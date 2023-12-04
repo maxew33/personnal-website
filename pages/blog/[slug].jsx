@@ -1,7 +1,10 @@
+import Header from "@/components/header/Header"
+
 export default function Page({ post }) {
 
     return (
         <>
+        <Header/>
             <div>{post && post[0].title.rendered}</div>
             <div dangerouslySetInnerHTML={{__html: post[0].content.rendered}}></div>
         </>
@@ -9,6 +12,7 @@ export default function Page({ post }) {
 }
 
 export async function getStaticPaths() {
+    console.log(13)
     const res = await fetch(process.env.DB_URI)
     const posts = await res.json()
 

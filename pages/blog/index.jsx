@@ -1,3 +1,4 @@
+import Header from '@/components/header/Header'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
@@ -15,11 +16,12 @@ export default function index() {
             setLoad(true)
         }
         !load && reqArticles()
-        console.log(articles)
+        console.log(123, articles)
     }, [articles])
 
     return (
         <>
+        <Header/>
             <h1>Mes articles</h1>
             <ul>
                 {load &&
