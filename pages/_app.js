@@ -3,7 +3,7 @@ import AppContext from '@/components/context/AppContext'
 import { useEffect, useState } from 'react'
 
 export default function App({ Component, pageProps }) {
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(true)
 
     useEffect(() => {
         const bgCol = darkMode ? '#010028' : '#FAFAFA'
