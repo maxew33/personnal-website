@@ -1,9 +1,18 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Header.module.css'
+import AppContext from '../context/AppContext'
 
 export default function Header() {
+
+    const context = useContext(AppContext)
+    
+const handleClick = () =>{
+    context.setDarkMode(!context.darkMode)
+    console.log('clic !', context.darkMode)
+}
+
     return (
         <header className={styles.header}>
             <Link href="/">
@@ -18,9 +27,10 @@ export default function Header() {
                 <Link href="/#about">à propos</Link>
                 <Link href="/#projects">projets</Link>
                 <Link href="/#estimate">devis</Link>
-                <Link href="/#contact">contact</Link>
                 <Link href="/blog">blog</Link>
+                <Link href="/#contact">contact</Link>
             </nav>
+            <button onClick={handleClick}>click me</button>
         </header>
     )
 }

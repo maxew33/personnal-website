@@ -1,0 +1,10 @@
+:root{
+    --bg: #010028;
+    --col: #F8F2FE;
+}
+
+body{
+    background: var(--bg);
+    color: var(--col);
+    transition: background .25s ease-in-out;
+}
