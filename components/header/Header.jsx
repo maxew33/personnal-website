@@ -27,11 +27,11 @@ const handleClick = () =>{
                 />
             </Link>
             <nav className={styles.navigation}>
-                <Link href="/#about">à propos</Link>
-                <Link href="/#projects">projets</Link>
-                <Link href="/#estimate">devis</Link>
+                <Link href="/">accueil</Link>
+                <Link href="/projects">projets</Link>
+                <Link href="/estimate">devis</Link>
                 <Link href="/blog">blog</Link>
-                <Link href="/#contact" className={styles.contact}>contact</Link>
+                <Link href="/contact" className={styles.contact}>contact</Link>
             </nav>
             <button onClick={handleClick} className={styles.darkModeBtn}>
                 <FontAwesomeIcon icon={context.darkMode ? faSun : faMoon}/>

@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template: repeat(6, 1fr)/repeat(2, 1fr);
+  height: 85vh;
+  max-width: 1600px;
+  margin: auto;
+  font-family: var(--font-fam2);
+  font-size: 6rem;
+  color: var(--col);
+  line-height: 1.15;
+  font-weight: bold;
+}
+
+.highlighted {
+  color: var(--cta);
+  font-size: 6rem;
+}
+
+.txtHook1 {
+  grid-column: span 2;
+  grid-row: 1;
+  align-self: center;
+  text-align: center;
+}
+
+.txtHook2 {
+  font-size: 4rem;
+  grid-column: 2;
+  grid-row: 3/span 2;
+  align-self: first baseline;
+  text-align: center;
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  aspect-ratio: 2;
+  background: url("../../front/public/assets/homeHero.png");
+  background-position: bottom left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.imgContainer {
+  position: absolute;
+  top: 5.25%;
+  left: 6.5%;
+  height: 57%;
+  width: 45.65%;
+  background: #c0ffee;
+  transform: skew(1.52deg);
+}

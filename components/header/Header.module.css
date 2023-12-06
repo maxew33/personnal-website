@@ -1,4 +1,8 @@
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,6 +11,7 @@
   padding: 1rem 0;
   margin: 1rem auto;
   max-width: 1600px;
+  backdrop-filter: blur(5px);
 }
 .header > * {
   min-width: 6rem;

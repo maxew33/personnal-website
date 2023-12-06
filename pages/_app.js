@@ -1,6 +1,8 @@
 import '@/styles/globals.css'
 import AppContext from '@/components/context/AppContext'
 import { useEffect, useState } from 'react'
+import Header from '@/components/header/Header'
+import Footer from '@/components/footer/Footer'
 
 export default function App({ Component, pageProps }) {
     const [darkMode, setDarkMode] = useState(true)
@@ -14,7 +16,9 @@ export default function App({ Component, pageProps }) {
 
     return (
         <AppContext.Provider value={{ darkMode, setDarkMode }}>
+            <Header/>
             <Component {...pageProps} />
+            <Footer/>
         </AppContext.Provider>
     )
 }
