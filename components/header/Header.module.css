@@ -2,15 +2,14 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 4rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: solid var(--col);
-  border-width: 2px 0;
-  padding: 1rem 0;
+  border-width: 1px 0;
+  padding: 0.75rem 2rem;
   margin: 1rem auto;
-  max-width: 1600px;
   backdrop-filter: blur(5px);
 }
 .header > * {
@@ -22,7 +21,8 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 300;
   text-transform: capitalize;
   font-family: var(--font-fam2);
 }
@@ -37,7 +37,7 @@
   padding: 0.25rem 1rem;
   border-radius: 5rem;
   color: var(--cta);
-  border: 2px solid var(--col);
+  border: 1px solid var(--col);
 }
 
 .logo {

@@ -1,13 +1,12 @@
 .hero {
     position: relative;
     display: grid;
-    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     height: 85vh;
-    max-width: 1600px;
+    max-width: 1400px;
     margin: auto;
-    // border: 5px solid red;
     font-family: var(--font-fam2);
-    font-size: 6rem;
+    font-size: 4rem;
     color: var(--col);
     line-height: 1.15;
     font-weight: bold;
@@ -15,28 +14,28 @@
 
 .highlighted{
     color: var(--cta);
-    font-size: 6rem;
+    font-size: 4.5rem;
 }
 
 .txtHook1{
-    grid-column: span 2;
+    grid-column: 2;
     grid-row: 1;
     align-self:center;
-    text-align: center;
+    text-align: Left;
 }
 
 .txtHook2{
-    font-size: 4rem;
+    font-size: 3rem;
     grid-column: 2;
-    grid-row: 3 / span 2;
+    grid-row: 2 / span 2;
     align-self:first baseline;
-    text-align: center;
+    text-align: left;
 }
 
 .slider{
     position: absolute;
-    bottom: 0;
-    width: 80%;
+    bottom: 10%;
+    width: 70%;
     aspect-ratio: 2;
     background: url('../../front/public/assets/homeHero.png');
     background-position: bottom left;
@@ -50,6 +49,14 @@
     left: 6.5%;
     height: 57%;
     width: 45.65%;
-    background: #c0ffee;
+    background: navy;
     transform: skew(1.52deg);
+    clip-path: polygon(.7% 0, 99.5% .4%, 100% 99%, 0.4% 99.5%);
+    &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(120deg, #fff0, #fffc, #fff5, #fff0);
+    }
 }
