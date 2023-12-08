@@ -1,15 +1,26 @@
+.main {
+  max-width: 1400px;
+  margin: auto;
+}
+
 .hero {
   position: relative;
   display: grid;
-  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  grid-template: repeat(6, 1fr)/repeat(2, 1fr);
+  width: 100%;
   height: 85vh;
-  max-width: 1400px;
-  margin: auto;
   font-family: var(--font-fam2);
   font-size: 4rem;
   color: var(--col);
   line-height: 1.15;
-  font-weight: bold;
+}
+
+.heroHeader {
+  font-size: 1.25rem;
+  grid-column: 1/3;
+  grid-row: 1;
+  align-self: center;
+  text-align: center;
 }
 
 .highlighted {
@@ -19,7 +30,7 @@
 
 .txtHook1 {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
   align-self: center;
   text-align: Left;
 }
@@ -27,8 +38,8 @@
 .txtHook2 {
   font-size: 3rem;
   grid-column: 2;
-  grid-row: 2/span 2;
-  align-self: first baseline;
+  grid-row: 3/span 2;
+  align-self: center;
   text-align: left;
 }
 
@@ -45,7 +56,7 @@
 
 .imgContainer {
   position: absolute;
-  top: 5.25%;
+  top: 5.2%;
   left: 6.5%;
   height: 57%;
   width: 45.65%;
@@ -59,4 +70,16 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3333333333), rgba(255, 255, 255, 0));
+}
+
+.heroFooter {
+  font-size: 1.25rem;
+  grid-column: 1/3;
+  grid-row: 6;
+  align-self: center;
+  text-align: center;
+  line-height: 1.5;
+}
+.heroFooter a {
+  color: var(--cta);
 }

@@ -30,7 +30,7 @@ const handleClick = () =>{
                 <Link href="/">accueil</Link>
                 <Link href="/projects">projets</Link>
                 <Link href="/estimate">devis</Link>
-                <Link href="/blog">blog</Link>
+                <Link href="/blog">articles</Link>
                 <Link href="/contact" className={styles.contact}>contact</Link>
             </nav>
             <button onClick={handleClick} className={styles.darkModeBtn}>
