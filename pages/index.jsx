@@ -13,6 +13,10 @@ export default function Home() {
         setImageData(
             '/assets/portraits/quinten-de-graaf-iwBfqKwaJQI-unsplash.jpg'
         )
+
+        document.addEventListener('scroll', () => {
+            console.log(123)
+        })
     }, [])
 
     return (
@@ -20,19 +24,21 @@ export default function Home() {
             <main className={styles.main}>
                 <section className={styles.hero}>
                     <h1 className={styles.heroHeader}>
-                        Bienvenue sur TechQuest, votre partenaire de confiance
-                        pour la création de sites web exceptionnels.
+                        Bienvenue chez Velvet Studio, votre partenaire de
+                        confiance pour la création de sites web exceptionnels.
                     </h1>
-                    <p className={styles.txtHook1}>
+                    <p className={styles.txtHook}>
                         Soyez{' '}
                         <span className={styles.highlighted}>En ligne</span>
-                    </p>
-                    <p className={styles.txtHook2}>
-                        Avec un site <br />
-                        qui <span className={styles.highlighted}>
-                            vous
-                        </span>{' '}
+                        <br />
+                        avec un site
+                        <br /> qui{' '}
+                        <span className={styles.highlighted}>vous</span>{' '}
                         ressemble.
+                        <br />
+                        <Link href="/contact" className={styles.contact}>
+                            Commençons un projet
+                        </Link>
                     </p>
                     <div className={styles.slider}>
                         <div className={styles.imgContainer}>
@@ -45,7 +51,7 @@ export default function Home() {
                             />
                         </div>
                     </div>
-                    <p className={styles.heroFooter}>
+                    <p className={styles.heroFooter + ' footer'}>
                         Particulier cherchant à partager votre passion ou
                         entreprise visant à se démarquer, <br />
                         nous sommes là pour transformer vos idées en réalité :{' '}
@@ -53,17 +59,21 @@ export default function Home() {
                     </p>
                 </section>
                 <section className={styles.work}>
-                    <p>
-                        Chez TechQuest, notre engagement envers l'excellence se
-                        manifeste à travers nos créations. <br /> Chaque site
-                        web est le résultat d'une collaboration étroite avec nos
-                        clients, transformant leurs idées en des expériences en
-                        ligne uniques.
-                    </p>
+                    <h2>Choisir Velvet Studio</h2>
                     <article>
-                        <img src="" alt="" />
                         <p>
-                            Projets Variés : Que vous soyez un entrepreneur
+                            Chez Velvet Studio, l'engagement envers l'excellence
+                            se manifeste à travers nos créations. <br />
+                            Chaque site est le résultat d'une collaboration
+                            étroite avec nos clients, transformant leurs idées
+                            en des expériences en ligne uniques.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h2>Variété des profils</h2>
+                        <p>
+                            Que vous soyez un entrepreneur
                             passionné, un artiste créatif ou une entreprise
                             innovante, nous avons eu le privilège de travailler
                             sur une multitude de projets. De la conception
@@ -74,9 +84,9 @@ export default function Home() {
                         </p>
                     </article>
                     <article>
-                        <img src="" alt="" />
+                        <h2>Design Intuitif : </h2>
                         <p>
-                            Design Intuitif : Nous mettons l'accent sur un
+                            Nous mettons l'accent sur un
                             design intuitif qui captivera vos visiteurs dès la
                             première impression. <br />
                             Nos créations ne se limitent pas à l'esthétique,
@@ -85,19 +95,17 @@ export default function Home() {
                         </p>
                     </article>
 
-                    {/* CTA */}
+                    {/* CTA */}               
 
+                    <article>
+                        <h2>Témoignages</h2>
                     <p>
-                        Témoignages Clients : La satisfaction de nos clients est
+                        La satisfaction de nos clients est
                         notre meilleure publicité. <br />
                         Découvrez les témoignages de ceux qui ont déjà fait
                         confiance à TechQuest pour donner vie à leur présence en
                         ligne.
                     </p>
-
-                    <article>
-                        <img src="" alt="" />
-                        <p></p>
                     </article>
                 </section>
             </main>

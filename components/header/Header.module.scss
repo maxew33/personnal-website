@@ -1,4 +1,7 @@
+@import '../../styles/scss/utils/mixins';
+
 .header {
+    z-index: 2;
     position: sticky;
     top: 0;
     left: 0;
@@ -6,8 +9,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: solid var(--col);
-    border-width: 1px 0;
+    max-width: 1400px;
+    // border: solid var(--col);
+    // border-width: 1px 0;
     padding: .75rem 2rem;
     margin: 1rem auto;
     backdrop-filter: blur(5px);
@@ -36,16 +40,17 @@
 }
 
 .contact {
-    padding: 0.25rem 1rem;
-    border-radius: 5rem;
-    color: var(--cta);
-    border: 1px solid var(--col);
-    font-weight: 400;
+    // padding: 0.25rem 1rem;
+    // border-radius: 5rem;
+    // color: var(--cta);
+    // border: 1px solid var(--col);
+    // font-weight: 400;
+    @include contactUs($size: 1.5rem);
 }
 
 .logo {
-    width: 3rem;
-    height: 2.875rem;
+    // width: 3rem;
+    aspect-ratio: 1;
 }
 
 .darkModeBtn {

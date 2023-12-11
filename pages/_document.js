@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="fr">
       <Head>
-        <title>TechQuest</title>
-        <meta name="description" content="techquest" />
+        <title>Velvet Studio</title>
+        <meta name="description" content="velvet studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

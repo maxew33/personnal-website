@@ -15,13 +15,17 @@ const handleClick = () =>{
     console.log('clic !', context.darkMode)
 }
 
+const handleScroll = () => {
+    console.log(123)
+}
+
     return (
-        <header className={styles.header}>
+        <header className={styles.header} onScroll={handleScroll}>
             <Link href="/">
                 <Image
                     src="/assets/logo2.png"
-                    width={60}
-                    height={57.5}
+                    width={230}
+                    height={85}
                     alt="logo de techquest"
                     className={styles.logo}
                 />
@@ -33,9 +37,9 @@ const handleClick = () =>{
                 <Link href="/blog">articles</Link>
                 <Link href="/contact" className={styles.contact}>contact</Link>
             </nav>
-            <button onClick={handleClick} className={styles.darkModeBtn}>
+            {/* <button onClick={handleClick} className={styles.darkModeBtn}>
                 <FontAwesomeIcon icon={context.darkMode ? faSun : faMoon}/>
-            </button>
+            </button> */}
         </header>
     )
 }

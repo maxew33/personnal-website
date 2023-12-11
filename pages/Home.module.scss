@@ -1,4 +1,94 @@
-.main{
+@import '../styles/scss/utils/mixins';
+
+.main {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template: 1fr 4fr 1fr / repeat(2, 1fr);
+    width: 100%;
+    min-height: 75vh;
+    font-family: var(--font-fam2);
+    font-size: 4rem;
+    color: var(--col);
+    line-height: 1.15;
+}
+
+.heroHeader {
+    font-size: 1.5rem;
+    grid-column: 1/3;
+    grid-row: 1;
+    align-self: center;
+    // text-align: center;
+    padding: 0 3rem;
+}
+
+.highlighted {
+    color: var(--cta);
+    font-size: 4.5rem;
+}
+
+.txtHook {
+    grid-column: 2;
+    grid-row: 2 ;
+    align-self: flex-start;
+    justify-self: center;
+    text-align: Left;
+    width: 600px;
+}
+
+.contact {
+    text-decoration: none;
+    @include contactUs($size: 2rem);
+}
+
+.slider {
+    position: absolute;
+    bottom: 5%;
+    width: max(70%, 780px);
+    aspect-ratio: 2;
+    background: url('../../front/public/assets/homeHero.png');
+    background-position: bottom left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.imgContainer {
+    position: absolute;
+    top: 5.2%;
+    left: 6.5%;
+    height: 57%;
+    width: 45.65%;
+    background: navy;
+    transform: skew(1.52deg);
+    clip-path: polygon(0.7% 0, 99.5% 0.4%, 100% 99%, 0.4% 99.5%);
+    &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(120deg, #fff0, #fffc, #fff5, #fff0);
+    }
+}
+
+.heroFooter {
+    font-size: 1.25rem;
+    grid-column: 1/3;
+    grid-row: 3;
+    align-self: center;
+    text-align: center;
+    line-height: 1.5;
+
+    & a {
+        color: var(--cta);
+    }
+}
+
+/*
+.main {
     max-width: 1400px;
     margin: auto;
 }
@@ -16,11 +106,12 @@
 }
 
 .heroHeader {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     grid-column: 1/3;
     grid-row: 1;
     align-self: center;
-    text-align: center;
+    // text-align: center;
+    padding: 0 3rem;
 }
 
 .highlighted {
@@ -30,17 +121,22 @@
 
 .txtHook1 {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 2 / span 3;
     align-self: center;
     text-align: Left;
 }
 
 .txtHook2 {
     font-size: 3rem;
-    grid-column: 2;
-    grid-row: 3 / span 2;
     align-self: center;
     text-align: left;
+}
+
+.contact {
+    grid-column: 2;
+    grid-row:3;
+    text-decoration: none;
+    @include contactUs($size: 1.5rem);
 }
 
 .slider {
@@ -72,7 +168,7 @@
     }
 }
 
-.heroFooter{
+.heroFooter {
     font-size: 1.25rem;
     grid-column: 1/3;
     grid-row: 6;
@@ -80,7 +176,8 @@
     text-align: center;
     line-height: 1.5;
 
-    & a{
+    & a {
         color: var(--cta);
     }
 }
+*/

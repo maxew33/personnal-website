@@ -5,7 +5,7 @@ import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 
 export default function App({ Component, pageProps }) {
-    const [darkMode, setDarkMode] = useState(true)
+    const [darkMode, setDarkMode] = useState(false)
 
     useEffect(() => {
         const bgCol = darkMode ? '#010028' : '#FAFAFA'

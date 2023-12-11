@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Libre+Bodoni:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Nova+Cut&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,57 +12,76 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* END OF RESET */
-
-:root{
-    --bg: #010028;
-    --col: #F8F2FE;
-    --cta: #02BDC7;
-	
-    --ctabg: #02BDC750;
-    --font-fam1: 'Montserrat', sans-serif;
-    --font-fam2: 'Ubuntu', sans-serif;
+/*
+font-family: 'Afacad', sans-serif;
+font-family: 'Crimson Text', serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Source Sans 3', sans-serif;
+font-family: 'Nova Cut', sans-serif;
+font-family: 'Libre Bodoni', courier, serif;
+*/
+:root {
+  --bg: #FAFAFA;
+  --col: #010028;
+  --cta: #02BDC7;
+  --ctabg: #02BDC750;
+  --font-fam1: "Source Sans 3", courier, serif;
+  --font-fam2: "Afacad", sans-serif;
 }
 
-body{
-    background: linear-gradient(70deg, var(--ctabg), #fff0 45%), var(--bg);
-	background-attachment: fixed;
-	min-height: 200vh;
-    color: var(--col);
-    transition: background .25s ease-in-out;
+body {
+  background: radial-gradient(circle at 100vw 100vh, var(--ctabg), rgba(255, 255, 255, 0) 75%), var(--bg);
+  /* background-position: right 100vh; */
+  /* background-attachment: fixed; */
+  min-height: 200vh;
+  color: var(--col);
+  transition: background 0.25s ease-in-out;
+  font-family: var(--font-fam1);
+}
+
+section {
+  margin-bottom: 1rem;
 }

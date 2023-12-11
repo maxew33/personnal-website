@@ -1,0 +1,9 @@
+@mixin contactUs($size : inherit) {
+    padding: $size/4 $size;
+    border-radius: 25rem;
+    color: var(--bg);
+    border: 1px solid;
+    background: var(--cta);
+    font-weight: 400;
+    font-size: $size;
+}
