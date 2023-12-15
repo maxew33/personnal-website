@@ -3,13 +3,17 @@
 .main {
     max-width: 1400px;
     margin: auto;
+
+    section {
+        margin: 4rem 0;
+        width: 100%;
+    }
 }
 
 .hero {
     position: relative;
     display: grid;
-    grid-template: 1fr 4fr 1fr / repeat(2, 1fr);
-    width: 100%;
+    grid-template: 1fr 4fr / repeat(2, 1fr);
     min-height: 75vh;
     font-family: var(--font-fam2);
     font-size: 4rem;
@@ -33,7 +37,7 @@
 
 .txtHook {
     grid-column: 2;
-    grid-row: 2 ;
+    grid-row: 2;
     align-self: flex-start;
     justify-self: center;
     text-align: Left;
@@ -46,6 +50,7 @@
 }
 
 .slider {
+    z-index: -1;
     position: absolute;
     bottom: 5%;
     width: max(70%, 780px);
@@ -62,7 +67,7 @@
     left: 6.5%;
     height: 57%;
     width: 45.65%;
-    background: navy;
+    background: transparent;
     transform: skew(1.52deg);
     clip-path: polygon(0.7% 0, 99.5% 0.4%, 100% 99%, 0.4% 99.5%);
     &::after {
@@ -74,17 +79,91 @@
     }
 }
 
-.heroFooter {
-    font-size: 1.25rem;
-    grid-column: 1/3;
-    grid-row: 3;
+.callToAction {
+    font-size: 1.5rem;
     align-self: center;
     text-align: center;
     line-height: 1.5;
+}
 
-    & a {
-        color: var(--cta);
+.ctaLink {
+    color: var(--cta);
+}
+
+.features {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.featureWrapper {
+    width: 30%;
+    // border: 2px solid var(--cta);
+    background: linear-gradient(#ffffff50, #ffffff), var(--cta);
+    margin: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+}
+
+.featureTitle {
+    margin: 0.75rem 0 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.featureContent {
+    font-size: 1.115rem;
+    line-height: 1.15;
+}
+
+.presentation {
+    display: grid;
+    grid-template-areas:
+        'title image'
+        'text image';
+
+    h2 {
+        grid-area: title;
+        font-family: var(--font-fam1);
+        font-size: 2rem;
+        padding: 0.25rem 0 0.75rem 2rem;
+        margin-left: 25vw;
     }
+
+    p {
+        grid-area: text;
+        line-height: 1.15;
+        font-size: 1.25rem;
+        margin-left: 25vw;
+    }
+
+    img {
+        grid-area: image;
+        width: 36vw;
+        max-width: 576px;
+        height: 24vw;
+        max-height: 384px;
+        object-fit: cover;
+    }
+}
+
+.testimonialSlider{
+    overflow: hidden;
+}
+
+.testimonial{
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column-reverse;
+}
+
+.testimonialName{
+    font-size: 1.25rem;
+}
+.testimonialContent{
+    line-height: 1.15;
+    font-size: 1.15rem;
 }
 
 /*

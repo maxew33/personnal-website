@@ -73,7 +73,6 @@ font-family: 'Libre Bodoni', courier, serif;
 }
 
 body {
-  background: radial-gradient(circle at 100vw 100vh, var(--ctabg), rgba(255, 255, 255, 0) 75%), var(--bg);
   /* background-position: right 100vh; */
   /* background-attachment: fixed; */
   min-height: 200vh;
