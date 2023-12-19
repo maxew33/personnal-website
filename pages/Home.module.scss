@@ -1,6 +1,132 @@
 @import '../styles/scss/utils/mixins';
 
 .main {
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-family: var(--fontfam1);
+
+    section {
+        width: 100%;
+    }
+
+    h1,
+    h2 {
+        font-size: 2.5rem;
+        font-family: var(--fontfam1);
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+.sectionContent {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.heroContent {
+    position: relative;
+    top: 10rem;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heroText {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+        line-height: 1.5;
+        &:last-of-type,
+        a {
+            color: var(--bg);
+        }
+    }
+}
+
+.highlighted {
+    color: var(--secondary);
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactBtn {
+    text-decoration: none;
+    @include contactUs($size: 1.25rem);
+}
+
+.heroIllus {
+    height: 100%;
+    object-fit: cover;
+}
+
+.arguments {
+    background: var(--primary);
+}
+
+.argumentsContent {
+    position: relative;
+    top: 20rem;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.argumentsWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 1.5rem;
+}
+
+.argumentsTitle {
+    color: var(--bg);
+}
+
+.features {
+    padding-top: 20rem;
+}
+
+.featuresWrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 1rem .5rem;
+    background: linear-gradient(#fffd, #fffd), var(--secondary);
+    border-radius: 2rem 2rem 0 0;
+}
+
+.solutionsWrapper{
+    
+    background: linear-gradient(#fffd, #fffd), var(--secondary);
+}
+
+.solutions {
+    display: flex;
+    padding: 5rem 0;
+}
+/*
+.main {
     max-width: 1400px;
     margin: auto;
 
@@ -165,7 +291,7 @@
     line-height: 1.15;
     font-size: 1.15rem;
 }
-
+*/
 /*
 .main {
     max-width: 1400px;

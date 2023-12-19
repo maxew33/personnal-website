@@ -1,16 +1,21 @@
-.header {
+.headerContainer {
+  width: 100%;
   z-index: 2;
   position: sticky;
+  margin-top: 2rem;
   top: 0;
   left: 0;
+  backdrop-filter: blur(5px);
+}
+
+.header {
   width: calc(100% - 4rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1400px;
   padding: 0.75rem 2rem;
-  margin: 1rem auto;
-  backdrop-filter: blur(5px);
+  margin: 0 auto 1rem;
 }
 .header > * {
   min-width: 6rem;
@@ -22,9 +27,9 @@
   align-items: center;
   gap: 1.5rem;
   font-size: 1.15rem;
-  font-weight: 300;
   text-transform: capitalize;
-  font-family: var(--font-fam2);
+  font-family: var(--fontfam2);
+  color: var(--text);
 }
 .navigation a {
   text-decoration: none;
@@ -43,14 +48,12 @@
   font-size: 1.5rem;
 }
 
-.logo {
-  aspect-ratio: 1;
+.link {
+  height: 2.5rem;
 }
 
-.darkModeBtn {
-  border: none;
-  background: unset;
-  font-size: 2rem;
-  color: var(--col);
-  cursor: pointer;
+.logo {
+  height: 2.5rem;
+  width: 7.5rem;
+  object-fit: contain;
 }

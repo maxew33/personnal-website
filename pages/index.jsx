@@ -20,112 +20,134 @@ export default function Home() {
     }, [])
 
     return (
-        <>
-            <main className={styles.main}>
-                <section className={styles.hero}>
-                    <h1 className={styles.heroHeader}>
-                        Bienvenue chez Velvet Studio, votre partenaire de
-                        confiance pour la création de sites web exceptionnels.
-                    </h1>
-                    <p className={styles.txtHook}>
-                        Soyez{' '}
-                        <span className={styles.highlighted}>En ligne</span>
-                        <br />
-                        avec un site
-                        <br /> qui{' '}
-                        <span className={styles.highlighted}>vous</span>{' '}
-                        ressemble.
-                        <br />
-                        <Link href="/contact" className={styles.contact}>
-                            Commençons un projet
-                        </Link>
-                    </p>
-                    <div className={styles.slider}>
-                        <div className={styles.imgContainer}>
-                            <Image
-                                src={imageData}
-                                alt="eyes"
-                                layout="fill"
-                                objectFit="cover"
-                                // className={styles.imgContainer}
-                            />
-                        </div>
-                    </div>
-                </section>
-                <section className={styles.callToAction}>
-                    <p className={styles.callToActionText}>
-                        Particulier cherchant à partager votre passion ou
-                        entreprise visant à se démarquer, nous sommes là pour
-                        transformer vos idées en réalité :{' '}
-                        <Link className={styles.ctaLink} href="/contact">
-                            contactez-nous
-                        </Link>
-                        .
-                    </p>
-                </section>
-                <section className={styles.features}>
-                    <article className={styles.featureWrapper}>
-                        <h2 className={styles.featureTitle}>
-                            Élégance Fonctionnelle
-                        </h2>
-                        <p className={styles.featureContent}>
-                            Chaque site que nous créons est une fusion
-                            harmonieuse de design esthétique et de
-                            fonctionnalités puissantes. <br />
-                            Pour nous l'élégance n'est pas un luxe mais une
-                            composante essentielle de chaque projet
-                        </p>
-                    </article>
-                    <article className={styles.featureWrapper}>
-                        <h2 className={styles.featureTitle}>
-                            Conception Stratégique
-                        </h2>
-                        <p className={styles.featureContent}>
-                            Chaque projet est guidé par une vision stratégique,
-                            alignant chaque aspect du design sur vos objectifs
-                            commerciaux. <br />
-                            Avec nous, la conception va au-delà du visuel pour
-                            devenir une force motrice pour votre succès en
-                            ligne.
-                        </p>
-                    </article>
-                    <article className={styles.featureWrapper}>
-                        <h2 className={styles.featureTitle}>
-                            Expérience Intuitive
-                        </h2>
-                        <p className={styles.featureContent}>
-                            Chaque élément est conçu pour guider les
-                            utilisateurs à travers votre contenu, favorisant
-                            ainsi une exploration naturelle.
-                            <br />
-                            Grace à nous, vos visiteurs vivrons une immersion
-                            totale dans ce que vous avez à offrir.
-                        </p>
-                    </article>
-                </section>
-                <section className={styles.work}>
-                    <article className={styles.presentation}>
-                        <h2>Choisir Velvet Studio</h2>
+        <main className={styles.main}>
+            <section className={styles.hero}>
+                <article
+                    className={styles.sectionContent + ' ' + styles.heroContent}
+                >
+                    <div className={styles.heroText}>
+                        <h1>
+                            Soyez{' '}
+                            <span className={styles.highlighted}>En ligne</span>{' '}
+                            avec un site qui{' '}
+                            <span className={styles.highlighted}>vous</span>{' '}
+                            ressemble.
+                        </h1>
                         <p>
-                            C'est choisir l'engagement envers l'excellence.
-                            <br />
-                            Un engagement qui se manifeste à travers nos
-                            créations. <br />
+                            Bienvenue chez Velvet Studio, votre partenaire de
+                            confiance pour la création de sites web
+                            exceptionnels.
+                        </p>
+                        <span className={styles.linkContainer}>
+                            <Link href="/contact" className={styles.contactBtn}>
+                                Commençons un projet
+                            </Link>
+                            <Link href="/projects">Voir nos projets →</Link>
+                        </span>
+                        <p>
+                            Particulier cherchant à partager votre passion ou
+                            entreprise visant à se démarquer nous sommes là pour
+                            transformer vos idées en réalité :{' '}
+                            <Link href="/contact">contactez-nous</Link>.
+                        </p>
+                    </div>
+                    <Image
+                        src="/assets/home/desk.png"
+                        height={467}
+                        width={700}
+                        className={styles.heroIllus}
+                        alt="Bienvenue chez Velvet Studio"
+                    />
+                </article>
+            </section>
+            <section className={styles.arguments}>
+                <article
+                    className={styles.sectionContent + ' ' + styles.argumentsContent}
+                >
+                    <Image
+                        src="/assets/home/chooseUs.png"
+                        height={467}
+                        width={700}
+                        className={styles.articleIllus}
+                        alt="pourquoi choisir Velvet Studio"
+                    />
+                    <div className={styles.argumentsWrapper}>
+                        <h2 className={styles.argumentsTitle}>
+                            Choisir Velvet Web
+                        </h2>
+                        <p className={styles.argumentsText}>
+                            C'est choisir l'engagement envers l'excellence. Un
+                            engagement qui se manifeste à travers nos créations.
                             Chaque site est le résultat d'une collaboration
                             étroite avec nos clients, transformant leurs idées
                             en des expériences en ligne uniques.
                         </p>
-                        <Image
-                            src="/assets/illus/john-schnobrich-FlPc9_VocJ4-unsplash.jpg"
-                            width={576}
-                            height={384}
-                            alt="working together"
-                        />
-                    </article>
-
-                    <article className={styles.presentation}>
-                        <h2>Variété des profils</h2>
-                        <p>
+                    </div>
+                </article>
+            </section>
+            <section className={styles.features}>
+                <article className={styles.sectionContent}>
+                    <Link href="/contact" className={styles.contactBtn}>Commençons un projet</Link>
+                    <div className={styles.featuresWrapper}>
+                        <article className={styles.feature}>
+                            <h3 className={styles.featureTitle}>
+                                Élégance Fonctionnelle
+                            </h3>
+                            <p className={styles.featureText}>
+                                Chaque site que nous créons est une fusion
+                                harmonieuse de design esthétique et de
+                                fonctionnalités puissantes.
+                                <br /> Pour nous l'élégance n'est pas un luxe
+                                mais une composante essentielle de chaque
+                                projet.
+                            </p>
+                        </article>
+                        <article className={styles.feature}>
+                            <h3 className={styles.featureTitle}>
+                                Conception Stratégique
+                            </h3>
+                            <p className={styles.featureText}>
+                                Chaque projet est guidé par une vision
+                                stratégique, alignant chaque aspect du design
+                                sur vos objectifs commerciaux.
+                                <br />
+                                Avec nous, la conception va au-delà du visuel
+                                pour devenir une force motrice pour votre succès
+                                en ligne.
+                            </p>
+                        </article>
+                        <article className={styles.feature}>
+                            <h3 className={styles.featureTitle}>
+                                Expérience Intuitive
+                            </h3>
+                            <p className={styles.featureText}>
+                                Chaque élément est conçu pour guider les
+                                utilisateurs à travers votre contenu, favorisant
+                                ainsi une exploration naturelle.
+                                <br />
+                                Grace à nous, vos visiteurs vivrons une
+                                immersion totale dans ce que vous avez à offrir.
+                            </p>
+                        </article>
+                    </div>
+                </article>
+            </section>
+            <section className={styles.solutionsWrapper}>
+                <article
+                    className={styles.solutions + ' ' + styles.sectionContent}
+                >
+                    <Image
+                        src="/assets/home/solutions.png"
+                        height={467}
+                        width={700}
+                        className={styles.articleIllus}
+                        alt="pourquoi choisir Velvet Studio"
+                    />
+                    <div className={styles.sectionContent}>
+                        <h2 className={styles.articleTitle}>
+                            Des Solutions Sur Mesure{' '}
+                        </h2>
+                        <p className={styles.articleText}>
                             Nous sommes fiers d'offrir une variété de solutions
                             adaptées à tous les profils, quelle que soit la
                             taille de votre entreprise ou votre budget. Que vous
@@ -133,62 +155,56 @@ export default function Home() {
                             indépendant, ou une entreprise établie, notre
                             approche est inclusive.
                         </p>
-                        <Image
-                            src="/assets/illus/krakenimages-Y5bvRlcCx8k-unsplash.jpg"
-                            width={384}
-                            height={576}
-                            alt="working together"
-                        />
-                    </article>
-
-                    {/* CTA */}
-
-                    <article className={styles.testimonialsWrapper}>
-                        <h2 className={styles.testimonialsTitle}>La satisfaction de nos clients est notre meilleure
-                            publicité.</h2>
-                        <p className={styles.testimonialsContent}>
-                            Découvrez les témoignages de ceux qui ont déjà fait
-                            confiance à TechQuest pour donner vie à leur
-                            présence en ligne.
+                    </div>
+                </article>
+            </section>
+            <section className={styles.testimonials}>
+                <article className={styles.sectionContent}>
+                    <h2>
+                        La{' '}
+                        <span className={styles.hightlighted}>
+                            satisfaction
+                        </span>{' '}
+                        de nos clients : notre meilleure publicité.
+                    </h2>
+                    <article className={styles.testimonial}>
+                        <p className={styles.testimonialContent}>
+                            Maxime est un professionnel à la fois très réactif
+                            et très à l'écoute. Quelqu'un sur qui l'on peut se
+                            fier. Il semble avoir une solution pour chaque
+                            problème et c'est toujours un atout pour moi de
+                            travailler avec lui.
                         </p>
-                        <div className={styles.testimonialSlider}>
-                            <div className={styles.testimonial}>
-                                <div className={styles.testimonialName}>Christophe V.</div>
-                                <div className={styles.testimonialContent}>
-                                    Maxime est un professionnel à la fois très
-                                    réactif et très à l'écoute. Quelqu'un sur
-                                    qui l'on peut se fier. Il semble avoir une
-                                    solution pour chaque problème et c'est
-                                    toujours un atout pour moi de travailler
-                                    avec lui.
-                                </div>
-                            </div>
-                            <div className={styles.testimonial}>
-                                <div className={styles.testimonialName}>Jérémy H.</div>
-                                <div className={styles.testimonialContent}>
-                                    Maxime est un professionnel à la fois très
-                                    réactif et très à l'écoute. Quelqu'un sur
-                                    qui l'on peut se fier. Il semble avoir une
-                                    solution pour chaque problème et c'est
-                                    toujours un atout pour moi de travailler
-                                    avec lui.
-                                </div>
-                            </div>
-                            <div className={styles.testimonial}>
-                                <div className={styles.testimonialName}>Maxime M.</div>
-                                <div className={styles.testimonialContent}>
-                                    Maxime est un professionnel à la fois très
-                                    réactif et très à l'écoute. Quelqu'un sur
-                                    qui l'on peut se fier. Il semble avoir une
-                                    solution pour chaque problème et c'est
-                                    toujours un atout pour moi de travailler
-                                    avec lui.
-                                </div>
-                            </div>
-                        </div>
+                        <span className={styles.testimonialAuthor}>
+                            Jérémie H.
+                        </span>
                     </article>
-                </section>
-            </main>
-        </>
+                    <article className={styles.testimonial}>
+                        <p className={styles.testimonialContent}>
+                            Maxime est un professionnel à la fois très réactif
+                            et très à l'écoute. Quelqu'un sur qui l'on peut se
+                            fier. Il semble avoir une solution pour chaque
+                            problème et c'est toujours un atout pour moi de
+                            travailler avec lui.
+                        </p>
+                        <span className={styles.testimonialAuthor}>
+                            Christophe V.
+                        </span>
+                    </article>
+                    <article className={styles.testimonial}>
+                        <p className={styles.testimonialContent}>
+                            Maxime est un professionnel à la fois très réactif
+                            et très à l'écoute. Quelqu'un sur qui l'on peut se
+                            fier. Il semble avoir une solution pour chaque
+                            problème et c'est toujours un atout pour moi de
+                            travailler avec lui.
+                        </p>
+                        <span className={styles.testimonialAuthor}>
+                            Maxime M.
+                        </span>
+                    </article>
+                </article>
+            </section>
+        </main>
     )
 }
