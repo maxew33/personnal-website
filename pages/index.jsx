@@ -25,7 +25,7 @@ export default function Home() {
                 <article
                     className={styles.sectionContent + ' ' + styles.heroContent}
                 >
-                    <div className={styles.heroText}>
+                    <div className={styles.heroText }>
                         <h1>
                             Soyez{' '}
                             <span className={styles.highlighted}>En ligne</span>{' '}
@@ -62,7 +62,9 @@ export default function Home() {
             </section>
             <section className={styles.arguments}>
                 <article
-                    className={styles.sectionContent + ' ' + styles.argumentsContent}
+                    className={
+                        styles.sectionContent + ' ' + styles.argumentsContent
+                    }
                 >
                     <Image
                         src="/assets/home/chooseUs.png"
@@ -71,7 +73,7 @@ export default function Home() {
                         className={styles.articleIllus}
                         alt="pourquoi choisir Velvet Studio"
                     />
-                    <div className={styles.argumentsWrapper}>
+                    <div className={styles.articleTextWrapper}>
                         <h2 className={styles.argumentsTitle}>
                             Choisir Velvet Web
                         </h2>
@@ -86,8 +88,10 @@ export default function Home() {
                 </article>
             </section>
             <section className={styles.features}>
-                <article className={styles.sectionContent}>
-                    <Link href="/contact" className={styles.contactBtn}>Commençons un projet</Link>
+                <article className={`${styles.sectionContent} ${styles.featuresContent}`}>
+                    <Link href="/contact" className={`${styles.contactBtn} ${styles.featureLink}`}>
+                        Commençons un projet
+                    </Link>
                     <div className={styles.featuresWrapper}>
                         <article className={styles.feature}>
                             <h3 className={styles.featureTitle}>
@@ -143,7 +147,7 @@ export default function Home() {
                         className={styles.articleIllus}
                         alt="pourquoi choisir Velvet Studio"
                     />
-                    <div className={styles.sectionContent}>
+                    <div className={styles.solutionsContent}>
                         <h2 className={styles.articleTitle}>
                             Des Solutions Sur Mesure{' '}
                         </h2>
@@ -160,49 +164,49 @@ export default function Home() {
             </section>
             <section className={styles.testimonials}>
                 <article className={styles.sectionContent}>
-                    <h2>
+                    <h2 className={styles.testimonialsTitle}>
                         La{' '}
-                        <span className={styles.hightlighted}>
-                            satisfaction
-                        </span>{' '}
+                        <span className={styles.highlighted}>satisfaction</span>{' '}
                         de nos clients : notre meilleure publicité.
                     </h2>
-                    <article className={styles.testimonial}>
-                        <p className={styles.testimonialContent}>
-                            Maxime est un professionnel à la fois très réactif
-                            et très à l'écoute. Quelqu'un sur qui l'on peut se
-                            fier. Il semble avoir une solution pour chaque
-                            problème et c'est toujours un atout pour moi de
-                            travailler avec lui.
-                        </p>
-                        <span className={styles.testimonialAuthor}>
-                            Jérémie H.
-                        </span>
-                    </article>
-                    <article className={styles.testimonial}>
-                        <p className={styles.testimonialContent}>
-                            Maxime est un professionnel à la fois très réactif
-                            et très à l'écoute. Quelqu'un sur qui l'on peut se
-                            fier. Il semble avoir une solution pour chaque
-                            problème et c'est toujours un atout pour moi de
-                            travailler avec lui.
-                        </p>
-                        <span className={styles.testimonialAuthor}>
-                            Christophe V.
-                        </span>
-                    </article>
-                    <article className={styles.testimonial}>
-                        <p className={styles.testimonialContent}>
-                            Maxime est un professionnel à la fois très réactif
-                            et très à l'écoute. Quelqu'un sur qui l'on peut se
-                            fier. Il semble avoir une solution pour chaque
-                            problème et c'est toujours un atout pour moi de
-                            travailler avec lui.
-                        </p>
-                        <span className={styles.testimonialAuthor}>
-                            Maxime M.
-                        </span>
-                    </article>
+                    <div className={styles.testimonialsWrapper}>
+                        <article className={styles.testimonial}>
+                            <p className={styles.testimonialContent}>
+                                Maxime est un professionnel à la fois très
+                                réactif et très à l'écoute. Quelqu'un sur qui
+                                l'on peut se fier. Il semble avoir une solution
+                                pour chaque problème et c'est toujours un atout
+                                pour moi de travailler avec lui.
+                            </p>
+                            <span className={styles.testimonialAuthor}>
+                                Jérémie H.
+                            </span>
+                        </article>
+                        <article className={styles.testimonial}>
+                            <p className={styles.testimonialContent}>
+                                Maxime est un professionnel à la fois très
+                                réactif et très à l'écoute. Quelqu'un sur qui
+                                l'on peut se fier. Il semble avoir une solution
+                                pour chaque problème et c'est toujours un atout
+                                pour moi de travailler avec lui.
+                            </p>
+                            <span className={styles.testimonialAuthor}>
+                                Christophe V.
+                            </span>
+                        </article>
+                        <article className={styles.testimonial}>
+                            <p className={styles.testimonialContent}>
+                                Maxime est un professionnel à la fois très
+                                réactif et très à l'écoute. Quelqu'un sur qui
+                                l'on peut se fier. Il semble avoir une solution
+                                pour chaque problème et c'est toujours un atout
+                                pour moi de travailler avec lui.
+                            </p>
+                            <span className={styles.testimonialAuthor}>
+                                Maxime M.
+                            </span>
+                        </article>
+                    </div>
                 </article>
             </section>
         </main>
