@@ -1,4 +1,45 @@
-.footer{
-    height: 5rem;
+.footer {
     background: var(--primary);
+
+    padding: 5rem 0;
+
+    & a {
+        text-decoration: none;
+        color: var(--bg);
+    }
+}
+
+.footerWrapper {
+    margin: auto;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    height: 2.5rem;
+    color: var(--bg);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 2.5rem;
+    width: 7.5rem;
+    object-fit: contain;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.icon {
+    font-size: 2rem;
 }

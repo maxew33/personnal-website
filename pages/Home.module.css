@@ -5,6 +5,7 @@
   color: var(--text);
   font-size: 1.25rem;
   font-family: var(--fontfam2);
+  overflow-x: hidden;
 }
 .main section {
   width: 100%;

@@ -33,8 +33,8 @@ export default function Header() {
                 <nav className={styles.navigation}>
                     <Link href="/">accueil</Link>
                     <Link href="/projects">projets</Link>
-                    <Link href="/estimate">devis</Link>
-                    <Link href="/blog">articles</Link>
+                    <Link href="/pricing">devis</Link>
+                    {/* <Link href="/blog">articles</Link> */}
                     <Link href="/contact" className={styles.contact}>
                         contact
                     </Link>
