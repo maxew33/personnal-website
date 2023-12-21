@@ -17,10 +17,11 @@ font-family: 'Libre Bodoni', courier, serif;
 :root {
     --bg: #{$bgCol};
     --text: #{$textCol};
-    --cta: #{$accentCol};
     --primary: #{$primaryCol};
     --secondary: #{$secondaryCol};
-    --accent: #{$accentCol};
+    --accent: #{$accentCol};    
+    --cta: #{$accentCol};
+    --grey: #{$grey};
 
     --fontfam1:'Merriweather', serif;
     --fontfam2:'Source Sans 3', sans-serif;
@@ -29,4 +30,11 @@ font-family: 'Libre Bodoni', courier, serif;
 body {
     color: var(--bg);
     font-family: var(--fontfam2);
+}
+
+#__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
