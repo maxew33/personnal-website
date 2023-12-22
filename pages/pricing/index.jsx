@@ -12,14 +12,15 @@ export default function Pricing() {
             <section className={styles.pricingWrapper}>
                 <article className={`${styles.article} ${styles.basic}`}>
                     <div className={styles.header}>
-                        <h3 className={styles.headerTitle}>
-                            offre essentielle
-                        </h3>
-                        <h4 className={styles.headerSubtitle}>
-                            présence en ligne
-                        </h4>
+                        à partir de <span className={styles.price}>600€</span>
                     </div>
                     <div className={styles.content}>
+                        <h3 className={styles.pricingTitle}>
+                            offre essentielle
+                        </h3>
+                        <h4 className={styles.pricingSubtitle}>
+                            présence en ligne
+                        </h4>
                         <ul className={styles.contentList}>
                             <li>Site vitrine</li>
                             <li>
@@ -30,18 +31,18 @@ export default function Pricing() {
                         </ul>
                     </div>
                     <div className={styles.footer}>
-                        à partir de{' '}
-                        <span className={styles.highLighted}>600 €</span>
+                        <Link href="/contact">en savoir +</Link>
                     </div>
                 </article>
                 <article className={`${styles.article} ${styles.standard}`}>
                     <div className={styles.header}>
-                        <h3 className={styles.headerTitle}>offre standard</h3>
-                        <h4 className={styles.headerSubtitle}>
-                            visibilité avancée
-                        </h4>
+                        à partir de <span className={styles.price}>1200€</span>
                     </div>
                     <div className={styles.content}>
+                        <h3 className={styles.pricingTitle}>offre standard</h3>
+                        <h4 className={styles.pricingSubtitle}>
+                            visibilité avancée
+                        </h4>
                         <ul className={styles.contentList}>
                             <li>Site vitrine jusqu'à 5 pages</li>
                             <li>Design personnalisé</li>
@@ -50,18 +51,20 @@ export default function Pricing() {
                         </ul>
                     </div>
                     <div className={styles.footer}>
-                        à partir de{' '}
-                        <span className={styles.highLighted}>1200 €</span>
+                        <Link href="/contact">en savoir +</Link>
                     </div>
                 </article>
                 <article className={`${styles.article} ${styles.premium}`}>
                     <div className={styles.header}>
-                        <h3 className={styles.headerTitle}>offre e-commerce</h3>
-                        <h4 className={styles.headerSubtitle}>
-                            boutique en ligne
-                        </h4>
+                        à partir de <span className={styles.price}>3000€</span>
                     </div>
                     <div className={styles.content}>
+                        <h3 className={styles.pricingTitle}>
+                            offre e-commerce
+                        </h3>
+                        <h4 className={styles.pricingSubtitle}>
+                            boutique en ligne
+                        </h4>
                         <ul className={styles.contentList}>
                             <li>Site e-commerce professionnel</li>
                             <li>Système de gestion de contenu (CMS)</li>
@@ -71,8 +74,7 @@ export default function Pricing() {
                         </ul>
                     </div>
                     <div className={styles.footer}>
-                        à partir de{' '}
-                        <span className={styles.highLighted}>3000 €</span>
+                        <Link href="/contact">en savoir +</Link>
                     </div>
                 </article>
             </section>
