@@ -1,10 +1,21 @@
-.main {
+.pageTitle, .main {
   color: var(--text);
   width: 1400px;
   margin: auto;
+}
+
+.pageTitle {
+  margin: 0.5rem auto 3rem;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: var(--fontfam1);
+  text-transform: capitalize;
+}
+
+.main {
   display: flex;
-  flex-grow: 1;
   margin-bottom: 2rem;
+  min-height: 34rem;
 }
 .main > section {
   flex: 1;
@@ -18,9 +29,18 @@
   padding: 2rem 0 0 2rem;
 }
 
+.title {
+  background: url("../../public/assets/contact/phone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--bg);
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
 .followUs {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
 }
 
 .icon {
@@ -28,6 +48,7 @@
   font-size: 2rem;
   line-height: 100%;
   padding: unset;
+  width: 2rem;
 }
 
 .contactUs a,
@@ -68,12 +89,15 @@
   width: 100%;
 }
 
-.input, .textArea {
+.input,
+.textArea {
   width: calc(100% - 2rem);
   padding: 0.5rem 1rem;
   font-size: 1.15rem;
 }
-.input:focus ~ .label, .input:valid ~ .label, .textArea:focus ~ .label, .textArea:valid ~ .label {
+.input:focus ~ .label, .input:valid ~ .label,
+.textArea:focus ~ .label,
+.textArea:valid ~ .label {
   font-size: 0.75rem;
   transform: translate(0.25rem, -100%);
 }
@@ -108,4 +132,24 @@
 
 .linksWrapper {
   background: var(--secondaryTransparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.linksWrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 2.5rem;
+  font-size: 1.25rem;
+}
+
+.socialIcon {
+  font-size: 2.5rem;
 }
