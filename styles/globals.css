@@ -68,6 +68,7 @@ font-family: 'Libre Bodoni', courier, serif;
   --text: #34495E;
   --primary: #2C3E50;
   --secondary: #9B59B6;
+  --secondaryTransparent: hsla(283, 39%, 53%, 0.2);
   --accent: #E74C3C;
   --cta: #E74C3C;
   --grey: #D9D9D9;

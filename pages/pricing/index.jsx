@@ -12,7 +12,7 @@ export default function Pricing() {
             <section className={styles.pricingWrapper}>
                 <article className={`${styles.article} ${styles.basic}`}>
                     <div className={styles.header}>
-                        à partir de <span className={styles.price}>600€</span>
+                        à partir de <span className={styles.price}>800€</span>
                     </div>
                     <div className={styles.content}>
                         <h3 className={styles.pricingTitle}>
@@ -36,7 +36,7 @@ export default function Pricing() {
                 </article>
                 <article className={`${styles.article} ${styles.standard}`}>
                     <div className={styles.header}>
-                        à partir de <span className={styles.price}>1200€</span>
+                        à partir de <span className={styles.price}>1500€</span>
                     </div>
                     <div className={styles.content}>
                         <h3 className={styles.pricingTitle}>offre standard</h3>

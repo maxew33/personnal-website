@@ -1,0 +1,111 @@
+.main {
+  color: var(--text);
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+.main > section {
+  flex: 1;
+}
+.main > section h2 {
+  font-size: 2.25rem;
+  font-family: var(--fontfam1);
+  text-transform: capitalize;
+}
+.main > section article {
+  padding: 2rem 0 0 2rem;
+}
+
+.followUs {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon {
+  color: var(--accent);
+  font-size: 2rem;
+  line-height: 100%;
+  padding: unset;
+}
+
+.contactUs a,
+.contactUs a:visited {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--bg);
+}
+.contactUs article {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 4rem);
+  justify-content: space-between;
+}
+
+.prez {
+  line-height: 1.15;
+  font-size: 1.15rem;
+}
+
+.formWrapper {
+  flex-grow: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 2rem);
+}
+
+.inputsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input, .textArea {
+  width: calc(100% - 2rem);
+  padding: 0.5rem 1rem;
+  font-size: 1.15rem;
+}
+.input:focus ~ .label, .input:valid ~ .label, .textArea:focus ~ .label, .textArea:valid ~ .label {
+  font-size: 0.75rem;
+  transform: translate(0.25rem, -100%);
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0.25rem, 20%);
+  font-size: 1rem;
+  transition: 0.15s transform ease-in-out, 0.15s font-size ease-in-out;
+}
+
+.messageWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.button {
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  padding: 0.75rem 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.linksWrapper {
+  background: var(--secondaryTransparent);
+}
