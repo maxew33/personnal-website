@@ -68,17 +68,17 @@ font-family: 'Libre Bodoni', courier, serif;
   --text: #000;
   --primary: #2C3E50;
   --secondary: #9B59B6;
-  --secondaryTransparent: hsla(283, 39%, 53%, 0.2);
+  --secondaryTransparent: #F8F4FA;
   --accent: #E74C3C;
-  --cta: #E74C3C;
   --grey: #D9D9D9;
   --fontfam1:"Merriweather", serif;
   --fontfam2:"Source Sans 3", sans-serif;
 }
 
 body {
-  color: var(--bg);
+  color: var(--text);
   font-family: var(--fontfam2);
+  background: var(--bg);
 }
 
 #__next {

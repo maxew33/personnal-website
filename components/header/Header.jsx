@@ -1,27 +1,35 @@
+'use client'
+ 
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import React, { useContext } from 'react'
+import React from 'react'
 import styles from './Header.module.css'
-import AppContext from '../context/AppContext'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
-    const context = useContext(AppContext)
+    const pathname = usePathname()
 
-    const handleClick = () => {
-        context.setDarkMode(!context.darkMode)
-        console.log('clic !', context.darkMode)
-    }
+    const paths =[
+        {
+            'path':'/',
+            'name':'accueil'
+        },
+        {
+            'path':'/projects/',
+            'name':'projets'
+        },
+        {
+            'path':'/pricing/',
+            'name':'tarifs'
+        },
+    ]
 
-    const handleScroll = () => {
-        console.log(123)
-    }
+    console.log(pathname)
 
     return (
         <div className={styles.headerContainer}>
-            <header className={styles.header} onScroll={handleScroll}>
-                <Link href="/" className={styles.link}>
+            <header className={styles.header}>
+                <Link href="/" className={styles.logoLink}>
                     <Image
                         src="/assets/logo.png"
                         width={256}
@@ -31,15 +39,14 @@ export default function Header() {
                     />
                 </Link>
                 <nav className={styles.navigation}>
-                    <Link href="/">accueil</Link>
-                    <Link href="/projects">projets</Link>
-                    <Link href="/pricing">tarifs</Link>
-                    {/* <Link href="/blog">articles</Link> */}
-                    <Link href="/contact" className={styles.contact}>
-                        contact
-                    </Link>
+                    {paths.map((path, index) => (
+                        <Link href={path.path} key={`path${index}`} className={`${styles.link} ${pathname === path.path && styles.active}`}>{path.name}</Link>
+                    ))}
+                    <Link href='/contact/' className={`${styles.contact} ${pathname === '/contact/' && styles.active}`}>contact</Link>
                 </nav>
             </header>
         </div>
     )
 }
+
+

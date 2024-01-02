@@ -1,31 +1,15 @@
-import Footer from '@/components/footer/Footer'
-import Header from '@/components/header/Header'
-import Head from 'next/head'
 import Link from 'next/link'
 import styles from './Home.module.css'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 export default function Home() {
-    const [imageData, setImageData] = useState('')
-
-    useEffect(() => {
-        setImageData(
-            '/assets/portraits/quinten-de-graaf-iwBfqKwaJQI-unsplash.jpg'
-        )
-
-        document.addEventListener('scroll', () => {
-            console.log(123)
-        })
-    }, [])
-
     return (
         <main className={styles.main}>
             <section className={styles.hero}>
                 <article
                     className={styles.sectionContent + ' ' + styles.heroContent}
                 >
-                    <div className={styles.heroText }>
+                    <div className={styles.heroText}>
                         <h1>
                             Soyez{' '}
                             <span className={styles.highlighted}>En ligne</span>{' '}
@@ -88,8 +72,13 @@ export default function Home() {
                 </article>
             </section>
             <section className={styles.features}>
-                <article className={`${styles.sectionContent} ${styles.featuresContent}`}>
-                    <Link href="/contact" className={`${styles.contactBtn} ${styles.featureLink}`}>
+                <article
+                    className={`${styles.sectionContent} ${styles.featuresContent}`}
+                >
+                    <Link
+                        href="/contact"
+                        className={`${styles.contactBtn} ${styles.featureLink}`}
+                    >
                         Commençons un projet
                     </Link>
                     <div className={styles.featuresWrapper}>
@@ -184,11 +173,11 @@ export default function Home() {
                         </article>
                         <article className={styles.testimonial}>
                             <p className={styles.testimonialContent}>
-                                Maxime est un professionnel à la fois très
-                                réactif et très à l'écoute. Quelqu'un sur qui
-                                l'on peut se fier. Il semble avoir une solution
-                                pour chaque problème et c'est toujours un atout
-                                pour moi de travailler avec lui.
+                                Nous sommes extrêmement satisfaits du site web
+                                que Velvet Web a créé. Leur approche
+                                professionnelle et leur attention aux détails
+                                ont permis de mettre en valeur notre expertise
+                                de manière élégante.
                             </p>
                             <span className={styles.testimonialAuthor}>
                                 Christophe V.
@@ -196,11 +185,11 @@ export default function Home() {
                         </article>
                         <article className={styles.testimonial}>
                             <p className={styles.testimonialContent}>
-                                Maxime est un professionnel à la fois très
-                                réactif et très à l'écoute. Quelqu'un sur qui
-                                l'on peut se fier. Il semble avoir une solution
-                                pour chaque problème et c'est toujours un atout
-                                pour moi de travailler avec lui.
+                                Mes attentes ont été dépassées avec ce portfolio
+                                interactif qui va au-delà d'une simple
+                                présentation de mes compétences pour devenir une
+                                véritable expérience immersive pour mes
+                                visiteurs.
                             </p>
                             <span className={styles.testimonialAuthor}>
                                 Maxime M.
@@ -208,6 +197,18 @@ export default function Home() {
                         </article>
                     </div>
                 </article>
+            </section>
+            <section className={styles.ctaSection}>
+                <div className={styles.ctaContent}>
+                    <h2>Prêt à donner vie à votre projet en ligne ?</h2>
+                    <p>
+                        Contactez-nous dès maintenant pour discuter de vos idées
+                        et commencer à créer le site web qui vous ressemble.
+                    </p>
+                    <Link href="/contact" className={styles.contactBtn}>
+                        Commencer
+                    </Link>
+                </div>
             </section>
         </main>
     )

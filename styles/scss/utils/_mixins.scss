@@ -1,30 +1,30 @@
-@mixin contactUs($size : inherit) {
+@mixin contactUs($size: inherit) {
     padding: $size/2 $size;
+    border: 1px solid var(--accent);
     border-radius: 25rem;
     color: var(--bg);
-    background: var(--cta);
+    background: var(--accent);
     font-weight: 400;
     font-size: $size;
+    &:hover {
+        background: var(--bg);
+        color: var(--accent);
+    }
 }
 
-@mixin flexCol{
+@mixin flexCol {
     display: flex;
     flex-direction: column;
 }
 
-@mixin flexSB{    
+@mixin flexSB {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-@mixin textShadow($color : white){
-    text-shadow: 1px 1px 0 $color, 
-    1px -1px 0 $color, 
-    -1px 1px 0 $color, 
-    -1px -1px 0 $color, 
-    1px 0px 0 $color, 
-    0px 1px 0 $color, 
-    -1px 0px 0 $color, 
-    0px -1px 0 $color;
+@mixin textShadow($color: white) {
+    text-shadow: 1px 1px 0 $color, 1px -1px 0 $color, -1px 1px 0 $color,
+        -1px -1px 0 $color, 1px 0px 0 $color, 0px 1px 0 $color,
+        -1px 0px 0 $color, 0px -1px 0 $color;
 }

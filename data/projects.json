@@ -33,14 +33,18 @@
         {
             "name": "Maxime Malfilâtre, développeur front end",
             "description": "Maxime Malfilâtre est un développeur front-end basé à Bordeaux. Son portfolio présente ses compétences en matière de développement web, mettant en avant des projets variés et innovants.",
-            "objectives": "L'objectif était de créer un site web qui reflète le talent et la créativité de Maxime Malfilâtre. En mettant l'accent sur ses compétences en développement front-end, le portfolio devait être à la fois professionnel et captivant.",
-            "implementation": "Nous avons développé un site web personnalisé, mettant en valeur les projets exceptionnels de Maxime Malfilâtre. Chaque détail, de la navigation fluide à la présentation visuelle, a été soigneusement intégré pour offrir une expérience utilisateur optimale.",
+            "objectives": "L'objectif était de concevoir un site web qui reflète la personnalité créative de Maxime Malfilâtre. Le portfolio devait être plus qu'une simple vitrine de compétences, mais une immersion dans son style, sa créativité et son approche unique du développement web.",
+            "implementation": "Nous avons développé un site web sur mesure, mettant en avant des projets personnels et originaux de Maxime. L'interaction était au cœur de la conception, offrant aux visiteurs une expérience immersive qui va au-delà des simples démonstrations techniques.",
             "highlights": [
-                "Design Professionnel : Une esthétique moderne et professionnelle pour mettre en valeur les compétences de Maxime Malfilâtre.",
-                "Développement Front-End : Présentation détaillée de ses compétences en développement front-end à travers des projets concrets.",
-                "Expérience Utilisateur Captivante : Une navigation intuitive pour découvrir son portfolio et en apprendre davantage sur son parcours professionnel."
+                "Une esthétique unique et personnelle.",
+                "Une exploration interacive des projets.",
+                "Une navigation immersive."
+              
             ],
-            "image": "path/to/maxime_malfilatre_image.jpg"
+            "result": {
+                "name": "visuels du site de Maxime Malfilâtre",
+                "path": "/assets/projects/maximeMalfilatre.png"
+            }
         }
     ]
 }

@@ -20,8 +20,7 @@ font-family: 'Libre Bodoni', courier, serif;
     --primary: #{$primaryCol};
     --secondary: #{$secondaryCol};
     --secondaryTransparent: #{$secondaryColTrans};
-    --accent: #{$accentCol};    
-    --cta: #{$accentCol};
+    --accent: #{$accentCol};   
     --grey: #{$grey};
 
     --fontfam1:'Merriweather', serif;
@@ -29,8 +28,9 @@ font-family: 'Libre Bodoni', courier, serif;
 }
 
 body {
-    color: var(--bg);
+    color: var(--text);
     font-family: var(--fontfam2);
+    background: var(--bg);
 }
 
 #__next {
