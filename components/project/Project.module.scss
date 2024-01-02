@@ -1,5 +1,80 @@
-.section{
+@import '../../styles/scss/utils/mixins';
+
+.section {
     color: var(--text);
     max-width: 1400px;
-    margin: 0 auto;
+    margin: auto;
+}
+
+.header {
+    color: var(--bg);
+    font-size: 2rem;
+    height: 6rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 1rem;
+
+    .nameContainer {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: #2c3e5080;
+        cursor: pointer;
+
+        h2 {
+            font-family: var(--fontfam1);
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+    }
+}
+
+.chevron{
+    position: absolute;
+    right: 1rem; 
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: .25s transform linear;
+}
+
+.chevronActive{    
+    transform: translate(0, -50%) rotate(-180deg);
+}
+
+.contentWrapper{
+    height: 0px;
+    transition: .5s height;
+    overflow: hidden;
+}
+
+.active{
+    height: 35rem;
+}
+
+.description {
+    font-size: 1.25rem;
+}
+
+.content {
+    @include flexSB;
+    margin: 2rem 0;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.contentText {
+    line-height: 1.5;
+    background: var(--secondaryTransparent);
+    padding: 0.5rem 1rem;
+
+    >*:not(:first-child){
+        margin-top: 0.75rem;
+    } 
+}
+
+.contentName {
+    font-size: 1.5rem;
 }

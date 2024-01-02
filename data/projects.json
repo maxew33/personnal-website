@@ -1,0 +1,46 @@
+{
+    "projects": [
+        {
+            "name": "Cabinet CAP Patrimoine",
+            "description": "Le Cabinet CAP Patrimoine, spécialisé en conseil de gestion de patrimoine, était à la recherche d'une présence en ligne qui reflète son engagement envers l'excellence dans le domaine financier, immobilier, de la défiscalisation, de la retraite, de l'épargne, et de la prévoyance.",
+            "objectives": "Notre objectif était de créer un site web qui transmette la sophistication de leurs services tout en fournissant une expérience utilisateur intuitive.",
+            "implementation": "Nous avons développé un site web sur mesure pour le Cabinet CAP Patrimoine, mettant en avant chaque aspect de leurs services de gestion privée. La conception a été pensée pour refléter la confiance, l'expertise et l'attention personnalisée qu'ils offrent à leurs clients.",
+            "highlights": [
+                "Une esthétique sophistiquée pour correspondre à la nature haut de gamme des services du Cabinet.",
+                "Des sections détaillées sur les domaines de compétence du Cabinet, fournissant aux visiteurs des informations claires et utiles.",
+                "Des incitations stratégiques à contacter le Cabinet pour des conseils personnalisés."
+            ],
+            "result": {
+                "name": "visuels du site du cabinet cap patrimoine",
+                "path": "/assets/projects/cabinetCapPatrimoine.png"
+            }
+        },
+        {
+            "name": "Jérémie Bonne, Graphiste Bordelais",
+            "description": "Jérémie Bonne est un graphiste talentueux basé à Bordeaux. Spécialisé dans la communication, le lettrage, et l'identité visuelle, il fournit des services créatifs de haute qualité.",
+            "objectives": "Notre objectif était de créer un site web qui mette en valeur le travail exceptionnel de Jérémie Bonne. En collaborant étroitement avec lui, nous avons intégré sa maquette tout en garantissant une expérience utilisateur fluide et esthétique.",
+            "implementation": "Nous avons développé un site web sur mesure, reflétant le style distinctif de Jérémie Bonne. Chaque détail, du lettrage à l'identité visuelle, a été intégré avec précision pour présenter son travail de manière percutante.",
+            "highlights": [
+                "Une intégration fidèle de la maquette fournie par Jérémie Bonne.",
+                "Mise en avant de ses compétences en communication visuelle à travers des éléments graphiques saisissants.",
+                "Une navigation intuitive pour découvrir le portfolio diversifié de Jérémie Bonne."
+            ],
+            "result": {
+                "name": "visuels du site de Jérémie Bonne",
+                "path": "/assets/projects/jeremieBonne.png"
+            }
+        },
+        {
+            "name": "Maxime Malfilâtre, développeur front end",
+            "description": "Maxime Malfilâtre est un développeur front-end basé à Bordeaux. Son portfolio présente ses compétences en matière de développement web, mettant en avant des projets variés et innovants.",
+            "objectives": "L'objectif était de créer un site web qui reflète le talent et la créativité de Maxime Malfilâtre. En mettant l'accent sur ses compétences en développement front-end, le portfolio devait être à la fois professionnel et captivant.",
+            "implementation": "Nous avons développé un site web personnalisé, mettant en valeur les projets exceptionnels de Maxime Malfilâtre. Chaque détail, de la navigation fluide à la présentation visuelle, a été soigneusement intégré pour offrir une expérience utilisateur optimale.",
+            "highlights": [
+                "Design Professionnel : Une esthétique moderne et professionnelle pour mettre en valeur les compétences de Maxime Malfilâtre.",
+                "Développement Front-End : Présentation détaillée de ses compétences en développement front-end à travers des projets concrets.",
+                "Expérience Utilisateur Captivante : Une navigation intuitive pour découvrir son portfolio et en apprendre davantage sur son parcours professionnel."
+            ],
+            "image": "path/to/maxime_malfilatre_image.jpg"
+        }
+    ]
+}

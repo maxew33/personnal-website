@@ -1,54 +1,111 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Project.module.css'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export default function Project(props) {
-
     const [data, setData] = useState({
         name: 'nom',
         description: 'description',
-        goal: 'objectifs',
+        objectives: 'objectifs',
+        implementation: 'réalisation',
         highlights: ['points forts'],
-        image: { nom: 'name', path: '' },
+        result: { nom: 'name', path: '' },
+        banner: '',
     })
 
-    useEffect(() => {
-      if (props) {
-          const { name, description, goal, highlights, image } = props;
+    const [active, setActive] = useState(false)
 
-          // Update the state with the values from props
-          setData({
-              name: name || 'nom',
-              description: description || 'description',
-              goal: goal || 'objectifs',
-              highlights: highlights || ['points forts'],
-              image: { nom: image?.nom || 'name', path: image?.path || '' },
-          });
-      }
-  }, [props]);
+    useEffect(() => {
+        if (props) {
+            const {
+                name,
+                description,
+                objectives,
+                highlights,
+                result,
+                banner,
+                implementation,
+            } = props
+
+            // Update the state with the values from props
+            setData({
+                name: name || 'nom',
+                description: description || 'description',
+                objectives: objectives || 'objectifs',
+                implementation: implementation || 'réalisation',
+                highlights: highlights || ['points forts'],
+                result: {
+                    name: result?.name || 'visuels',
+                    path: result?.path || '',
+                },
+                banner: banner || '/assets/projects/banner.jpg',
+            })
+        }
+    }, [props])
+
+    const openWrapper = () => {
+        setActive(!active)
+    }
 
     return (
         <section className={styles.section}>
-            <header>
-                <h2>{data.name}</h2>
-            </header>
-            <div className={styles.content}>
-                <div>
-                <p>{data.description}</p>
-                    <p>Goal: {data.goal}</p>
-                    <ul>
-                        {data.highlights.map((highlight, index) => (
-                            <li key={index}>{highlight}</li>
-                        ))}
-                    </ul>
+            <header
+                style={{ backgroundImage: `url(${data.banner})` }}
+                className={styles.header}
+            >
+                <div className={styles.nameContainer} onClick={openWrapper}>
+                    <h2>{data.name}</h2>
+                    <span
+                        className={`${styles.chevron} ${
+                            active && styles.chevronActive
+                        }`}
+                    >
+                        <FontAwesomeIcon icon={faChevronDown} />
+                    </span>
                 </div>
-                <Image
-                    src={data.image.path || '/assets/home/chooseUs.png'}
-                    height={467}
-                    width={700}
-                    className={styles.articleIllus}
-                    alt={data.image.nom || 'pourquoi choisir Velvet Studio'}
-                />
+            </header>
+
+            <div
+                className={`${styles.contentWrapper} ${
+                    active && styles.active
+                }`}
+            >
+                <p className={styles.description}>{data.description}</p>
+                <div className={styles.content}>
+                    <div className={styles.contentText}>
+                        <div>
+                            <h3 className={styles.contentName}>Objectifs : </h3>
+                            {data.objectives}
+                        </div>
+                        <div>
+                            <h3 className={styles.contentName}>
+                                Réalisation :{' '}
+                            </h3>
+                            {data.implementation}
+                        </div>
+                        <div>
+                            <h3 className={styles.contentName}>
+                                Points forts :
+                            </h3>{' '}
+                            <ul>
+                                {data.highlights.map((highlight, index) => (
+                                    <li key={`hightlight${index}`}>
+                                        {highlight}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <Image
+                        src={data.result.path || '/assets/home/chooseUs.png'}
+                        height={295}
+                        width={530}
+                        className={styles.articleIllus}
+                        alt={data.result.name || 'visuels du site'}
+                    />
+                </div>
             </div>
         </section>
     )
