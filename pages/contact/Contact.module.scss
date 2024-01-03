@@ -134,7 +134,7 @@ text-transform: capitalize;
 }
 
 .linksWrapper {
-    background: var(--secondaryTransparent);
+    background: var(--lightCol);
     @include flexCol;
     gap: 0.5rem;
 

@@ -131,7 +131,7 @@
 }
 
 .linksWrapper {
-  background: var(--secondaryTransparent);
+  background: var(--lightCol);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

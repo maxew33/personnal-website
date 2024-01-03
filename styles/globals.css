@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Libre+Bodoni:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Nova+Cut&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap&family=Merriweather&display=swap&family=Acme&family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Libre+Bodoni:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Nova+Cut&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap&family=Merriweather&display=swap&family=Acme&family=Merriweather&family=Anton&family=Archivo+Black&family=Lilita+One&family=Outfit&family=Seymour+One&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,23 +55,28 @@ table {
 
 /* END OF RESET */
 /*
-font-family: 'Afacad', sans-serif;
 font-family: 'Crimson Text', serif;
-font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Playfair Display SC', serif;
-font-family: 'Source Sans 3', sans-serif;
-font-family: 'Nova Cut', sans-serif;
 font-family: 'Libre Bodoni', courier, serif;
+
+font-family: 'Afacad', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Source Sans 3', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Lilita One', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Seymour One', sans-serif;
 */
 :root {
   --bg: #F9FEFF;
   --text: #000;
-  --primary: #2C3E50;
-  --secondary: #9B59B6;
-  --secondaryTransparent: #F8F4FA;
-  --accent: #E74C3C;
+  --primary: #4C5E9D;
+  --secondary: #FF9209;
+  --lightCol: #FFF4ED;
+  --accent: #FF6C22;
   --grey: #D9D9D9;
-  --fontfam1:"Merriweather", serif;
+  --fontfam1:"Archivo Black", serif;
   --fontfam2:"Source Sans 3", sans-serif;
 }
 

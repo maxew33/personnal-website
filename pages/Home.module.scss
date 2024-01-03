@@ -1,6 +1,8 @@
 @import '../styles/scss/utils/mixins';
 
 .main {
+    position: relative;
+    top: -5rem;
     width: 100%;
     font-size: 1.25rem;
     font-family: var(--fontfam2);
@@ -31,7 +33,7 @@
 
 .heroContent {
     position: relative;
-    top: 6rem;
+    top: 8rem;
     height: 40rem;
     @include flexSB;
 }
@@ -119,7 +121,7 @@
     align-items: center;
     width: 25%;
     padding: 1rem 1.5rem;
-    background: linear-gradient(#fffe, #fffe), var(--secondary);
+    background: var(--lightCol);
     border-radius: 2rem 2rem 0 0;
     height: 10rem;
 }
@@ -134,7 +136,7 @@
 }
 
 .solutionsWrapper {
-    background: linear-gradient(#fffe, #fffe), var(--secondary);
+    background: var(--lightCol);
 }
 
 .solutions {
