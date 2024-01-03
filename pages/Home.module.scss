@@ -2,7 +2,7 @@
 
 .main {
     position: relative;
-    top: -5rem;
+    top: -2rem;
     width: 100%;
     font-size: 1.25rem;
     font-family: var(--fontfam2);
@@ -23,28 +23,34 @@
 }
 
 .sectionContent {
+    width: 98%;
     max-width: 1400px;
     margin: auto;
-}
-
-%txtPadding {
-    padding: 0 1.5rem;
+    display: grid;
+    grid-template-areas:
+        'illus title'
+        'illus content';
+    gap: 1rem;
+    align-items: center;
 }
 
 .heroContent {
     position: relative;
     top: 8rem;
     height: 40rem;
-    @include flexSB;
-}
-
-.heroText {
-    flex: 1;
+    width: 98%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        'title illus'
+        'welcome illus'
+        'linkContainer illus'
+        'invit illus';
     line-height: 1.5;
     height: 100%;
-    @include flexCol;
-    @extend %txtPadding;
-    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
     p {
         &:last-of-type,
         a {
@@ -53,24 +59,45 @@
     }
 }
 
+.title {
+    grid-area: title;
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
 .highlighted {
     color: var(--secondary);
 }
 
 .linkContainer {
+    grid-area: linkContainer;
     @include flexSB;
 }
 
 .contactBtn {
     text-decoration: none;
     @include contactUs($size: 1.25rem);
-    // padding: .75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
 }
 
 .heroIllus {
+    grid-area: illus;
+    max-width: 40vw;
     height: 100%;
     object-fit: cover;
 }
+
+.invit{
+    grid-area: invit;
+}
+
+.link {
+    @include links;
+}
+
+//======= ARGUMENTS =======//
 
 .arguments {
     background: var(--primary);
@@ -80,18 +107,24 @@
     position: relative;
     top: 15rem;
     height: 30rem;
-    @include flexSB;
 }
 
-.articleTextWrapper {
+.articleIllus {
+    grid-area: illus;
     height: 100%;
-    @include flexCol;
-    justify-content: space-evenly;
-    @extend %txtPadding;
+    max-width: 45vw;
+    object-fit: cover;
 }
 
-.argumentsTitle {
+.articleTitle {
+    grid-area: title;
     color: var(--bg);
+    align-self: center;
+}
+
+.articleText {
+    grid-area: content;
+    align-self: center;
 }
 
 .features {
@@ -104,7 +137,7 @@
 }
 
 .featureLink {
-    margin: 5rem;
+    margin: 2.5rem 0 5rem;
     align-self: center;
     font-size: 2rem;
     padding: 1rem 2rem;
@@ -140,25 +173,25 @@
 }
 
 .solutions {
-    display: flex;
     padding: 5rem 0;
-}
 
-.solutionsContent {
-    @include flexCol;
-    @extend %txtPadding;
-    justify-content: space-around;
+    & .articleTitle {
+        color: unset;
+    }
 }
 
 .testimonialsTitle {
     margin: 5rem 0;
     text-align: center;
+    line-height: 1.15;
 }
 
 .testimonialsWrapper {
     @include flexSB;
     gap: 5rem;
     margin-bottom: 5rem;
+    max-width: calc(100% - 3rem);
+    margin: auto;
     article {
         flex: 1 1 0;
     }
@@ -193,4 +226,157 @@
     width: 100%;
     text-align: right;
     margin-top: 1rem;
+}
+
+.ctaSection {
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 6rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.ctaBtn {
+    @include contactUs($size: 2.25rem);
+    padding: 0.5rem 2.5rem;
+    margin: 3rem 0 2rem;
+}
+
+@media screen and (max-width: 1080px) {
+    .heroContent {
+        grid-template-areas:
+            'title title'
+            'welcome illus'
+            'linkContainer illus'
+            'invit illus';
+        gap: 2.5rem;
+    }
+
+    .sectionContent {
+        grid-template-areas:
+            'title title'
+            'illus content';
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .articleTitle {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .argumentsContent {
+        height: 20rem;
+    }
+
+    // FEATURES //
+
+    .featuresWrapper {
+        @include flexCol;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .feature {
+        @include flexSB;
+        width: 100%;
+        border-radius: unset;
+        height: 100%;
+        padding: 1rem 0;
+        >*{
+            max-width: 98%;
+            margin: auto;
+        }
+    }
+
+    .featureTitle {
+        font-size: 1.75rem;
+    }
+
+    .featureText {
+        font-size: 1.25rem;
+    }
+
+    .featuresContent {
+        width: 100%;
+        padding-bottom: 5rem;
+    }
+
+    .solutionsWrapper {
+        background: var(--primary);
+        color: var(--bg);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .testimonialsTitle {
+        margin: 5rem 10%;
+    }
+
+    .testimonialsWrapper {
+        @include flexCol;
+        gap: 2.5rem;
+        max-width: calc(100% - 6rem);
+    }
+
+    .testimonialContent {
+        font-size: 1.25rem;
+    }
+
+    .ctaSection {
+        max-width: 80%;
+        line-height: 1.15;
+    }
+
+    .ctaContent {
+        padding-top: 1.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .heroContent {
+        grid-template-areas:
+            'title title'
+            'welcome welcome'
+            'linkContainer illus'
+            'invit illus';
+    }
+
+    .sectionContent {
+        grid-template-areas:
+            'title title'
+            'illus illus'
+            'content content';
+        gap: 1rem;
+    }
+
+    .argumentsContent {
+        height: unset;
+    }
+
+    .articleIllus {
+        max-width: 100%;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .heroContent {
+        grid-template-areas:
+            'title title'
+            'welcome welcome'
+            'linkContainer linkContainer'
+            'illus illus'
+            'invit invit';
+        gap: 2.5rem;
+        height: 50rem;
+    }
+
+    .heroIllus{
+        max-width: 100%;
+        height: 15rem;
+    }
 }

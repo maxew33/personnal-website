@@ -3,7 +3,11 @@ import styles from './Footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+    faFacebook,
+    faFacebookSquare,
+    faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
     return (
@@ -23,22 +27,33 @@ export default function Footer() {
                         <span>Agency</span>
                     </span>
                 </Link>
-                <span>©Velvet web agency Bordeaux 2024</span>
-                <Link href="/pricing">Nos solutions</Link>
-                <Link href="/legal">Mentions Légales</Link>
+                <span className={styles.copyright}>
+                    ©Velvet web agency Bordeaux 2024
+                </span>
+                <Link href="/pricing" className={styles.solutions}>
+                    Nos solutions
+                </Link>
+                <Link href="/legal" className={styles.legal}>
+                    Mentions Légales
+                </Link>
                 {/* <Link href="/blog">articles</Link> */}
                 <Link href="/contact" className={styles.contact}>
                     contact
                 </Link>
-                <Link
-                    href="https://www.linkedin.com/in/maxime-malfilatre/"
-                    className={styles.contact}
-                >
-                    <FontAwesomeIcon
-                        icon={faLinkedin}
-                        className={styles.icon}
-                    />
-                </Link>
+                <div className={styles.social}>
+                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/">
+                        <FontAwesomeIcon
+                            icon={faLinkedin}
+                            className={styles.icon}
+                        />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/">
+                        <FontAwesomeIcon
+                            icon={faFacebookSquare}
+                            className={styles.icon}
+                        />
+                    </Link>
+                </div>
             </div>
         </footer>
     )

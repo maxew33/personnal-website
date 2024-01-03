@@ -7,34 +7,37 @@ export default function Home() {
         <main className={styles.main}>
             <section className={styles.hero}>
                 <article
-                    className={styles.sectionContent + ' ' + styles.heroContent}
+                    className={styles.heroContent}
                 >
-                    <div className={styles.heroText}>
-                        <h1>
-                            Soyez{' '}
-                            <span className={styles.highlighted}>En ligne</span>{' '}
-                            avec un site qui{' '}
-                            <span className={styles.highlighted}>vous</span>{' '}
-                            ressemble.
-                        </h1>
-                        <p>
-                            Bienvenue chez Velvet Studio, votre partenaire de
-                            confiance pour la création de sites web
-                            exceptionnels.
-                        </p>
-                        <span className={styles.linkContainer}>
-                            <Link href="/contact" className={styles.contactBtn}>
-                                Commençons un projet
-                            </Link>
-                            <Link href="/projects">Voir nos projets →</Link>
-                        </span>
-                        <p>
-                            Particulier cherchant à partager votre passion ou
-                            entreprise visant à se démarquer nous sommes là pour
-                            transformer vos idées en réalité :{' '}
-                            <Link href="/contact">contactez-nous</Link>.
-                        </p>
-                    </div>
+                    <h1 className={styles.title}>
+                        Soyez{' '}
+                        <span className={styles.highlighted}>En ligne</span>{' '}
+                        avec un site qui{' '}
+                        <span className={styles.highlighted}>vous</span>{' '}
+                        ressemble.
+                    </h1>
+
+                    <p className={styles.welcome}>
+                        Bienvenue chez Velvet Studio, votre partenaire de
+                        confiance pour la création de sites web exceptionnels.
+                    </p>
+
+                    <span className={styles.linkContainer}>
+                        <Link href="/contact" className={styles.contactBtn}>
+                            Commençons un projet
+                        </Link>
+                        <Link href="/projects" className={styles.link}>
+                            Voir nos projets
+                        </Link>
+                    </span>
+
+                    <p className={styles.invit}>
+                        Particulier cherchant à partager votre passion ou entreprise visant à se démarquer nous sommes là pour transformer vos idées en réalité :{' '}
+                        <Link href="/contact" className={styles.link}>
+                            contactez-nous.
+                        </Link>
+                    </p>
+
                     <Image
                         src="/assets/home/desk.png"
                         height={467}
@@ -46,9 +49,7 @@ export default function Home() {
             </section>
             <section className={styles.arguments}>
                 <article
-                    className={
-                        styles.sectionContent + ' ' + styles.argumentsContent
-                    }
+                    className={`${styles.sectionContent} ${styles.argumentsContent}`}
                 >
                     <Image
                         src="/assets/home/chooseUs.png"
@@ -57,18 +58,16 @@ export default function Home() {
                         className={styles.articleIllus}
                         alt="pourquoi choisir Velvet Studio"
                     />
-                    <div className={styles.articleTextWrapper}>
-                        <h2 className={styles.argumentsTitle}>
+                        <h2 className={styles.articleTitle}>
                             Choisir Velvet Web
                         </h2>
-                        <p className={styles.argumentsText}>
+                        <p className={styles.articleText}>
                             C'est choisir l'engagement envers l'excellence. Un
                             engagement qui se manifeste à travers nos créations.
                             Chaque site est le résultat d'une collaboration
                             étroite avec nos clients, transformant leurs idées
                             en des expériences en ligne uniques.
                         </p>
-                    </div>
                 </article>
             </section>
             <section className={styles.features}>
@@ -136,7 +135,6 @@ export default function Home() {
                         className={styles.articleIllus}
                         alt="pourquoi choisir Velvet Studio"
                     />
-                    <div className={styles.solutionsContent}>
                         <h2 className={styles.articleTitle}>
                             Des Solutions Sur Mesure{' '}
                         </h2>
@@ -148,11 +146,10 @@ export default function Home() {
                             indépendant, ou une entreprise établie, notre
                             approche est inclusive.
                         </p>
-                    </div>
                 </article>
             </section>
             <section className={styles.testimonials}>
-                <article className={styles.sectionContent}>
+                <article className={styles.testimonialsContent}>
                     <h2 className={styles.testimonialsTitle}>
                         La{' '}
                         <span className={styles.highlighted}>satisfaction</span>{' '}
@@ -199,16 +196,14 @@ export default function Home() {
                 </article>
             </section>
             <section className={styles.ctaSection}>
-                <div className={styles.ctaContent}>
-                    <h2>Prêt à donner vie à votre projet en ligne ?</h2>
-                    <p>
-                        Contactez-nous dès maintenant pour discuter de vos idées
-                        et commencer à créer le site web qui vous ressemble.
-                    </p>
-                    <Link href="/contact" className={styles.contactBtn}>
-                        Commencer
-                    </Link>
-                </div>
+                <h2 className={styles.ctaTitle}>Prêt à donner vie à votre projet en ligne ?</h2>
+                <p className={styles.ctaContent}>
+                    Contactez-nous dès maintenant pour discuter de vos idées et
+                    commencer à créer le site web qui vous ressemble.
+                </p>
+                <Link href="/contact" className={styles.ctaBtn}>
+                    Commencer
+                </Link>
             </section>
         </main>
     )

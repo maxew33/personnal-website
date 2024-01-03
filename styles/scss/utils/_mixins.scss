@@ -28,3 +28,23 @@
         -1px -1px 0 $color, 1px 0px 0 $color, 0px 1px 0 $color,
         -1px 0px 0 $color, 0px -1px 0 $color;
 }
+
+@mixin links{    
+    color: unset;
+
+    &::after{
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: var(--accent);
+        transition: transform .15s linear;
+        transform-origin: right;
+    }
+
+    &:hover::after{
+        transform: scaleX(0);
+    }
+}

@@ -11,13 +11,18 @@
 
 .footerWrapper {
     margin: auto;
+    width: calc(100% - 4rem);
     max-width: 1400px;
-    display: flex;
+    display: grid;
+    grid-template-areas: 'logo copyright solutions legal contact social';
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    text-transform: capitalize;
 }
 
-.link {
+.link,
+.link:hover {
+    justify-self: flex-start;
     height: 2.5rem;
     color: var(--bg);
     text-decoration: none;
@@ -25,6 +30,7 @@
     align-items: center;
     font-size: 0.75rem;
     gap: 0.5rem;
+    grid-area: logo;
 }
 
 .logo {
@@ -40,6 +46,63 @@
     height: inherit;
 }
 
+.copyright {
+    grid-area: copyright;
+}
+
+.solutions {
+    grid-area: solutions;
+}
+
+.legal {
+    grid-area: legal;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.social {
+    grid-area: social;
+    justify-self: flex-end;
+    display: flex;
+    gap: 1rem;
+}
+
 .icon {
     font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .footerWrapper {
+        row-gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            'logo solutions contact social'
+            'logo solutions contact social'
+            'copyright copyright legal legal';
+    }
+}
+@media screen and (max-width: 576px) {
+    .footerWrapper {
+        row-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'logo contact social'
+            'solutions . legal'
+            'copyright copyright copyright';
+    }
+
+    .copyright {
+        justify-self: flex-start;
+    }
+    
+    .solutions {
+        justify-self: flex-start;
+    }
+    
+    .legal {
+        justify-self: flex-end;
+    }
+    
 }

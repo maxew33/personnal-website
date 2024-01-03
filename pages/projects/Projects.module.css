@@ -3,11 +3,13 @@
   max-width: 1400px;
   margin: 0 auto;
 }
+.main > * {
+  line-height: 1.75;
+}
 
 .header {
   margin: 4rem auto 8rem;
-  line-height: 1.75;
-  width: min(1000px, 100%);
+  width: min(1000px, 98%);
 }
 
 .headerTitle {

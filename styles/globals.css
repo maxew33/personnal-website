@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -73,7 +74,7 @@ font-family: 'Seymour One', sans-serif;
   --text: #000;
   --primary: #4C5E9D;
   --secondary: #FF9209;
-  --lightCol: #FFF4ED;
+  --lightCol: #eee;
   --accent: #FF6C22;
   --grey: #D9D9D9;
   --fontfam1:"Archivo Black", serif;
@@ -91,4 +92,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+a, a:hover, a:visited {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  /* Votre code CSS spécifique pour les écrans mobiles (portrait) */
+}
+/* Mobile (paysage) */
+@media screen and (max-width: 767px) {
+  /* Votre code CSS spécifique pour les écrans mobiles (paysage) */
+}
+/* Tablette */
+@media screen and (max-width: 991px) {
+  /* Votre code CSS spécifique pour les tablettes */
+}
+/* Petits écrans d'ordinateur portable */
+@media screen and (max-width: 1199px) {
+  /* Votre code CSS spécifique pour les petits écrans d'ordinateur portable */
+}
+/* Écrans d'ordinateur portable/moyens */
+@media screen and (max-width: 1400px) {
+  :root {
+    font-size: 14px;
+  }
 }

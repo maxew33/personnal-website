@@ -44,6 +44,9 @@
   height: 0px;
   transition: 0.5s height;
   overflow: hidden;
+  width: 98%;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .active {
