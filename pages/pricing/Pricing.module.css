@@ -6,26 +6,27 @@
   justify-content: space-around;
   color: var(--text);
   max-width: 1400px;
+  width: 100%;
   margin: auto;
 }
 
 .title,
 .subtitle {
   font-family: var(--fontfam1);
+  max-width: 90%;
+  text-align: center;
 }
 
 .title {
   font-size: 2.75rem;
-}
-
-.title {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
 }
 
 .pricingWrapper {
   display: flex;
-  width: 100%;
-  padding: 2rem;
+  width: 1400px;
+  max-width: 98%;
+  padding: 2rem 0;
   justify-content: space-between;
 }
 
@@ -34,6 +35,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 25rem;
+  max-width: 31%;
   background: #fff;
   border-radius: 2.5rem;
   box-shadow: 0px 4px 4px 0 var(--grey);
@@ -156,4 +158,104 @@
 
 .highLighted {
   color: var(--articleBg);
+}
+
+.more,
+.labelForMore,
+.labelForLess {
+  display: none;
+}
+
+.labelForMore,
+.labelForLess {
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+}
+.labelForMore::after,
+.labelForLess::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 10rem;
+  background: var(--grey);
+}
+
+@media screen and (max-width: 1200px) {
+  .contentList {
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pricingWrapper {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .contentList {
+    height: auto;
+  }
+  .article {
+    flex-direction: row;
+    width: 45rem;
+    max-width: 98%;
+    margin: auto;
+  }
+  .header {
+    width: 30%;
+    padding: 1.5rem;
+    border-radius: 2.5rem 0 0 2.5rem;
+  }
+  .header ::after {
+    left: 98%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid var(--articleBg);
+  }
+  .content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article:hover {
+    transform: unset;
+  }
+  .header {
+    width: 40%;
+    padding: 1.5rem;
+  }
+  .content {
+    width: 60%;
+  }
+  .labelForMore {
+    display: block;
+  }
+  .more:checked ~ .contentList {
+    display: block;
+  }
+  .more:checked ~ .labelForLess {
+    display: block;
+  }
+  .more:checked ~ .labelForMore {
+    display: none;
+  }
+  .contentList {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    font-size: 5vw;
+  }
+  .price {
+    font-size: 10vw;
+    display: block;
+  }
+  .pricingTitle {
+    font-size: 6vw;
+  }
 }

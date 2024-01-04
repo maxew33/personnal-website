@@ -21,6 +21,24 @@ export default function Pricing() {
                         <h4 className={styles.pricingSubtitle}>
                             présence en ligne
                         </h4>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="moreBasic"
+                            className={styles.more}
+                        />
+                        <label
+                            htmlFor="moreBasic"
+                            className={styles.labelForMore}
+                        >
+                            en savoir +{' '}
+                        </label>
+                        <label
+                            htmlFor="moreBasic"
+                            className={styles.labelForLess}
+                        >
+                            fermer
+                        </label>
                         <ul className={styles.contentList}>
                             <li>Site vitrine</li>
                             <li>
@@ -29,9 +47,9 @@ export default function Pricing() {
                             </li>
                             <li>Référencement de base</li>
                         </ul>
-                    </div>
-                    <div className={styles.footer}>
-                        <Link href="/contact">en savoir +</Link>
+                        <div className={styles.footer}>
+                            <Link href="/contact">Contact</Link>
+                        </div>
                     </div>
                 </article>
                 <article className={`${styles.article} ${styles.standard}`}>
@@ -43,15 +61,33 @@ export default function Pricing() {
                         <h4 className={styles.pricingSubtitle}>
                             visibilité avancée
                         </h4>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="moreStandard"
+                            className={styles.more}
+                        />
+                        <label
+                            htmlFor="moreStandard"
+                            className={styles.labelForMore}
+                        >
+                            en savoir +{' '}
+                        </label>
+                        <label
+                            htmlFor="moreStandard"
+                            className={styles.labelForLess}
+                        >
+                            fermer
+                        </label>
                         <ul className={styles.contentList}>
                             <li>Site vitrine jusqu'à 5 pages</li>
                             <li>Design personnalisé</li>
                             <li>Formulaire de contact</li>
                             <li>Référencement avancé</li>
                         </ul>
-                    </div>
-                    <div className={styles.footer}>
-                        <Link href="/contact">en savoir +</Link>
+                        <div className={styles.footer}>
+                            <Link href="/contact">Contact</Link>
+                        </div>
                     </div>
                 </article>
                 <article className={`${styles.article} ${styles.premium}`}>
@@ -65,6 +101,24 @@ export default function Pricing() {
                         <h4 className={styles.pricingSubtitle}>
                             boutique en ligne
                         </h4>
+                        <input
+                            type="checkbox"
+                            name=""
+                            id="morePremium"
+                            className={styles.more}
+                        />
+                        <label
+                            htmlFor="morePremium"
+                            className={styles.labelForMore}
+                        >
+                            en savoir +{' '}
+                        </label>
+                        <label
+                            htmlFor="morePremium"
+                            className={styles.labelForLess}
+                        >
+                            fermer
+                        </label>
                         <ul className={styles.contentList}>
                             <li>Site e-commerce professionnel</li>
                             <li>Système de gestion de contenu (CMS)</li>
@@ -72,9 +126,9 @@ export default function Pricing() {
                             <li>Formation à l'utilisation du CMS</li>
                             <li>Référencement avancé</li>
                         </ul>
-                    </div>
-                    <div className={styles.footer}>
-                        <Link href="/contact">en savoir +</Link>
+                        <div className={styles.footer}>
+                            <Link href="/contact">Contact</Link>
+                        </div>
                     </div>
                 </article>
             </section>
