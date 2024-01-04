@@ -193,6 +193,12 @@
   color: unset;
 }
 
+.testimonialsContent {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+}
+
 .testimonialsTitle {
   margin: 5rem 0;
   text-align: center;
@@ -318,7 +324,7 @@
     color: var(--bg);
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .testimonialsTitle {
     margin: 5rem 10%;
   }

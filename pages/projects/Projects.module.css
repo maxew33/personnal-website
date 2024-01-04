@@ -1,6 +1,7 @@
 .main {
   color: var(--text);
   max-width: 1400px;
+  min-height: 80vh;
   margin: 0 auto;
 }
 .main > * {

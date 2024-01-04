@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section {
   color: var(--text);
   max-width: 1400px;
@@ -24,7 +25,8 @@
 .header .nameContainer h2 {
   font-family: var(--fontfam1);
   position: absolute;
-  top: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   left: 1rem;
 }
 
@@ -77,4 +79,29 @@
 
 .contentName {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 1.75rem;
+  }
+  .active {
+    height: 100%;
+  }
+  .description {
+    font-size: 1.25rem;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .articleIllus {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+/* Tablette */
+/* Mobile (paysage) */
+@media screen and (max-width: 576px) {
+  /* Votre code CSS spécifique pour les écrans mobiles (portrait) */
 }

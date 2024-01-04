@@ -196,7 +196,7 @@ export default function Home() {
                 </article>
             </section>
             <section className={styles.ctaSection}>
-                <h2 className={styles.ctaTitle}>Prêt à donner vie à votre projet en ligne ?</h2>
+                <h2 className={styles.ctaTitle}>Prêt à donner vie à votre projet&nbsp;?</h2>
                 <p className={styles.ctaContent}>
                     Contactez-nous dès maintenant pour discuter de vos idées et
                     commencer à créer le site web qui vous ressemble.
