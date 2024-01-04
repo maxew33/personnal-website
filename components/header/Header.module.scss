@@ -45,7 +45,7 @@
 
 .contact {
     @include contactUs($size: 1.5rem);
-    &.active{
+    &.active {
         color: var(--accent);
         background: var(--bg);
         border: 1px solid #0000;
@@ -62,9 +62,9 @@
     object-fit: contain;
 }
 
-.link{
+.link {
     position: relative;
-    &::after{
+    &::after {
         content: '';
         position: absolute;
         bottom: -1px;
@@ -73,19 +73,143 @@
         height: 1px;
         background: var(--accent);
         transform: scaleX(0);
-        transition: transform .15s linear;
+        transition: transform 0.15s linear;
         transform-origin: left;
     }
 
-    &.active, &:hover{
-        &::after{
+    &.active,
+    &:hover {
+        &::after {
             transform: scaleX(1);
         }
     }
 }
 
+.burger {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 2rem;
+    height: 24px;
+    width: 24px;
+    border: none;
+    cursor: pointer;
+    background: unset;
+
+    span {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 24px;
+        border-radius: 25px;
+        background: var(--accent);
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            width: inherit;
+            height: inherit;
+            top: -7px;
+            background: var(--accent);
+            border: none;
+            border-radius: 25px;
+            transition: transform 0.15s linear;
+        }
+
+        &::before {
+            top: 7px;
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
-    .headerContainer{
-        display: none;
+
+    .burger{
+        display: block;
+    }
+
+    .header {
+        width: calc(100% - 4rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+        padding: 0.75rem 2rem;
+        margin: auto;
+
+        > * {
+            min-width: unset;
+        }
+    }
+
+    .menuOpen {
+        .burger {
+            span {
+                background: transparent;
+
+                &::after {
+                    transform: translateY(7px) rotate(-135deg);
+                }
+                &::before {
+                    transform: translateY(-7px) rotate(135deg);
+                }
+            }
+        }
+        .navigation {
+            height: 17.5rem;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        position: absolute;
+        overflow: hidden;
+        top: 5vh;
+        left:0;
+        transition: height .15s linear;
+        height: 0px;
+        width: 100%;
+        background: #fff5;
+        backdrop-filter: blur(5px);
+
+        & .link{
+            position: relative;
+            left: 1.5rem;
+            font-size: 2.5rem;
+            &::after {
+                bottom: -3px;
+                height: 3px;
+            }
+        }
+    }
+
+    .contact, .contact:hover{
+        font-size: 3.5rem;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    .headerContainer {
+        margin-top: unset;
+        top: 0;
+        left: 0;
+        height: 5vh;
+    }
+
+    .logoLink {
+        height: 2.5vh;
+    }
+
+    .logo {
+        height: 2.5vh;
+        width: 7.5vh;
+        object-fit: contain;
     }
 }
