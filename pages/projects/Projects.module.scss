@@ -2,9 +2,8 @@
 
 .main{
     color: var(--text);
-    max-width: 1400px;
     min-height: 80vh;
-    margin: 0 auto;
+    @include maxWidth;
     >*{
         line-height: 1.75;}
 }

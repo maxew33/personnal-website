@@ -48,3 +48,8 @@
         transform: scaleX(0);
     }
 }
+
+@mixin maxWidth{    
+    max-width: 1400px;
+    margin: auto;
+}

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-around;
   color: var(--text);
-  max-width: 1400px;
   width: 100%;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -24,8 +24,9 @@
 
 .pricingWrapper {
   display: flex;
-  width: 1400px;
-  max-width: 98%;
+  width: 98%;
+  max-width: 1400px;
+  margin: auto;
   padding: 2rem 0;
   justify-content: space-between;
 }

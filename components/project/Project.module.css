@@ -14,12 +14,14 @@
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 1rem;
+  border-radius: 25px;
 }
 .header .nameContainer {
   position: relative;
   height: 100%;
   width: 100%;
   background: rgba(44, 62, 80, 0.5019607843);
+  border-radius: 25px;
   cursor: pointer;
 }
 .header .nameContainer h2 {

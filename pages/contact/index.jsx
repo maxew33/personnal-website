@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import styles from './Contact.module.css'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faLinkedin,
@@ -18,41 +18,44 @@ export default function Contact() {
     const [modalDisplayed, setModalDisplayed] = useState(false)
     const form = useRef()
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault()
-        
+
+        const service = await fetch(process.env.REACT_APP_EMAILKEY_SERVICE_ID)
+        const template = await fetch(process.env.REACT_APP_EMAILKEY_TEMPLATE_ID)
+        const user = await fetch(process.env.REACT_APP_EMAILKEY_USER_ID)
+
         emailjs
-        .sendForm(
-            process.env.REACT_APP_EMAILKEY_SERVICE_ID,
-            process.env.REACT_APP_EMAILKEY_TEMPLATE_ID,
-            form.current,
-            process.env.REACT_APP_EMAILKEY_USER_ID
-        )
-        .then(
-            (result) => {
-                console.log(result)
-                setModalDisplayed(true)
-            },
-            (error) => {
-                console.log(error.text)
-                alert("le message n'a pas pu être envoyé.")
-            }
-        )
-        .catch((err) => {
-            console.error('FAILED...', err)
-        })
+            .sendForm(
+                service,
+                template,
+                form.current,
+                user
+            )
+            .then(
+                (result) => {
+                    console.log(result)
+                    setModalDisplayed(true)
+                },
+                (error) => {
+                    console.log(error.text)
+                    alert("le message n'a pas pu être envoyé.")
+                }
+            )
+            .catch((err) => {
+                console.error('FAILED...', err)
+            })
     }
 
     const displayModal = () => {
         setModalDisplayed(!modalDisplayed)
-
     }
 
     return (
         <>
             <header className={styles.pageTitle}>Nous contacter</header>
             <main className={styles.main}>
-                <section className={styles.title}>
+                <section className={`${styles.section} ${styles.title}`}>
                     <article>
                         <h3>
                             Ensemble, explorons les opportunités qui s'offrent à
@@ -61,10 +64,10 @@ export default function Contact() {
                     </article>
                 </section>
 
-                <section className={styles.contactUs}>
-                    <article>
-                        <h2>Une question ?</h2>
-                        <p className={styles.prez}>
+                <section className={`${styles.section} ${styles.formContact}`}>
+                    <article className={styles.article}>
+                        <h2 className={styles.articleTitle}>Une question ?</h2>
+                        <p className={styles.formTitle}>
                             Envoyez-nous un message. <br />
                             Nous vous répondrons dès que possible.
                         </p>
@@ -103,7 +106,7 @@ export default function Contact() {
                                     Email
                                 </label>
                             </div>
-                            <div className={styles.messageWrapper}>
+                            <div className={styles.textAreaWrapper}>
                                 <textarea
                                     id="messageInput"
                                     name="message"
@@ -119,7 +122,7 @@ export default function Contact() {
                                     Message
                                 </label>
                             </div>
-                            <button type="submit" className={styles.button}>
+                            <button type="submit" className={styles.formButton}>
                                 envoyer {` `}
                                 <FontAwesomeIcon icon={faPaperPlane} />
                             </button>
@@ -127,46 +130,46 @@ export default function Contact() {
                     </article>
                 </section>
 
-                <section className={styles.linksWrapper}>
-                    <article>
+                <section className={`${styles.section} ${styles.linksWrapper}`}>
+                    <article className={styles.article}>
                         {/* <!-- Google Calendar Appointment Scheduling begin --> */}
-                        <h2>
+                        <h2 className={styles.articleTitle}>
                             <FontAwesomeIcon
                                 icon={faCalendarDays}
                                 className={styles.icon}
                             />{' '}
                             Rencontrez-nous
                         </h2>
-                        <div className={styles.contentWrapper}>
+                        <div className={styles.linkWrapper}>
                             <a href="https://calendar.app.google/x5FM2reA2PDo4JkA8">
                                 Prendre rendez-vous
                             </a>
                         </div>
                         {/* <!-- end Google Calendar Appointment Scheduling --> */}
                     </article>
-                    <article>
-                        <h2>
+                    <article className={styles.article}>
+                        <h2 className={styles.articleTitle}>
                             <FontAwesomeIcon
                                 icon={faMobileScreen}
                                 className={styles.icon}
                             />{' '}
                             Appelez-nous
                         </h2>
-                        <div className={styles.contentWrapper}>
+                        <div className={styles.linkWrapper}>
                             <a href="tel:07555555" className={styles.contact}>
                                 07-555-555
                             </a>
                         </div>
                     </article>
-                    <article>
-                        <h2>
+                    <article className={styles.article}>
+                        <h2 className={styles.articleTitle}>
                             <FontAwesomeIcon
                                 icon={faEnvelope}
                                 className={styles.icon}
                             />{' '}
                             écrivez-nous
                         </h2>
-                        <div className={styles.contentWrapper}>
+                        <div className={styles.linkWrapper}>
                             <a
                                 href="mailto:contact@velvetweb.fr"
                                 className={styles.contact}
@@ -175,15 +178,15 @@ export default function Contact() {
                             </a>
                         </div>
                     </article>
-                    <article className={styles.followUs}>
-                        <h2>
+                    <article className={`${styles.article} ${styles.followUs}}`}>
+                        <h2 className={styles.articleTitle}>
                             <FontAwesomeIcon
                                 icon={faThumbsUp}
                                 className={styles.icon}
                             />{' '}
                             Suivez-nous
                         </h2>
-                        <div className={styles.contentWrapper}>
+                        <div className={styles.linkWrapper}>
                             <a
                                 href="https://www.linkedin.com/in/maxime-malfilatre/"
                                 className={styles.contact}
@@ -208,7 +211,7 @@ export default function Contact() {
             </main>
             {modalDisplayed && (
                 <div className={styles.modal}>
-                    <section className={styles.modalContent}>
+                    <section className={`${styles.section} ${styles.modalContent}`}>
                         <h3 className={styles.modalTitle}>
                             Votre message a été envoyé avec succès!
                         </h3>
