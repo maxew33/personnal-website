@@ -26,12 +26,7 @@ export default function Contact() {
         const user = await fetch(process.env.REACT_APP_EMAILKEY_USER_ID)
 
         emailjs
-            .sendForm(
-                service,
-                template,
-                form.current,
-                user
-            )
+            .sendForm(service, template, form.current, user)
             .then(
                 (result) => {
                     console.log(result)
@@ -77,6 +72,12 @@ export default function Contact() {
                             className={styles.formWrapper}
                         >
                             <div className={styles.inputWrapper}>
+                                <label
+                                    htmlFor="nameInput"
+                                    className={styles.label}
+                                >
+                                    Nom
+                                </label>
                                 <input
                                     id="nameInput"
                                     type="text"
@@ -84,14 +85,14 @@ export default function Contact() {
                                     className={styles.input}
                                     required
                                 />
-                                <label
-                                    htmlFor="nameInput"
-                                    className={styles.label}
-                                >
-                                    Nom
-                                </label>
                             </div>
                             <div className={styles.inputWrapper}>
+                                <label
+                                    htmlFor="emailInput"
+                                    className={styles.label}
+                                >
+                                    Email
+                                </label>
                                 <input
                                     id="emailInput"
                                     type="email"
@@ -99,14 +100,14 @@ export default function Contact() {
                                     className={styles.input}
                                     required
                                 />
-                                <label
-                                    htmlFor="emailInput"
-                                    className={styles.label}
-                                >
-                                    Email
-                                </label>
                             </div>
                             <div className={styles.textAreaWrapper}>
+                                <label
+                                    htmlFor="messageInput"
+                                    className={styles.label}
+                                >
+                                    Message
+                                </label>
                                 <textarea
                                     id="messageInput"
                                     name="message"
@@ -115,12 +116,6 @@ export default function Contact() {
                                     required
                                     defaultValue={''}
                                 />
-                                <label
-                                    htmlFor="messageInput"
-                                    className={styles.label}
-                                >
-                                    Message
-                                </label>
                             </div>
                             <button type="submit" className={styles.formButton}>
                                 envoyer {` `}
@@ -134,10 +129,12 @@ export default function Contact() {
                     <article className={styles.article}>
                         {/* <!-- Google Calendar Appointment Scheduling begin --> */}
                         <h2 className={styles.articleTitle}>
-                            <FontAwesomeIcon
-                                icon={faCalendarDays}
-                                className={styles.icon}
-                            />{' '}
+                            <span className={styles.iconContainer}>
+                                <FontAwesomeIcon
+                                    icon={faCalendarDays}
+                                    className={styles.icon}
+                                />
+                            </span>{' '}
                             Rencontrez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
@@ -149,10 +146,11 @@ export default function Contact() {
                     </article>
                     <article className={styles.article}>
                         <h2 className={styles.articleTitle}>
+                            <span className={styles.iconContainer}>
                             <FontAwesomeIcon
                                 icon={faMobileScreen}
                                 className={styles.icon}
-                            />{' '}
+                            /></span>{' '}
                             Appelez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
@@ -163,10 +161,11 @@ export default function Contact() {
                     </article>
                     <article className={styles.article}>
                         <h2 className={styles.articleTitle}>
+                            <span className={styles.iconContainer}>
                             <FontAwesomeIcon
                                 icon={faEnvelope}
                                 className={styles.icon}
-                            />{' '}
+                            /></span>{' '}
                             écrivez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
@@ -178,12 +177,15 @@ export default function Contact() {
                             </a>
                         </div>
                     </article>
-                    <article className={`${styles.article} ${styles.followUs}}`}>
+                    <article
+                        className={`${styles.article} ${styles.followUs}}`}
+                    >
                         <h2 className={styles.articleTitle}>
+                            <span className={styles.iconContainer}>
                             <FontAwesomeIcon
                                 icon={faThumbsUp}
                                 className={styles.icon}
-                            />{' '}
+                            /></span>{' '}
                             Suivez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
@@ -209,9 +211,12 @@ export default function Contact() {
                     </article>
                 </section>
             </main>
+
             {modalDisplayed && (
                 <div className={styles.modal}>
-                    <section className={`${styles.section} ${styles.modalContent}`}>
+                    <section
+                        className={`${styles.section} ${styles.modalContent}`}
+                    >
                         <h3 className={styles.modalTitle}>
                             Votre message a été envoyé avec succès!
                         </h3>

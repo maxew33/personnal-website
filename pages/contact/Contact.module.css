@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .modal {
   position: fixed;
   background: rgba(255, 255, 255, 0.6666666667);
@@ -56,12 +55,6 @@
   margin: auto;
 }
 
-.main {
-  display: flex;
-  margin-bottom: 2rem;
-  min-height: 34rem;
-}
-
 .pageTitle {
   margin: 2.5rem auto 3rem;
   text-align: center;
@@ -70,14 +63,22 @@
   text-transform: capitalize;
 }
 
+.main {
+  display: grid;
+  grid-template: "title form" 2fr "link form" 7fr/3fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  min-height: 34rem;
+}
+
 .section {
-  flex: 1;
+  border-radius: 25px;
 }
 
 .article {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0 0 2rem;
+  padding: 2rem;
 }
 
 .articleTitle {
@@ -87,9 +88,11 @@
 }
 
 .title {
+  grid-area: title;
   background: url("../../public/assets/contact/phone.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: var(--bg);
   font-size: 2rem;
   line-height: 1.5;
@@ -98,9 +101,14 @@
   margin: 1rem;
 }
 
-.formContact article {
+.formContact {
+  background: var(--lightCol);
+  grid-area: form;
+}
+.formContact .article {
   height: calc(100% - 4rem);
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .formTitle {
@@ -112,22 +120,23 @@
   flex-grow: 0.5;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: calc(100% - 2rem);
+  gap: 1rem;
 }
 
-.inputWrapper, .textAreaWrapper {
+.inputWrapper,
+.textAreaWrapper {
   position: relative;
   width: 100%;
 }
 
 .input,
 .textArea {
+  background: var(--bg);
   width: calc(100% - 2rem);
   padding: 0.5rem 1rem;
   font-size: 1.15rem;
   border: none;
-  background: var(--lightCol);
+  border-radius: 10px;
 }
 .input:focus ~ .label, .input:valid ~ .label,
 .textArea:focus ~ .label,
@@ -136,13 +145,15 @@
   transform: translate(0.25rem, -100%);
 }
 
+.input {
+  min-height: 2rem;
+}
+
 .label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(0.25rem, 20%);
+  position: relative;
+  display: inline-block;
   font-size: 1rem;
-  transition: 0.15s transform ease-in-out, 0.15s font-size ease-in-out;
+  margin: 0 0 0.5rem 1.25rem;
 }
 
 .formButton {
@@ -154,6 +165,7 @@
   cursor: pointer;
   text-transform: capitalize;
   font-size: 1.15rem;
+  border-radius: 10px;
 }
 .formButton:hover {
   background: #fff;
@@ -161,14 +173,25 @@
 }
 
 .linksWrapper {
+  grid-area: link;
   background: var(--lightCol);
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
 }
-.linksWrapper article {
+.linksWrapper .article {
+  position: relative;
+  width: 35%;
+  background: var(--bg);
   gap: 1.5rem;
-  padding-bottom: 2.5rem;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.linksWrapper .articleTitle {
+  font-size: 1.75rem;
 }
 
 .followUs {
@@ -176,18 +199,28 @@
   flex-direction: column;
 }
 
+.iconContainer {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: -0.75rem;
+  left: -0.75rem;
+  border-radius: 25px;
+  padding: 0.75rem;
+  background-color: var(--bg);
+}
+
 .icon {
   color: var(--accent);
   font-size: 2rem;
-  line-height: 100%;
-  padding: unset;
-  width: 2rem;
 }
 
 .linkWrapper {
   display: flex;
   gap: 1.5rem;
-  padding-left: 2.5rem;
   font-size: 1.25rem;
 }
 
@@ -195,65 +228,18 @@
   font-size: 2.5rem;
 }
 
-@media screen and (max-width: 576px) {
-  /* Votre code CSS spécifique pour les écrans mobiles (portrait) */
-}
-/* Mobile (paysage) */
-@media screen and (max-width: 767px) {
-  /* Votre code CSS spécifique pour les écrans mobiles (paysage) */
-}
 /* Tablette */
 @media screen and (max-width: 991px) {
-  /* Votre code CSS spécifique pour les tablettes */
-}
-/* Petits écrans d'ordinateur portable */
-@media screen and (max-width: 1199px) {
   .main {
     width: 100%;
-    flex-direction: column;
-    gap: 2rem;
+    grid-template: "title" "link" "form";
   }
-  .formContact {
-    width: 98%;
-    margin: auto;
+  .section {
+    border-radius: unset;
   }
-  .formContact article {
-    padding: unset;
-    gap: 1rem;
-  }
-  .formWrapper {
-    width: 100%;
-    gap: 1.5rem;
-  }
-  .inputWrapper, .textAreaWrapper {
-    position: relative;
-    width: 100%;
-  }
-  .input,
-  .textArea {
-    border: none;
-    box-shadow: 0px 4px 4px 0 var(--grey);
-  }
-  .label {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(0.25rem, 20%);
-    font-size: 1rem;
-    transition: 0.15s transform ease-in-out, 0.15s font-size ease-in-out;
-  }
-  .formButton {
-    color: var(--bg);
-    background: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 0.75rem 0;
-    width: 100%;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-size: 1.15rem;
-  }
-  .formButton:hover {
-    background: #fff;
-    color: var(--accent);
+}
+@media screen and (max-width: 576px) {
+  .linksWrapper .article {
+    width: 85%;
   }
 }
