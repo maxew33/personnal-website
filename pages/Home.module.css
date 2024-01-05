@@ -19,7 +19,7 @@
 }
 
 .sectionContent {
-  width: 100%;
+  width: 98%;
   max-width: 1400px;
   margin: auto;
   display: grid;
@@ -360,6 +360,7 @@
     grid-template-areas: "title title" "welcome welcome" "linkContainer illus" "invit illus";
   }
   .sectionContent {
+    width: 100%;
     grid-template-areas: "title title" "illus illus" "content content";
     gap: 1rem;
   }
@@ -367,7 +368,8 @@
     height: unset;
   }
   .articleIllus {
-    max-width: 100%;
+    width: 100%;
+    max-width: unset;
     height: 15rem;
     border-radius: unset;
   }

@@ -10,28 +10,29 @@
     color: var(--bg);
     font-size: 2rem;
     height: 6rem;
-    width: 100%;
+    width: 98%;
+    max-width: 1400px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     border-radius: 25px;
+}
 
-    .nameContainer {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        background: #2c3e5080;
-        border-radius: 25px;
-        cursor: pointer;
+.nameContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #2c3e5080;
+    border-radius: 25px;
+    cursor: pointer;
 
-        h2 {
-            font-family: var(--fontfam1);
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 1rem;
-        }
+    h2 {
+        font-family: var(--fontfam1);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
     }
 }
 
@@ -111,14 +112,12 @@
 
 /* Tablette */
 @media screen and (max-width: 991px) {
-
+    .header {
+        width: 100%;
+        border-radius: unset;
+    }
+    .nameContainer {
+        border-radius: unset;
+    }
 }
-/* Mobile (paysage) */
-@media screen and (max-width: 767px) {
-
-}
-@media screen and (max-width: 576px) {
-    /* Votre code CSS spécifique pour les écrans mobiles (portrait) */
-}
-
 

@@ -23,7 +23,7 @@
 }
 
 .sectionContent {
-    width: 100%;
+    width: 98%;
     @include maxWidth;
     display: grid;
     grid-template-areas:
@@ -358,6 +358,7 @@
     }
 
     .sectionContent {
+        width: 100%;
         grid-template-areas:
             'title title'
             'illus illus'
@@ -370,7 +371,8 @@
     }
 
     .articleIllus {
-        max-width: 100%;
+        width: 100%;
+        max-width: unset;
         height: 15rem;
         border-radius: unset;
     }
