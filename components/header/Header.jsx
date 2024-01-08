@@ -34,7 +34,9 @@ export default function Header() {
     }
 
     return (
-        <div className={styles.headerContainer}>
+        <div className={`${styles.headerContainer} ${
+            menuOpen && styles.headerMenuOpen
+        }`}>
             <header className={`${styles.header} ${
                             menuOpen && styles.menuOpen
                         }`}>

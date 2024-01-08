@@ -42,8 +42,8 @@ export default function Pricing() {
                         <ul className={styles.contentList}>
                             <li>Site vitrine</li>
                             <li>
-                                Design basé sur un de{' '}
-                                <Link href="/templates">nos modèles</Link>
+                                Design basé sur un de{' '}nos modèles
+                                {/* <Link href="/templates">nos modèles</Link> */}
                             </li>
                             <li>Référencement de base</li>
                         </ul>

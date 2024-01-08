@@ -79,7 +79,7 @@
 }
 
 .section{    
-    border-radius: 25px;
+    border-radius: 25px;@include boxShadow;
 }
 
 .article {

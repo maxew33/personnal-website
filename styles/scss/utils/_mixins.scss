@@ -10,6 +10,7 @@
         background: var(--bg);
         color: var(--accent);
     }
+    @include boxShadow;
 }
 
 @mixin flexCol {
@@ -52,4 +53,8 @@
 @mixin maxWidth{    
     max-width: 1400px;
     margin: auto;
+}
+
+@mixin boxShadow($color: var(--grey)){
+    box-shadow: 0px 4px 4px 0 $color;
 }

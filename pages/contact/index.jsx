@@ -16,30 +16,44 @@ import {
 
 export default function Contact() {
     const [modalDisplayed, setModalDisplayed] = useState(false)
-    const form = useRef()
+    const [formState, setFormState] = useState({
+        name: '',
+        email: '',
+        message: '',
+    })
 
-    const sendEmail = async (e) => {
-        e.preventDefault()
+    const handleInput = (e, target) => {
+        setFormState((prevFormState) => ({
+            ...prevFormState,
+            [target]: e.target.value,
+        }))
+    }
 
-        const service = await fetch(process.env.REACT_APP_EMAILKEY_SERVICE_ID)
-        const template = await fetch(process.env.REACT_APP_EMAILKEY_TEMPLATE_ID)
-        const user = await fetch(process.env.REACT_APP_EMAILKEY_USER_ID)
+    const form = useRef(null)
 
-        emailjs
-            .sendForm(service, template, form.current, user)
-            .then(
-                (result) => {
-                    console.log(result)
-                    setModalDisplayed(true)
-                },
-                (error) => {
-                    console.log(error.text)
-                    alert("le message n'a pas pu être envoyé.")
-                }
-            )
-            .catch((err) => {
-                console.error('FAILED...', err)
-            })
+    const sendEmail = (event) => {
+        const service = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+        const template = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+        const user = process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+        event.preventDefault()
+        if (service && template && user && form.current) {
+            emailjs
+                .sendForm(service, template, form.current, user)
+                .then(
+                    (result) => {
+                        console.log(result)
+                        setModalDisplayed(true)
+                        setFormState({ name: '', email: '', message: '' })
+                    },
+                    (error) => {
+                        console.log(error.text)
+                        alert("le message n'a pas pu être envoyé.")
+                    }
+                )
+                .catch((err) => {
+                    console.error('FAILED...', err)
+                })
+        }
     }
 
     const displayModal = () => {
@@ -82,6 +96,8 @@ export default function Contact() {
                                     id="nameInput"
                                     type="text"
                                     name="from_name"
+                                    value={formState.name}
+                                    onChange={(e) => handleInput(e, 'name')}
                                     className={styles.input}
                                     required
                                 />
@@ -97,6 +113,8 @@ export default function Contact() {
                                     id="emailInput"
                                     type="email"
                                     name="user_email"
+                                    value={formState.email}
+                                    onChange={(e) => handleInput(e, 'email')}
                                     className={styles.input}
                                     required
                                 />
@@ -113,8 +131,9 @@ export default function Contact() {
                                     name="message"
                                     className={styles.textArea}
                                     rows="5"
+                                    value={formState.message}
+                                    onChange={(e) => handleInput(e, 'message')}
                                     required
-                                    defaultValue={''}
                                 />
                             </div>
                             <button type="submit" className={styles.formButton}>
@@ -147,10 +166,11 @@ export default function Contact() {
                     <article className={styles.article}>
                         <h2 className={styles.articleTitle}>
                             <span className={styles.iconContainer}>
-                            <FontAwesomeIcon
-                                icon={faMobileScreen}
-                                className={styles.icon}
-                            /></span>{' '}
+                                <FontAwesomeIcon
+                                    icon={faMobileScreen}
+                                    className={styles.icon}
+                                />
+                            </span>{' '}
                             Appelez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
@@ -162,10 +182,11 @@ export default function Contact() {
                     <article className={styles.article}>
                         <h2 className={styles.articleTitle}>
                             <span className={styles.iconContainer}>
-                            <FontAwesomeIcon
-                                icon={faEnvelope}
-                                className={styles.icon}
-                            /></span>{' '}
+                                <FontAwesomeIcon
+                                    icon={faEnvelope}
+                                    className={styles.icon}
+                                />
+                            </span>{' '}
                             écrivez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
@@ -182,10 +203,11 @@ export default function Contact() {
                     >
                         <h2 className={styles.articleTitle}>
                             <span className={styles.iconContainer}>
-                            <FontAwesomeIcon
-                                icon={faThumbsUp}
-                                className={styles.icon}
-                            /></span>{' '}
+                                <FontAwesomeIcon
+                                    icon={faThumbsUp}
+                                    className={styles.icon}
+                                />
+                            </span>{' '}
                             Suivez-nous
                         </h2>
                         <div className={styles.linkWrapper}>
