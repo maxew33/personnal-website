@@ -1,6 +1,8 @@
 .footer {
+  position: relative;
+  top: 5rem;
   background: var(--primary);
-  padding: 5rem 0;
+  padding: 2.5rem 0 5rem;
   color: var(--bg);
 }
 .footer a {

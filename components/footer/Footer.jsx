@@ -8,10 +8,12 @@ import {
     faFacebookSquare,
     faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
+import Wave from '../wave/wave'
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
+            <Wave />
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.link}>
                     <Image

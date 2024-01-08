@@ -1,0 +1,8 @@
+.svg {
+  height: 5rem;
+  position: absolute;
+  top: -5rem;
+}
+.svg path {
+  fill: var(--primary);
+}
