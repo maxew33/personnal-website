@@ -101,12 +101,15 @@
 
 .arguments {
     background: var(--primary);
+    position: relative;
+    top:2.5rem;
+    z-index: -1;
 }
 
 .argumentsContent {
     position: relative;
-    top: 15rem;
-    height: 30rem;
+    top: 12.5rem;
+    height: 25rem;
 }
 
 .articleIllus {
@@ -172,6 +175,7 @@
 
 .solutionsWrapper {
     background: var(--lightCol);
+    position: relative;
 }
 
 .solutions {

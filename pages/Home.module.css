@@ -75,7 +75,7 @@
   background: var(--accent);
   font-weight: 400;
   font-size: 1.25rem;
-  box-shadow: 0px 4px 4px 0 var(--grey);
+  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
   padding: 0.75rem 1.5rem;
 }
 .contactBtn:hover {
@@ -116,12 +116,15 @@
 
 .arguments {
   background: var(--primary);
+  position: relative;
+  top: 2.5rem;
+  z-index: -1;
 }
 
 .argumentsContent {
   position: relative;
-  top: 15rem;
-  height: 30rem;
+  top: 12.5rem;
+  height: 25rem;
 }
 
 .articleIllus {
@@ -189,6 +192,7 @@
 
 .solutionsWrapper {
   background: var(--lightCol);
+  position: relative;
 }
 
 .solutions {
@@ -269,7 +273,7 @@
   background: var(--accent);
   font-weight: 400;
   font-size: 2.25rem;
-  box-shadow: 0px 4px 4px 0 var(--grey);
+  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
   padding: 0.5rem 2.5rem;
   margin: 3rem 0 2rem;
 }

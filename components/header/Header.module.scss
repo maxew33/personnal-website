@@ -54,14 +54,27 @@
     }
 }
 
-.logoLink {
+.logoLink, .logoLink:hover {
     height: 2.5rem;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 0.5rem;
 }
 
 .logo {
     height: 2.5rem;
-    width: 7.5rem;
+    width: auto;
     object-fit: contain;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
 }
 
 .link {

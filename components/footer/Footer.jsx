@@ -18,19 +18,18 @@ export default function Footer() {
                 <Link href="/" className={styles.link}>
                     <Image
                         src="/assets/logo.png"
-                        width={256}
-                        height={77}
-                        alt="logo de techquest"
+                        width={118}
+                        height={87}
+                        alt="logo de velvet web"
                         className={styles.logo}
                     />
                     <span className={styles.name}>
                         <span>Velvet</span>
                         <span> Web</span>
-                        <span>Agency</span>
                     </span>
                 </Link>
                 <span className={styles.copyright}>
-                    ©Velvet web agency Bordeaux 2024
+                    ©Velvet web Bordeaux 2024
                 </span>
                 <Link href="/pricing" className={styles.solutions}>
                     Nos solutions

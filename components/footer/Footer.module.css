@@ -36,14 +36,14 @@
 
 .logo {
   height: 2.5rem;
-  width: 7.5rem;
+  width: auto;
   object-fit: contain;
 }
 
 .name {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: inherit;
 }
 
@@ -85,15 +85,12 @@
   .footerWrapper {
     row-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "logo contact social" "solutions . legal" "copyright copyright copyright";
+    grid-template-areas: "logo . social" "solutions . contact" "copyright . legal";
   }
-  .copyright {
+  .copyright, .solutions {
     justify-self: flex-start;
   }
-  .solutions {
-    justify-self: flex-start;
-  }
-  .legal {
+  .legal, .contact {
     justify-self: flex-end;
   }
 }

@@ -34,20 +34,26 @@ export default function Header() {
     }
 
     return (
-        <div className={`${styles.headerContainer} ${
-            menuOpen && styles.headerMenuOpen
-        }`}>
-            <header className={`${styles.header} ${
-                            menuOpen && styles.menuOpen
-                        }`}>
+        <div
+            className={`${styles.headerContainer} ${
+                menuOpen && styles.headerMenuOpen
+            }`}
+        >
+            <header
+                className={`${styles.header} ${menuOpen && styles.menuOpen}`}
+            >
                 <Link href="/" className={styles.logoLink}>
                     <Image
                         src="/assets/logo.png"
-                        width={256}
-                        height={77}
-                        alt="logo de techquest"
+                        width={118}
+                        height={87}
+                        alt="logo de velvet web"
                         className={styles.logo}
                     />
+                    <span className={styles.name}>
+                        <span>Velvet</span>
+                        <span> Web</span>
+                    </span>
                 </Link>
                 <button onClick={displayNav} className={styles.burger}>
                     <span></span>
@@ -60,7 +66,7 @@ export default function Header() {
                             className={`${styles.link} ${
                                 pathname === path.path && styles.active
                             }`}
-                            onClick={hideNav} 
+                            onClick={hideNav}
                         >
                             {path.name}
                         </Link>
@@ -70,7 +76,7 @@ export default function Header() {
                         className={`${styles.contact} ${
                             pathname === '/contact/' && styles.active
                         }`}
-                        onClick={hideNav} 
+                        onClick={hideNav}
                     >
                         contact
                     </Link>

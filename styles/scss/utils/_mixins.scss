@@ -10,7 +10,7 @@
         background: var(--bg);
         color: var(--accent);
     }
-    @include boxShadow;
+    @include boxShadow(#1115);
 }
 
 @mixin flexCol {
