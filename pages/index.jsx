@@ -139,12 +139,7 @@ export default function Home() {
                             Des Solutions Sur Mesure{' '}
                         </h2>
                         <p className={styles.articleText}>
-                            Nous sommes fiers d'offrir une variété de solutions
-                            adaptées à tous les profils, quelle que soit la
-                            taille de votre entreprise ou votre budget. Que vous
-                            soyez un entrepreneur passionné, un artiste
-                            indépendant, ou une entreprise établie, notre
-                            approche est inclusive.
+                        Nous sommes fiers d'offrir une variété de <span className={styles.highlighted}>solutions adaptées</span> à tous les profils, quelle que soit la taille de votre entreprise ou votre budget. <br/>Que vous soyez un entrepreneur passionné, un artiste indépendant, ou une entreprise établie, notre approche est <span className={styles.highlighted}>personnalisée </span>pour répondre à vos besoins spécifiques.
                         </p>
                 </article>
             </section>

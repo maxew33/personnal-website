@@ -13,6 +13,7 @@ export default function Project(props) {
         highlights: ['points forts'],
         result: { nom: 'name', path: '' },
         banner: '',
+        link:'/'
     })
 
     const [active, setActive] = useState(false)
@@ -27,6 +28,7 @@ export default function Project(props) {
                 result,
                 banner,
                 implementation,
+                link
             } = props
 
             // Update the state with the values from props
@@ -41,6 +43,7 @@ export default function Project(props) {
                     path: result?.path || '',
                 },
                 banner: banner || '/assets/projects/banner.jpg',
+                link: link || '/'
             })
         }
     }, [props])
@@ -67,45 +70,39 @@ export default function Project(props) {
                 </div>
             </header>
 
-            <div
-                className={`${styles.contentWrapper} ${
-                    active && styles.active
-                }`}
-            >
+            <div className={`${styles.content} ${active && styles.active}`}>
                 <p className={styles.description}>{data.description}</p>
-                <div className={styles.content}>
-                    <div className={styles.contentText}>
-                        <div>
-                            <h3 className={styles.contentName}>Objectifs : </h3>
-                            {data.objectives}
-                        </div>
-                        <div>
-                            <h3 className={styles.contentName}>
-                                Réalisation :{' '}
-                            </h3>
-                            {data.implementation}
-                        </div>
-                        <div>
-                            <h3 className={styles.contentName}>
-                                Points forts :
-                            </h3>{' '}
-                            <ul>
-                                {data.highlights.map((highlight, index) => (
-                                    <li key={`hightlight${index}`}>
-                                        {highlight}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    <Image
-                        src={data.result.path || '/assets/home/chooseUs.png'}
-                        height={295}
-                        width={530}
-                        className={styles.articleIllus}
-                        alt={data.result.name || 'visuels du site'}
-                    />
+                <div
+                    className={`${styles.contentWrapper} ${styles.objectives}`}
+                >
+                    <h3 className={styles.contentTitle}>Objectifs : </h3>
+                    {data.objectives}
                 </div>
+                <div
+                    className={`${styles.contentWrapper} ${styles.implementation}`}
+                >
+                    <h3 className={styles.contentTitle}>Réalisation : </h3>
+                    {data.implementation}
+                </div>
+                <div
+                    className={`${styles.contentWrapper} ${styles.highlights}`}
+                >
+                    <h3 className={styles.contentTitle}>Points forts :</h3>{' '}
+                    <ul>
+                        {data.highlights.map((highlight, index) => (
+                            <li key={`hightlight${index}`}>{highlight}</li>
+                        ))}
+                    </ul>
+                </div>
+                <a href={data.link} target="_blank" rel="noopener noreferrer" className={styles.contentLink} >
+                <Image
+                    src={data.result.path || '/assets/home/chooseUs.png'}
+                    height={295}
+                    width={530}
+                    className={styles.contentIllus}
+                    alt={data.result.name || 'visuels du site'}
+                /></a>
+
             </div>
         </section>
     )

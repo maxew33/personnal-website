@@ -13,7 +13,8 @@
             "result": {
                 "name": "visuels du site du cabinet cap patrimoine",
                 "path": "/assets/projects/cabinetCapPatrimoine.png"
-            }
+            },
+            "link":"https://cabinet-cap-patrimoine.fr/"
         },
         {
             "name": "Jérémie Bonne, Graphiste Bordelais",
@@ -28,7 +29,8 @@
             "result": {
                 "name": "visuels du site de Jérémie Bonne",
                 "path": "/assets/projects/jeremieBonne.png"
-            }
+            },
+            "link":"https://jeremie-bonne.fr/"
         },
         {
             "name": "Maxime Malfilâtre, développeur front end",
@@ -44,7 +46,8 @@
             "result": {
                 "name": "visuels du site de Maxime Malfilâtre",
                 "path": "/assets/projects/maximeMalfilatre.png"
-            }
+            },
+            "link":"https://www.maxime-malfilatre.com"
         }
     ]
 }

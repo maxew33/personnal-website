@@ -54,9 +54,11 @@
   color: var(--accent);
 }
 .contact.active {
+  position: relative;
   color: var(--accent);
   background: var(--bg);
   border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: unset;
 }
 
 .logoLink {

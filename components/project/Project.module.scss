@@ -48,13 +48,18 @@
     transform: translate(0, -50%) rotate(-180deg);
 }
 
-.contentWrapper {
+.content {
     height: 0px;
     transition: 0.5s height;
     overflow: hidden;
     width: 98%;
     max-width: 1400px;
-    margin: auto;
+    margin: auto;    
+    display: grid;
+    grid-template-areas: 'description description'
+    'objectives objectives'
+    'implementation illus'
+    'hightlights illus';
 }
 
 .active {
@@ -63,13 +68,7 @@
 
 .description {
     font-size: 1.25rem;
-}
-
-.content {
-    @include flexSB;
-    margin: 2rem 0;
-    gap: 1rem;
-    align-items: flex-end;
+    grid-area: description;
 }
 
 .contentText {
@@ -82,8 +81,32 @@
     }
 }
 
-.contentName {
+.contentTitle {
     font-size: 1.5rem;
+}
+
+.contentIllus{
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.contentLink{
+    margin-left: 5rem;
+    grid-area: illus;
+}
+
+.objectives{
+    grid-area: objectives;
+}
+
+.implementation{
+    grid-area: implementation;
+}
+
+.highlights{
+    grid-area: hightlights;
 }
 
 @media screen and (max-width: 1200px) {
@@ -93,20 +116,19 @@
 
     .active {
         height: 100%;
+        margin-bottom: 2rem;
     }
 
     .description {
         font-size: 1.25rem;
     }
 
-    .content {
-        flex-direction: column-reverse;
-    }
-
-    .articleIllus{
-        width: 100%;
-        height: auto;
-        object-fit: contain;
+    .content {    
+        grid-template-areas: 'description description'
+        'objectives objectives'
+        'implementation implementation'
+        'hightlights illus';
+        gap: .5rem;
     }
 }
 
@@ -118,6 +140,18 @@
     }
     .nameContainer {
         border-radius: unset;
+    }
+
+    .content {    
+        grid-template-areas: 'description'
+        'illus'
+        'objectives '
+        'implementation '
+        'hightlights ';
+    }
+    
+    .contentLink{
+        margin: 2rem auto 0;
     }
 }
 

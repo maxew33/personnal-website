@@ -46,9 +46,11 @@
 .contact {
     @include contactUs($size: 1.5rem);
     &.active {
+        position: relative;
         color: var(--accent);
         background: var(--bg);
         border: 1px solid #0000;
+        box-shadow: unset;
     }
 }
 
