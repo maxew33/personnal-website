@@ -14,7 +14,6 @@ export default function index() {
             setLoad(true)
         }
         !load && reqArticles()
-        console.log(123, articles)
     }, [articles])
 
     return (

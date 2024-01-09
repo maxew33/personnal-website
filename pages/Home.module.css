@@ -107,11 +107,12 @@
   height: 1px;
   width: 100%;
   background: var(--accent);
-  transition: transform 0.15s linear;
+  transition: transform 0.25s linear;
   transform-origin: right;
 }
 .link:hover::after {
   transform: scaleX(0);
+  animation: unset;
 }
 
 .arguments {

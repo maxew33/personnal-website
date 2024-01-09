@@ -15,7 +15,6 @@ export default function Projects() {
         async function fetchData() {
             const projectsData = await getProjectsData()
             setData(projectsData)
-            console.log(projectsData)
         }
         fetchData()
     }, [])

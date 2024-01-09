@@ -2,8 +2,71 @@ import Link from 'next/link'
 import styles from './Home.module.css'
 import Image from 'next/image'
 import Wave from '@/components/wave/wave'
+import { delay, motion, spring, stagger } from 'framer-motion'
 
 export default function Home() {
+    const featuresContent = [
+        {
+            title: 'Élégance Fonctionnelle',
+            text: "Chaque site que nous créons est une fusion harmonieuse de design esthétique et de fonctionnalités puissantes.<br />Pour nous l'élégance n'est pas un luxe mais une composante essentielle de chaque projet.",
+        },
+        {
+            title: 'Conception Stratégique',
+            text: 'Chaque projet est guidé par une vision stratégique, alignant chaque aspect du design sur vos objectifs commerciaux.<br />Avec nous, la conception va au-delà du visuel pour devenir une force motrice pour votre succès en ligne.',
+        },
+        {
+            title: 'Expérience Intuitive',
+            text: 'Chaque élément est conçu pour guider les utilisateurs à travers votre contenu, favorisant ainsi une exploration naturelle.<br />Grace à nous, vos visiteurs vivront une immersion totale dans ce que vous avez à offrir.',
+        },
+    ]
+
+    const featureAnimationVariants = {
+        initial: {
+            opacity: 0,
+            y: 320,
+        },
+        animate: (index) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.1 * index,
+                type: 'tween',
+            },
+        }),
+    }
+
+    const testimonialsContent = [
+        {
+            content:
+                "Maxime est un professionnel à la fois très réactif et très à l'écoute. Quelqu'un sur qui l'on peut se fier. Il semble avoir une solution pour chaque problème et c'est toujours un atout pour moi de travailler avec lui.",
+            author: 'Jérémie H.',
+        },
+        {
+            content:
+                'Nous sommes extrêmement satisfaits du site web que Velvet Web a créé. Leur approche professionnelle et leur attention aux détails ont permis de mettre en valeur notre expertise de manière élégante.',
+            author: 'Christophe V.',
+        },
+        {
+            content:
+                "Mes attentes ont été dépassées avec ce portfolio interactif qui va au-delà d'une simple présentation de mes compétences pour devenir une véritable expérience immersive pour mes visiteurs.",
+            author: 'Maxime M.',
+        },
+    ]
+
+    const testimaonialAnimationVariants = {
+        initial: {
+            opacity: 0,
+            scale: 0,
+        },
+        animate: (index) => ({
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delay: 0.25 * index,
+            },
+        }),
+    }
+
     return (
         <main className={styles.main}>
             <section className={styles.hero}>
@@ -81,8 +144,12 @@ export default function Home() {
                     >
                         Commençons un projet
                     </Link>
-                    <div className={styles.featuresWrapper}>
-                        <article className={styles.feature}>
+                    {/* <div className={styles.featuresWrapper}>
+                        <motion.article
+                            whileInView={{ opacity: 1, y: -300 }}
+                            transition={{ delay: 0.1, type: 'tween' }}
+                            className={styles.feature}
+                        >
                             <h3 className={styles.featureTitle}>
                                 Élégance Fonctionnelle
                             </h3>
@@ -94,7 +161,7 @@ export default function Home() {
                                 mais une composante essentielle de chaque
                                 projet.
                             </p>
-                        </article>
+                        </motion.article>
                         <article className={styles.feature}>
                             <h3 className={styles.featureTitle}>
                                 Conception Stratégique
@@ -122,6 +189,29 @@ export default function Home() {
                                 immersion totale dans ce que vous avez à offrir.
                             </p>
                         </article>
+                    </div> */}
+                    <div className={styles.featuresWrapper}>
+                        {featuresContent.map((article, index) => (
+                            <motion.article
+                                key={'feature' + index}
+                                className={styles.feature}
+                                variants={featureAnimationVariants}
+                                initial="initial"
+                                whileInView="animate"
+                                custom={index}
+                                viewport={{ once: true }}
+                            >
+                                <h3 className={styles.featureTitle}>
+                                    {article.title}
+                                </h3>
+                                <p
+                                    className={styles.featureText}
+                                    dangerouslySetInnerHTML={{
+                                        __html: article.text,
+                                    }}
+                                />
+                            </motion.article>
+                        ))}
                     </div>
                 </article>
             </section>
@@ -157,7 +247,7 @@ export default function Home() {
                     </p>
                 </article>
             </section>
-            <section className={styles.testimonials}>
+            {/* <section className={styles.testimonials}>
                 <article className={styles.testimonialsContent}>
                     <h2 className={styles.testimonialsTitle}>
                         La{' '}
@@ -201,6 +291,37 @@ export default function Home() {
                                 Maxime M.
                             </span>
                         </article>
+                    </div>
+                </article>
+            </section> */}
+            <section className={styles.testimonials}>
+                <article className={styles.testimonialsContent}>
+                    <h2 className={styles.testimonialsTitle}>
+                        La{' '}
+                        <span className={styles.highlighted}>satisfaction</span>{' '}
+                        de nos clients : notre meilleure publicité.
+                    </h2>
+                    <div className={styles.testimonialsWrapper}>
+                        {testimonialsContent.map((testimonial, index) => (
+                            <article
+                                key={'testimonial' + index}
+                                className={styles.testimonial}
+                            >
+                                <motion.p
+                                    variants={testimaonialAnimationVariants}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    custom={index}
+                                    viewport={{ once: true }}
+                                    className={styles.testimonialContent}
+                                >
+                                    {testimonial.content}
+                                </motion.p>
+                                <span className={styles.testimonialAuthor}>
+                                    {testimonial.author}
+                                </span>
+                            </article>
+                        ))}
                     </div>
                 </article>
             </section>

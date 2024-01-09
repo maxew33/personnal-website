@@ -87,10 +87,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "logo . social" "solutions . contact" "copyright . legal";
   }
-  .copyright, .solutions {
+  .copyright,
+  .solutions {
     justify-self: flex-start;
   }
-  .legal, .contact {
+  .legal,
+  .contact {
     justify-self: flex-end;
   }
 }

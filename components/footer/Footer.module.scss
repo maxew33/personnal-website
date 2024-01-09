@@ -95,13 +95,13 @@
             'copyright . legal';
     }
 
-    .copyright, .solutions  {
+    .copyright,
+    .solutions {
         justify-self: flex-start;
     }
-    
-   
-    .legal, .contact {
+
+    .legal,
+    .contact {
         justify-self: flex-end;
     }
-    
 }

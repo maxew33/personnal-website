@@ -1,30 +1,27 @@
 import React from 'react'
 
-export default function Wave({color, positionPlace, positionValue}) {
+export default function Wave({ color, positionPlace, positionValue }) {
+    const fillColor = color || 'var(--primary)'
+    const value = positionValue || '-2.5rem'
+    const topPosition = positionPlace === 'bottom' ? 'auto' : value
+    const bottomPosition = positionPlace === 'bottom' ? value : 'auto'
 
-  const fillColor = color || "var(--primary)"
-  const value = positionValue || "-2.5rem"  
-  const topPosition = positionPlace === "bottom" ? "auto" : value;
-  const bottomPosition = positionPlace === "bottom" ? value : "auto";
+    const svgStyle = {
+        height: '5rem',
+        position: 'absolute',
+        top: topPosition,
+        bottom: bottomPosition,
+    }
 
-
-
-  const svgStyle = {
-    height: '5rem',
-    position: 'absolute',
-    top: topPosition,
-    bottom: bottomPosition,
-  };
-  console.log(svgStyle)
-  return (
-    <svg
-    viewBox="0 0 370.41666 84.666664"
-    width="100%"
-    height="320"
-    preserveAspectRatio="none"
-    style={svgStyle}
->
-    {/* <path
+    return (
+        <svg
+            viewBox="0 0 370.41666 84.666664"
+            width="100%"
+            height="320"
+            preserveAspectRatio="none"
+            style={svgStyle}
+        >
+            {/* <path
         d="M 370.41666,84.666666
         V 16.404167
         c 0,0 -61.19208,17.4625 -92.60416,17.4625 -31.41209,0 -61.67351,-11.984049 -92.60417,-17.4625
@@ -33,17 +30,17 @@ export default function Wave({color, positionPlace, positionValue}) {
         h 370.41666"
         fill={fillColor}
     /> */}
-        <path
-        d="M 370.41666,84.666666
+            <path
+                d="M 370.41666,84.666666
         V 16.404167
         c 0,0 -61.18339,10.726548 -92.08753,10.74629 -31.24627,0.01996 -62.06547,-7.297241 -93.1208,-10.74629
         C 140.72266,11.463526 96.325761,5.462904 51.689031,2.154274 34.491575,0.87953863 0,0 0,0
         v 84.666666
         h 370.41666"
-        fill={fillColor}
-    />
-</svg>
-  )
+                fill={fillColor}
+            />
+        </svg>
+    )
 }
 
 /*M 370.41666,84.666666

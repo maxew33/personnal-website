@@ -12,7 +12,6 @@ export default function Page({ post }) {
 }
 
 export async function getStaticPaths() {
-    console.log(13)
     const res = await fetch(process.env.DB_URI)
     const posts = await res.json()
 

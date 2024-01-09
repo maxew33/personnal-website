@@ -41,13 +41,12 @@ export default function Contact() {
                 .sendForm(service, template, form.current, user)
                 .then(
                     (result) => {
-                        console.log(result)
                         setModalDisplayed(true)
                         setFormState({ name: '', email: '', message: '' })
                     },
                     (error) => {
-                        console.log(error.text)
                         alert("le message n'a pas pu être envoyé.")
+                        console.error('FAILED...', error)
                     }
                 )
                 .catch((err) => {
