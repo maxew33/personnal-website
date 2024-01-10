@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import styles from './Contact.module.css'
 import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -61,9 +60,9 @@ export default function Contact() {
 
     return (
         <>
-            <header className={styles.pageTitle}>Nous contacter</header>
-            <main className={styles.main}>
-                <section className={`${styles.section} ${styles.title}`}>
+            <header className="contact-pageTitle">Nous contacter</header>
+            <main className="contact-main">
+                <section className="contact-section contact-title">
                     <article>
                         <h3>
                             Ensemble, explorons les opportunités qui s'offrent à
@@ -72,22 +71,22 @@ export default function Contact() {
                     </article>
                 </section>
 
-                <section className={`${styles.section} ${styles.formContact}`}>
-                    <article className={styles.article}>
-                        <h2 className={styles.articleTitle}>Une question ?</h2>
-                        <p className={styles.formTitle}>
+                <section className="contact-section contact-formContact">
+                    <article className="contact-article">
+                        <h2 className="contact-articleTitle">Une question ?</h2>
+                        <p className="contact-formTitle">
                             Envoyez-nous un message. <br />
                             Nous vous répondrons dès que possible.
                         </p>
                         <form
                             ref={form}
                             onSubmit={sendEmail}
-                            className={styles.formWrapper}
+                            className="contact-formWrapper"
                         >
-                            <div className={styles.inputWrapper}>
+                            <div className="contact-inputWrapper">
                                 <label
                                     htmlFor="nameInput"
-                                    className={styles.label}
+                                    className="contact-label"
                                 >
                                     Nom
                                 </label>
@@ -97,14 +96,14 @@ export default function Contact() {
                                     name="from_name"
                                     value={formState.name}
                                     onChange={(e) => handleInput(e, 'name')}
-                                    className={styles.input}
+                                    className="contact-input"
                                     required
                                 />
                             </div>
-                            <div className={styles.inputWrapper}>
+                            <div className="contact-inputWrapper">
                                 <label
                                     htmlFor="emailInput"
-                                    className={styles.label}
+                                    className="contact-label"
                                 >
                                     Email
                                 </label>
@@ -114,28 +113,28 @@ export default function Contact() {
                                     name="user_email"
                                     value={formState.email}
                                     onChange={(e) => handleInput(e, 'email')}
-                                    className={styles.input}
+                                    className="contact-input"
                                     required
                                 />
                             </div>
-                            <div className={styles.textAreaWrapper}>
+                            <div className="contact-textAreaWrapper">
                                 <label
                                     htmlFor="messageInput"
-                                    className={styles.label}
+                                    className="contact-label"
                                 >
                                     Message
                                 </label>
                                 <textarea
                                     id="messageInput"
                                     name="message"
-                                    className={styles.textArea}
+                                    className="contact-textArea"
                                     rows="5"
                                     value={formState.message}
                                     onChange={(e) => handleInput(e, 'message')}
                                     required
                                 />
                             </div>
-                            <button type="submit" className={styles.formButton}>
+                            <button type="submit" className="contact-formButton">
                                 envoyer {` `}
                                 <FontAwesomeIcon icon={faPaperPlane} />
                             </button>
@@ -143,89 +142,89 @@ export default function Contact() {
                     </article>
                 </section>
 
-                <section className={`${styles.section} ${styles.linksWrapper}`}>
-                    <article className={styles.article}>
+                <section className="contact-section contact-linksWrapper">
+                    <article className="contact-article">
                         {/* <!-- Google Calendar Appointment Scheduling begin --> */}
-                        <h2 className={styles.articleTitle}>
-                            <span className={styles.iconContainer}>
+                        <h2 className="contact-articleTitle">
+                            <span className="contact-iconContainer">
                                 <FontAwesomeIcon
                                     icon={faCalendarDays}
-                                    className={styles.icon}
+                                    className="contact-icon"
                                 />
                             </span>{' '}
                             Rencontrez-nous
                         </h2>
-                        <div className={styles.linkWrapper}>
+                        <div className="contact-linkWrapper">
                             <a href="https://calendar.app.google/x5FM2reA2PDo4JkA8">
                                 Prendre rendez-vous
                             </a>
                         </div>
                         {/* <!-- end Google Calendar Appointment Scheduling --> */}
                     </article>
-                    <article className={styles.article}>
-                        <h2 className={styles.articleTitle}>
-                            <span className={styles.iconContainer}>
+                    <article className="contact-article">
+                        <h2 className="contact-articleTitle">
+                            <span className="contact-iconContainer">
                                 <FontAwesomeIcon
                                     icon={faMobileScreen}
-                                    className={styles.icon}
+                                    className="contact-icon"
                                 />
                             </span>{' '}
                             Appelez-nous
                         </h2>
-                        <div className={styles.linkWrapper}>
-                            <a href="tel:07555555" className={styles.contact}>
+                        <div className="contact-linkWrapper">
+                            <a href="tel:07555555" className="contact-contact">
                                 07-555-555
                             </a>
                         </div>
                     </article>
-                    <article className={styles.article}>
-                        <h2 className={styles.articleTitle}>
-                            <span className={styles.iconContainer}>
+                    <article className="contact-article">
+                        <h2 className="contact-articleTitle">
+                            <span className="contact-iconContainer">
                                 <FontAwesomeIcon
                                     icon={faEnvelope}
-                                    className={styles.icon}
+                                    className="contact-icon"
                                 />
                             </span>{' '}
                             écrivez-nous
                         </h2>
-                        <div className={styles.linkWrapper}>
+                        <div className="contact-linkWrapper">
                             <a
                                 href="mailto:contact@techquest.fr"
-                                className={styles.contact}
+                                className="contact-contact"
                             >
                                 contact@techquest.fr
                             </a>
                         </div>
                     </article>
                     <article
-                        className={`${styles.article} ${styles.followUs}}`}
+                        className="contact-article contact-followUs"
                     >
-                        <h2 className={styles.articleTitle}>
-                            <span className={styles.iconContainer}>
+                        <h2 className="contact-articleTitle">
+                            <span className="contact-iconContainer">
                                 <FontAwesomeIcon
                                     icon={faThumbsUp}
-                                    className={styles.icon}
+                                    className="contact-icon"
                                 />
                             </span>{' '}
                             Suivez-nous
                         </h2>
-                        <div className={styles.linkWrapper}>
+                        <div className="contact-linkWrapper">
                             <a
                                 href="https://www.linkedin.com/in/maxime-malfilatre/"
-                                className={styles.contact}
+                                className="contact-contact"
                             >
                                 <FontAwesomeIcon
                                     icon={faLinkedin}
-                                    className={styles.socialIcon}
+                                    className="contact-socialIcon"
                                 />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/maxime-malfilatre/"
-                                className={styles.contact}
+                                className="contact-contact"
                             >
                                 <FontAwesomeIcon
                                     icon={faSquareFacebook}
-                                    className={styles.socialIcon}
+                                    className="contact-socialIcon"
                                 />
                             </a>
                         </div>
@@ -234,11 +233,11 @@ export default function Contact() {
             </main>
 
             {modalDisplayed && (
-                <div className={styles.modal}>
+                <div className="contact-modal">
                     <section
-                        className={`${styles.section} ${styles.modalContent}`}
+                        className="contact-section contact-modalContent"
                     >
-                        <h3 className={styles.modalTitle}>
+                        <h3 className="contact-modalTitle">
                             Votre message a été envoyé avec succès!
                         </h3>
                         <br /> Nous reviendrons vers vous dès que possible.
@@ -246,7 +245,7 @@ export default function Contact() {
                         notre site.
                         <button
                             onClick={displayModal}
-                            className={styles.modalButton}
+                            className="contact-modalButton"
                         >
                             OK
                         </button>

@@ -1,6 +1,4 @@
-@import '../../styles/scss/utils/mixins';
-
-.main{
+.projects-main{
     color: var(--text);
     min-height: 80vh;
     @include maxWidth;
@@ -8,22 +6,22 @@
         line-height: 1.75;}
 }
 
-.header{
+.projects-header{
     margin: 4rem auto 8rem;
     width: min(1000px, 98%);
 }
 
-.headerTitle{
+.projects-headerTitle{
     font-size: 2.5rem;
     font-family: var(--fontfam1);
 }
 
-.headerContent{
+.projects-headerContent{
     font-size: 1.25rem;
     margin: 1rem 0 2.5rem;
 }
 
-.contactBtn {
+.projects-contactBtn {
     display: inline-block;
     text-decoration: none;
     @include contactUs($size: 1.25rem);

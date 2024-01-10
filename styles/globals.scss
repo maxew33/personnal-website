@@ -1,22 +1,11 @@
-@import './scss/base/reset', './scss/components/buttons',
-    './scss/utils/variables';
+@import './scss/base/reset', './scss/utils/mixins', './scss/components/buttons', './scss/utils/variables', './scss/pages/home/home', './scss/pages/projects/projects', './scss/pages/pricing/pricing', './scss/pages/legal/legal', './scss/pages/contact/contact', './scss/components/project';
 
-@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Libre+Bodoni:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Nova+Cut&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap&family=Merriweather&display=swap&family=Acme&family=Merriweather&family=Anton&family=Archivo+Black&family=Lilita+One&family=Outfit&family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&display=swap');
 
 /* END OF RESET */
 /*
-font-family: 'Crimson Text', serif;
-font-family: 'Playfair Display SC', serif;
-font-family: 'Libre Bodoni', courier, serif;
-
-font-family: 'Afacad', sans-serif;
-font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Source Sans 3', sans-serif;
-font-family: 'Anton', sans-serif;
 font-family: 'Archivo Black', sans-serif;
-font-family: 'Lilita One', sans-serif;
-font-family: 'Outfit', sans-serif;
-font-family: 'Seymour One', sans-serif;
 */
 
 :root {
@@ -25,11 +14,11 @@ font-family: 'Seymour One', sans-serif;
     --primary: #{$primaryCol};
     --secondary: #{$secondaryCol};
     --lightCol: #{$lightCol};
-    --accent: #{$accentCol};   
+    --accent: #{$accentCol};
     --grey: #{$grey};
 
-    --fontfam1:'Archivo Black', serif;
-    --fontfam2:'Source Sans 3', sans-serif;
+    --fontfam1: 'Archivo Black', serif;
+    --fontfam2: 'Source Sans 3', sans-serif;
 }
 
 body {
@@ -45,67 +34,72 @@ body {
     justify-content: space-between;
 }
 
-a, a:hover, a:visited{
+a,
+a:hover,
+a:visited {
     display: inline-block;
     position: relative;
     text-decoration: none;
 }
 
-.slide-in, .slide-out{
-  position: absolute;
-  display: grid;
-  place-content: center;
-  font-size: 5rem;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform-origin: bottom;
-  z-index: 100;
-  background: url('/assets/transition.png'), var(--primary);
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-attachment: fixed;
-  background-position: center;
-
+.slide-in,
+.slide-out {
+    position: fixed;
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: bottom;
+    z-index: 100;
+    background: url('/assets/transition.webp'),
+        radial-gradient(circle at 50% 65%, #fff1 60%, var(--primary)),
+        radial-gradient(circle at 50% 65%, #fff2 50%, var(--primary)),
+        radial-gradient(circle at 50% 65%, #fff3 40%, var(--primary)),
+        radial-gradient(circle at 50% 65%, #fff 30%, var(--primary)),
+        var(--primary);
+    background-repeat: no-repeat;
+    // background-size: 60%;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-.slide-out{ 
-  transform-origin: top;
+.slide-out {
+    transform-origin: top;
 }
 
-.name{
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
+.name {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
 }
-
 
 @media screen and (max-width: 576px) {
     /* Votre code CSS spécifique pour les écrans mobiles (portrait) */
-  }
-  
-  /* Mobile (paysage) */
-  @media screen and (max-width: 767px) {
+}
+
+/* Mobile (paysage) */
+@media screen and (max-width: 767px) {
     /* Votre code CSS spécifique pour les écrans mobiles (paysage) */
-  }
-  
-  /* Tablette */
-  @media screen and (max-width: 991px) {
+}
+
+/* Tablette */
+@media screen and (max-width: 991px) {
     /* Votre code CSS spécifique pour les tablettes */
-  }
-  
-  /* Petits écrans d'ordinateur portable */
-  @media  screen and (max-width: 1199px) {
+}
+
+/* Petits écrans d'ordinateur portable */
+@media screen and (max-width: 1199px) {
     /* Votre code CSS spécifique pour les petits écrans d'ordinateur portable */
-  }
-  
-  /* Écrans d'ordinateur portable/moyens */
-  @media screen and (max-width: 1400px) {
-    :root{
+}
+
+/* Écrans d'ordinateur portable/moyens */
+@media screen and (max-width: 1400px) {
+    :root {
         font-size: 14px;
     }
-  }
-  
+}

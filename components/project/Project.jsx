@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styles from './Project.module.css'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -13,7 +12,7 @@ export default function Project(props) {
         highlights: ['points forts'],
         result: { nom: 'name', path: '' },
         banner: '',
-        link:'/'
+        link: '/',
     })
 
     const [active, setActive] = useState(false)
@@ -28,7 +27,7 @@ export default function Project(props) {
                 result,
                 banner,
                 implementation,
-                link
+                link,
             } = props
 
             // Update the state with the values from props
@@ -42,8 +41,8 @@ export default function Project(props) {
                     name: result?.name || 'visuels',
                     path: result?.path || '',
                 },
-                banner: banner || '/assets/projects/banner.jpg',
-                link: link || '/'
+                banner: banner || '/assets/projects/banner.webp',
+                link: link || '/',
             })
         }
     }, [props])
@@ -53,16 +52,16 @@ export default function Project(props) {
     }
 
     return (
-        <section className={styles.section}>
+        <section className="project-section">
             <header
                 style={{ backgroundImage: `url(${data.banner})` }}
-                className={styles.header}
+                className="project-header"
             >
-                <div className={styles.nameContainer} onClick={openWrapper}>
+                <div className="project-nameContainer" onClick={openWrapper}>
                     <h2>{data.name}</h2>
                     <span
-                        className={`${styles.chevron} ${
-                            active && styles.chevronActive
+                        className={`project-chevron ${
+                            active && 'project-chevronActive'
                         }`}
                     >
                         <FontAwesomeIcon icon={faChevronDown} />
@@ -70,39 +69,38 @@ export default function Project(props) {
                 </div>
             </header>
 
-            <div className={`${styles.content} ${active && styles.active}`}>
-                <p className={styles.description}>{data.description}</p>
-                <div
-                    className={`${styles.contentWrapper} ${styles.objectives}`}
-                >
-                    <h3 className={styles.contentTitle}>Objectifs : </h3>
+            <div className={`project-content ${active && "project-active"}`}>
+                <p className="project-description">{data.description}</p>
+                <div className="project-contentWrapper project-objectives">
+                    <h3 className="project-contentTitle">Objectifs : </h3>
                     {data.objectives}
                 </div>
-                <div
-                    className={`${styles.contentWrapper} ${styles.implementation}`}
-                >
-                    <h3 className={styles.contentTitle}>Réalisation : </h3>
+                <div className="project-contentWrapper} ${project-implementation">
+                    <h3 className="project-contentTitle">Réalisation : </h3>
                     {data.implementation}
                 </div>
-                <div
-                    className={`${styles.contentWrapper} ${styles.highlights}`}
-                >
-                    <h3 className={styles.contentTitle}>Points forts :</h3>{' '}
+                <div className="project-contentWrapper} ${project-highlights">
+                    <h3 className="project-contentTitle">Points forts :</h3>{' '}
                     <ul>
                         {data.highlights.map((highlight, index) => (
                             <li key={`hightlight${index}`}>{highlight}</li>
                         ))}
                     </ul>
                 </div>
-                <a href={data.link} target="_blank" rel="noopener noreferrer" className={styles.contentLink} >
-                <Image
-                    src={data.result.path || '/assets/home/chooseUs.png'}
-                    height={295}
-                    width={530}
-                    className={styles.contentIllus}
-                    alt={data.result.name || 'visuels du site'}
-                /></a>
-
+                <a
+                    href={data.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-contentLink"
+                >
+                    <Image
+                        src={data.result.path || '/assets/home/chooseUs.webp'}
+                        height={295}
+                        width={530}
+                        className="project-contentIllus"
+                        alt={data.result.name || 'visuels du site'}
+                    />
+                </a>
             </div>
         </section>
     )

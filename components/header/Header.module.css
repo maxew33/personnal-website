@@ -47,11 +47,13 @@
   background: var(--accent);
   font-weight: 400;
   font-size: 1.5rem;
+  text-shadow: 1px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, -1px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, -1px 1px #b90050, 1px -1px #b90050;
   box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
 }
 .contact:hover {
   background: var(--bg);
   color: var(--accent);
+  text-shadow: unset;
 }
 .contact.active {
   position: relative;
@@ -59,6 +61,7 @@
   background: var(--bg);
   border: 1px solid rgba(0, 0, 0, 0);
   box-shadow: unset;
+  text-shadow: unset;
 }
 
 .logoLink, .logoLink:hover {

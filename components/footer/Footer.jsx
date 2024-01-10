@@ -17,7 +17,7 @@ export default function Footer() {
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.link}>
                     <Image
-                        src="/assets/logo.png"
+                        src="/assets/logo.webp"
                         width={118}
                         height={87}
                         alt="logo de techquest"
@@ -42,13 +42,15 @@ export default function Footer() {
                     contact
                 </Link>
                 <div className={styles.social}>
-                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/">
+                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/"
+                    aria-label="lien linkedin">
                         <FontAwesomeIcon
                             icon={faLinkedin}
                             className={styles.icon}
                         />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/">
+                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/"
+                    aria-label="lien facebook">
                         <FontAwesomeIcon
                             icon={faFacebookSquare}
                             className={styles.icon}

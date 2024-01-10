@@ -6,9 +6,15 @@
     background: var(--accent);
     font-weight: 400;
     font-size: $size;
+    text-shadow: 1px 1px #b90050, 0px 1px #b90050,
+        0px 1px #b90050, 0px 1px #b90050,
+        -1px -1px #b90050, 0px -1px #b90050,
+        0px -1px #b90050, 0px -1px #b90050,
+        -1px 1px #b90050, 1px -1px #b90050;
     &:hover {
         background: var(--bg);
         color: var(--accent);
+        text-shadow: unset;
     }
     @include boxShadow(#1115);
 }

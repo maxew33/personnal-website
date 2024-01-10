@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
-import styles from './Pricing.module.css'
 import { motion } from 'framer-motion'
 
 async function getPricingData() {
@@ -17,7 +16,6 @@ export default function Pricing() {
             setData(pricesData)
         }
         fetchData()
-        console.log(data)
     }, [])
 
     const priceWrapperAnimationVariants = {
@@ -30,17 +28,17 @@ export default function Pricing() {
             opacity: 1,
             scale: 1,
             x: 0,
-            transition: { duration: .75, delay: 0.15 * index },
+            transition: { duration: 0.75, delay: 0.15 * index },
         }),
     }
 
     return (
-        <main className={styles.main}>
-            <h1 className={styles.title}>Découvrez nos offres web</h1>
-            <h2 className={styles.subtitle}>
+        <main className="pricing-main">
+            <h1 className="pricing-title">Découvrez nos offres web</h1>
+            <h2 className="pricing-subtitle">
                 Choisissez la solution adaptée à votre succès en ligne
             </h2>
-            <section className={styles.pricingWrapper}>
+            <section className="pricing-pricingWrapper">
                 {data.map((price, index) => (
                     <motion.article
                         key={'article' + index}
@@ -48,44 +46,44 @@ export default function Pricing() {
                         initial="initial"
                         animate="animate"
                         custom={index}
-                        className={`${styles.article} ${styles[price.type]}`}
+                        className={`pricing-article pricing-${price.type}`}
                     >
-                        <div className={styles.header}>
+                        <div className="pricing-header">
                             à partir de{' '}
-                            <span className={styles.price}>{price.price}</span>
+                            <span className="pricing-price">{price.price}</span>
                         </div>
-                        <div className={styles.content}>
-                            <h3 className={styles.pricingTitle}>
+                        <div className="pricing-content">
+                            <h3 className="pricing-pricingTitle">
                                 {price.title}
                             </h3>
-                            <h4 className={styles.pricingSubtitle}>
+                            <h4 className="pricing-pricingSubtitle">
                                 {price.subtitle}
                             </h4>
                             <input
                                 type="checkbox"
                                 name=""
                                 id={`more${price.type}`}
-                                className={styles.more}
+                                className="pricing-more"
                             />
                             <label
                                 htmlFor={`more${price.type}`}
-                                className={styles.labelForMore}
+                                className="pricing-labelForMore"
                             >
                                 en savoir +{' '}
                             </label>
                             <label
                                 htmlFor={`more${price.type}`}
-                                className={styles.labelForLess}
+                                className="pricing-labelForLess"
                             >
                                 fermer
                             </label>
-                            <ul className={styles.contentList}>
+                            <ul className="pricing-contentList">
                                 {price.features.map((feature, index) => (
                                     <li key={index}>{feature}</li>
                                 ))}
                             </ul>
-                            <div className={styles.footer}>
-                                <Link href="/contact">Contact</Link>
+                            <div className="pricing-footer">
+                                <Link href="/contact" className='pricing-contact'>Contact</Link>
                             </div>
                         </div>
                     </motion.article>

@@ -42,9 +42,9 @@ export default function Header() {
             <header
                 className={`${styles.header} ${menuOpen && styles.menuOpen}`}
             >
-                <Link href="/" className={styles.logoLink}>
+                <Link href="/" className={styles.logoLink} aria-label={paths.name}>
                     <Image
-                        src="/assets/logo.png"
+                        src="/assets/logo.webp"
                         width={118}
                         height={87}
                         alt="logo de techquest"
@@ -62,6 +62,7 @@ export default function Header() {
                     {paths.map((path, index) => (
                         <Link
                             href={path.path}
+                            aria-label={path.name}
                             key={`path${index}`}
                             className={`${styles.link} ${
                                 pathname === path.path && styles.active
@@ -73,6 +74,7 @@ export default function Header() {
                     ))}
                     <Link
                         href="/contact/"
+                        aria-label="contact"
                         className={`${styles.contact} ${
                             pathname === '/contact/' && styles.active
                         }`}

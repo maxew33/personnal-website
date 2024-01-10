@@ -12,7 +12,7 @@
             ],
             "result": {
                 "name": "visuels du site du cabinet cap patrimoine",
-                "path": "/assets/projects/cabinetCapPatrimoine.png"
+                "path": "/assets/projects/cabinetCapPatrimoine.webp"
             },
             "link":"https://cabinet-cap-patrimoine.fr/"
         },
@@ -28,7 +28,7 @@
             ],
             "result": {
                 "name": "visuels du site de Jérémie Bonne",
-                "path": "/assets/projects/jeremieBonne.png"
+                "path": "/assets/projects/jeremieBonne.webp"
             },
             "link":"https://jeremie-bonne.fr/"
         },
@@ -45,7 +45,7 @@
             ],
             "result": {
                 "name": "visuels du site de Maxime Malfilâtre",
-                "path": "/assets/projects/maximeMalfilatre.png"
+                "path": "/assets/projects/maximeMalfilatre.webp"
             },
             "link":"https://www.maxime-malfilatre.com"
         }

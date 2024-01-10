@@ -1,6 +1,4 @@
-@import '../../styles/scss/utils/mixins';
-
-.modal {
+.contact-modal {
     position: fixed;
     background: #fffa;
     backdrop-filter: blur(5px);
@@ -16,7 +14,7 @@
     }
 }
 
-.modalContent {
+.contact-modalContent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,11 +26,11 @@
     font-size: 1.5rem;
     border-radius: 15px;
 
-    .modalTitle {
+    .contact-modalTitle {
         font-size: 2rem;
     }
 
-    .modalButton {
+    .contact-modalButton {
         display: block;
         cursor: pointer;
         position: relative;
@@ -53,14 +51,14 @@
     }
 }
 
-.pageTitle,
-.main {
+.contact-pageTitle,
+.contact-main {
     color: var(--text);
     width: 98%;
     @include maxWidth;
 }
 
-.pageTitle {
+.contact-pageTitle {
     margin: 2.5rem auto 3rem;
     text-align: center;
     font-size: 3.5rem;
@@ -68,7 +66,7 @@
     text-transform: capitalize;
 }
 
-.main {
+.contact-main {
     display: grid;
     grid-template:
         'title form' 2fr
@@ -78,16 +76,17 @@
     min-height: 34rem;
 }
 
-.section{    
-    border-radius: 25px;@include boxShadow;
+.contact-section {
+    border-radius: 25px;
+    @include boxShadow;
 }
 
-.article {
+.contact-article {
     @include flexCol;
     padding: 2rem;
 }
 
-.articleTitle {
+.contact-articleTitle {
     font-size: 2.25rem;
     font-family: var(--fontfam1);
     text-transform: capitalize;
@@ -95,15 +94,14 @@
 
 // page
 
-.title {
+.contact-title {
     grid-area: title;
-    background: url('../../public/assets/contact/phone.jpg');
+    background: url('/assets/contact/phone.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: var(--bg);
     font-size: 2rem;
-    // line-height: 1.5;
     display: grid;
     place-content: center;
 
@@ -114,36 +112,36 @@
 
 // Form section
 
-.formContact {
+.contact-formContact {
     background: var(--lightCol);
     grid-area: form;
 
-    .article {
+    .contact-article {
         height: calc(100% - 4rem);
         justify-content: space-between;
         gap: 1rem;
     }
 }
 
-.formTitle {
+.contact-formTitle {
     line-height: 1.15;
     font-size: 1.15rem;
 }
 
-.formWrapper {
+.contact-formWrapper {
     flex-grow: 0.5;
     @include flexCol;
     gap: 1rem;
 }
 
-.inputWrapper,
-.textAreaWrapper {
+.contact-inputWrapper,
+.contact-textAreaWrapper {
     position: relative;
     width: 100%;
 }
 
-.input,
-.textArea {
+.contact-input,
+.contact-textArea {
     background: var(--bg);
     width: calc(100% - 2rem);
     padding: 0.5rem 1rem;
@@ -152,25 +150,25 @@
     border-radius: 10px;
     &:focus,
     &:valid {
-        & ~ .label {
+        & ~ .contact-label {
             font-size: 0.75rem;
             transform: translate(0.25rem, -100%);
         }
     }
 }
 
-.input {
+.contact-input {
     min-height: 2rem;
 }
 
-.label {
+.contact-label {
     position: relative;
     display: inline-block;
     font-size: 1rem;
     margin: 0 0 0.5rem 1.25rem;
 }
 
-.formButton {
+.contact-formButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,14 +186,14 @@
         background: #fff;
         color: var(--accent);
     }
-    svg{
+    svg {
         height: 1.25rem;
     }
 }
 
 // direct contact
 
-.linksWrapper {
+.contact-linksWrapper {
     grid-area: link;
     background: var(--lightCol);
     display: flex;
@@ -204,7 +202,7 @@
     gap: 2rem;
     padding: 2rem;
 
-    .article {
+    .contact-article {
         position: relative;
         width: 35%;
         background: var(--bg);
@@ -214,16 +212,16 @@
         justify-content: center;
     }
 
-    .articleTitle {
+    .contact-articleTitle {
         font-size: 1.75rem;
     }
 }
 
-.followUs {
+.contact-followUs {
     @include flexCol;
 }
 
-.iconContainer {
+.contact-iconContainer {
     width: 2rem;
     height: 2rem;
     position: absolute;
@@ -237,24 +235,24 @@
     background-color: var(--bg);
 }
 
-.icon {
+.contact-icon {
     color: var(--accent);
     font-size: 2rem;
 }
 
-.linkWrapper {
+.contact-linkWrapper {
     display: flex;
     gap: 1.5rem;
     font-size: 1.25rem;
 }
 
-.socialIcon {
-    font-size: 2.5rem;
+.contact-socialIcon {
+    height: 2.5rem;
 }
 
 /* Tablette */
 @media screen and (max-width: 991px) {
-    .main {
+    .contact-main {
         width: 100%;
         grid-template:
             'title'
@@ -262,14 +260,14 @@
             'form';
     }
 
-    .section{
+    .contact-section {
         border-radius: unset;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .linksWrapper {
-        .article {
+    .contact-linksWrapper {
+        .contact-article {
             width: 85%;
         }
     }

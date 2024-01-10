@@ -1,6 +1,4 @@
-@import '../../styles/scss/utils/mixins';
-
-.main {
+.pricing-main {
     @include flexCol;
     align-items: center;
     justify-content: space-around;
@@ -9,19 +7,19 @@
     @include maxWidth;
 }
 
-.title,
-.subtitle {
+.pricing-title,
+.pricing-subtitle {
     font-family: var(--fontfam1);
     max-width: 90%;
     text-align: center;
 }
 
-.title {
+.pricing-title {
     font-size: 2.75rem;
     margin: 1.5rem auto;
 }
 
-.pricingWrapper {
+.pricing-pricingWrapper {
     display: flex;
     width: 98%;
     @include maxWidth;
@@ -29,7 +27,7 @@
     justify-content: space-between;
 }
 
-.article {
+.pricing-article {
     @include flexCol;
     justify-content: space-between;
     width: 25rem;
@@ -43,25 +41,25 @@
     }
 }
 
-.basic {
+.pricing-basic {
     --articleBg: var(--secondary);
 }
 
-.standard {
+.pricing-standard {
     --articleBg: var(--accent);
 }
 
-.premium {
+.pricing-premium {
     --articleBg: var(--primary);
 }
 
-.pricingTitle,
-.header {
+.pricing-pricingTitle,
+.pricing-header {
     font-size: 1.5rem;
     text-transform: capitalize;
 }
 
-.header {
+.pricing-header {
     background: var(--articleBg);
     position: relative;
     text-align: center;
@@ -85,25 +83,25 @@
     }
 }
 
-.price {
+.pricing-price {
     font-size: 4rem;
     display: block;
 }
 
-.content {
+.pricing-content {
     @include flexCol;
     align-items: center;
 }
 
-.pricingTitle {
+.pricing-pricingTitle {
     padding: 2rem 0 1rem 0;
 }
 
-.pricingSubtitle {
+.pricing-pricingSubtitle {
     padding-bottom: 1rem;
 }
 
-.contentList {
+.pricing-contentList {
     position: relative;
     width: 80%;
     height: 14rem;
@@ -128,7 +126,7 @@
     }
 }
 
-.footer {
+.pricing-footer {
     position: relative;
     text-align: center;
     padding: 2rem;
@@ -142,30 +140,34 @@
         width: 10rem;
         background: var(--grey);
     }
+}
 
-    a {
-        text-decoration: unset;
-        color: var(--bg);
-        background: var(--articleBg);
-        padding: 0.5rem 1rem;
-        border-radius: 15rem;
-        font-size: 1.5rem;
-        text-transform: capitalize;
+.pricing-contact {
+    text-decoration: unset;
+    color: var(--bg);
+    background: var(--articleBg);
+    padding: 0.5rem 1rem;
+    border-radius: 15rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    &:hover{
+        color:var(--articleBg);
+        background: var(--bg);
     }
 }
 
-.highLighted {
+.pricing-highLighted {
     color: var(--articleBg);
 }
 
-.more,
-.labelForMore,
-.labelForLess {
+.pricing-more,
+.pricing-labelForMore,
+.pricing-labelForLess {
     display: none;
 }
 
-.labelForMore,
-.labelForLess {
+.pricing-labelForMore,
+.pricing-labelForLess {
     position: relative;
     padding: 1rem;
     cursor: pointer;
@@ -183,29 +185,29 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .contentList {
+    .pricing-contentList {
         height: 16rem;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .pricingWrapper {
+    .pricing-pricingWrapper {
         flex-wrap: wrap;
         gap: 1.5rem;
     }
 
-    .contentList {
+    .pricing-contentList {
         height: auto;
     }
 
-    .article {
+    .pricing-article {
         flex-direction: row;
         width: 45rem;
         max-width: 98%;
         margin: auto;
     }
 
-    .header {
+    .pricing-header {
         width: 30%;
         padding: 1.5rem;
         border-radius: 2.5rem 0 0 2.5rem;
@@ -219,58 +221,58 @@
         }
     }
 
-    .content {
+    .pricing-content {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .article {
+    .pricing-article {
         &:hover {
             transform: unset;
         }
     }
 
-    .header {
+    .pricing-header {
         width: 40%;
         padding: 1.5rem;
     }
 
-    .content {
+    .pricing-content {
         width: 60%;
     }
 
-    .labelForMore {
+    .pricing-labelForMore {
         display: block;
     }
 
-    .more:checked {
-        ~ .contentList {
+    .pricing-more:checked {
+        ~ .pricing-contentList {
             display: block;
         }
-        ~ .labelForLess {
+        ~ .pricing-labelForLess {
             display: block;
         }
-        ~ .labelForMore {
+        ~ .pricing-labelForMore {
             display: none;
         }
     }
 
-    .contentList {
+    .pricing-contentList {
         display: none;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .header{        
+    .pricing-header {
         font-size: 5vw;
     }
-    .price {
+    .pricing-price {
         font-size: 10vw;
         display: block;
     }
 
-    .pricingTitle{
+    .pricing-pricingTitle {
         font-size: 6vw;
     }
 }

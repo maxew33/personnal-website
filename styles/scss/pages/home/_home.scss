@@ -1,6 +1,4 @@
-@import '../styles/scss/utils/mixins';
-
-.main {
+.home-main {
     position: relative;
     top: -2rem;
     width: 100%;
@@ -22,7 +20,7 @@
     }
 }
 
-.sectionContent {
+.home-sectionContent {
     width: 98%;
     @include maxWidth;
     display: grid;
@@ -33,7 +31,7 @@
     align-items: center;
 }
 
-.heroContent {
+.home-heroContent {
     position: relative;
     top: 8rem;
     height: 40rem;
@@ -57,30 +55,30 @@
     }
 }
 
-.title {
+.home-title {
     grid-area: title;
 }
 
-.welcome {
+.home-welcome {
     grid-area: welcome;
 }
 
-.highlighted {
+.home-highlighted {
     color: var(--secondary);
 }
 
-.linkContainer {
+.home-linkContainer {
     grid-area: linkContainer;
     @include flexSB;
 }
 
-.contactBtn {
+.home-contactBtn {
     text-decoration: none;
     @include contactUs($size: 1.25rem);
     padding: 0.75rem 1.5rem;
 }
 
-.heroIllus {
+.home-heroIllus {
     grid-area: illus;
     max-width: 40vw;
     height: 100%;
@@ -89,30 +87,30 @@
     @include boxShadow(#1115);
 }
 
-.invit {
+.home-invit {
     grid-area: invit;
 }
 
-.link {
+.home-link {
     @include links;
 }
 
 //======= ARGUMENTS =======//
 
-.arguments {
+.home-arguments {
     background: var(--primary);
     position: relative;
     top:2.5rem;
     z-index: -1;
 }
 
-.argumentsContent {
+.home-argumentsContent {
     position: relative;
     top: 12.5rem;
     height: 25rem;
 }
 
-.articleIllus {
+.home-articleIllus {
     grid-area: illus;
     height: 100%;
     max-width: 45vw;
@@ -121,46 +119,46 @@
     @include boxShadow(#1115);
 }
 
-.articleTitle {
+.home-articleTitle {
     grid-area: title;
     color: var(--bg);
     align-self: center;
 }
 
-.articleText {
+.home-articleText {
     grid-area: content;
     align-self: center;
 }
 
-// .feature{
+// .home-feature{
 //     position: relative;
 //     opacity: 0;
 //     top: 20rem;
 // }
 
-.features {
+.home-features {
     padding-top: 20rem;
 }
 
-.featuresContent {
+.home-featuresContent {
     @include flexCol;
     gap: 2rem;
 }
 
-.featureLink {
+.home-featureLink {
     margin: 2.5rem 0 5rem;
     align-self: center;
     font-size: 2rem;
     padding: 1rem 2rem;
 }
 
-.featuresWrapper {
+.home-featuresWrapper {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
 }
 
-.feature {
+.home-feature {
     @include flexCol;
     align-items: center;
     width: 25%;
@@ -170,40 +168,40 @@
     height: 10rem;
 }
 
-.featureTitle {
+.home-featureTitle {
     font-size: 1.5rem;
     padding: 0.5rem 0 1.5rem;
 }
 
-.featureText {
+.home-featureText {
     font-size: 0.9rem;
 }
 
-.solutionsWrapper {
+.home-solutionsWrapper {
     background: var(--lightCol);
     position: relative;
 }
 
-.solutions {
+.home-solutions {
     padding: 5rem 0;
 
-    & .articleTitle {
+    & .home-articleTitle {
         color: unset;
     }
 }
 
-.testimonialsContent {
+.home-testimonialsContent {
     width: 95%;
     @include maxWidth;
 }
 
-.testimonialsTitle {
+.home-testimonialsTitle {
     margin: 5rem 0;
     text-align: center;
     line-height: 1.15;
 }
 
-.testimonialsWrapper {
+.home-testimonialsWrapper {
     @include flexSB;
     gap: 5rem;
     margin-bottom: 5rem;
@@ -214,7 +212,7 @@
     }
 }
 
-.testimonialContent {
+.home-testimonialContent {
     position: relative;
     background: #fff;
     padding: 1rem;
@@ -238,28 +236,28 @@
     }
 }
 
-.testimonialAuthor {
+.home-testimonialAuthor {
     display: inline-block;
     width: 100%;
     text-align: right;
     margin-top: 1rem;
 }
 
-.ctaSection {
+.home-ctaSection {
     @include maxWidth;
     padding-top: 6rem;
     text-align: center;
     line-height: 2;
 }
 
-.ctaBtn {
+.home-ctaBtn {
     @include contactUs($size: 2.25rem);
     padding: 0.5rem 2.5rem;
     margin: 3rem 0 2rem;
 }
 
 @media screen and (max-width: 1080px) {
-    .heroContent {
+    .home-heroContent {
         grid-template-areas:
             'title title'
             'welcome illus'
@@ -268,38 +266,38 @@
         gap: 2.5rem;
     }
 
-    .sectionContent {
+    .home-sectionContent {
         grid-template-areas:
             'title title'
             'illus content';
     }
 
-    .title {
+    .home-title {
         text-align: center;
     }
 
-    .articleTitle {
+    .home-articleTitle {
         text-align: center;
     }
-    .articleTitle,
-    .articleText {
+    .home-articleTitle,
+    .home-articleText {
         width: 98%;
         margin: auto;
     }
 
-    .argumentsContent {
+    .home-argumentsContent {
         height: 20rem;
     }
 
     // FEATURES //
 
-    .featuresWrapper {
+    .home-featuresWrapper {
         @include flexCol;
         width: 100%;
         gap: 0.5rem;
     }
 
-    .feature {
+    .home-feature {
         @include flexSB;
         width: 100%;
         border-radius: unset;
@@ -311,46 +309,46 @@
         }
     }
 
-    .featureTitle {
+    .home-featureTitle {
         font-size: 1.75rem;
     }
 
-    .featureText {
+    .home-featureText {
         font-size: 1.25rem;
     }
 
-    .featuresContent {
+    .home-featuresContent {
         width: 100%;
         padding-bottom: 5rem;
     }
 
-    .solutionsWrapper {
+    .home-solutionsWrapper {
         background: var(--primary);
         color: var(--bg);
     }
 }
 
 @media screen and (max-width: 992px) {
-    .testimonialsTitle {
+    .home-testimonialsTitle {
         margin: 5rem 10%;
     }
 
-    .testimonialsWrapper {
+    .home-testimonialsWrapper {
         @include flexCol;
         gap: 2.5rem;
         max-width: calc(100% - 6rem);
     }
 
-    .testimonialContent {
+    .home-testimonialContent {
         font-size: 1.25rem;
     }
 
-    .ctaSection {
+    .home-ctaSection {
         max-width: 80%;
         line-height: 1.15;
     }
 
-    .ctaContent {
+    .home-ctaContent {
         padding-top: 1.5rem;
         font-size: 1.25rem;
         text-align: left;
@@ -361,7 +359,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .heroContent {
+    .home-heroContent {
         grid-template-areas:
             'title title'
             'welcome welcome'
@@ -369,7 +367,7 @@
             'invit illus';
     }
 
-    .sectionContent {
+    .home-sectionContent {
         width: 100%;
         grid-template-areas:
             'title title'
@@ -378,11 +376,11 @@
         gap: 1rem;
     }
 
-    .argumentsContent {
+    .home-argumentsContent {
         height: unset;
     }
 
-    .articleIllus {
+    .home-articleIllus {
         width: 100%;
         max-width: unset;
         height: 15rem;
@@ -391,7 +389,7 @@
 }
 
 @media screen and (max-width: 576px) {
-    .heroContent {
+    .home-heroContent {
         grid-template-areas:
             'title title'
             'welcome welcome'
@@ -407,7 +405,7 @@
         }
     }
 
-    .heroIllus {
+    .home-heroIllus {
         max-width: 100%;
         height: 15rem;
         border-radius: unset;

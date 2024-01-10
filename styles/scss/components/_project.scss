@@ -1,12 +1,10 @@
-@import '../../styles/scss/utils/mixins';
-
-.section {
+.project-section {
     color: var(--text);
     max-width: 1400px;
     margin: auto;
 }
 
-.header {
+.project-header {
     color: var(--bg);
     font-size: 2rem;
     height: 6rem;
@@ -19,7 +17,7 @@
     border-radius: 25px;
 }
 
-.nameContainer {
+.project-nameContainer {
     position: relative;
     height: 100%;
     width: 100%;
@@ -36,7 +34,10 @@
     }
 }
 
-.chevron {
+.project-chevron {
+    > * {
+        height: 2rem;
+    }
     position: absolute;
     right: 1rem;
     top: 50%;
@@ -44,34 +45,35 @@
     transition: 0.25s transform linear;
 }
 
-.chevronActive {
+.project-chevronActive {
     transform: translate(0, -50%) rotate(-180deg);
 }
 
-.content {
+.project-content {
     height: 0px;
     transition: 0.5s height;
     overflow: hidden;
     width: 98%;
     max-width: 1400px;
-    margin: auto;    
+    margin: auto;
     display: grid;
-    grid-template-areas: 'description description'
-    'objectives objectives'
-    'implementation illus'
-    'hightlights illus';
+    grid-template-areas:
+        'description description'
+        'objectives objectives'
+        'implementation illus'
+        'hightlights illus';
 }
 
-.active {
+.project-active {
     height: 35rem;
 }
 
-.description {
+.project-description {
     font-size: 1.25rem;
     grid-area: description;
 }
 
-.contentText {
+.project-contentText {
     line-height: 1.5;
     background: var(--lightCol);
     padding: 0.5rem 1rem;
@@ -81,77 +83,78 @@
     }
 }
 
-.contentTitle {
+.project-contentTitle {
     font-size: 1.5rem;
 }
 
-.contentIllus{
+.project-contentIllus {
     width: 100%;
     max-width: 30rem;
     height: auto;
     object-fit: contain;
 }
 
-.contentLink{
+.project-contentLink {
     margin-left: 5rem;
     grid-area: illus;
 }
 
-.objectives{
+.project-objectives {
     grid-area: objectives;
 }
 
-.implementation{
+.project-implementation {
     grid-area: implementation;
 }
 
-.highlights{
+.project-highlights {
     grid-area: hightlights;
 }
 
 @media screen and (max-width: 1200px) {
-    .header {
+    .project-header {
         font-size: 1.75rem;
     }
 
-    .active {
+    .project-active {
         height: 100%;
         margin-bottom: 2rem;
     }
 
-    .description {
+    .project-description {
         font-size: 1.25rem;
     }
 
-    .content {    
-        grid-template-areas: 'description description'
-        'objectives objectives'
-        'implementation implementation'
-        'hightlights illus';
-        gap: .5rem;
+    .project-content {
+        grid-template-areas:
+            'description description'
+            'objectives objectives'
+            'implementation implementation'
+            'hightlights illus';
+        gap: 0.5rem;
     }
 }
 
 /* Tablette */
 @media screen and (max-width: 991px) {
-    .header {
+    .project-header {
         width: 100%;
         border-radius: unset;
     }
-    .nameContainer {
+    .project-nameContainer {
         border-radius: unset;
     }
 
-    .content {    
-        grid-template-areas: 'description'
-        'illus'
-        'objectives '
-        'implementation '
-        'hightlights ';
+    .project-content {
+        grid-template-areas:
+            'description'
+            'illus'
+            'objectives '
+            'implementation '
+            'hightlights ';
     }
-    
-    .contentLink{
+
+    .project-contentLink {
         margin: 2rem auto 0;
     }
 }
-
