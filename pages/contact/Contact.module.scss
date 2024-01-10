@@ -171,6 +171,10 @@
 }
 
 .formButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     color: var(--bg);
     background: var(--accent);
     border: 1px solid var(--accent);
@@ -183,6 +187,9 @@
     &:hover {
         background: #fff;
         color: var(--accent);
+    }
+    svg{
+        height: 1.25rem;
     }
 }
 
