@@ -96,7 +96,8 @@
   background-position: center;
   color: var(--bg);
   font-size: 2rem;
-  line-height: 1.5;
+  display: grid;
+  place-content: center;
 }
 .title h3 {
   margin: 1rem;

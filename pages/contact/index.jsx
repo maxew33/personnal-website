@@ -190,10 +190,10 @@ export default function Contact() {
                         </h2>
                         <div className={styles.linkWrapper}>
                             <a
-                                href="mailto:contact@velvetweb.fr"
+                                href="mailto:contact@techquest.fr"
                                 className={styles.contact}
                             >
-                                contact@velvetweb.fr
+                                contact@techquest.fr
                             </a>
                         </div>
                     </article>

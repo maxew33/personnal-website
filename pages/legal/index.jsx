@@ -18,8 +18,8 @@ export default function Legal() {
                     <span className={styles.underlined}>
                         Prestations et Services :{' '}
                     </span>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     met à disposition des Clients :
                 </p>
@@ -35,8 +35,8 @@ export default function Legal() {
                     Ci après dénommé « Information (s) » qui correspondent à
                     l'ensemble des données personnelles susceptibles d'être
                     détenues par{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     pour la gestion de votre compte, de la gestion de la
                     relation client et à des fins d'analyses et de statistiques.
@@ -69,8 +69,8 @@ export default function Legal() {
                     En vertu de l'article 6 de la loi n° 2004-575 du 21 juin
                     2004 pour la confiance dans l'économie numérique, il est
                     précisé aux utilisateurs du site internet{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     l'identité des différents intervenants dans le cadre de sa
                     réalisation et de son suivi:
@@ -122,15 +122,15 @@ export default function Legal() {
                 </p>
                 <p>
                     L'utilisation du site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     implique l'acceptation pleine et entière des conditions
                     générales d'utilisation ci-après décrites. Ces conditions
                     d'utilisation sont susceptibles d'être modifiées ou
                     complétées à tout moment, les utilisateurs du site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     sont donc invités à les consulter de manière régulière.
                 </p>
@@ -138,18 +138,18 @@ export default function Legal() {
                     Ce site internet est normalement accessible à tout moment
                     aux utilisateurs. Une interruption pour raison de
                     maintenance technique peut être toutefois décidée par{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>
                     , qui s'efforcera alors de communiquer préalablement aux
                     utilisateurs les dates et heures de l'intervention. Le site
                     web{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     est mis à jour régulièrement par{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     responsable. De la même façon, les mentions légales peuvent
                     être modifiées à tout moment : elles s'imposent néanmoins à
@@ -163,17 +163,17 @@ export default function Legal() {
                 </h4>
                 <p>
                     Le site internet{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     a pour objet de fournir une information concernant
                     l'ensemble des activités de la société.{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     s'efforce de fournir sur le site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr{' '}
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     des informations aussi précises que possible. Toutefois, il
                     ne pourra être tenu responsable des oublis, des
@@ -183,14 +183,14 @@ export default function Legal() {
                 </p>
                 <p>
                     Toutes les informations indiquées sur le site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     sont données à titre indicatif, et sont susceptibles
                     d'évoluer. Par ailleurs, les renseignements figurant sur le
                     site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     ne sont pas exhaustifs. Ils sont donnés sous réserve de
                     modifications ayant été apportées depuis leur mise en ligne.
@@ -209,9 +209,9 @@ export default function Legal() {
                     s'engage à accéder au site en utilisant un matériel récent,
                     ne contenant pas de virus et avec un navigateur de dernière
                     génération mis-à-jour Le site{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     est hébergé chez un prestataire sur le territoire de l'Union
                     Européenne conformément aux dispositions du Règlement
@@ -229,9 +229,9 @@ export default function Legal() {
                     un trafic réputé anormal.
                 </p>
                 <p>
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     et l'hébergeur ne pourront être tenus responsables en cas de
                     dysfonctionnement du réseau Internet, des lignes
@@ -245,9 +245,9 @@ export default function Legal() {
                     </span>
                 </h4>
                 <p>
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     est propriétaire des droits de propriété intellectuelle et
                     détient les droits d'usage sur tous les éléments accessibles
@@ -257,9 +257,9 @@ export default function Legal() {
                     adaptation de tout ou partie des éléments du site, quel que
                     soit le moyen ou le procédé utilisé, est interdite, sauf
                     autorisation écrite préalable de :{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>
                 </p>
                 <p>
@@ -275,53 +275,53 @@ export default function Legal() {
                     </span>
                 </h4>
                 <p>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     agit en tant qu'éditeur du site.{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     est responsable de la qualité et de la véracité du Contenu
                     qu'il publie.
                 </p>
                 <p>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     ne pourra être tenu responsable des dommages directs et
                     indirects causés au matériel de l'utilisateur, lors de
                     l'accès au site internet{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>
                     , et résultant soit de l'utilisation d'un matériel ne
                     répondant pas aux spécifications indiquées au point 4, soit
                     de l'apparition d'un bug ou d'une incompatibilité.
                 </p>
                 <p>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     ne pourra également être tenu responsable des dommages
                     indirects (tels par exemple qu'une perte de marché ou perte
                     d'une chance) consécutifs à l'utilisation du site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>
                     . Des espaces interactifs (possibilité de poser des
                     questions dans l'espace contact) sont à la disposition des
                     utilisateurs.{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     se réserve le droit de supprimer, sans mise en demeure
                     préalable, tout contenu déposé dans cet espace qui
                     contreviendrait à la législation applicable en France, en
                     particulier aux dispositions relatives à la protection des
                     données. Le cas échéant,{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     se réserve également la possibilité de mettre en cause la
                     responsabilité civile et/ou pénale de l'utilisateur,
@@ -351,16 +351,16 @@ export default function Legal() {
                     création du compte personnel de l'Utilisateur et de sa
                     navigation sur le Site, le responsable du traitement des
                     Données Personnelles est : <span></span>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     est représenté par <span>Vitu</span>, son représentant légal{' '}
                 </p>
                 <p>
                     En tant que responsable du traitement des données qu'il
                     collecte,{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     s'engage à respecter le cadre des dispositions légales en
                     vigueur. Il lui appartient notamment au Client d'établir les
@@ -369,18 +369,18 @@ export default function Legal() {
                     consentements, une information complète sur le traitement de
                     leurs données personnelles et de maintenir un registre des
                     traitements conforme à la réalité. Chaque fois que{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     traite des Données Personnelles,{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     prend toutes les mesures raisonnables pour s'assurer de
                     l'exactitude et de la pertinence des Données Personnelles au
                     regard des finalités pour lesquelles{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     les traite.
                 </p>
@@ -390,8 +390,8 @@ export default function Legal() {
                     </span>
                 </h5>
                 <p>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     est susceptible de traiter tout ou partie des données :{' '}
                 </p>
@@ -419,8 +419,8 @@ export default function Legal() {
                     <li>
                         {' '}
                         pour mener des enquêtes de satisfaction facultatives sur{' '}
-                        <a href="https://www.velvetweb.fr">
-                            https://www.velvetweb.fr
+                        <a href="https://www.techquest.fr">
+                            https://www.techquest.fr
                         </a>{' '}
                         : adresse email{' '}
                     </li>
@@ -431,8 +431,8 @@ export default function Legal() {
                     </li>
                 </ul>
                 <p>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     ne commercialise pas vos données personnelles qui sont donc
                     uniquement utilisées par nécessité ou à des fins
@@ -446,8 +446,8 @@ export default function Legal() {
                 <p>
                     Conformément à la réglementation européenne en vigueur, les
                     Utilisateurs de{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     disposent des droits suivants :
                 </p>
@@ -483,9 +483,9 @@ export default function Legal() {
                     <li>
                         droit de définir le sort des données des Utilisateurs
                         après leur mort et de choisir à qui{' '}
-                        <a href="https://www.velvetweb.fr">
+                        <a href="https://www.techquest.fr">
                             {' '}
-                            https://www.velvetweb.fr{' '}
+                            https://www.techquest.fr{' '}
                         </a>{' '}
                         devra communiquer (ou non) ses données à un tiers qu'ils
                         aura préalablement désigné
@@ -493,13 +493,13 @@ export default function Legal() {
                 </ul>
                 <p>
                     Dès que{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     a connaissance du décès d'un Utilisateur et à défaut
                     d'instructions de sa part,{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     s'engage à détruire ses données, sauf si leur conservation
                     s'avère nécessaire à des fins probatoires ou pour répondre à
@@ -507,13 +507,13 @@ export default function Legal() {
                 </p>
                 <p>
                     Si l'Utilisateur souhaite savoir comment{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     utilise ses Données Personnelles, demander à les rectifier
                     ou s'oppose à leur traitement, l'Utilisateur peut contacter{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     par écrit à l'adresse suivante :
                 </p>
@@ -525,8 +525,8 @@ export default function Legal() {
                 <p>
                     Dans ce cas, l'Utilisateur doit indiquer les Données
                     Personnelles qu'il souhaiterait que{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     corrige, mette à jour ou supprime, en s'identifiant
                     précisément avec une copie d'une pièce d'identité (carte
@@ -535,13 +535,13 @@ export default function Legal() {
                 <p>
                     Les demandes de suppression de Données Personnelles seront
                     soumises aux obligations qui sont imposées à{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     par la loi, notamment en matière de conservation ou
                     d'archivage des documents. Enfin, les Utilisateurs de{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     peuvent déposer une réclamation auprès des autorités de
                     contrôle, et notamment de la CNIL
@@ -553,17 +553,17 @@ export default function Legal() {
                     </span>
                 </h5>
                 <p>
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     s'interdit de traiter, héberger ou transférer les
                     Informations collectées sur ses Clients vers un pays situé
                     en dehors de l'Union européenne ou reconnu comme « non
                     adéquat » par la Commission européenne sans en informer
                     préalablement le client. Pour autant,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     reste libre du choix de ses sous-traitants techniques et
                     commerciaux à la condition qu'il présentent les garanties
@@ -571,9 +571,9 @@ export default function Legal() {
                     la Protection des Données (RGPD : n° 2016-679).
                 </p>
                 <p>
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     s'engage à prendre toutes les précautions nécessaires afin
                     de préserver la sécurité des Informations et notamment
@@ -581,25 +581,25 @@ export default function Legal() {
                     autorisées. Cependant, si un incident impactant l'intégrité
                     ou la confidentialité des Informations du Client est portée
                     à la connaissance de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>
                     , celle-ci devra dans les meilleurs délais informer le
                     Client et lui communiquer les mesures de corrections prises.
                     Par ailleurs,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     ne collecte aucune « données sensibles ».
                 </p>
                 <p>
                     Les Données Personnelles de l'Utilisateur peuvent être
                     traitées par des filiales de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     et des sous-traitants (prestataires de services),
                     exclusivement afin de réaliser les finalités de la présente
@@ -609,9 +609,9 @@ export default function Legal() {
                     Dans la limite de leurs attributions respectives et pour les
                     finalités rappelées ci-dessus, les principales personnes
                     susceptibles d'avoir accès aux données des Utilisateurs de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     sont principalement les agents de notre service client.
                 </p>
@@ -622,9 +622,9 @@ export default function Legal() {
                 </h5>
                 <p>
                     Concernant les utilisateurs d'un Site{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>
                     ,nous collectons les données suivantes qui sont
                     indispensables au fonctionnement du service , et qui seront
@@ -635,9 +635,9 @@ export default function Legal() {
                     <span>- </span>
                 </p>
                 <p>
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     collecte également des informations qui améliorent
                     l'expérience utilisateur et offre des astuces
@@ -673,24 +673,24 @@ export default function Legal() {
                 </p>
                 <p>
                     Aucune information personnelle de l'utilisateur du site{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     n'est publiée à l'insu de l'utilisateur, échangée,
                     transférée, cédée ou vendue sur un support quelconque à des
                     tiers. Seule l'hypothèse du rachat de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     et de ses droits permettrait la transmission des dites
                     informations à l'éventuel acquéreur qui serait à son tour
                     tenu de la même obligation de conservation et de
                     modification des données vis à vis de l'utilisateur du site{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>
                     .
                 </p>
@@ -700,9 +700,9 @@ export default function Legal() {
                 <p>
                     Pour assurer la sécurité et la confidentialité des Données
                     Personnelles et des Données Personnelles de Santé,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     utilise des réseaux protégés par des dispositifs standards
                     tels que par pare-feu, la pseudonymisation, l'encryption et
@@ -710,9 +710,9 @@ export default function Legal() {
                 </p>
                 <p>
                     Lors du traitement des Données Personnelles,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     prend toutes les mesures raisonnables visant à les protéger
                     contre toute perte, utilisation détournée, accès non
@@ -726,18 +726,18 @@ export default function Legal() {
                 </h4>
                 <p>
                     Le site{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>{' '}
                     contient un certain nombre de liens hypertextes vers
                     d'autres sites, mis en place avec l'autorisation de{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>
                     . Cependant,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     n'a pas la possibilité de vérifier le contenu des sites
                     ainsi visités, et n'assumera en conséquence aucune
@@ -767,17 +767,17 @@ export default function Legal() {
                     d'endommager le terminal de l'Utilisateur.
                 </p>
                 <p>
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     est susceptible de traiter les informations de l'Utilisateur
                     concernant sa visite du Site, telles que les pages
                     consultées, les recherches effectuées. Ces informations
                     permettent à{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     d'améliorer le contenu du Site, de la navigation de
                     l'Utilisateur.
@@ -794,9 +794,9 @@ export default function Legal() {
                     le refus des Cookies lui soient proposés ponctuellement,
                     avant qu'un Cookie soit susceptible d'être enregistré dans
                     son terminal.{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     informe l'Utilisateur que, dans ce cas, il se peut que les
                     fonctionnalités de son logiciel de navigation ne soient pas
@@ -808,9 +808,9 @@ export default function Legal() {
                     ceux qui y sont enregistrés, l'Utilisateur est informé que
                     sa navigation et son expérience sur le Site peuvent être
                     limitées. Cela pourrait également être le cas lorsque,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     ou l'un de ses prestataires ne peut pas reconnaître, à des
                     fins de compatibilité technique, le type de navigateur
@@ -820,22 +820,22 @@ export default function Legal() {
                 </p>
                 <p>
                     Le cas échéant,{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     décline toute responsabilité pour les conséquences liées au
                     fonctionnement dégradé du Site et des services
                     éventuellement proposés par{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>
                     , résultant (i) du refus de Cookies par l'Utilisateur (ii)
                     de l'impossibilité pour{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr
+                        https://www.techquest.fr
                     </a>{' '}
                     d'enregistrer ou de consulter les Cookies nécessaires à leur
                     fonctionnement du fait du choix de l'Utilisateur. Pour la
@@ -848,9 +848,9 @@ export default function Legal() {
                 <p>
                     À tout moment, l'Utilisateur peut faire le choix d'exprimer
                     et de modifier ses souhaits en matière de Cookies.{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     pourra en outre faire appel aux services de prestataires
                     externes pour l'aider à recueillir et traiter les
@@ -860,16 +860,16 @@ export default function Legal() {
                     Enfin, en cliquant sur les icônes dédiées aux réseaux
                     sociaux Twitter, Facebook, Linkedin et Google Plus figurant
                     sur le Site de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     ou dans son application mobile et si l'Utilisateur a accepté
                     le dépôt de cookies en poursuivant sa navigation sur le Site
                     Internet ou l'application mobile de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>
                     , Twitter, Facebook, Linkedin et Google Plus peuvent
                     également déposer des cookies sur vos terminaux (ordinateur,
@@ -879,15 +879,15 @@ export default function Legal() {
                     Ces types de cookies ne sont déposés sur vos terminaux qu'à
                     condition que vous y consentiez, en continuant votre
                     navigation sur le Site Internet ou l'application mobile de{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>
                     . À tout moment, l'Utilisateur peut néanmoins revenir sur
                     son consentement à ce que{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     dépose ce type de cookies.
                 </p>
@@ -897,9 +897,9 @@ export default function Legal() {
                     </span>
                 </h5>
                 <p>
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     peut employer occasionnellement des balises Internet
                     (également appelées « tags », ou balises d'action, GIF à un
@@ -916,9 +916,9 @@ export default function Legal() {
                 </p>
                 <p>
                     Cette technologie permet à{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     d'évaluer les réponses des visiteurs face au Site et
                     l'efficacité de ses actions (par exemple, le nombre de fois
@@ -930,8 +930,8 @@ export default function Legal() {
                     informations sur les visiteurs du Site et d'autres sites
                     Internet grâce à ces balises, constituer des rapports sur
                     l'activité du Site à l'attention de{' '}
-                    <a href="https://www.velvetweb.fr">
-                        https://www.velvetweb.fr
+                    <a href="https://www.techquest.fr">
+                        https://www.techquest.fr
                     </a>
                     , et fournir d'autres services relatifs à l'utilisation de
                     celui-ci et d'Internet.
@@ -943,9 +943,9 @@ export default function Legal() {
                 </h4>
                 <p>
                     Tout litige en relation avec l'utilisation du site{' '}
-                    <a href="https://www.velvetweb.fr">
+                    <a href="https://www.techquest.fr">
                         {' '}
-                        https://www.velvetweb.fr{' '}
+                        https://www.techquest.fr{' '}
                     </a>{' '}
                     est soumis au droit français. En dehors des cas où la loi ne
                     le permet pas, il est fait attribution exclusive de

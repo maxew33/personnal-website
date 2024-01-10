@@ -20,16 +20,16 @@ export default function Footer() {
                         src="/assets/logo.png"
                         width={118}
                         height={87}
-                        alt="logo de velvet web"
+                        alt="logo de techquest"
                         className={styles.logo}
                     />
                     <span className={styles.name}>
-                        <span>Velvet</span>
-                        <span> Web</span>
+                        <span>Techquest</span>
+                        <span> Bordeaux</span>
                     </span>
                 </Link>
                 <span className={styles.copyright}>
-                    ©Velvet web Bordeaux 2024
+                    ©techquest Bordeaux 2024
                 </span>
                 <Link href="/pricing" className={styles.solutions}>
                     Nos solutions

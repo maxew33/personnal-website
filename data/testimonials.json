@@ -1,0 +1,16 @@
+{
+    "testimonials": [
+        {
+            "content": "Maxime est un professionnel à la fois très réactif et très à l'écoute. Quelqu'un sur qui l'on peut se fier. Il semble avoir une solution pour chaque problème et c'est toujours un atout pour moi de travailler avec lui.",
+            "author": "Jérémie H."
+        },
+        {
+            "content": "Nous sommes extrêmement satisfaits du site web que techquest a créé. Leur approche professionnelle et leur attention aux détails ont permis de mettre en valeur notre expertise de manière élégante.",
+            "author": "Christophe V."
+        },
+        {
+            "content": "Mes attentes ont été dépassées avec ce portfolio interactif qui va au-delà d'une simple présentation de mes compétences pour devenir une véritable expérience immersive pour mes visiteurs.",
+            "author": "Maxime M."
+        }
+    ]
+}
