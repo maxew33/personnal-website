@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
                 />
                 <meta
                     property="og:image"
-                    content="https://opengraph.b-cdn.net/production/documents/0c240f04-b133-491b-9639-f6e4a4599294.png?token=MXszPVw640HDFx68rFAxDZh6hIN59JBympN-N4OzCeo&height=630&width=1200&expires=33240910819"
+                    content="https://techquest.fr/OG.webp"
                 />
 
                 {/* <!-- Twitter Meta Tags --> */}
@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }) {
                 />
                 <meta
                     name="twitter:image"
-                    content="https://opengraph.b-cdn.net/production/documents/0c240f04-b133-491b-9639-f6e4a4599294.png?token=MXszPVw640HDFx68rFAxDZh6hIN59JBympN-N4OzCeo&height=630&width=1200&expires=33240910819"
+                    content="https://techquest.fr/OG.webp"
                 />
 
                 {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}

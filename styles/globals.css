@@ -505,6 +505,15 @@ table {
   text-shadow: unset;
 }
 
+@media screen and (max-width: 991px) {
+  .projects-header {
+    text-align: center;
+  }
+  .projects-headerContent {
+    text-align: justify;
+    margin: 1rem 1.5rem 3rem;
+  }
+}
 .pricing-main {
   display: flex;
   flex-direction: column;
@@ -1004,6 +1013,9 @@ table {
   display: flex;
   gap: 1.5rem;
   font-size: 1.25rem;
+}
+.contact-linkWrapper a {
+  color: var(--accent);
 }
 
 .contact-socialIcon {

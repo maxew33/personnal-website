@@ -201,13 +201,14 @@
     top: 0;
     left: 0;
     height: 5vh;
+    height: calc(24px + 1.5rem);
   }
   .logoLink {
     height: 2.5vh;
   }
   .logo {
-    height: 2.5vh;
-    width: 7.5vh;
+    height: 24px;
+    width: auto;
     object-fit: contain;
   }
 }
