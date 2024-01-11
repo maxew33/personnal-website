@@ -55,7 +55,7 @@ export default function Header() {
                         <span> Bordeaux</span>
                     </span>
                 </Link>
-                <button onClick={displayNav} className={styles.burger}>
+                <button onClick={displayNav} className={styles.burger} aria-label="menu">
                     <span></span>
                 </button>
                 <nav className={styles.navigation}>

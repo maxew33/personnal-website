@@ -86,10 +86,7 @@ export default function Home() {
                     <p className="home-invit">
                         Particulier cherchant à partager votre passion ou
                         entreprise visant à se démarquer nous sommes là pour
-                        transformer vos idées en réalité :{' '}
-                        <Link href="/contact" className="home-link">
-                            contactez-nous.
-                        </Link>
+                        transformer vos idées en réalité.
                     </p>
 
                     <Image
@@ -113,7 +110,7 @@ export default function Home() {
                         className="home-articleIllus"
                         alt="pourquoi choisir TechQuest Bordeaux"
                     />
-                    <h2 className="home-articleTitle">Choisir techquest</h2>
+                    <h2 className="home-articleTitle">Choisir TechQuest</h2>
                     <p className="home-articleText">
                         C'est choisir l'engagement envers l'excellence. Un
                         engagement qui se manifeste à travers nos créations.
@@ -164,7 +161,7 @@ export default function Home() {
                         height={467}
                         width={700}
                         className="home-articleIllus"
-                        alt="pourquoi choisir TechQuest Bordeaux"
+                        alt="Les solutions de TechQuest"
                     />
                     <h2 className="home-articleTitle">
                         Des Solutions Sur Mesure{' '}

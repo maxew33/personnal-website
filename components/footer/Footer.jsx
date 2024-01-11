@@ -29,7 +29,7 @@ export default function Footer() {
                     </span>
                 </Link>
                 <span className={styles.copyright}>
-                    ©techquest Bordeaux 2024
+                    ©TechQuest Bordeaux 2024
                 </span>
                 <Link href="/pricing" className={styles.solutions}>
                     Nos solutions

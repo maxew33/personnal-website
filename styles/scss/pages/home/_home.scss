@@ -21,7 +21,7 @@
 }
 
 .home-sectionContent {
-    width: 98%;
+    width: min(98%, 90vw);
     @include maxWidth;
     display: grid;
     grid-template-areas:
@@ -35,7 +35,7 @@
     position: relative;
     top: 8rem;
     height: 40rem;
-    width: 98%;
+    width: min(98%, 90vw);
     @include maxWidth;
     display: grid;
     grid-template-areas:
@@ -281,7 +281,7 @@
     }
     .home-articleTitle,
     .home-articleText {
-        width: 98%;
+        width: min(98%, 90vw);
         margin: auto;
     }
 
@@ -304,7 +304,7 @@
         height: 100%;
         padding: 1rem 0;
         > * {
-            max-width: 98%;
+            max-width: min(98%, 90vw);
             margin: auto;
         }
     }
@@ -352,7 +352,7 @@
         padding-top: 1.5rem;
         font-size: 1.25rem;
         text-align: left;
-        width: 98%;
+        width: min(98%, 90vw);
         margin: auto;
         max-width: 825px;
     }
@@ -400,7 +400,7 @@
         height: 50rem;
         width: 100%;
         > *:not(:last-child) {
-            width: 98%;
+            width: min(98%, 90vw);
             margin: auto;
         }
     }
@@ -410,4 +410,6 @@
         height: 15rem;
         border-radius: unset;
     }
+
+    
 }

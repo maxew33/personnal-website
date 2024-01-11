@@ -8,7 +8,7 @@
     color: var(--bg);
     font-size: 2rem;
     height: 6rem;
-    width: 98%;
+    width: min(98%, 90vw);
     max-width: 1400px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,7 +53,7 @@
     height: 0px;
     transition: 0.5s height;
     overflow: hidden;
-    width: 98%;
+    width: min(98%, 90vw);
     max-width: 1400px;
     margin: auto;
     display: grid;
