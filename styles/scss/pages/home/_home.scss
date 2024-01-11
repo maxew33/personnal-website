@@ -100,7 +100,7 @@
 .home-arguments {
     background: var(--primary);
     position: relative;
-    top:2.5rem;
+    top: 2.5rem;
     z-index: -1;
 }
 
@@ -128,13 +128,13 @@
 .home-articleText {
     grid-area: content;
     align-self: center;
-}
 
-// .home-feature{
-//     position: relative;
-//     opacity: 0;
-//     top: 20rem;
-// }
+    .home-link {
+        &::after {
+            bottom: 0.25rem;
+        }
+    }
+}
 
 .home-features {
     padding-top: 20rem;

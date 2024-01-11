@@ -63,8 +63,7 @@ export default function Home() {
             <section className="home-hero">
                 <article className="home-heroContent">
                     <h1 className="home-title">
-                        Soyez{' '}
-                        <span className="home-highlighted">En ligne</span>{' '}
+                        Soyez <span className="home-highlighted">En ligne</span>{' '}
                         avec un site qui{' '}
                         <span className="home-highlighted">vous</span>{' '}
                         ressemble.
@@ -99,16 +98,14 @@ export default function Home() {
                         width={700}
                         className="home-heroIllus"
                         alt="Bienvenue chez TechQuest Bordeaux"
-                        priority 
+                        priority
                     />
                 </article>
             </section>
             <section className="home-arguments">
                 <Wave />
                 <Wave color="var(--bg)" positionPlace="bottom" />
-                <article
-                    className="home-sectionContent home-argumentsContent"
-                >
+                <article className="home-sectionContent home-argumentsContent">
                     <Image
                         src="/assets/home/chooseUs.webp"
                         height={467}
@@ -127,9 +124,7 @@ export default function Home() {
                 </article>
             </section>
             <section className="home-features">
-                <article
-                    className="home-sectionContent home-featuresContent"
-                >
+                <article className="home-sectionContent home-featuresContent">
                     <Link
                         href="/contact"
                         className="home-contactBtn home-featureLink"
@@ -163,9 +158,7 @@ export default function Home() {
             </section>
             <section className="home-solutionsWrapper">
                 <Wave color="var(--bg)" positionPlace="bottom" />
-                <article
-                    className="home-solutions home-sectionContent"
-                >
+                <article className="home-solutions home-sectionContent">
                     <Image
                         src="/assets/home/solutions.webp"
                         height={467}
@@ -178,17 +171,17 @@ export default function Home() {
                     </h2>
                     <p className="home-articleText">
                         Nous sommes fiers d'offrir une variété de{' '}
-                        <span className="home-highlighted">
+                        <Link href="/pricing" className="home-link">
                             solutions adaptées
-                        </span>{' '}
+                        </Link>{' '}
                         à tous les profils, quelle que soit la taille de votre
                         entreprise ou votre budget. <br />
                         Que vous soyez un entrepreneur passionné, un artiste
                         indépendant, ou une entreprise établie, notre approche
                         est{' '}
-                        <span className="home-highlighted">
-                            personnalisée{' '}
-                        </span>
+                        <Link href="/projects" className="home-link">
+                            personnalisée
+                        </Link>{' '}
                         pour répondre à vos besoins spécifiques.
                     </p>
                 </article>
