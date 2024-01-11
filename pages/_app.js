@@ -8,11 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function App({ Component, pageProps }) {
     const router = useRouter()
+
     return (
         <>
             <Head>
                 {/* <!-- HTML Meta Tags --> */}
-                <title>Techquest Bordeaux</title>
+                <title>TechQuest Bordeaux</title>
                 <meta
                     name="description"
                     content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }) {
                 {/* <!-- Facebook Meta Tags --> */}
                 <meta property="og:url" content="https://techquest.fr/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Techquest Bordeaux" />
+                <meta property="og:title" content="TechQuest Bordeaux" />
                 <meta
                     property="og:description"
                     content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."
@@ -35,7 +36,7 @@ export default function App({ Component, pageProps }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="techquest.fr" />
                 <meta property="twitter:url" content="https://techquest.fr/" />
-                <meta name="twitter:title" content="Techquest Bordeaux" />
+                <meta name="twitter:title" content="TechQuest Bordeaux" />
                 <meta
                     name="twitter:description"
                     content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."

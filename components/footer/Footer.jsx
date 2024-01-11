@@ -24,7 +24,7 @@ export default function Footer() {
                         className={styles.logo}
                     />
                     <span className={styles.name}>
-                        <span>Techquest</span>
+                        <span>TechQuest</span>
                         <span> Bordeaux</span>
                     </span>
                 </Link>

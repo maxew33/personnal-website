@@ -29,10 +29,6 @@ export default function Home() {
         fetchData()
     }, [])
 
-    useEffect(() => {
-        console.log(testimonialsData)
-    },[testimonialsData])
-
     const featureAnimationVariants = {
         initial: {
             opacity: 0,
@@ -75,7 +71,7 @@ export default function Home() {
                     </h1>
 
                     <p className="home-welcome">
-                        Bienvenue chez Techquest Bordeaux, votre partenaire de
+                        Bienvenue chez TechQuest Bordeaux, votre partenaire de
                         confiance pour la création de sites web exceptionnels.
                     </p>
 
@@ -102,7 +98,8 @@ export default function Home() {
                         height={467}
                         width={700}
                         className="home-heroIllus"
-                        alt="Bienvenue chez Techquest Bordeaux"
+                        alt="Bienvenue chez TechQuest Bordeaux"
+                        priority 
                     />
                 </article>
             </section>
@@ -117,7 +114,7 @@ export default function Home() {
                         height={467}
                         width={700}
                         className="home-articleIllus"
-                        alt="pourquoi choisir Techquest Bordeaux"
+                        alt="pourquoi choisir TechQuest Bordeaux"
                     />
                     <h2 className="home-articleTitle">Choisir techquest</h2>
                     <p className="home-articleText">
@@ -174,7 +171,7 @@ export default function Home() {
                         height={467}
                         width={700}
                         className="home-articleIllus"
-                        alt="pourquoi choisir Techquest Bordeaux"
+                        alt="pourquoi choisir TechQuest Bordeaux"
                     />
                     <h2 className="home-articleTitle">
                         Des Solutions Sur Mesure{' '}

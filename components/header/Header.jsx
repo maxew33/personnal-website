@@ -45,13 +45,13 @@ export default function Header() {
                 <Link href="/" className={styles.logoLink} aria-label={paths.name}>
                     <Image
                         src="/assets/logo.webp"
-                        width={118}
-                        height={87}
+                        width={36}
+                        height={40}
                         alt="logo de techquest"
                         className={styles.logo}
                     />
                     <span className={styles.name}>
-                        <span>Techquest</span>
+                        <span>TechQuest</span>
                         <span> Bordeaux</span>
                     </span>
                 </Link>
