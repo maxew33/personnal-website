@@ -60,7 +60,7 @@ export default function Contact() {
 
     return (
         <>
-            <header className="contact-pageTitle">Nous contacter</header>
+            <header className="contact-pageTitle">Contact</header>
             <main className="contact-main">
                 <section className="contact-section contact-title">
                     <article>
@@ -75,8 +75,8 @@ export default function Contact() {
                     <article className="contact-article">
                         <h2 className="contact-articleTitle">Une question ?</h2>
                         <p className="contact-formTitle">
-                            Envoyez-nous un message. <br />
-                            Nous vous répondrons dès que possible.
+                            Envoyez-moi un message. <br />
+                            Je vous répondrai dès que possible.
                         </p>
                         <form
                             ref={form}
@@ -152,7 +152,7 @@ export default function Contact() {
                                     className="contact-icon"
                                 />
                             </span>{' '}
-                            Rencontrez-nous
+                            Rencontrez-moi
                         </h2>
                         <div className="contact-linkWrapper">
                             <a href="https://calendar.app.google/x5FM2reA2PDo4JkA8">
@@ -169,11 +169,11 @@ export default function Contact() {
                                     className="contact-icon"
                                 />
                             </span>{' '}
-                            Appelez-nous
+                            Appelez-moi
                         </h2>
                         <div className="contact-linkWrapper">
-                            <a href="tel:07555555" className="contact-contact">
-                                07-555-555
+                            <a href="tel:0781847657" className="contact-contact">
+                                07-81-84-76-57
                             </a>
                         </div>
                     </article>
@@ -185,7 +185,7 @@ export default function Contact() {
                                     className="contact-icon"
                                 />
                             </span>{' '}
-                            écrivez-nous
+                            écrivez-moi
                         </h2>
                         <div className="contact-linkWrapper">
                             <a
@@ -206,7 +206,7 @@ export default function Contact() {
                                     className="contact-icon"
                                 />
                             </span>{' '}
-                            Suivez-nous
+                            Suivez-moi
                         </h2>
                         <div className="contact-linkWrapper">
                             <a

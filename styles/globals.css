@@ -78,7 +78,7 @@ table {
   font-size: 2.5rem;
   font-family: var(--fontfam1);
 }
-.home-main p {
+.home-main p, .home-main blockquote {
   line-height: 1.5;
 }
 
@@ -125,6 +125,7 @@ table {
 
 .home-linkContainer {
   grid-area: linkContainer;
+  margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,18 +135,18 @@ table {
   text-decoration: none;
   padding: 0.625rem 1.25rem;
   border: 1px solid var(--accent);
-  border-radius: 25rem;
+  border-radius: 5px;
   color: var(--bg);
   background: var(--accent);
+  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
   font-weight: 400;
   font-size: 1.25rem;
-  text-shadow: 1px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, -1px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, -1px 1px #b90050, 1px -1px #b90050;
-  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
-  padding: 0.75rem 1.5rem;
+  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
+  padding: 0.5rem 1.5rem;
 }
 .home-contactBtn:hover {
-  background: var(--bg);
-  color: var(--accent);
+  background: var(--primary);
+  border: 1px solid var(--primary);
   text-shadow: unset;
 }
 
@@ -154,8 +155,8 @@ table {
   max-width: 40vw;
   height: 100%;
   object-fit: cover;
-  border-radius: 25px;
-  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
 }
 
 .home-invit {
@@ -199,8 +200,8 @@ table {
   height: 100%;
   max-width: 45vw;
   object-fit: cover;
-  border-radius: 25px;
-  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
 }
 
 .home-articleTitle {
@@ -224,11 +225,10 @@ table {
 .home-featuresContent {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .home-featureLink {
-  margin: 2.5rem 0 5rem;
+  margin: 7.5rem 0;
   align-self: center;
   font-size: 2rem;
   padding: 1rem 2rem;
@@ -301,7 +301,7 @@ table {
   position: relative;
   background: #fff;
   padding: 1rem;
-  box-shadow: 0px 4px 4px 0 var(--grey);
+  box-shadow: 0px 2px 2px 0 var(--grey);
 }
 .home-testimonialContent::after, .home-testimonialContent::before {
   position: absolute;
@@ -338,19 +338,19 @@ table {
 .home-ctaBtn {
   padding: 1.125rem 2.25rem;
   border: 1px solid var(--accent);
-  border-radius: 25rem;
+  border-radius: 5px;
   color: var(--bg);
   background: var(--accent);
+  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
   font-weight: 400;
   font-size: 2.25rem;
-  text-shadow: 1px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, -1px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, -1px 1px #b90050, 1px -1px #b90050;
-  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
+  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
   padding: 0.5rem 2.5rem;
-  margin: 3rem 0 2rem;
+  margin: 5rem 0;
 }
 .home-ctaBtn:hover {
-  background: var(--bg);
-  color: var(--accent);
+  background: var(--primary);
+  border: 1px solid var(--primary);
   text-shadow: unset;
 }
 
@@ -471,6 +471,15 @@ table {
     height: 15rem;
     border-radius: unset;
   }
+  .home-features {
+    padding-top: 15rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .home-contactBtn {
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+  }
 }
 .projects-main {
   color: var(--text);
@@ -502,18 +511,18 @@ table {
   text-decoration: none;
   padding: 0.625rem 1.25rem;
   border: 1px solid var(--accent);
-  border-radius: 25rem;
+  border-radius: 5px;
   color: var(--bg);
   background: var(--accent);
+  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
   font-weight: 400;
   font-size: 1.25rem;
-  text-shadow: 1px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, 0px 1px #b90050, -1px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, 0px -1px #b90050, -1px 1px #b90050, 1px -1px #b90050;
-  box-shadow: 0px 4px 4px 0 rgba(17, 17, 17, 0.3333333333);
+  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
   padding: 0.75rem 1.5rem;
 }
 .projects-contactBtn:hover {
-  background: var(--bg);
-  color: var(--accent);
+  background: var(--primary);
+  border: 1px solid var(--primary);
   text-shadow: unset;
 }
 
@@ -866,8 +875,8 @@ table {
 }
 
 .contact-section {
-  border-radius: 25px;
-  box-shadow: 0px 4px 4px 0 var(--grey);
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 0 var(--grey);
 }
 
 .contact-article {
@@ -1011,7 +1020,7 @@ table {
   justify-content: center;
   top: -0.75rem;
   left: -0.75rem;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 0.75rem;
   background-color: var(--bg);
 }
@@ -1065,7 +1074,7 @@ table {
   background-size: cover;
   background-attachment: fixed;
   margin: 0 auto 1rem;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .project-nameContainer {
@@ -1073,7 +1082,7 @@ table {
   height: 100%;
   width: 100%;
   background: rgba(44, 62, 80, 0.5019607843);
-  border-radius: 25px;
+  border-radius: 15px;
   cursor: pointer;
 }
 .project-nameContainer h2 {
@@ -1195,7 +1204,7 @@ font-family: 'Archivo Black', sans-serif;
 */
 :root {
   --bg: #fff;
-  --text: #000;
+  --text: #010028;
   --primary: #14213d;
   --secondary: #1f7ead;
   --lightCol: hsl(0, 0%, 95%);
@@ -1203,6 +1212,7 @@ font-family: 'Archivo Black', sans-serif;
   --grey: #D9D9D9;
   --fontfam1: "Archivo Black", serif;
   --fontfam2: "Source Sans 3", sans-serif;
+  color-scheme: only light;
 }
 
 body {
@@ -1238,34 +1248,38 @@ a:visited {
   height: 100vh;
   transform-origin: bottom;
   z-index: 100;
-}
-.slide-in::after, .slide-in::before,
-.slide-out::after,
-.slide-out::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-.slide-in::after,
-.slide-out::after {
-  background: url("/assets/transition.webp");
-  background-size: min(1000px, 60%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-.slide-in::before,
-.slide-out::before {
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.0666666667) 60%, var(--primary)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1333333333) 50%, var(--primary)), radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 40%, var(--primary)), radial-gradient(circle at center, #fff 30%, var(--primary)), var(--primary);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background: var(--lightCol);
+  /*
+      &::after,
+      &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+      }
+
+      &::after {
+          background: url('/assets/transition.webp');
+          background-size: min(1000px, 60%);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+      }
+      &::before {
+          background: radial-gradient(circle at center, #fff1 60%, var(--primary)),
+              radial-gradient(circle at center, #fff2 50%, var(--primary)),
+              radial-gradient(circle at center, #fff3 40%, var(--primary)),
+              radial-gradient(circle at center, #fff 30%, var(--primary)),
+              var(--primary);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+      }*/
 }
 
 .slide-out {
@@ -1284,5 +1298,14 @@ a:visited {
 @media screen and (max-width: 1400px) {
   :root {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .home-contactBtn {
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+  }
+  :root {
+    font-size: 12px;
   }
 }

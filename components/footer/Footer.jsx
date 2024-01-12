@@ -32,7 +32,7 @@ export default function Footer() {
                     ©TechQuest Bordeaux 2024
                 </span>
                 <Link href="/pricing" className={styles.solutions}>
-                    Nos solutions
+                    Solutions
                 </Link>
                 <Link href="/legal" className={styles.legal}>
                     Mentions Légales

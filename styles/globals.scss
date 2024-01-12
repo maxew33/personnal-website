@@ -1,4 +1,8 @@
-@import './scss/base/reset', './scss/utils/mixins', './scss/components/buttons', './scss/utils/variables', './scss/pages/home/home', './scss/pages/projects/projects', './scss/pages/pricing/pricing', './scss/pages/legal/legal', './scss/pages/contact/contact', './scss/components/project';
+@import './scss/base/reset', './scss/utils/mixins', './scss/components/buttons',
+    './scss/utils/variables', './scss/pages/home/home',
+    './scss/pages/projects/projects', './scss/pages/pricing/pricing',
+    './scss/pages/legal/legal', './scss/pages/contact/contact',
+    './scss/components/project';
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&display=swap');
 
@@ -19,6 +23,8 @@ font-family: 'Archivo Black', sans-serif;
 
     --fontfam1: 'Archivo Black', serif;
     --fontfam2: 'Source Sans 3', sans-serif;
+
+    color-scheme: only light;
 }
 
 body {
@@ -54,9 +60,11 @@ a:visited {
     height: 100vh;
     transform-origin: bottom;
     z-index: 100;
-
-    &::after, &::before{
-        content:"";
+    background: var(--lightCol);
+/*
+    &::after,
+    &::before {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -67,24 +75,23 @@ a:visited {
         background-position: center;
     }
 
-    &::after{
+    &::after {
         background: url('/assets/transition.webp');
         background-size: min(1000px, 60%);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
     }
-    &::before{
-        background:         
-        radial-gradient(circle at center, #fff1 60%, var(--primary)),
-        radial-gradient(circle at center, #fff2 50%, var(--primary)),
-        radial-gradient(circle at center, #fff3 40%, var(--primary)),
-        radial-gradient(circle at center, #fff 30%, var(--primary)),
-        var(--primary);
+    &::before {
+        background: radial-gradient(circle at center, #fff1 60%, var(--primary)),
+            radial-gradient(circle at center, #fff2 50%, var(--primary)),
+            radial-gradient(circle at center, #fff3 40%, var(--primary)),
+            radial-gradient(circle at center, #fff 30%, var(--primary)),
+            var(--primary);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
-    }
+    }*/
 }
 
 .slide-out {
@@ -103,5 +110,15 @@ a:visited {
 @media screen and (max-width: 1400px) {
     :root {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home-contactBtn {
+        text-decoration: none;
+        padding: 0.75rem 1.25rem;
+    }
+    :root {
+        font-size: 12px;
     }
 }

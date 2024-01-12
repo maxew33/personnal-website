@@ -42,7 +42,11 @@ export default function Header() {
             <header
                 className={`${styles.header} ${menuOpen && styles.menuOpen}`}
             >
-                <Link href="/" className={styles.logoLink} aria-label={paths.name}>
+                <Link
+                    href="/"
+                    className={styles.logoLink}
+                    aria-label={paths.name}
+                >
                     <Image
                         src="/assets/logo.webp"
                         width={36}
@@ -55,15 +59,21 @@ export default function Header() {
                         <span> Bordeaux</span>
                     </span>
                 </Link>
-                <button onClick={displayNav} className={styles.burger} aria-label="menu">
+                <button
+                    onClick={displayNav}
+                    className={styles.burger}
+                    aria-label="menu"
+                >
                     <span></span>
                 </button>
                 <nav className={styles.navigation}>
                     {paths.map((path, index) => (
                         <Link
                             href={path.path}
-                            aria-label={path.name}
                             key={`path${index}`}
+                            aria-current={
+                                pathname === path.path ? 'true' : 'false'
+                            }
                             className={`${styles.link} ${
                                 pathname === path.path && styles.active
                             }`}
@@ -75,9 +85,10 @@ export default function Header() {
                     <Link
                         href="/contact/"
                         aria-label="contact"
-                        className={`${styles.contact} ${
-                            pathname === '/contact/' && styles.active
-                        }`}
+                        className={styles.contact}
+                        aria-current={
+                            pathname === '/contact/' ? 'true' : 'false'
+                        }
                         onClick={hideNav}
                     >
                         contact

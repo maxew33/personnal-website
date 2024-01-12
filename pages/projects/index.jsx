@@ -21,14 +21,14 @@ export default function Projects() {
     return (
         <main className="projects-main">
             <header className="projects-header">
-                <h1 className="projects-headerTitle">Nos projets</h1>
+                <h1 className="projects-headerTitle">Projets</h1>
                 <p className="projects-headerContent">
-                    Chaque projet que nous entreprenons est une histoire unique
-                    de créativité, de collaboration et de réussite. <br/>Explorez notre portfolio pour découvrir comment nous transformons
+                    Chaque projet est une histoire unique
+                    de créativité, de collaboration et de réussite. <br/>Explorez ce portfolio pour découvrir comment je transforme
                     des idées en expériences en ligne exceptionnelles.
                 </p>
                 <Link href="/contact" className="projects-contactBtn">
-                    Commençons un projet
+                    Commencer un projet
                 </Link>
             </header>
             {data.map((project, index) => (

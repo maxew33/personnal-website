@@ -1,19 +1,17 @@
 @mixin contactUs($size: inherit) {
     padding: $size/2 $size;
     border: 1px solid var(--accent);
-    border-radius: 25rem;
+    border-radius: 5px;
     color: var(--bg);
     background: var(--accent);
+    transition: background-color 0.25s linear, color 0.25s linear,
+        border-color 0.25s linear;
     font-weight: 400;
     font-size: $size;
-    text-shadow: 1px 1px #b90050, 0px 1px #b90050,
-        0px 1px #b90050, 0px 1px #b90050,
-        -1px -1px #b90050, 0px -1px #b90050,
-        0px -1px #b90050, 0px -1px #b90050,
-        -1px 1px #b90050, 1px -1px #b90050;
     &:hover {
-        background: var(--bg);
-        color: var(--accent);
+        background: var(--primary);
+        border: 1px solid var(--primary);
+        // color: var(--text);
         text-shadow: unset;
     }
     @include boxShadow(#1115);
@@ -84,5 +82,5 @@
 }
 
 @mixin boxShadow($color: var(--grey)) {
-    box-shadow: 0px 4px 4px 0 $color;
+    box-shadow: 0px 2px 2px 0 $color;
 }

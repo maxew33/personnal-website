@@ -1,24 +1,33 @@
 @import '../../styles/scss/utils/mixins';
 
-.legalNoticeWrapper{
-@include maxWidth;
-@include flexCol;
-gap: .5rem;
-padding: 2rem 0;
-line-height: 1.15;
+.legalNoticeWrapper {
+    @include maxWidth;
+    @include flexCol;
+    gap: 0.5rem;
+    padding: 2rem 0;
+    line-height: 1.15;
+    
+    h1, h2{
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
 
-h3{
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
+    h2{
+        font-size: 2rem;
+    }
+
+    h3 {
+        margin: 1.5rem 0 1rem;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
 }
 
-h4{
-    font-size: 1.5rem;
-}
-
-}
-
-.underlined{
+.underlined {
     text-decoration: underline;
 }

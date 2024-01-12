@@ -55,17 +55,17 @@ export default function App({ Component, pageProps }) {
                     <Footer />
                     <motion.div
                         className="slide-in"
-                        initial={{ height: '100vh' }}
+                        initial={{ height: '0' }}
                         animate={{ height: 0 }}
                         exit={{ height: '100vh' }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.35 }}
                     ></motion.div>
                     <motion.div
                         className="slide-out"
                         initial={{ height: '100vh', top: 0 }}
                         animate={{ height: 0, top: '100vh' }}
                         exit={{ height: 0, top: '100vh' }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.35 }}
                     ></motion.div>
                 </motion.div>
             </AnimatePresence>

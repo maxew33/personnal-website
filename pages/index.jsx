@@ -19,6 +19,14 @@ export default function Home() {
     const [featuresData, setFeaturesData] = useState([])
 
     useEffect(() => {
+        console.log(`
+_                       
+|_)  _   _  o  _       _ 
+|_) (_) | | | (_) |_| |  
+           _|            
+     \\_________/
+     
+`)
         async function fetchData() {
             const testimonials = await getTestimonialsData()
             setTestimonialsData(testimonials)
@@ -76,16 +84,16 @@ export default function Home() {
 
                     <span className="home-linkContainer">
                         <Link href="/contact" className="home-contactBtn">
-                            Commençons un projet
+                            Contact
                         </Link>
                         <Link href="/projects" className="home-link">
-                            Voir nos projets
+                            Voir les projets
                         </Link>
                     </span>
 
                     <p className="home-invit">
                         Particulier cherchant à partager votre passion ou
-                        entreprise visant à se démarquer nous sommes là pour
+                        entreprise visant à se démarquer, je suis là pour
                         transformer vos idées en réalité.
                     </p>
 
@@ -113,9 +121,9 @@ export default function Home() {
                     <h2 className="home-articleTitle">Choisir TechQuest</h2>
                     <p className="home-articleText">
                         C'est choisir l'engagement envers l'excellence. Un
-                        engagement qui se manifeste à travers nos créations.
+                        engagement qui se manifeste à travers mes créations.
                         Chaque site est le résultat d'une collaboration étroite
-                        avec nos clients, transformant leurs idées en des
+                        avec mes clients, transformant leurs idées en des
                         expériences en ligne uniques.
                     </p>
                 </article>
@@ -126,7 +134,7 @@ export default function Home() {
                         href="/contact"
                         className="home-contactBtn home-featureLink"
                     >
-                        Commençons un projet
+                        Contact
                     </Link>
                     <div className="home-featuresWrapper">
                         {featuresData.map((article, index) => (
@@ -167,15 +175,14 @@ export default function Home() {
                         Des Solutions Sur Mesure{' '}
                     </h2>
                     <p className="home-articleText">
-                        Nous sommes fiers d'offrir une variété de{' '}
+                        Je suis fier d'offrir une variété de{' '}
                         <Link href="/pricing" className="home-link">
                             solutions adaptées
                         </Link>{' '}
                         à tous les profils, quelle que soit la taille de votre
                         entreprise ou votre budget. <br />
                         Que vous soyez un entrepreneur passionné, un artiste
-                        indépendant, ou une entreprise établie, notre approche
-                        est{' '}
+                        indépendant, ou une entreprise établie, mon approche est{' '}
                         <Link href="/projects" className="home-link">
                             personnalisée
                         </Link>{' '}
@@ -188,7 +195,7 @@ export default function Home() {
                     <h2 className="home-testimonialsTitle">
                         La{' '}
                         <span className="home-highlighted">satisfaction</span>{' '}
-                        de nos clients : notre meilleure publicité.
+                        de mes clients : ma meilleure publicité.
                     </h2>
                     <div className="home-testimonialsWrapper">
                         {testimonialsData.map((testimonial, index) => (
@@ -196,7 +203,7 @@ export default function Home() {
                                 key={'testimonial' + index}
                                 className="home-testimonial"
                             >
-                                <motion.p
+                                <motion.blockquote
                                     variants={testimaonialAnimationVariants}
                                     initial="initial"
                                     whileInView="animate"
@@ -205,7 +212,7 @@ export default function Home() {
                                     className="home-testimonialContent"
                                 >
                                     {testimonial.content}
-                                </motion.p>
+                                </motion.blockquote>
                                 <span className="home-testimonialAuthor">
                                     {testimonial.author}
                                 </span>
@@ -219,11 +226,11 @@ export default function Home() {
                     Prêt à donner vie à votre projet&nbsp;?
                 </h2>
                 <p className="home-ctaContent">
-                    Contactez-nous dès maintenant pour discuter de vos idées et
-                    commencer à créer le site web qui vous ressemble.
+                    Discutone ensemble de vos idées et créons le site web qui
+                    vous ressemble.
                 </p>
                 <Link href="/contact" className="home-ctaBtn">
-                    Commencer
+                    Contact
                 </Link>
             </section>
         </main>
