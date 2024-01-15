@@ -80,6 +80,7 @@
 
 .burger {
   position: absolute;
+  z-index: 2;
   left: 50%;
   transform: translate(-50%);
   height: 2rem;

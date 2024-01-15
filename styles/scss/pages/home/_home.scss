@@ -1,21 +1,21 @@
 .home-main {
     position: relative;
-    top: -2rem;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-family: var(--fontfam2);
 
     section {
         width: 100%;
+        position: relative;
     }
 
     h1,
     h2 {
-        font-size: 2.5rem;
         font-family: var(--fontfam1);
     }
 
-    p, blockquote {
+    p,
+    blockquote {
         line-height: 1.5;
     }
 }
@@ -27,88 +27,117 @@
     grid-template-areas:
         'illus title'
         'illus content';
-    gap: 1rem;
     align-items: center;
 }
 
+// first part
+
 .home-heroContent {
     position: relative;
-    top: 8rem;
-    height: 40rem;
+    justify-content: center;
+    height: 90vh;
     width: min(98%, 90vw);
     @include maxWidth;
     display: grid;
     grid-template-areas:
-        'title illus'
-        'welcome illus'
-        'linkContainer illus'
-        'invit illus';
-    line-height: 1.5;
-    height: 100%;
+        'title carousel'
+        'welcome carousel';
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 5rem;
-    p {
-        &:last-of-type,
-        a {
-            color: var(--bg);
-        }
-    }
 }
 
 .home-title {
     grid-area: title;
+    font-size: 4rem;
+    line-height: 1.15;
 }
 
 .home-welcome {
     grid-area: welcome;
+    font-size: 2rem;
+    place-self: baseline;
 }
 
 .home-highlighted {
     color: var(--secondary);
 }
 
-.home-linkContainer {
-    grid-area: linkContainer;
-    margin-bottom: 2.5rem;
-    @include flexSB;
+.home-carousel {
+    // border: .5px solid red;
+    position: relative;
+    grid-area: carousel;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: url('/assets/home/hand.png');
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    background-position: bottom right;
+    transition: background-position 0.25s linear;
 }
 
-.home-contactBtn {
-    text-decoration: none;
-    @include contactUs($size: 1.25rem);
-    padding: 0.5rem 1.5rem;
+.home-carousel-illus-container {
+    position: absolute;
+    bottom: 17.2rem;
+    right: 11.15rem;
+    width: 12.75rem;
+    aspect-ratio: 0.58;
+    background: var(--bg);
+    overflow: hidden;
 }
 
-.home-heroIllus {
-    grid-area: illus;
-    max-width: 40vw;
+.home-carousel-illus {
+    position: absolute;
+    bottom: 0;
+    width: inherit;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
-    @include boxShadow(#1115);
+    transition: transform 0.5s ease-in-out;
+    transform: translate(-100%);
+    &[data-position='1'] {
+        transform: translate(0%);
+        z-index: 10;
+    }
+    &[data-position='2'] {
+        transform: translate(100%);
+        z-index: 10;
+    }
 }
 
-.home-invit {
-    grid-area: invit;
+.home-carousel-name-container{
+    position: absolute;
+    bottom: 40rem;
+    right: 10rem;
+    // border: 2px solid red;
+    // left: calc(100% - 11.15rem);
+    overflow-y: hidden;
+    height: 4rem;
+    width: 15rem;
+    // border: 2px solid red;
+    font-family: var(--fontfam3);
 }
 
-.home-link {
-    @include links;
+.home-carousel-name{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    &[data-displayed='1']{
+        opacity:1;
+    }
 }
 
 //======= ARGUMENTS =======//
 
 .home-arguments {
     background: var(--primary);
-    position: relative;
-    top: 2.5rem;
-    z-index: -1;
+    height: 90vh;
 }
 
 .home-argumentsContent {
     position: relative;
-    top: 12.5rem;
-    height: 25rem;
+    // top: 12.5rem;
 }
 
 .home-articleIllus {
@@ -138,7 +167,7 @@
 }
 
 .home-features {
-    padding-top: 20rem;
+    // padding-top: 20rem;
 }
 
 .home-featuresContent {
@@ -246,7 +275,7 @@
 
 .home-ctaSection {
     @include maxWidth;
-    padding-top: 6rem;
+    // padding-top: 6rem;
     text-align: center;
     line-height: 2;
 }
@@ -254,7 +283,7 @@
 .home-ctaBtn {
     @include contactUs($size: 2.25rem);
     padding: 0.5rem 2.5rem;
-    margin: 5rem 0;
+    // margin: 5rem 0;
 }
 
 @media screen and (max-width: 1080px) {
@@ -415,8 +444,6 @@
     .home-features {
         padding-top: 15rem;
     }
-
-    
 }
 
 @media screen and (max-width: 390px) {
@@ -424,5 +451,4 @@
         text-decoration: none;
         padding: 0.75rem 1.25rem;
     }
-    
 }

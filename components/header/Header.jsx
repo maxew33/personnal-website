@@ -20,8 +20,12 @@ export default function Header() {
             name: 'projets',
         },
         {
-            path: '/pricing/',
+            path: '/service/',
             name: 'services',
+        },
+        {
+            path: '/contact/',
+            name: 'contact',
         },
     ]
 
@@ -66,30 +70,30 @@ export default function Header() {
                 <a href="tel:0781847657" className={styles.phone}>
                     07 81 84 76 57
                 </a>
+                <section
+                    className={`${styles.navigationWrapper} ${
+                        menuOpen && styles.navigationWrapperOpen
+                    }`}
+                >
+                    <nav className={styles.navigation}>
+                        {paths.map((path, index) => (
+                            <Link
+                                href={path.path}
+                                key={`path${index}`}
+                                aria-current={
+                                    pathname === path.path ? 'true' : 'false'
+                                }
+                                className={`${styles.link} ${
+                                    pathname === path.path && styles.active
+                                }`}
+                                onClick={hideNav}
+                            >
+                                {path.name}
+                            </Link>
+                        ))}
+                    </nav>
+                </section>
             </header>
-            <section
-                className={`${styles.navigationWrapper} ${
-                    menuOpen && styles.navigationWrapperOpen
-                }`}
-            >
-                <nav className={styles.navigation}>
-                    {paths.map((path, index) => (
-                        <Link
-                            href={path.path}
-                            key={`path${index}`}
-                            aria-current={
-                                pathname === path.path ? 'true' : 'false'
-                            }
-                            className={`${styles.link} ${
-                                pathname === path.path && styles.active
-                            }`}
-                            onClick={hideNav}
-                        >
-                            {path.name}
-                        </Link>
-                    ))}
-                </nav>
-            </section>
         </div>
     )
 }

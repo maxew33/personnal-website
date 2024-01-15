@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Kalam&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,20 +65,20 @@ table {
     */
 .home-main {
   position: relative;
-  top: -2rem;
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: var(--fontfam2);
 }
 .home-main section {
   width: 100%;
+  position: relative;
 }
 .home-main h1,
 .home-main h2 {
-  font-size: 2.5rem;
   font-family: var(--fontfam1);
 }
-.home-main p, .home-main blockquote {
+.home-main p,
+.home-main blockquote {
   line-height: 1.5;
 }
 
@@ -88,111 +88,107 @@ table {
   margin: auto;
   display: grid;
   grid-template-areas: "illus title" "illus content";
-  gap: 1rem;
   align-items: center;
 }
 
 .home-heroContent {
   position: relative;
-  top: 8rem;
-  height: 40rem;
+  justify-content: center;
+  height: 90vh;
   width: min(98%, 90vw);
   max-width: 1400px;
   margin: auto;
   display: grid;
-  grid-template-areas: "title illus" "welcome illus" "linkContainer illus" "invit illus";
-  line-height: 1.5;
-  height: 100%;
+  grid-template-areas: "title carousel" "welcome carousel";
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 5rem;
-}
-.home-heroContent p:last-of-type,
-.home-heroContent p a {
-  color: var(--bg);
 }
 
 .home-title {
   grid-area: title;
+  font-size: 4rem;
+  line-height: 1.15;
 }
 
 .home-welcome {
   grid-area: welcome;
+  font-size: 2rem;
+  place-self: baseline;
 }
 
 .home-highlighted {
   color: var(--secondary);
 }
 
-.home-linkContainer {
-  grid-area: linkContainer;
-  margin-bottom: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.home-contactBtn {
-  text-decoration: none;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid var(--accent);
-  border-radius: 5px;
-  color: var(--bg);
-  background: var(--accent);
-  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
-  font-weight: 400;
-  font-size: 1.25rem;
-  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
-  padding: 0.5rem 1.5rem;
-}
-.home-contactBtn:hover {
-  background: var(--primary);
-  border: 1px solid var(--primary);
-  text-shadow: unset;
-}
-
-.home-heroIllus {
-  grid-area: illus;
-  max-width: 40vw;
+.home-carousel {
+  position: relative;
+  grid-area: carousel;
+  z-index: -1;
   height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
+  width: 100%;
+  background: url("/assets/home/hand.png");
+  background-repeat: no-repeat;
+  background-size: 35rem;
+  background-position: bottom right;
+  transition: background-position 0.25s linear;
 }
 
-.home-invit {
-  grid-area: invit;
+.home-carousel-illus-container {
+  position: absolute;
+  bottom: 17.2rem;
+  right: 11.15rem;
+  width: 12.75rem;
+  aspect-ratio: 0.58;
+  background: var(--bg);
+  overflow: hidden;
 }
 
-.home-link {
-  color: unset;
-}
-.home-link::after {
-  content: "";
+.home-carousel-illus {
   position: absolute;
   bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  background: var(--accent);
-  transition: transform 0.25s linear;
-  transform-origin: right;
+  width: inherit;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(-100%);
 }
-.home-link:hover::after {
-  transform: scaleX(0);
-  animation: unset;
+.home-carousel-illus[data-position="1"] {
+  transform: translate(0%);
+  z-index: 10;
+}
+.home-carousel-illus[data-position="2"] {
+  transform: translate(100%);
+  z-index: 10;
+}
+
+.home-carousel-name-container {
+  position: absolute;
+  bottom: 40rem;
+  right: 10rem;
+  overflow-y: hidden;
+  height: 4rem;
+  width: 15rem;
+  font-family: var(--fontfam3);
+}
+
+.home-carousel-name {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+.home-carousel-name[data-displayed="1"] {
+  opacity: 1;
 }
 
 .home-arguments {
   background: var(--primary);
-  position: relative;
-  top: 2.5rem;
-  z-index: -1;
+  height: 90vh;
 }
 
 .home-argumentsContent {
   position: relative;
-  top: 12.5rem;
-  height: 25rem;
 }
 
 .home-articleIllus {
@@ -216,10 +212,6 @@ table {
 }
 .home-articleText .home-link::after {
   bottom: 0.25rem;
-}
-
-.home-features {
-  padding-top: 20rem;
 }
 
 .home-featuresContent {
@@ -330,7 +322,6 @@ table {
 .home-ctaSection {
   max-width: 1400px;
   margin: auto;
-  padding-top: 6rem;
   text-align: center;
   line-height: 2;
 }
@@ -346,7 +337,6 @@ table {
   font-size: 2.25rem;
   box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
   padding: 0.5rem 2.5rem;
-  margin: 5rem 0;
 }
 .home-ctaBtn:hover {
   background: var(--primary);
@@ -1201,6 +1191,7 @@ table {
 /*
 font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
+font-family: 'Kalam', cursive;
 */
 :root {
   --bg: #fff;
@@ -1212,6 +1203,7 @@ font-family: 'Archivo Black', sans-serif;
   --grey: #D9D9D9;
   --fontfam1: "Archivo Black", serif;
   --fontfam2: "Source Sans 3", sans-serif;
+  --fontfam3: "Kalam", cursive;
   color-scheme: only light;
 }
 

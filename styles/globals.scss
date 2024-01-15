@@ -4,12 +4,13 @@
     './scss/pages/legal/legal', './scss/pages/contact/contact',
     './scss/components/project';
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Kalam&display=swap');
 
 /* END OF RESET */
 /*
 font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
+font-family: 'Kalam', cursive;
 */
 
 :root {
@@ -23,6 +24,7 @@ font-family: 'Archivo Black', sans-serif;
 
     --fontfam1: 'Archivo Black', serif;
     --fontfam2: 'Source Sans 3', sans-serif;
+    --fontfam3:  'Kalam', cursive;
 
     color-scheme: only light;
 }

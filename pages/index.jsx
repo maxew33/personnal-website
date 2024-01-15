@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Wave from '@/components/wave/wave'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 async function getFeaturesData() {
     const { features } = await require('../data/features.json')
@@ -14,9 +14,26 @@ async function getTestimonialsData() {
     return testimonials
 }
 
+async function getIllusData() {
+    const { projects } = await require('../data/projects.json')
+    return projects
+}
+
 export default function Home() {
     const [testimonialsData, setTestimonialsData] = useState([])
     const [featuresData, setFeaturesData] = useState([])
+    const [illusData, setIllusData] = useState([])
+
+    const [counter, setCounter] = useState(1)
+
+    useEffect(() => {
+        illusData.length > 0 &&
+            (setTimeout(
+                () => setCounter((counter + 1) % illusData.length),
+                3000
+            ),
+            console.log(illusData.length))
+    }, [counter, illusData])
 
     useEffect(() => {
         console.log(`
@@ -27,15 +44,36 @@ _
      \\_________/
      
 `)
+
         async function fetchData() {
             const testimonials = await getTestimonialsData()
             setTestimonialsData(testimonials)
 
             const features = await getFeaturesData()
             setFeaturesData(features)
+
+            const illus = await getIllusData()
+            setIllusData(illus)
         }
         fetchData()
     }, [])
+
+    useEffect(() => console.log(illusData), [illusData])
+
+    const illusAnimationVariants = {
+        initial: {
+            opacity: 0,
+            y: 320,
+        },
+        animate: (index) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.1 * index,
+                type: 'tween',
+            },
+        }),
+    }
 
     const featureAnimationVariants = {
         initial: {
@@ -69,6 +107,7 @@ _
     return (
         <main className="home-main">
             <section className="home-hero">
+                <Wave color="var(--primary" positionPlace="bottom" />
                 <article className="home-heroContent">
                     <h1 className="home-title">
                         Soyez <span className="home-highlighted">En ligne</span>{' '}
@@ -78,37 +117,74 @@ _
                     </h1>
 
                     <p className="home-welcome">
-                        Bienvenue chez TechQuest Bordeaux, votre partenaire de
-                        confiance pour la création de sites web exceptionnels.
+                        TechQuest, création de site web originaux.
                     </p>
 
-                    <span className="home-linkContainer">
-                        <Link href="/contact" className="home-contactBtn">
-                            Contact
-                        </Link>
-                        <Link href="/projects" className="home-link">
-                            Voir les projets
-                        </Link>
-                    </span>
+                    {illusData.length > 1 && (
+                        <motion.div
+                            className="home-carousel"
+                            initial={{ y: 250, opacity: 0, scale: 0.5 }}
+                            animate={{ y: 0, opacity: 1, scale: 1 }}
+                            transition={{
+                                ease: 'easeOut',
+                                duration: 2,
+                                delay: 1,
+                            }}
+                            style={{ originX: 0.5, originY: 1 }}
+                        >
+                            <div className="home-carousel-illus-container">
+                                {illusData.map((illus, index) => (
+                                    <Image
+                                        key={'illus' + index}
+                                        src={illus.result.minify}
+                                        height="351"
+                                        width="204"
+                                        className="home-carousel-illus"
+                                        alt={illus.result.name}
+                                        data-position={
+                                            index + counter >
+                                            illusData.length - 1
+                                                ? index +
+                                                  counter -
+                                                  illusData.length
+                                                : index + counter
+                                        }
+                                        priority
+                                    />
+                                ))}
+                            </div>
+                            <div className="home-carousel-name-container">
+                                {illusData.map((illus, index) => (
+                                    <div
+                                        key={'name' + index}
+                                        className="home-carousel-name"
+                                        data-displayed={
+                                            index + counter >
+                                            illusData.length - 1
+                                                ? index +
+                                                  counter -
+                                                  illusData.length
+                                                : index + counter
+                                        }
+                                    >
+                                        {illus.name}
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
 
-                    <p className="home-invit">
-                        Particulier cherchant à partager votre passion ou
-                        entreprise visant à se démarquer, je suis là pour
-                        transformer vos idées en réalité.
-                    </p>
-
-                    <Image
+                    {/* <Image
                         src="/assets/home/desk.webp"
                         height={467}
                         width={700}
                         className="home-heroIllus"
                         alt="Bienvenue chez TechQuest Bordeaux"
                         priority
-                    />
+                    /> */}
                 </article>
             </section>
             <section className="home-arguments">
-                <Wave />
                 <Wave color="var(--bg)" positionPlace="bottom" />
                 <article className="home-sectionContent home-argumentsContent">
                     <Image
@@ -118,16 +194,17 @@ _
                         className="home-articleIllus"
                         alt="pourquoi choisir TechQuest Bordeaux"
                     />
-                    <h2 className="home-articleTitle">Choisir TechQuest</h2>
+                    <h2 className="home-articleTitle">Qui suis-je ?</h2>
                     <p className="home-articleText">
-                        C'est choisir l'engagement envers l'excellence. Un
-                        engagement qui se manifeste à travers mes créations.
-                        Chaque site est le résultat d'une collaboration étroite
-                        avec mes clients, transformant leurs idées en des
-                        expériences en ligne uniques.
+                        Bonjour, je m'appelle Maxime et si j'ai créé TechQuest,
+                        c'est pour vous proposer{' '}
+                        <Link href="/service/"> mes services</Link> pour vous
+                        accompagner dans la conception de votre site web.
                     </p>
                 </article>
             </section>
+
+            {/*
             <section className="home-features">
                 <article className="home-sectionContent home-featuresContent">
                     <Link
@@ -233,6 +310,7 @@ _
                     Contact
                 </Link>
             </section>
+                        */}
         </main>
     )
 }

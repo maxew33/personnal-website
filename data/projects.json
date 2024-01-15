@@ -12,9 +12,10 @@
             ],
             "result": {
                 "name": "visuels du site du cabinet cap patrimoine",
-                "path": "/assets/projects/cabinetCapPatrimoine.webp"
+                "path": "/assets/projects/cabinetCapPatrimoine.webp",
+                "minify": "/assets/home/chris.png"
             },
-            "link":"https://cabinet-cap-patrimoine.fr/"
+            "link": "https://cabinet-cap-patrimoine.fr/"
         },
         {
             "name": "Jérémie Bonne, Graphiste Bordelais",
@@ -28,9 +29,11 @@
             ],
             "result": {
                 "name": "visuels du site de Jérémie Bonne",
-                "path": "/assets/projects/jeremieBonne.webp"
+                "path": "/assets/projects/jeremieBonne.webp",
+
+                "minify": "/assets/home/jerem.png"
             },
-            "link":"https://jeremie-bonne.fr/"
+            "link": "https://jeremie-bonne.fr/"
         },
         {
             "name": "Maxime Malfilâtre, développeur front end",
@@ -41,13 +44,13 @@
                 "Une esthétique unique et personnelle.",
                 "Une exploration interacive des projets.",
                 "Une navigation immersive."
-              
             ],
             "result": {
                 "name": "visuels du site de Maxime Malfilâtre",
-                "path": "/assets/projects/maximeMalfilatre.webp"
+                "path": "/assets/projects/maximeMalfilatre.webp",
+                "minify": "/assets/home/max.png"
             },
-            "link":"https://www.maxime-malfilatre.com"
+            "link": "https://www.maxime-malfilatre.com"
         }
     ]
 }
