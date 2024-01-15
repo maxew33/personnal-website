@@ -2,16 +2,16 @@
 
 .headerContainer {
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     position: sticky;
-    margin-top: 2rem;
     top: 0;
     left: 0;
     background: var(--bg);
-    box-shadow: 0px 4px 2px 0 var(--grey);
 }
 
 .header {
+    position: relative;
+    z-index: 10;
     width: calc(100% - 4rem);
     display: flex;
     align-items: center;
@@ -19,11 +19,6 @@
     max-width: 1400px;
     padding: 0.75rem 2rem;
     margin: auto;
-
-    > * {
-        min-width: 6rem;
-        text-align: center;
-    }
 }
 
 .navigation {
@@ -37,25 +32,7 @@
 
     a {
         text-decoration: none;
-        &:not(:last-of-type) {
-            color: unset;
-        }
-    }
-}
-
-.contact {
-    @include contactUs($size: 1.5rem);
-    padding: unset;
-    position: relative;
-    color: var(--accent);
-    background: var(--bg);
-    // border: 1px solid #0000;
-    border: none;
-    box-shadow: unset;
-    text-shadow: unset;
-    &:hover{
-        background: var(--bg);
-        border: none;
+        color: unset;
     }
 }
 
@@ -76,15 +53,10 @@
     object-fit: contain;
 }
 
-.name {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: inherit;
-}
-
-.link, .contact {
+.phone,
+.link {
     position: relative;
+    color: var(--accent);
     &::after {
         content: '';
         position: absolute;
@@ -97,7 +69,6 @@
         transition: transform 0.15s linear;
         transform-origin: left;
     }
-
     &.active,
     &:hover {
         &::after {
@@ -106,13 +77,16 @@
     }
 }
 
+.phone{
+    font-size: 1.5rem;
+}
+
 .burger {
-    display: none;
     position: absolute;
-    top: 0.75rem;
-    right: 2rem;
-    height: 24px;
-    width: 24px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 2rem;
+    width: 2rem;
     border: none;
     cursor: pointer;
     background: unset;
@@ -121,8 +95,8 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        height: 3px;
-        width: 24px;
+        height: 5px;
+        width: 2rem;
         border-radius: 15px;
         background: var(--accent);
         &::after,
@@ -132,7 +106,7 @@
             left: 0px;
             width: inherit;
             height: inherit;
-            top: -7px;
+            top: -10px;
             background: var(--accent);
             border: none;
             border-radius: 15px;
@@ -140,16 +114,54 @@
         }
 
         &::before {
-            top: 7px;
+            top: 10px;
         }
     }
 }
 
-@media screen and (max-width: 800px) {
+.menuOpen {
     .burger {
-        display: block;
-    }
+        span {
+            background: transparent;
 
+            &::after {
+                transform: translateY(10px) rotate(-135deg);
+            }
+            &::before {
+                transform: translateY(-10px) rotate(135deg);
+            }
+        }
+    }
+}
+
+.navigationWrapper{
+    // display: none;
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--grey);
+    clip-path: circle(0% at 50% 1.75rem);
+    transition: clip-path .5s ease-in-out;
+    display: grid;
+    grid-template-areas: 'navigation contact';
+}
+
+.navigationWrapperOpen{
+    display: grid;
+    clip-path: circle(100% at 50% 1.75rem);
+}
+
+.navigation{
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5rem;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 800px) {
     .header {
         width: calc(100% - 4rem);
         display: flex;
@@ -161,24 +173,6 @@
 
         > * {
             min-width: unset;
-        }
-    }
-
-    .menuOpen {
-        .burger {
-            span {
-                background: transparent;
-
-                &::after {
-                    transform: translateY(7px) rotate(-135deg);
-                }
-                &::before {
-                    transform: translateY(-7px) rotate(135deg);
-                }
-            }
-        }
-        .navigation {
-            height: 20rem;
         }
     }
 
@@ -197,7 +191,7 @@
         background: var(--bg);
         box-shadow: 0px 4px 2px 0 var(--grey);
 
-        & .link {
+        & .phone {
             position: relative;
             left: 3rem;
             font-size: 1.5rem;

@@ -21,7 +21,7 @@ export default function Header() {
         },
         {
             path: '/pricing/',
-            name: 'tarifs',
+            name: 'services',
         },
     ]
 
@@ -54,10 +54,6 @@ export default function Header() {
                         alt="logo de techquest"
                         className={styles.logo}
                     />
-                    <span className={styles.name}>
-                        <span>TechQuest</span>
-                        <span> Bordeaux</span>
-                    </span>
                 </Link>
                 <button
                     onClick={displayNav}
@@ -66,6 +62,16 @@ export default function Header() {
                 >
                     <span></span>
                 </button>
+
+                <a href="tel:0781847657" className={styles.phone}>
+                    07 81 84 76 57
+                </a>
+            </header>
+            <section
+                className={`${styles.navigationWrapper} ${
+                    menuOpen && styles.navigationWrapperOpen
+                }`}
+            >
                 <nav className={styles.navigation}>
                     {paths.map((path, index) => (
                         <Link
@@ -82,19 +88,8 @@ export default function Header() {
                             {path.name}
                         </Link>
                     ))}
-                    <Link
-                        href="/contact/"
-                        aria-label="contact"
-                        className={styles.contact}
-                        aria-current={
-                            pathname === '/contact/' ? 'true' : 'false'
-                        }
-                        onClick={hideNav}
-                    >
-                        contact
-                    </Link>
                 </nav>
-            </header>
+            </section>
         </div>
     )
 }
