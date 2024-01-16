@@ -1,13 +1,14 @@
+//a effacer !!!! //
+.more {
+    height: 150vh;
+}
+// fin //
+
 .home-main {
     position: relative;
     width: 100%;
     font-size: 1.5rem;
     font-family: var(--fontfam2);
-
-    section {
-        width: 100%;
-        position: relative;
-    }
 
     h1,
     h2 {
@@ -20,24 +21,33 @@
     }
 }
 
-.home-sectionContent {
-    width: min(98%, 90vw);
-    @include maxWidth;
-    display: grid;
-    grid-template-areas:
-        'illus title'
-        'illus content';
-    align-items: center;
+.home-section {
+    width: 100%;
+    position: relative;
 }
 
-// first part
-
-.home-heroContent {
+.home-article {
     position: relative;
-    justify-content: center;
-    height: 90vh;
     width: min(98%, 90vw);
     @include maxWidth;
+}
+
+.home-section-title {
+    font-size: 3rem;
+    font-family: var(--fontfam2);
+    text-transform: capitalize;
+}
+
+//======= HERO =======//
+
+.home-hero {
+    position: sticky;
+    top: 4rem;
+}
+
+.home-hero-article {
+    justify-content: center;
+    height: 90vh;
     display: grid;
     grid-template-areas:
         'title carousel'
@@ -73,7 +83,7 @@
     background-repeat: no-repeat;
     background-size: 35rem;
     background-position: bottom right;
-    transition: background-position 0.25s linear;
+    // transition: background-position 0.25s linear;
 }
 
 .home-carousel-illus-container {
@@ -104,7 +114,7 @@
     }
 }
 
-.home-carousel-name-container{
+.home-carousel-name-container {
     position: absolute;
     bottom: 40rem;
     right: 10rem;
@@ -117,42 +127,88 @@
     font-family: var(--fontfam3);
 }
 
-.home-carousel-name{
+.home-carousel-name {
     position: absolute;
     opacity: 0;
     width: 100%;
     text-align: center;
     transition: opacity 0.5s ease-in-out;
-    &[data-displayed='1']{
-        opacity:1;
+    &[data-displayed='1'] {
+        opacity: 1;
     }
 }
 
-//======= ARGUMENTS =======//
+//======= ABOUT =======//
 
-.home-arguments {
+.home-about {
     background: var(--primary);
-    height: 90vh;
+    min-height: 150vh;
+    color: var(--bg);
 }
+
+.home-about-article {
+    height: 100%;
+    display: flex;
+    // flex-direction: row-reverse;
+    gap: 5rem;
+    > * {
+        flex-basis: 100%;
+    }
+}
+
+.home-about-title-wrapper {
+    height: 80vh;
+    position: sticky;
+    @include flexCol;
+    justify-content: space-around;
+    align-items: center;
+    top: 5rem;
+    width: 50%;
+}
+
+.home-about-title {
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.home-about-illus {
+    display: inline-block;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.home-about-content {
+    @include flexCol;
+    justify-content: space-evenly;
+    position: relative;
+    margin: 100vh 0;
+}
+
+.home-about-content-wrapper {
+    height: 40vh;
+    display: grid;
+    place-content: center;
+    position: sticky;
+
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            top: 5rem * $i;
+        }
+    }
+}
+
+.home-about-content-text {
+    font-size: 2rem;
+    position: sticky;
+    top: 5rem;
+}
+
+// ======================================= //
 
 .home-argumentsContent {
     position: relative;
     // top: 12.5rem;
-}
-
-.home-articleIllus {
-    grid-area: illus;
-    height: 100%;
-    max-width: 45vw;
-    object-fit: cover;
-    border-radius: 15px;
-    @include boxShadow(#1115);
-}
-
-.home-articleTitle {
-    grid-area: title;
-    color: var(--bg);
-    align-self: center;
 }
 
 .home-articleText {
@@ -168,6 +224,7 @@
 
 .home-features {
     // padding-top: 20rem;
+    height: 150vh;
 }
 
 .home-featuresContent {

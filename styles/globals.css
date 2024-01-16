@@ -63,15 +63,15 @@ table {
     --accent: #ff006e;
     --grey: #d9d9d9;
     */
+.more {
+  height: 150vh;
+}
+
 .home-main {
   position: relative;
   width: 100%;
   font-size: 1.5rem;
   font-family: var(--fontfam2);
-}
-.home-main section {
-  width: 100%;
-  position: relative;
 }
 .home-main h1,
 .home-main h2 {
@@ -82,22 +82,32 @@ table {
   line-height: 1.5;
 }
 
-.home-sectionContent {
-  width: min(98%, 90vw);
-  max-width: 1400px;
-  margin: auto;
-  display: grid;
-  grid-template-areas: "illus title" "illus content";
-  align-items: center;
+.home-section {
+  width: 100%;
+  position: relative;
 }
 
-.home-heroContent {
+.home-article {
   position: relative;
-  justify-content: center;
-  height: 90vh;
   width: min(98%, 90vw);
   max-width: 1400px;
   margin: auto;
+}
+
+.home-section-title {
+  font-size: 3rem;
+  font-family: var(--fontfam2);
+  text-transform: capitalize;
+}
+
+.home-hero {
+  position: sticky;
+  top: 4rem;
+}
+
+.home-hero-article {
+  justify-content: center;
+  height: 90vh;
   display: grid;
   grid-template-areas: "title carousel" "welcome carousel";
   grid-template-columns: 1fr 1fr;
@@ -130,7 +140,6 @@ table {
   background-repeat: no-repeat;
   background-size: 35rem;
   background-position: bottom right;
-  transition: background-position 0.25s linear;
 }
 
 .home-carousel-illus-container {
@@ -182,28 +191,82 @@ table {
   opacity: 1;
 }
 
-.home-arguments {
+.home-about {
   background: var(--primary);
-  height: 90vh;
+  min-height: 150vh;
+  color: var(--bg);
+}
+
+.home-about-article {
+  height: 100%;
+  display: flex;
+  gap: 5rem;
+}
+.home-about-article > * {
+  flex-basis: 100%;
+}
+
+.home-about-title-wrapper {
+  height: 80vh;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 5rem;
+  width: 50%;
+}
+
+.home-about-title {
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.home-about-illus {
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.home-about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 100vh 0;
+}
+
+.home-about-content-wrapper {
+  height: 40vh;
+  display: grid;
+  place-content: center;
+  position: sticky;
+}
+.home-about-content-wrapper:nth-child(1) {
+  top: 5rem;
+}
+.home-about-content-wrapper:nth-child(2) {
+  top: 10rem;
+}
+.home-about-content-wrapper:nth-child(3) {
+  top: 15rem;
+}
+.home-about-content-wrapper:nth-child(4) {
+  top: 20rem;
+}
+.home-about-content-wrapper:nth-child(5) {
+  top: 25rem;
+}
+
+.home-about-content-text {
+  font-size: 2rem;
+  position: sticky;
+  top: 5rem;
 }
 
 .home-argumentsContent {
   position: relative;
-}
-
-.home-articleIllus {
-  grid-area: illus;
-  height: 100%;
-  max-width: 45vw;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
-}
-
-.home-articleTitle {
-  grid-area: title;
-  color: var(--bg);
-  align-self: center;
 }
 
 .home-articleText {
@@ -212,6 +275,10 @@ table {
 }
 .home-articleText .home-link::after {
   bottom: 0.25rem;
+}
+
+.home-features {
+  height: 150vh;
 }
 
 .home-featuresContent {
