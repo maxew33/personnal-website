@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import {motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { delay, motion } from 'framer-motion'
 
 async function getTestimonialsData() {
     const { testimonials } = await require('../../data/testimonials.json')
@@ -43,9 +43,15 @@ export default function Testimonials() {
                             <motion.blockquote
                                 variants={testimanialAnimationVariants}
                                 initial="initial"
-                                whileInView="animate"
+                                whileInView={() => (
+                                    console.log('in view'), 'animate'
+                                )}
                                 custom={index}
                                 viewport={{ once: true }}
+                                transition={{
+                                    duration: 1,
+                                    delay: .75,
+                                }}
                                 className="home-testimonialContent"
                             >
                                 {testimonial.content}

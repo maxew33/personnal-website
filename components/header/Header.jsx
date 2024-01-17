@@ -34,7 +34,7 @@ export default function Header() {
     }
 
     const hideNav = () => {
-        setMenuOpen(false)
+        // setMenuOpen(false)
     }
 
     return (
