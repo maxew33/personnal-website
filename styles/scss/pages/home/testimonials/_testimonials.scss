@@ -1,16 +1,17 @@
 
-.home-testimonialsContent {
+.home-testimonials-content {
     width: 95%;
     @include maxWidth;
+    padding-top: 5rem;
 }
 
-.home-testimonialsTitle {
+.home-testimonials-title {
     margin: 5rem 0;
     text-align: center;
     line-height: 1.15;
 }
 
-.home-testimonialsWrapper {
+.home-testimonials-wrapper {
     @include flexSB;
     gap: 5rem;
     margin-bottom: 5rem;
@@ -21,7 +22,7 @@
     }
 }
 
-.home-testimonialContent {
+.home-testimonial-content {
     position: relative;
     background: #fff;
     padding: 1rem;
@@ -45,7 +46,7 @@
     }
 }
 
-.home-testimonialAuthor {
+.home-testimonial-author {
     display: inline-block;
     width: 100%;
     text-align: right;

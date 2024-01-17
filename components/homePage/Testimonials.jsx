@@ -30,11 +30,11 @@ export default function Testimonials() {
     }
     return (
         <section className="home-testimonials">
-            <article className="home-testimonialsContent">
-                <h2 className="home-section-title">
+            <article className="home-testimonials-content">
+                <h2 className="home-section-title home-testimonials-title">
                     Ils m'ont fait confiance.
                 </h2>
-                <div className="home-testimonialsWrapper">
+                <div className="home-testimonials-wrapper">
                     {testimonialsData.map((testimonial, index) => (
                         <article
                             key={'testimonial' + index}
@@ -52,11 +52,11 @@ export default function Testimonials() {
                                     duration: 1,
                                     delay: .75,
                                 }}
-                                className="home-testimonialContent"
+                                className="home-testimonial-content"
                             >
                                 {testimonial.content}
                             </motion.blockquote>
-                            <span className="home-testimonialAuthor">
+                            <span className="home-testimonial-author">
                                 {testimonial.author}
                             </span>
                         </article>

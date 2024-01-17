@@ -3,15 +3,15 @@ import Link from 'next/link'
 
 export default function Conclusion() {
     return (
-        <section className="home-ctaSection">
-            <h2 className="home-ctaTitle">
+        <section className="home-cta-section">
+            <h2 className="home-cta-title">
                 Prêt à donner vie à votre projet&nbsp;?
             </h2>
-            <p className="home-ctaContent">
+            <p className="home-cta-content">
                 Discutons ensemble de vos idées et créons un site web qui vous
                 ressemble.
             </p>
-            <Link href="/contact" className="home-ctaBtn">
+            <Link href="/contact" className="home-cta-btn">
                 Contact
             </Link>
         </section>

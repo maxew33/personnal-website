@@ -521,19 +521,20 @@ table {
   background-position: top left;
 }
 
-.home-testimonialsContent {
+.home-testimonials-content {
   width: 95%;
   max-width: 1400px;
   margin: auto;
+  padding-top: 5rem;
 }
 
-.home-testimonialsTitle {
+.home-testimonials-title {
   margin: 5rem 0;
   text-align: center;
   line-height: 1.15;
 }
 
-.home-testimonialsWrapper {
+.home-testimonials-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -542,34 +543,34 @@ table {
   max-width: calc(100% - 3rem);
   margin: auto;
 }
-.home-testimonialsWrapper article {
+.home-testimonials-wrapper article {
   flex: 1 1 0;
 }
 
-.home-testimonialContent {
+.home-testimonial-content {
   position: relative;
   background: #fff;
   padding: 1rem;
   box-shadow: 0px 2px 2px 0 var(--grey);
 }
-.home-testimonialContent::after, .home-testimonialContent::before {
+.home-testimonial-content::after, .home-testimonial-content::before {
   position: absolute;
   color: var(--accent);
   font-size: 5rem;
   font-family: "Acme";
 }
-.home-testimonialContent::after {
+.home-testimonial-content::after {
   content: "“";
   top: -3rem;
   left: -1rem;
 }
-.home-testimonialContent::before {
+.home-testimonial-content::before {
   content: "”";
   bottom: -4.5rem;
   right: -1rem;
 }
 
-.home-testimonialAuthor {
+.home-testimonial-author {
   display: inline-block;
   width: 100%;
   text-align: right;
