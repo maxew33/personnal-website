@@ -1,0 +1,113 @@
+.section {
+  position: sticky;
+  top: 4rem;
+}
+
+.article {
+  justify-content: center;
+  height: 90vh;
+  display: grid;
+  grid-template-areas: "title carousel" "welcome carousel" "link carousel";
+  grid-template-columns: 1fr 1fr;
+}
+
+.title {
+  grid-area: title;
+  font-size: 4rem;
+  line-height: 1.15;
+  align-self: center;
+}
+
+.presentation {
+  grid-area: welcome;
+  font-size: 2rem;
+  place-self: baseline;
+  font-family: var(--fontfam2);
+}
+
+.highlighted {
+  color: var(--accent);
+}
+
+.linkWrapper {
+  grid-area: link;
+}
+
+.icon {
+  height: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--text);
+  transition: color 0.125s linear;
+}
+.icon:hover {
+  color: var(--accent);
+}
+
+.carouselContainer {
+  position: relative;
+  grid-area: carousel;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/home/hand.png");
+  background-repeat: no-repeat;
+  background-size: 35rem;
+  background-position: bottom right;
+}
+
+.carousel {
+  position: absolute;
+  bottom: 17.2rem;
+  width: 12.75rem;
+  right: 11.15rem;
+  aspect-ratio: 0.58;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.carouselIllus {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(-100%);
+}
+.carouselIllus[data-position="1"] {
+  transform: translate(0%);
+  z-index: 10;
+}
+.carouselIllus[data-position="2"] {
+  transform: translate(100%);
+  z-index: 10;
+}
+
+.commentContainer {
+  position: absolute;
+  width: 7.5rem;
+  bottom: 40rem;
+  right: 11rem;
+}
+
+.comment {
+  position: absolute;
+  top: -2.5rem;
+  left: 0.75rem;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: right;
+  font-family: var(--fontfam3);
+  color: var(--text);
+}
+.comment::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 0.5rem;
+  background-image: url("/assets/home/arrow.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}

@@ -166,31 +166,6 @@ table {
   color: unset;
 }
 
-.home-ctaSection {
-  max-width: 1400px;
-  margin: auto;
-  text-align: center;
-  line-height: 2;
-}
-
-.home-ctaBtn {
-  padding: 1.125rem 2.25rem;
-  border: 1px solid var(--accent);
-  border-radius: 5px;
-  color: var(--bg);
-  background: var(--accent);
-  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
-  font-weight: 400;
-  font-size: 2.25rem;
-  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
-  padding: 0.5rem 2.5rem;
-}
-.home-ctaBtn:hover {
-  background: var(--primary);
-  border: 1px solid var(--primary);
-  text-shadow: unset;
-}
-
 @media screen and (max-width: 1080px) {
   .home-heroContent {
     grid-template-areas: "title title" "welcome illus" "linkContainer illus" "invit illus";
@@ -318,84 +293,33 @@ table {
     padding: 0.75rem 1.25rem;
   }
 }
-.home-about {
-  background: var(--primary);
-  min-height: 150vh;
-}
-
-.home-about-article {
-  height: 100%;
-  display: flex;
-  gap: 5rem;
-}
-.home-about-article > * {
-  flex-basis: 100%;
-}
-
-.home-about-title-wrapper {
-  height: 80vh;
-  position: sticky;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  top: 5rem;
-  width: 50%;
-}
-
-.home-about-title {
-  font-size: 5rem;
-  color: var(--bg);
-  width: 100%;
+.home-cta-section {
+  max-width: 1400px;
+  margin: auto;
   text-align: center;
 }
 
-.video-player-container {
-  width: 100%;
-  aspect-ratio: 20/11;
-  border-radius: 15px;
-  overflow: hidden;
+.home-cta-title {
+  margin: 15rem 0 2rem;
 }
 
-.home-about-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: relative;
-  margin: 100vh 0;
+.home-cta-btn {
+  padding: 1.125rem 2.25rem;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  color: var(--bg);
+  background: var(--accent);
+  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
+  font-weight: 400;
+  font-size: 2.25rem;
+  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
+  padding: 0.5rem 2.5rem;
+  margin: 5rem 0;
 }
-
-.home-about-content-wrapper {
-  height: 15vh;
-  margin: 15vh 0;
-  display: grid;
-  place-content: left;
-  position: sticky;
+.home-cta-btn:hover {
   background: var(--primary);
-}
-.home-about-content-wrapper:nth-child(1) {
-  top: 17.5vh;
-}
-.home-about-content-wrapper:nth-child(2) {
-  top: 35vh;
-}
-.home-about-content-wrapper:nth-child(3) {
-  top: 52.5vh;
-}
-.home-about-content-wrapper:nth-child(4) {
-  top: 70vh;
-}
-.home-about-content-wrapper:nth-child(5) {
-  top: 87.5vh;
-}
-.home-about-content-wrapper:last-child {
-  background: rgba(0, 0, 0, 0);
-}
-
-.home-about-content-text {
-  font-size: 2rem;
-  position: sticky;
-  top: 5rem;
+  border: 1px solid var(--primary);
+  text-shadow: unset;
 }
 
 .home-hero {
@@ -964,13 +888,14 @@ table {
 
 .contact-main {
   display: grid;
-  grid-template: "title form" 2fr "link form" 7fr/3fr 2fr;
+  grid-template: "link form" "link form"/3fr 2fr;
   gap: 2rem;
   margin-bottom: 2rem;
   min-height: 34rem;
 }
 
 .contact-section {
+  background: var(--lightCol);
   border-radius: 15px;
   box-shadow: 0px 2px 2px 0 var(--grey);
 }
@@ -987,23 +912,7 @@ table {
   text-transform: capitalize;
 }
 
-.contact-title {
-  grid-area: title;
-  background: url("/assets/contact/phone.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: var(--bg);
-  font-size: 2rem;
-  display: grid;
-  place-content: center;
-}
-.contact-title h3 {
-  margin: 1rem;
-}
-
 .contact-formContact {
-  background: var(--lightCol);
   grid-area: form;
 }
 .contact-formContact .contact-article {
@@ -1082,7 +991,6 @@ table {
 
 .contact-linksWrapper {
   grid-area: link;
-  background: var(--lightCol);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -1300,13 +1208,13 @@ font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
 */
 :root {
-  --bg: #fff;
+  --bg: #fcedda;
   --text: #010028;
-  --primary: #14213d;
+  --primary: #3d3d3d;
   --secondary: #1f7ead;
   --lightCol: hsl(0, 0%, 95%);
-  --accent: #ff006e;
-  --grey: #D9D9D9;
+  --accent: #ea445a;
+  --grey: #d9d9d9;
   --fontfam1: "Archivo Black", serif;
   --fontfam2: "Source Sans 3", sans-serif;
   --fontfam3: "Kalam", cursive;

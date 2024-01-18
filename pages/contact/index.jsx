@@ -62,15 +62,7 @@ export default function Contact() {
         <>
             <header className="contact-pageTitle">Contact</header>
             <main className="contact-main">
-                <section className="contact-section contact-title">
-                    <article>
-                        <h3>
-                            Ensemble, explorons les opportunités qui s'offrent à
-                            vous.
-                        </h3>
-                    </article>
-                </section>
-
+                
                 <section className="contact-section contact-formContact">
                     <article className="contact-article">
                         <h2 className="contact-articleTitle">Une question ?</h2>

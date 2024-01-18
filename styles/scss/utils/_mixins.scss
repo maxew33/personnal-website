@@ -39,6 +39,7 @@
 
     &::after {
         content: '';
+        z-index: -1;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -53,6 +54,29 @@
     &:hover::after {
         transform: scaleX(0);
         animation: unset;
+    }
+}
+
+@mixin comment($url:'/assets/home/arrow.png', $color: var(--text)){
+    position: absolute;
+    top: -2.5rem;
+    left: .75rem;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: right;
+    font-family: var(--fontfam3);
+    color: $color;
+
+    &::after{
+        content:'';
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        top: .5rem;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
     }
 }
 

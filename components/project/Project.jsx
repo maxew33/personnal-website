@@ -13,9 +13,10 @@ export default function Project(props) {
         result: { nom: 'name', path: '' },
         banner: '',
         link: '/',
+        id: '',
     })
 
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true)
 
     useEffect(() => {
         if (props) {
@@ -28,6 +29,7 @@ export default function Project(props) {
                 banner,
                 implementation,
                 link,
+                id
             } = props
 
             // Update the state with the values from props
@@ -43,6 +45,7 @@ export default function Project(props) {
                 },
                 banner: banner || '/assets/projects/banner.webp',
                 link: link || '/',
+                id: id || '0'
             })
         }
     }, [props])
@@ -52,7 +55,7 @@ export default function Project(props) {
     }
 
     return (
-        <section className="project-section">
+        <section className="project-section" id={`project-${data.id ?? ''}`}>
             <header
                 style={{ backgroundImage: `url(${data.banner})` }}
                 className="project-header"
@@ -69,7 +72,7 @@ export default function Project(props) {
                 </div>
             </header>
 
-            <div className={`project-content ${active && "project-active"}`}>
+            <div className={`project-content ${active && 'project-active'}`}>
                 <p className="project-description">{data.description}</p>
                 <div className="project-contentWrapper project-objectives">
                     <h3 className="project-contentTitle">Objectifs : </h3>

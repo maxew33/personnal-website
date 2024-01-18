@@ -1,24 +1,8 @@
-//a effacer !!!! //
-.more {
-    height: 150vh;
-}
-// fin //
-
 .home-main {
     position: relative;
     width: 100%;
     font-size: 1.5rem;
     font-family: var(--fontfam2);
-
-    h1,
-    h2 {
-        font-family: var(--fontfam1);
-    }
-
-    p,
-    blockquote {
-        line-height: 1.5;
-    }
 }
 
 .home-section {
@@ -38,96 +22,15 @@
     text-transform: capitalize;
 }
 
-//======= HERO =======//
 
-
-//======= ABOUT =======//
-
-
-// ======================================= //
-
-.home-argumentsContent {
-    position: relative;
-    // top: 12.5rem;
+h1,
+h2 {
+    font-family: var(--fontfam1);
 }
 
-.home-articleText {
-    grid-area: content;
-    align-self: center;
-
-    .home-link {
-        &::after {
-            bottom: 0.25rem;
-        }
-    }
-}
-
-.home-features {
-    // padding-top: 20rem;
-    height: 150vh;
-}
-
-.home-featuresContent {
-    @include flexCol;
-    // gap: 2rem;
-}
-
-.home-featureLink {
-    margin: 7.5rem 0;
-    align-self: center;
-    font-size: 2rem;
-    padding: 1rem 2rem;
-}
-
-.home-featuresWrapper {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-}
-
-.home-feature {
-    @include flexCol;
-    align-items: center;
-    width: 25%;
-    padding: 1rem 1.5rem;
-    background: var(--lightCol);
-    border-radius: 2rem 2rem 0 0;
-    height: 10rem;
-}
-
-.home-featureTitle {
-    font-size: 1.5rem;
-    padding: 0.5rem 0 1.5rem;
-}
-
-.home-featureText {
-    font-size: 0.9rem;
-}
-
-.home-solutionsWrapper {
-    background: var(--lightCol);
-    position: relative;
-}
-
-.home-solutions {
-    padding: 5rem 0;
-
-    & .home-articleTitle {
-        color: unset;
-    }
-}
-
-.home-ctaSection {
-    @include maxWidth;
-    // padding-top: 6rem;
-    text-align: center;
-    line-height: 2;
-}
-
-.home-ctaBtn {
-    @include contactUs($size: 2.25rem);
-    padding: 0.5rem 2.5rem;
-    // margin: 5rem 0;
+p,
+blockquote {
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 1080px) {

@@ -1,6 +1,7 @@
 {
     "projects": [
         {
+            "id": 0,
             "name": "Cabinet CAP Patrimoine",
             "description": "Le Cabinet CAP Patrimoine, spécialisé en conseil de gestion de patrimoine, était à la recherche d'une présence en ligne qui reflète son engagement envers l'excellence dans le domaine financier, immobilier, de la défiscalisation, de la retraite, de l'épargne, et de la prévoyance.",
             "objectives": "L'objectif était de créer un site web qui transmette la sophistication de leurs services tout en fournissant une expérience utilisateur intuitive.",
@@ -18,6 +19,7 @@
             "link": "https://cabinet-cap-patrimoine.fr/"
         },
         {
+            "id": 1,
             "name": "Jérémie Bonne, Graphiste Bordelais",
             "description": "Jérémie Bonne est un graphiste talentueux basé à Bordeaux. Spécialisé dans la communication, le lettrage, et l'identité visuelle, il fournit des services créatifs de haute qualité.",
             "objectives": "L'objectif était de créer un site web qui mette en valeur le travail exceptionnel de Jérémie Bonne. En collaborant étroitement avec lui, j'ai intégré sa maquette tout en garantissant une expérience utilisateur fluide et esthétique.",
@@ -36,6 +38,7 @@
             "link": "https://jeremie-bonne.fr/"
         },
         {
+            "id": 2,
             "name": "Maxime Malfilâtre, développeur front end",
             "description": "Maxime Malfilâtre est un développeur front-end basé à Bordeaux. Son portfolio présente ses compétences en matière de développement web, mettant en avant des projets variés et innovants.",
             "objectives": "L'objectif était de concevoir un site web qui reflète la personnalité créative de Maxime Malfilâtre. Le portfolio devait être plus qu'une simple vitrine de compétences, mais une immersion dans son style, sa créativité et son approche unique du développement web.",

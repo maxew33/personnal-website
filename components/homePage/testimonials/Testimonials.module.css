@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.article {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 5rem;
+}
+
+.title {
+  margin: 5rem 0;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  max-width: calc(100% - 3rem);
+  margin: auto;
+}
+
+.testimonial {
+  flex: 1 1 0;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0px 2px 2px 0 var(--grey);
+}
+.content::after, .content::before {
+  position: absolute;
+  color: var(--accent);
+  font-size: 5rem;
+  font-family: "Acme";
+}
+.content::after {
+  content: "“";
+  top: -2.5rem;
+  left: -1rem;
+}
+.content::before {
+  content: "”";
+  bottom: -4.5rem;
+  right: -1rem;
+}
+
+.comment {
+  position: absolute;
+  top: -2.5rem;
+  left: 0.75rem;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: right;
+  font-family: var(--fontfam3);
+  color: var(--text);
+}
+.comment::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 0.5rem;
+  background-image: url("/assets/home/arrow.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
+
+.author,
+.link {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.link {
+  position: absolute;
+  right: 0;
+  width: auto;
+  color: unset;
+}
+.link::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--accent);
+  transition: transform 0.25s linear;
+  transform-origin: right;
+}
+.link:hover::after {
+  transform: scaleX(0);
+  animation: unset;
+}
+.link:hover {
+  position: absolute;
+}

@@ -1,0 +1,17 @@
+
+.home-cta-section {
+    @include maxWidth;
+    // padding-top: 6rem;
+    text-align: center;
+}
+
+
+.home-cta-title{
+    margin: 15rem 0 2rem;
+}
+
+.home-cta-btn {
+    @include contactUs($size: 2.25rem);
+    padding: 0.5rem 2.5rem;
+    margin: 5rem 0;
+}

@@ -69,14 +69,15 @@
 .contact-main {
     display: grid;
     grid-template:
-        'title form' 2fr
-        'link form' 7fr / 3fr 2fr;
+        'link form' 
+        'link form'  / 3fr 2fr;
     gap: 2rem;
     margin-bottom: 2rem;
     min-height: 34rem;
 }
 
 .contact-section {
+    background: var(--lightCol);
     border-radius: 15px;
     @include boxShadow;
 }
@@ -92,28 +93,9 @@
     text-transform: capitalize;
 }
 
-// page
-
-.contact-title {
-    grid-area: title;
-    background: url('/assets/contact/phone.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: var(--bg);
-    font-size: 2rem;
-    display: grid;
-    place-content: center;
-
-    h3 {
-        margin: 1rem;
-    }
-}
-
 // Form section
 
 .contact-formContact {
-    background: var(--lightCol);
     grid-area: form;
 
     .contact-article {
@@ -195,7 +177,6 @@
 
 .contact-linksWrapper {
     grid-area: link;
-    background: var(--lightCol);
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
