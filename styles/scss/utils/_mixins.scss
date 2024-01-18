@@ -80,26 +80,6 @@
     }
 }
 
-// @keyframes cta {
-//     70%,
-//     100% {
-//         transform: scaleX(1);
-//         transform-origin: right;
-//     }
-//     85% {
-//         transform: scaleX(0);
-//         transform-origin: right;
-//     }
-//     86% {
-//         transform: scaleX(0);
-//         transform-origin: left;
-//     }
-//     99% {
-//         transform: scaleX(1);
-//         transform-origin: left;
-//     }
-// }
-
 @mixin maxWidth {
     max-width: 1400px;
     margin: auto;

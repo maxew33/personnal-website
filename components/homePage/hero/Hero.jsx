@@ -104,8 +104,8 @@ export default function Hero(props) {
 
                 <motion.div
                     className={styles.carouselContainer}
-                    initial={{ y: 250, opacity: 0, scale: 0.75 }}
-                    animate={{ y: 0, opacity: 1, scale: 1 }}
+                    initial={{ x: -350, y: 250, rotate: 90, opacity: 0, scale: 0.75 }}
+                    animate={{ x:0, y: 0, rotate: 0, opacity: 1, scale: 1 }}
                     style={{ originX: 0.5, originY: 1 }}
                     transition={{ duration: 0.75, delay: 1 }}
                     onAnimationComplete={() => setStartTitle(true)}

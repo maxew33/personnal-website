@@ -71,7 +71,7 @@ export default function Testimonials() {
                                 {testimonial.author}
                             </span>
                             <Link
-                                href={`/projects/#project-${testimonial.id}`}
+                                href={`/projects?id=${testimonial.id}`}
                                 scroll={false}
                                 className={styles.link}
                             >

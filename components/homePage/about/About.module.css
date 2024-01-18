@@ -86,6 +86,9 @@
   background: var(--grey);
   border-radius: 5px;
 }
+.contentWrapper:not(:last-child) {
+  box-shadow: 0px -2px 2px 0 var(--primary);
+}
 .contentWrapper:nth-child(1) {
   top: 17.5vh;
 }

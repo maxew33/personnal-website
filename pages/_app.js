@@ -1,16 +1,23 @@
 import '@/styles/globals.css'
+import AppContext from '@/components/context/AppContext'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-
-import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function App({ Component, pageProps }) {
-    const router = useRouter()
+    const [darkMode, setDarkMode] = useState(false)
+
+    /*useEffect(() => {
+        const bgCol = darkMode ? '#3d3d3d' : '#fcedda'
+        const primary = darkMode ? '#fcedda' : '#3d3d3d'
+        document.documentElement.style.setProperty('--bg', bgCol)
+        document.documentElement.style.setProperty('--primary', primary)
+    }, [darkMode])*/
 
     return (
-        <>
+        <AppContext.Provider value={{ darkMode, setDarkMode }}>
             <Head>
                 {/* <!-- HTML Meta Tags --> */}
                 <title>TechQuest Bordeaux</title>
@@ -48,13 +55,9 @@ export default function App({ Component, pageProps }) {
 
                 {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
             </Head>
-            <AnimatePresence mode="wait" initial={true}>
-                <motion.div key={router.pathname}>
-                    <Header />
-                    <Component {...pageProps} />
-                    <Footer />
-                </motion.div>
-            </AnimatePresence>
-        </>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+        </AppContext.Provider>
     )
 }

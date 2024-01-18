@@ -63,23 +63,11 @@ table {
     --accent: #ff006e;
     --grey: #d9d9d9;
     */
-.more {
-  height: 150vh;
-}
-
 .home-main {
   position: relative;
   width: 100%;
   font-size: 1.5rem;
   font-family: var(--fontfam2);
-}
-.home-main h1,
-.home-main h2 {
-  font-family: var(--fontfam1);
-}
-.home-main p,
-.home-main blockquote {
-  line-height: 1.5;
 }
 
 .home-section {
@@ -100,70 +88,14 @@ table {
   text-transform: capitalize;
 }
 
-.home-argumentsContent {
-  position: relative;
+h1,
+h2 {
+  font-family: var(--fontfam1);
 }
 
-.home-articleText {
-  grid-area: content;
-  align-self: center;
-}
-.home-articleText .home-link::after {
-  bottom: 0.25rem;
-}
-
-.home-features {
-  height: 150vh;
-}
-
-.home-featuresContent {
-  display: flex;
-  flex-direction: column;
-}
-
-.home-featureLink {
-  margin: 7.5rem 0;
-  align-self: center;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-}
-
-.home-featuresWrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-}
-
-.home-feature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25%;
-  padding: 1rem 1.5rem;
-  background: var(--lightCol);
-  border-radius: 2rem 2rem 0 0;
-  height: 10rem;
-}
-
-.home-featureTitle {
-  font-size: 1.5rem;
-  padding: 0.5rem 0 1.5rem;
-}
-
-.home-featureText {
-  font-size: 0.9rem;
-}
-
-.home-solutionsWrapper {
-  background: var(--lightCol);
-  position: relative;
-}
-
-.home-solutions {
-  padding: 5rem 0;
-}
-.home-solutions .home-articleTitle {
-  color: unset;
+p,
+blockquote {
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 1080px) {
@@ -320,185 +252,6 @@ table {
   background: var(--primary);
   border: 1px solid var(--primary);
   text-shadow: unset;
-}
-
-.home-hero {
-  position: sticky;
-  top: 4rem;
-}
-
-.home-hero-article {
-  justify-content: center;
-  height: 90vh;
-  display: grid;
-  grid-template-areas: "title carousel" "welcome carousel" "link carousel";
-  grid-template-columns: 1fr 1fr;
-}
-
-.home-title {
-  grid-area: title;
-  font-size: 4rem;
-  line-height: 1.15;
-  align-self: center;
-}
-
-.home-welcome {
-  grid-area: welcome;
-  font-size: 2rem;
-  place-self: baseline;
-}
-
-.home-highlighted {
-  color: var(--accent);
-}
-
-.home-link-wrapper {
-  grid-area: link;
-}
-
-.contact-social-icon {
-  height: 2.5rem;
-  padding-right: 1.5rem;
-  color: var(--text);
-  transition: color 0.125s linear;
-}
-.contact-social-icon:hover {
-  color: var(--accent);
-}
-
-.home-carousel {
-  position: relative;
-  grid-area: carousel;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  background: url("/assets/home/hand.png");
-  background-repeat: no-repeat;
-  background-size: 35rem;
-  background-position: bottom right;
-}
-
-.home-carousel-illus-container {
-  position: absolute;
-  bottom: 17.2rem;
-  width: 12.75rem;
-  right: 11.15rem;
-  aspect-ratio: 0.58;
-  background: var(--bg);
-  overflow: hidden;
-}
-
-.home-carousel-illus {
-  position: absolute;
-  bottom: 0;
-  width: inherit;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-in-out;
-  transform: translate(-100%);
-}
-.home-carousel-illus[data-position="1"] {
-  transform: translate(0%);
-  z-index: 10;
-}
-.home-carousel-illus[data-position="2"] {
-  transform: translate(100%);
-  z-index: 10;
-}
-
-.home-carousel-name-container {
-  position: absolute;
-  bottom: 40rem;
-  right: 10rem;
-  height: 4rem;
-  width: 15rem;
-  font-family: var(--fontfam3);
-}
-
-.home-carousel-name {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  text-align: center;
-  transition: opacity 0.5s ease-in-out;
-}
-.home-carousel-name[data-displayed="1"] {
-  opacity: 1;
-}
-
-.home-carousel-title {
-  position: absolute;
-  opacity: 0;
-  text-transform: capitalize;
-  width: 100%;
-  text-align: right;
-  transition: opacity 0.5s ease-in-out;
-}
-.home-carousel-title::after {
-  content: "";
-  position: absolute;
-  width: 5rem;
-  height: 5rem;
-  top: 0.5rem;
-  background-image: url("/assets/home/arrow.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-}
-
-.home-testimonials-content {
-  width: 95%;
-  max-width: 1400px;
-  margin: auto;
-  padding-top: 5rem;
-}
-
-.home-testimonials-title {
-  margin: 5rem 0;
-  text-align: center;
-  line-height: 1.15;
-}
-
-.home-testimonials-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
-  margin-bottom: 5rem;
-  max-width: calc(100% - 3rem);
-  margin: auto;
-}
-.home-testimonials-wrapper article {
-  flex: 1 1 0;
-}
-
-.home-testimonial-content {
-  position: relative;
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0px 2px 2px 0 var(--grey);
-}
-.home-testimonial-content::after, .home-testimonial-content::before {
-  position: absolute;
-  color: var(--accent);
-  font-size: 5rem;
-  font-family: "Acme";
-}
-.home-testimonial-content::after {
-  content: "“";
-  top: -3rem;
-  left: -1rem;
-}
-.home-testimonial-content::before {
-  content: "”";
-  bottom: -4.5rem;
-  right: -1rem;
-}
-
-.home-testimonial-author {
-  display: inline-block;
-  width: 100%;
-  text-align: right;
-  margin-top: 1rem;
 }
 
 .projects-main {
@@ -1240,65 +993,6 @@ a:visited {
   display: inline-block;
   position: relative;
   text-decoration: none;
-}
-
-.slide-in,
-.slide-out {
-  position: fixed;
-  display: grid;
-  place-content: center;
-  font-size: 5rem;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  transform-origin: bottom;
-  z-index: 100;
-  background: var(--lightCol);
-  /*
-  &::after,
-  &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-  }
-
-  &::after {
-      background: url('/assets/transition.webp');
-      background-size: min(1000px, 60%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-  }
-  &::before {
-      background: radial-gradient(circle at center, #fff1 60%, var(--primary)),
-          radial-gradient(circle at center, #fff2 50%, var(--primary)),
-          radial-gradient(circle at center, #fff3 40%, var(--primary)),
-          radial-gradient(circle at center, #fff 30%, var(--primary)),
-          var(--primary);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-  }*/
-}
-
-.slide-out {
-  transform-origin: top;
-}
-
-.name {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
 }
 
 @media screen and (max-width: 1400px) {
