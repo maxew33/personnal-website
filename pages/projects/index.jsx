@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import styles from './Projects.module.css'
-import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
+import ProjectModale from '@/components/projectModale/ProjectModale'
 
 async function getProjectsData() {
     const { projects } = await require('../../data/projects.json')
@@ -12,15 +12,16 @@ async function getProjectsData() {
 }
 
 export default function Projects() {
-    const searchParams = useSearchParams()
-
-    const id = typeof(searchParams.get('id')) === 'string' ? parseInt(searchParams.get('id')) : 0
 
     const [data, setData] = useState([])
 
-    const [projectPosition, setProjectPosition] = useState(id)
+    const [projectPosition, setProjectPosition] = useState(0)
 
     const [modalDisplayed, setModalDisplayed] = useState(false)
+
+    const [direction, setDirection] = useState(0)
+
+    const [projectSelected, setProjectSelected] = useState()
 
     useEffect(() => {
         async function fetchData() {
@@ -28,28 +29,21 @@ export default function Projects() {
             setData(projectsData)
         }
         fetchData()
-
     }, [])
 
-    const handleClick = () => {
-        console.log('click')
-        setModalDisplayed(true)
+    const handleClick = (project) => {
+        console.log(project.id)
+        setProjectSelected(project)
+        setModalDisplayed(!modalDisplayed)
     }
 
     const handleDirection = (dir) => {
-        /*let newPosition = projectPosition
+        setDirection(dir)
 
-        newPosition += dir
-
-        newPosition > data.length && (newPosition = 0)
-        newPosition < 0 && (newPosition = data.length)
-
-        console.log(newPosition)
-        setProjectPosition(newPosition)*/
         setProjectPosition((formerPos) =>
             formerPos + dir < 0
-                ? (data.length - 1)
-                : formerPos + dir > (data.length - 1)
+                ? data.length - 1
+                : formerPos + dir > data.length - 1
                 ? 0
                 : formerPos + dir
         )
@@ -57,6 +51,7 @@ export default function Projects() {
 
     return (
         <main className={styles.main}>
+            {modalDisplayed && <ProjectModale id={projectSelected.id} handleClick={handleClick}/>}
             <header className={styles.header}>
                 <h1 className={styles.headerTitle}>Projets</h1>
                 <p className={styles.headerContent}>
@@ -72,21 +67,24 @@ export default function Projects() {
             <div className={styles.carousel}>
                 <button
                     className={`${styles.button} ${styles.left}`}
-                    onClick={() => handleDirection(1)}
+                    onClick={() => handleDirection(-1)}
                 >
                     left
                 </button>
                 <button
                     className={`${styles.button} ${styles.right}`}
-                    onClick={() => handleDirection(-1)}
+                    onClick={() => handleDirection(1)}
                 >
                     right
                 </button>
                 {data.map((project, index) => (
                     <div
                         className={styles.projectContainer}
-                        onClick={handleClick}
-                        data-position={index - projectPosition}
+                        onClick={() => handleClick(project)}
+                        data-position={
+                            ((index + projectPosition) % data.length) +
+                            direction
+                        }
                         key={'project' + index}
                     >
                         <Image
@@ -96,11 +94,12 @@ export default function Projects() {
                             className={styles.illus}
                             alt={project.result.name}
                         />
-                        <span className={styles.name}>{project.name} - {projectPosition}</span>
+                        <span className={styles.name}>
+                            {project.name}
+                        </span>
                     </div>
                 ))}
             </div>
-            {modalDisplayed && <div className={styles.modale}>modale</div>}
         </main>
     )
 }

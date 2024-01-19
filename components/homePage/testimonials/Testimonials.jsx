@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { delay, motion } from 'framer-motion'
 import Link from 'next/link'
 import styles from './Testimonials.module.css'
+import ProjectModale from '@/components/projectModale/ProjectModale'
 
 async function getTestimonialsData() {
     const { testimonials } = await require('../../../data/testimonials.json')
@@ -10,6 +11,7 @@ async function getTestimonialsData() {
 
 export default function Testimonials() {
     const [testimonialsData, setTestimonialsData] = useState([])
+
     useEffect(() => {
         async function fetchData() {
             const testimonials = await getTestimonialsData()
@@ -17,6 +19,7 @@ export default function Testimonials() {
         }
         fetchData()
     }, [])
+
     const testimanialAnimationVariants = {
         initial: {
             opacity: 0,
@@ -30,9 +33,25 @@ export default function Testimonials() {
             },
         }),
     }
+
+    const [projectSelected, setProjectSelected] = useState('0')
+    const [modalDisplayed, setModalDisplayed] = useState(false)
+
+    const handleClick = (id) => {
+        console.log(id)
+        setProjectSelected(id)
+        setModalDisplayed(!modalDisplayed)
+    }
+
     return (
         <section className={`home-section ${styles.testimonials}`}>
             <article className={styles.article}>
+                {modalDisplayed && (
+                    <ProjectModale
+                        id={projectSelected}
+                        handleClick={handleClick}
+                    />
+                )}
                 <h2 className={`home-section-title ${styles.title}`}>
                     Ils m'ont fait confiance.
                 </h2>
@@ -70,13 +89,12 @@ export default function Testimonials() {
                             <span className={styles.author}>
                                 {testimonial.author}
                             </span>
-                            <Link
-                                href={`/projects?id=${testimonial.id}`}
-                                scroll={false}
+                            <button
                                 className={styles.link}
+                                onClick={() => handleClick(testimonial.id)}
                             >
                                 Voir le projet
-                            </Link>
+                            </button>
                         </article>
                     ))}
                 </div>

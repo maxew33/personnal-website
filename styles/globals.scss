@@ -12,13 +12,19 @@ font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
 */
 
+/*
+$accentCol: #ae371f;
+$primaryCol: #6a5e44;
+$bgCol: #fff1d0;*/
+
 :root {
     --bg: #{$bgCol};
-    --text: #{$textCol};
     --primary: #{$primaryCol};
+    --accent: #{$accentCol};
+    
+    --text: #{$textCol};
     --secondary: #{$secondaryCol};
     --lightCol: #{$lightCol};
-    --accent: #{$accentCol};
     --grey: #{$grey};
 
     --fontfam1: 'Archivo Black', serif;
