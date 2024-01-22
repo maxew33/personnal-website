@@ -34,24 +34,23 @@ export default function Testimonials() {
         }),
     }
 
-    const [projectSelected, setProjectSelected] = useState('0')
+    const [projectSelected, setProjectSelected] = useState('')
+    const [formerProjectSelected, setFormerProjectSelected] = useState('')
     const [modalDisplayed, setModalDisplayed] = useState(false)
 
     const handleClick = (id) => {
-        console.log(id)
+        setFormerProjectSelected(projectSelected)
         setProjectSelected(id)
         setModalDisplayed(!modalDisplayed)
     }
 
+    useEffect(() => {
+        projectSelected !== formerProjectSelected && setModalDisplayed(true)
+    }, [modalDisplayed])
+
     return (
         <section className={`home-section ${styles.testimonials}`}>
             <article className={styles.article}>
-                {modalDisplayed && (
-                    <ProjectModale
-                        id={projectSelected}
-                        handleClick={handleClick}
-                    />
-                )}
                 <h2 className={`home-section-title ${styles.title}`}>
                     Ils m'ont fait confiance.
                 </h2>
@@ -98,6 +97,12 @@ export default function Testimonials() {
                         </article>
                     ))}
                 </div>
+                {modalDisplayed && (
+                    <ProjectModale
+                        id={projectSelected}
+                        handleClick={handleClick}
+                    />
+                )}
             </article>
         </section>
     )

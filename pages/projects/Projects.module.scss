@@ -46,7 +46,7 @@
 .projectContainer {
     position: absolute;
     @include flexCol;
-    border: 2px solid blue;
+    @include boxShadow;
     background: var(--lightCol);
     padding: 1rem;
     border-radius: 10px;
@@ -89,8 +89,12 @@
     }
 }
 @keyframes to-the-back {
+    0%{
+        transform: translateX(0rem) rotate(5deg);
+    }
     25% {
         opacity: 0.75;
+        transform: translateX(5rem) rotate(15deg);
     }
 
     40% {

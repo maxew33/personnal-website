@@ -12,7 +12,6 @@ async function getProjectsData() {
 }
 
 export default function Projects() {
-
     const [data, setData] = useState([])
 
     const [projectPosition, setProjectPosition] = useState(0)
@@ -32,13 +31,13 @@ export default function Projects() {
     }, [])
 
     const handleClick = (project) => {
-        console.log(project.id)
         setProjectSelected(project)
         setModalDisplayed(!modalDisplayed)
     }
 
     const handleDirection = (dir) => {
         setDirection(dir)
+        setModalDisplayed(false)
 
         setProjectPosition((formerPos) =>
             formerPos + dir < 0
@@ -51,7 +50,6 @@ export default function Projects() {
 
     return (
         <main className={styles.main}>
-            {modalDisplayed && <ProjectModale id={projectSelected.id} handleClick={handleClick}/>}
             <header className={styles.header}>
                 <h1 className={styles.headerTitle}>Projets</h1>
                 <p className={styles.headerContent}>
@@ -94,12 +92,16 @@ export default function Projects() {
                             className={styles.illus}
                             alt={project.result.name}
                         />
-                        <span className={styles.name}>
-                            {project.name}
-                        </span>
+                        <span className={styles.name}>{project.name}</span>
                     </div>
                 ))}
             </div>
+            {modalDisplayed && (
+                <ProjectModale
+                    id={projectSelected.id}
+                    handleClick={handleClick}
+                />
+            )}
         </main>
     )
 }

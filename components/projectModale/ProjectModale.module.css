@@ -1,14 +1,103 @@
-.section {
-  position: absolute;
-  width: 100%;
+.article {
+  position: relative;
+  width: calc(100% - 2rem);
   height: 100%;
-  min-height: 80vh;
   max-width: 1400px;
   margin: auto;
-  margin: auto;
-  z-index: 5;
+  color: var(--text);
+  margin: 2rem auto;
+  padding: 2rem 1rem;
   border: 2px solid var(--grey);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.3333333333);
-  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.content {
+  overflow: hidden;
+  width: min(98%, 90vw);
+  margin: auto;
+  display: grid;
+  grid-template-areas: "description description" "objectives objectives" "implementation illus" "hightlights illus";
+}
+
+.description {
+  font-size: 1.25rem;
+  grid-area: description;
+}
+
+.contentTitle {
+  font-size: 1.5rem;
+}
+
+.contentText {
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  font-size: 1.15rem;
+}
+.contentText > *:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
+.contentIllus {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.contentLink {
+  margin-left: 5rem;
+  grid-area: illus;
+}
+
+.objectives {
+  grid-area: objectives;
+}
+
+.implementation {
+  grid-area: implementation;
+}
+
+.highlights {
+  grid-area: hightlights;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 1.75rem;
+  }
+  .active {
+    height: 100%;
+    margin-bottom: 2rem;
+  }
+  .description {
+    font-size: 1.25rem;
+  }
+  .content {
+    grid-template-areas: "description description" "objectives objectives" "implementation implementation" "hightlights illus";
+    gap: 0.5rem;
+  }
+}
+/* Tablette */
+@media screen and (max-width: 991px) {
+  .header {
+    width: 100%;
+    border-radius: unset;
+  }
+  .nameContainer {
+    border-radius: unset;
+  }
+  .content {
+    grid-template-areas: "description" "illus" "objectives " "implementation " "hightlights ";
+  }
+  .contentLink {
+    margin: 2rem auto 0;
+  }
 }
