@@ -63,14 +63,11 @@
     min-height: calc(15vh - 2rem);
     margin: 15vh 0;
     padding: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.15;
     display: grid;
     place-content: left;
     position: sticky;
-    background: var(--grey);
-    border-radius: 5px;
-    &:not(:last-child) {
-        box-shadow: 0px -2px 2px 0 var(--primary);
-    }
 
     @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
@@ -84,7 +81,6 @@
 }
 
 .contentText {
-    font-size: 2rem;
     position: sticky;
     top: 5rem;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { delay, motion } from 'framer-motion'
+import { AnimatePresence, delay, motion } from 'framer-motion'
 import Link from 'next/link'
 import styles from './Testimonials.module.css'
 import ProjectModale from '@/components/projectModale/ProjectModale'
@@ -38,15 +38,21 @@ export default function Testimonials() {
     const [formerProjectSelected, setFormerProjectSelected] = useState('')
     const [modalDisplayed, setModalDisplayed] = useState(false)
 
-    const handleClick = (id) => {
+    const handleClick = (project) => {
         setFormerProjectSelected(projectSelected)
-        setProjectSelected(id)
+        setProjectSelected(project)
         setModalDisplayed(!modalDisplayed)
     }
 
+    const handleClose = () => {
+        setModalDisplayed(false)
+    }
+
     useEffect(() => {
-        projectSelected !== formerProjectSelected && setModalDisplayed(true)
-    }, [modalDisplayed])
+        setTimeout(() => {
+            projectSelected !== formerProjectSelected && setModalDisplayed(true)
+        }, 750)
+    }, [projectSelected])
 
     return (
         <section className={`home-section ${styles.testimonials}`}>
@@ -54,6 +60,7 @@ export default function Testimonials() {
                 <h2 className={`home-section-title ${styles.title}`}>
                     Ils m'ont fait confiance.
                 </h2>
+                
                 <div className={styles.wrapper}>
                     {testimonialsData.map((testimonial, index) => (
                         <article
@@ -63,8 +70,7 @@ export default function Testimonials() {
                             <motion.blockquote
                                 variants={testimanialAnimationVariants}
                                 initial="initial"
-                                whileInView={() => (
-                                    console.log('in view'), 'animate'
+                                whileInView={() => ( 'animate'
                                 )}
                                 custom={index}
                                 viewport={{ once: true }}
@@ -96,13 +102,14 @@ export default function Testimonials() {
                             </button>
                         </article>
                     ))}
-                </div>
-                {modalDisplayed && (
-                    <ProjectModale
-                        id={projectSelected}
-                        handleClick={handleClick}
-                    />
-                )}
+                </div><AnimatePresence>
+                    {modalDisplayed && (
+                        <ProjectModale
+                            id={projectSelected}
+                            handleClose={handleClose}
+                        />
+                    )}
+                </AnimatePresence>
             </article>
         </section>
     )

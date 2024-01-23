@@ -5,6 +5,7 @@ import Link from 'next/link'
 import styles from './Projects.module.css'
 import Image from 'next/image'
 import ProjectModale from '@/components/projectModale/ProjectModale'
+import { AnimatePresence } from 'framer-motion'
 
 async function getProjectsData() {
     const { projects } = await require('../../data/projects.json')
@@ -21,6 +22,7 @@ export default function Projects() {
     const [direction, setDirection] = useState(0)
 
     const [projectSelected, setProjectSelected] = useState()
+    const [formerProjectSelected, setFormerProjectSelected] = useState()
 
     useEffect(() => {
         async function fetchData() {
@@ -31,13 +33,23 @@ export default function Projects() {
     }, [])
 
     const handleClick = (project) => {
+        setFormerProjectSelected(projectSelected)
         setProjectSelected(project)
         setModalDisplayed(!modalDisplayed)
     }
 
+    const handleClose = () => {
+        setModalDisplayed(false)
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            projectSelected !== formerProjectSelected && setModalDisplayed(true)
+        }, 750)
+    }, [projectSelected])
+
     const handleDirection = (dir) => {
         setDirection(dir)
-        setModalDisplayed(false)
 
         setProjectPosition((formerPos) =>
             formerPos + dir < 0
@@ -62,6 +74,14 @@ export default function Projects() {
                     contact
                 </Link>
             </header>
+            <AnimatePresence>
+                {modalDisplayed && (
+                    <ProjectModale
+                        id={projectSelected.id}
+                        handleClose={handleClose}
+                    />
+                )}
+            </AnimatePresence>
             <div className={styles.carousel}>
                 <button
                     className={`${styles.button} ${styles.left}`}
@@ -96,12 +116,6 @@ export default function Projects() {
                     </div>
                 ))}
             </div>
-            {modalDisplayed && (
-                <ProjectModale
-                    id={projectSelected.id}
-                    handleClick={handleClick}
-                />
-            )}
         </main>
     )
 }

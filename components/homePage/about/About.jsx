@@ -1,13 +1,32 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Wave from '../../wave/wave'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import styles from './About.module.css'
+import AnimatedText from '@/components/animatedText/AnimatedText'
+
+async function getTextData() {
+    const { text } = await require('../../../data/animatedText.json')
+    return text
+}
 
 export default function About(props) {
     const [startTitle, setStartTitle] = useState(false)
     const [startVideo, setStartVideo] = useState(false)
+    const [textData, setTextData] = useState()
+
+    useEffect(() => {
+        async function fetchData() {
+            const text = await getTextData()
+            setTextData(text)
+        }
+        fetchData()
+    }, [])
+
+    useEffect(()=>{
+        console.log(textData)
+    },[textData])
 
     const ReactPlayer = dynamic(() => import('react-player'), { ssr: false }) // prevent hydration error
 
@@ -83,28 +102,9 @@ export default function About(props) {
                     </div>
                 </div>
                 <div className={styles.content}>
-                    <p className={styles.contentWrapper}>
-                        <span className={styles.contentWrapperText}>
-                            Bonjour, je m'appelle Maxime.
-                        </span>
-                    </p>
-                    <p className={styles.contentWrapper}>
-                        <span className={styles.contentWrapperText}>
-                            Je suis développeur web.
-                        </span>
-                    </p>
-                    <p className={styles.contentWrapper}>
-                        <span className={styles.contentWrapperText}>
-                            J'ai créé TechQuest pour vous proposer{' '}
-                            <Link href="/service/"> mes services</Link>.
-                        </span>
-                    </p>
-                    <p className={styles.contentWrapper}>
-                        <span className={styles.contentWrapperText}>
-                            Et pour vous accompagner dans la conception de votre
-                            site web.
-                        </span>
-                    </p>
+                    {textData && textData.map((data, id) => 
+                    <AnimatedText text={data} className={styles.contentWrapper} once='true' key={'data'+id}/>)
+                    }
                     <p className={styles.contentWrapper}></p>
                 </div>
             </article>

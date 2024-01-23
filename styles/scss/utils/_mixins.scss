@@ -88,3 +88,9 @@
 @mixin boxShadow($color: var(--grey)) {
     box-shadow: 0px 2px 2px 0 $color;
 }
+
+@mixin sectionBg($bgColor: var(--bg)){
+    background-color: $bgColor;
+    background-image: url('/assets/noise.png');
+    background-attachment: fixed;
+}

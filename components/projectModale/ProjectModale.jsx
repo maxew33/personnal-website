@@ -8,7 +8,7 @@ async function getProjectsData() {
     return projects
 }
 
-export default function ProjectModale({ id, handleClick }) {
+export default function ProjectModale({ id, handleClose }) {
     const [data, setData] = useState()
 
     useEffect(() => {
@@ -31,6 +31,7 @@ export default function ProjectModale({ id, handleClick }) {
             initial={{ opacity: 0.5, height: 0 }}
             animate={{ opacity: 1, height: 500 }}
             transition={{ ease: 'linear', duration: 0.5 }}
+            exit={{ opacity: 0.5, height: 0 }}
         >
             <div className={styles.container}>
                 {data ? (
@@ -100,7 +101,9 @@ export default function ProjectModale({ id, handleClick }) {
                 ) : (
                     <div>Nous ne retrouvons pas l'article demandé.</div>
                 )}
-                <button onClick={handleClick} className={styles.exit}>X</button>
+                <button onClick={handleClose} className={styles.exit}>
+                    X
+                </button>
             </div>
         </motion.article>
     )
