@@ -1,0 +1,44 @@
+{
+    "service": [
+        {
+            "title": "fiabilité",
+            "description": "Fournir des solutions robustes et fiables.",
+            "features": [
+                "Utilisation de Next.js pour un rendu côté serveur (SSR) amélioré.",
+                "Génération de pages statiques pour une performance optimale."
+            ]
+        },
+        {
+            "title": "performance",
+            "description": "Optimiser les performances pour une expérience utilisateur fluide.",
+            "features": [
+                "Rendu côté serveur pour des performances améliorées.",
+                "Optimisation des images pour des temps de chargement réduits."
+            ]
+        },
+        {
+            "title": "visibilité",
+            "description": "Améliorer la visibilité en ligne et l'indexation par les moteurs de recherche.",
+            "features": [
+                "SEO amélioré grâce au rendu côté serveur et à la génération statique.",
+                "Pages pré-rendues pour une indexation rapide par les moteurs de recherche."
+            ]
+        },
+        {
+            "title": "accessibilité",
+            "description": "Garantir l'accessibilité à tous les utilisateurs.",
+            "features": [
+                "Conception centrée sur l'accessibilité pour tous les utilisateurs.",
+                "Compatibilité avec les technologies d'assistance."
+            ]
+        },
+        {
+            "title": "originalité",
+            "description": "Créer un site qui vous ressemble.",
+            "features": [
+                "Animations dynamiques avec Framer Motion.",
+                "Site créé sur mesure, à votre image."
+            ]
+        }
+    ]
+}

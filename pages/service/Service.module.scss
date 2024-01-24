@@ -1,0 +1,142 @@
+@import '../../styles/scss/utils/mixins';
+
+.main {
+    display: flex;
+    color: var(--text);
+    width: 100%;
+    @include maxWidth;
+}
+
+.illus{
+    position: relative;
+    width: min(50vw, 700px);
+    height: auto;
+    margin-top: 5rem;
+    border-radius: 10px;
+    background-image: url('/assets/service/illus2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    background-attachment: fixed;
+}
+
+.service{
+ flex: 1;
+}
+
+.title{
+    font-family: var(--fontfam1);
+    text-align: center;
+    font-size: 5.5rem;
+    margin: 5rem auto;
+    color: var(--accent);
+}
+
+.presentation, .introduction{
+    font-size: 1.25rem;
+    max-width: 98%;
+}
+
+.wrapper {
+    margin-top: 1rem;
+    @include flexCol;
+    justify-content: space-between;
+}
+
+.article {
+    @include flexCol;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0 var(--grey);
+    margin: 1rem 1rem 0 0;
+}
+
+.articleTitle {
+    margin: 1rem auto;
+    color: var(--accent);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.contentList {
+    position: relative;
+    width: 90%;
+    padding: 1rem 0;
+    margin-inline: auto;
+    list-style: none;
+    font-size: 1.15rem;
+    li:not(:last-child){
+        line-height: 2.5;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 10rem;
+        background: var(--grey);
+    }
+}
+
+.logo{
+    margin-right: .5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .contentList {
+        height: 16rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrapper {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .contentList {
+        height: auto;
+    }
+
+    .article {
+        flex-direction: row;
+        width: 45rem;
+        max-width: 98%;
+        margin: auto;
+    }
+
+    .content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .article {
+        &:hover {
+            transform: unset;
+        }
+    }
+
+    .header {
+        width: 40%;
+        padding: 1.5rem;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .contentList {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .articleTitle {
+        font-size: 6vw;
+    }
+}

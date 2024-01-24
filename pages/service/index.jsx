@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
+import styles from './Service.module.css'
 
-async function getPricingData() {
-    const { pricing } = await require('../../data/pricing.json')
-    return pricing
+async function getServiceData() {
+    const { service } = await require('../../data/service.json')
+    return service
 }
 
 export default function Pricing() {
@@ -12,13 +14,13 @@ export default function Pricing() {
 
     useEffect(() => {
         async function fetchData() {
-            const pricesData = await getPricingData()
-            setData(pricesData)
+            const servicesData = await getServiceData()
+            setData(servicesData)
         }
         fetchData()
     }, [])
 
-    const priceWrapperAnimationVariants = {
+    const serviceWrapperAnimationVariants = {
         initial: (index) => ({
             opacity: 0,
             scale: 0,
@@ -33,62 +35,57 @@ export default function Pricing() {
     }
 
     return (
-        <main className="pricing-main">
-            <h1 className="pricing-title">Découvrez nos offres web</h1>
-            <h2 className="pricing-subtitle">
-                Choisissez la solution adaptée à votre succès en ligne
-            </h2>
-            <section className="pricing-pricingWrapper">
-                {data.map((price, index) => (
-                    <motion.article
-                        key={'article' + index}
-                        variants={priceWrapperAnimationVariants}
-                        initial="initial"
-                        animate="animate"
-                        custom={index}
-                        className={`pricing-article pricing-${price.type}`}
-                    >
-                        <div className="pricing-header">
-                            à partir de{' '}
-                            <span className="pricing-price">{price.price}</span>
-                        </div>
-                        <div className="pricing-content">
-                            <h3 className="pricing-pricingTitle">
-                                {price.title}
-                            </h3>
-                            <h4 className="pricing-pricingSubtitle">
-                                {price.subtitle}
-                            </h4>
-                            <input
-                                type="checkbox"
-                                name=""
-                                id={`more${price.type}`}
-                                className="pricing-more"
-                            />
-                            <label
-                                htmlFor={`more${price.type}`}
-                                className="pricing-labelForMore"
-                            >
-                                en savoir +{' '}
-                            </label>
-                            <label
-                                htmlFor={`more${price.type}`}
-                                className="pricing-labelForLess"
-                            >
-                                fermer
-                            </label>
-                            <ul className="pricing-contentList">
-                                {price.features.map((feature, index) => (
-                                    <li key={index}>{feature}</li>
+        <main className={styles.main}>
+            <section className={styles.service}>
+                <h1 className={styles.title}>Mes services</h1>
+                <p className={styles.presentation}>
+                    Pour la conception des sites, j'exploite les capacités de
+                    React et de son framework Next.js, tandis que les animations
+                    sont élaborées avec Framer Motion. <br /><br/>
+                    Une fois le site mis en place, je procède à un audit à
+                    l'aide de Lighthouse. <br />
+                    Cette démarche vise à garantir des performances optimales,
+                    une accessibilité maximale, et un référencement (SEO)
+                    irréprochable.
+                </p>
+                <section className={styles.wrapper}>
+                    <p className={styles.introduction}>
+                    Voici les cinq piliers fondamentaux sur lesquels je m'appuie pour développer votre site:
+                    </p>
+
+                    {data.map((service, index) => (
+                        <motion.article
+                            key={'article' + index}
+                            variants={serviceWrapperAnimationVariants}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            custom={index}
+                            className={styles.article}
+                        >
+                            <h2 className={styles.articleTitle}>
+                                {service.title}
+                            </h2>
+                            <ul className={styles.contentList}>
+                                {service.features.map((feature, index) => (
+                                    <li key={index}>
+                                        <Image
+                                            src="/assets/logo.webp"
+                                            width={9}
+                                            height={10}
+                                            className={styles.logo}
+                                        />
+                                        {feature}
+                                    </li>
                                 ))}
                             </ul>
-                            <div className="pricing-footer">
-                                <Link href="/contact" className='pricing-contact'>Contact</Link>
-                            </div>
-                        </div>
-                    </motion.article>
-                ))}
+                        </motion.article>
+                    ))}
+                </section>
             </section>
+            <div className={styles.illus}>
+                
+            </div>
         </main>
     )
 }
