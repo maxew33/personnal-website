@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import styles from './Service.module.css'
+import Conclusion from '@/components/conclusion/Conclusion'
 
 async function getServiceData() {
     const { service } = await require('../../data/service.json')
@@ -35,7 +36,9 @@ export default function Pricing() {
     }
 
     return (
-        <main className={styles.main}>
+        <main>
+            
+        <section className={styles.main}>
             <section className={styles.service}>
                 <h1 className={styles.title}>Mes services</h1>
                 <p className={styles.presentation}>
@@ -83,9 +86,10 @@ export default function Pricing() {
                     ))}
                 </section>
             </section>
-            <div className={styles.illus}>
-                
+            <div className={styles.illus}>                
             </div>
+        </section>
+        <Conclusion/>
         </main>
     )
 }

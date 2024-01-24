@@ -53,7 +53,7 @@
 .phone,
 .link {
   position: relative;
-  color: var(--accent);
+  color: var(--primary);
 }
 .phone::after,
 .link::after {
@@ -63,7 +63,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: var(--accent);
+  background: var(--primary);
   transform: scaleX(0);
   transition: transform 0.15s linear;
   transform-origin: left;
@@ -102,7 +102,7 @@
   height: 5px;
   width: 2rem;
   border-radius: 15px;
-  background: var(--accent);
+  background: var(--primary);
 }
 .burger span::after, .burger span::before {
   content: "";
@@ -111,7 +111,7 @@
   width: inherit;
   height: inherit;
   top: -10px;
-  background: var(--accent);
+  background: var(--primary);
   border: none;
   border-radius: 15px;
   transition: transform 0.15s linear;
@@ -136,7 +136,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--primary);
+  background: var(--secondary);
   clip-path: circle(0% at 50% 1.75rem);
   transition: clip-path 0.5s ease-in-out;
   display: grid;

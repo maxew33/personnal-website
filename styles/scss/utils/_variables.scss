@@ -1,6 +1,5 @@
 $textCol: #010028;
 $bgCol: #fff;
-$grey: #d9d9d9;
 $primaryCol: #14213d;
 $lightCol: hsl(0, 0%, 95%);
 $secondaryCol: #1f7ead;
@@ -12,12 +11,9 @@ $bgCol: #fcedda;
 // $grey: #3d3d3d;
 // $bgCol: #fff1d0;
 
-$accentCol: #e75d50;
 // $accentCol: #ae371f;
 $primaryCol: #6a5e44;
-$primaryCol: #49403f;
 $bgCol: #fff1d0;
-$bgCol: #f6f2ea;
 
 // $accentCol: #c64f24;
 $lightCol: hsl(0, 0%, 95%);
@@ -29,9 +25,17 @@ $lightCol: hsl(0, 0%, 95%);
 /*
 --bg: #fff;
     --text: #000;
-    --primary: #14213d;
+    --secondary: #14213d;
     --secondary: #f2330d;
     --lightCol: #f2f2f2;
-    --accent: #ff006e;
+    --primary: #ff006e;
     --grey: #d9d9d9;
     */
+
+
+$textCol: #010028;
+$textCol: #1b1818;
+$primary: #e75d50;
+$secondary: #49403f;
+$grey: #d9d9d9;
+$bgCol: #f6f2ea;

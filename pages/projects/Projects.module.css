@@ -16,8 +16,11 @@
 }
 
 .headerTitle {
-  font-size: 2.5rem;
   font-family: var(--fontfam1);
+  text-align: center;
+  font-size: 5.5rem;
+  margin: 5rem auto;
+  color: var(--primary);
 }
 
 .headerContent {
@@ -29,10 +32,10 @@
   display: inline-block;
   text-decoration: none;
   padding: 0.625rem 1.25rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--primary);
   border-radius: 5px;
   color: var(--bg);
-  background: var(--accent);
+  background: var(--primary);
   transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
   font-weight: 400;
   font-size: 1.25rem;
@@ -40,8 +43,8 @@
   padding: 0.75rem 1.5rem;
 }
 .contactBtn:hover {
-  background: var(--primary);
-  border: 1px solid var(--primary);
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
   text-shadow: unset;
 }
 
@@ -59,7 +62,6 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0px 2px 2px 0 var(--grey);
-  background: var(--lightCol);
   padding: 1rem;
   border-radius: 10px;
   transition: transform 0.25s linear;

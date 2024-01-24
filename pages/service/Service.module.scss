@@ -25,11 +25,7 @@
 }
 
 .title{
-    font-family: var(--fontfam1);
-    text-align: center;
-    font-size: 5.5rem;
-    margin: 5rem auto;
-    color: var(--accent);
+    @include title;
 }
 
 .presentation, .introduction{
@@ -54,7 +50,7 @@
 
 .articleTitle {
     margin: 1rem auto;
-    color: var(--accent);
+    color: var(--primary);
     font-size: 1.5rem;
     text-transform: capitalize;
 }

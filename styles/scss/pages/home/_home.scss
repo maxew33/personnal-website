@@ -23,7 +23,7 @@
 .home-section-title {
     font-size: 3rem;
     font-family: var(--fontfam2);
-    text-transform: capitalize;
+    // text-transform: capitalize;
 }
 
 
@@ -104,7 +104,7 @@ blockquote {
     }
 
     .home-solutionsWrapper {
-        background: var(--primary);
+        background: var(--secondary);
         color: var(--bg);
     }
 }

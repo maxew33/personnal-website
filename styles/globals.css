@@ -56,10 +56,10 @@ table {
 /*
 --bg: #fff;
     --text: #000;
-    --primary: #14213d;
+    --secondary: #14213d;
     --secondary: #f2330d;
     --lightCol: #f2f2f2;
-    --accent: #ff006e;
+    --primary: #ff006e;
     --grey: #d9d9d9;
     */
 .home-main {
@@ -88,7 +88,6 @@ table {
 .home-section-title {
   font-size: 3rem;
   font-family: var(--fontfam2);
-  text-transform: capitalize;
 }
 
 h1,
@@ -153,7 +152,7 @@ blockquote {
     padding-bottom: 5rem;
   }
   .home-solutionsWrapper {
-    background: var(--primary);
+    background: var(--secondary);
     color: var(--bg);
   }
 }
@@ -228,35 +227,6 @@ blockquote {
     padding: 0.75rem 1.25rem;
   }
 }
-.home-cta-section {
-  max-width: 1400px;
-  margin: auto;
-  text-align: center;
-}
-
-.home-cta-title {
-  margin: 15rem 0 2rem;
-}
-
-.home-cta-btn {
-  padding: 1.125rem 2.25rem;
-  border: 1px solid var(--accent);
-  border-radius: 5px;
-  color: var(--bg);
-  background: var(--accent);
-  transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
-  font-weight: 400;
-  font-size: 2.25rem;
-  box-shadow: 0px 2px 2px 0 rgba(17, 17, 17, 0.3333333333);
-  padding: 0.5rem 2.5rem;
-  margin: 5rem 0;
-}
-.home-cta-btn:hover {
-  background: var(--primary);
-  border: 1px solid var(--primary);
-  text-shadow: unset;
-}
-
 /* END OF RESET */
 /*
 font-family: 'Source Sans 3', sans-serif;
@@ -269,16 +239,13 @@ $primaryCol: #6a5e44;
 $bgCol: #fff1d0;*/
 :root {
   --bg: #f6f2ea;
-  --primary: #49403f;
-  --accent: #e75d50;
-  --text: #010028;
-  --secondary: #1f7ead;
-  --lightCol: hsl(0, 0%, 95%);
+  --secondary: #49403f;
+  --primary: #e75d50;
+  --text: #1b1818;
   --grey: #d9d9d9;
   --fontfam1: "Archivo Black", serif;
   --fontfam2: "Source Sans 3", sans-serif;
   --fontfam3: "Kalam", cursive;
-  color-scheme: only light;
 }
 
 body {

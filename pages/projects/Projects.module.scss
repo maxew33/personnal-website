@@ -18,8 +18,7 @@
 }
 
 .headerTitle {
-    font-size: 2.5rem;
-    font-family: var(--fontfam1);
+    @include title;
 }
 
 .headerContent {
@@ -47,7 +46,6 @@
     position: absolute;
     @include flexCol;
     @include boxShadow;
-    background: var(--lightCol);
     padding: 1rem;
     border-radius: 10px;
     transition: transform 0.25s linear;
@@ -89,7 +87,7 @@
     }
 }
 @keyframes to-the-back {
-    0%{
+    0% {
         transform: translateX(0rem) rotate(5deg);
     }
     25% {

@@ -41,13 +41,6 @@
     object-fit: contain;
 }
 
-.name {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: inherit;
-}
-
 .copyright {
     grid-area: copyright;
 }

@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
         const bgCol = darkMode ? '#3d3d3d' : '#fcedda'
         const primary = darkMode ? '#fcedda' : '#3d3d3d'
         document.documentElement.style.setProperty('--bg', bgCol)
-        document.documentElement.style.setProperty('--primary', primary)
+        document.documentElement.style.setProperty('--secondary', primary)
     }, [darkMode])*/
 
     return (

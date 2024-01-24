@@ -3,7 +3,6 @@
 .section {
     position: sticky;
     top: 4rem;
-    z-index: -1;
 }
 
 .article {
@@ -32,7 +31,7 @@
 }
 
 .highlighted {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .linkWrapper{
@@ -46,7 +45,7 @@
     transition: color .125s linear;
 
     &:hover{
-        color: var(--accent);
+        color: var(--primary);
     }
 }
 

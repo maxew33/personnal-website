@@ -28,7 +28,7 @@
   text-align: center;
   font-size: 5.5rem;
   margin: 5rem auto;
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .presentation, .introduction {
@@ -55,7 +55,7 @@
 
 .articleTitle {
   margin: 1rem auto;
-  color: var(--accent);
+  color: var(--primary);
   font-size: 1.5rem;
   text-transform: capitalize;
 }

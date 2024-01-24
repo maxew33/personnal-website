@@ -2,7 +2,7 @@ import { useEffect} from 'react'
 import Hero from '@/components/homePage/hero/Hero'
 import About from '@/components/homePage/about/About'
 import Testimonials from '@/components/homePage/testimonials/Testimonials'
-import Conclusion from '@/components/homePage/conclusion/Conclusion'
+import Conclusion from '@/components/conclusion/Conclusion'
 
 import { useWindowHeight } from '@react-hook/window-size'
 

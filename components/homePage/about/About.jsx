@@ -59,7 +59,7 @@ export default function About(props) {
 
     return (
         <section className={`home-section ${styles.about}`} ref={targetRef}>
-            <Wave color="var(--primary)" positionPlace="top" />
+            <Wave positionPlace="top" />
             <Wave color="var(--bg)" positionPlace="bottom" />
             <article className={`home-article ${styles.article}`}>
                 <div className={styles.titleWrapper}>

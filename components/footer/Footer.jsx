@@ -15,22 +15,18 @@ export default function Footer() {
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.link}>
                     <Image
-                        src="/assets/logo.webp"
+                        src="/assets/logoW.webp"
                         width={118}
                         height={87}
                         alt="logo de techquest"
                         className={styles.logo}
                     />
-                    <span className={styles.name}>
-                        <span>TechQuest</span>
-                        <span> Bordeaux</span>
-                    </span>
                 </Link>
                 <span className={styles.copyright}>
                     ©TechQuest Bordeaux 2024
                 </span>
-                <Link href="/pricing" className={styles.solutions}>
-                    Solutions
+                <Link href="/service" className={styles.solutions}>
+                    Services
                 </Link>
                 <Link href="/legal" className={styles.legal}>
                     Mentions Légales

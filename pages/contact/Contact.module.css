@@ -1,0 +1,243 @@
+.pageTitle,
+.main {
+  color: var(--text);
+  width: 98%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.pageTitle {
+  font-family: var(--fontfam1);
+  text-align: center;
+  font-size: 5.5rem;
+  margin: 5rem auto;
+  color: var(--primary);
+}
+
+.main {
+  display: grid;
+  grid-template: "link form" "link form"/3fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  min-height: 34rem;
+}
+
+.section {
+  background: var(--secondary);
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 0 var(--grey);
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.articleTitle {
+  font-size: 2.25rem;
+  font-family: var(--fontfam1);
+  text-transform: capitalize;
+}
+
+.formContact {
+  grid-area: form;
+}
+.formContact .article {
+  color: var(--bg);
+  height: calc(100% - 4rem);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.formTitle {
+  line-height: 1.15;
+  font-size: 1.15rem;
+}
+
+.formWrapper {
+  flex-grow: 0.5;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputWrapper,
+.textAreaWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input,
+.textArea {
+  background: var(--bg);
+  width: calc(100% - 2rem);
+  padding: 0.5rem 1rem;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 6px;
+}
+.input:focus ~ .label, .input:valid ~ .label,
+.textArea:focus ~ .label,
+.textArea:valid ~ .label {
+  font-size: 0.75rem;
+  transform: translate(0.25rem, -100%);
+}
+
+.input {
+  min-height: 2rem;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 1.25rem;
+}
+
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--bg);
+  background: var(--primary);
+  border: none;
+  padding: 0.75rem 0;
+  width: 100%;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.15rem;
+  border-radius: 6px;
+  transition: background-color 0.125s linear, color 0.125s linear;
+}
+.formButton:hover {
+  background: var(--bg);
+  color: var(--secondary);
+}
+.formButton svg {
+  height: 1.25rem;
+}
+
+.linksWrapper {
+  grid-area: link;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.linksWrapper .article {
+  position: relative;
+  width: 35%;
+  background: var(--bg);
+  gap: 1.5rem;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+}
+.linksWrapper .articleTitle {
+  font-size: 1.75rem;
+}
+
+.followUs {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconContainer {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: -0.75rem;
+  left: -0.75rem;
+  border-radius: 6px;
+  padding: 0.75rem;
+  background-color: var(--bg);
+}
+
+.icon {
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.linkWrapper {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+}
+.linkWrapper a {
+  color: var(--primary);
+}
+
+.socialIcon {
+  height: 2.5rem;
+}
+
+.modal {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.6666666667);
+  backdrop-filter: blur(5px);
+  inset: 0;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 0.15s linear forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 2rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  border-radius: 6px;
+}
+.modalContent .modalTitle {
+  font-size: 2rem;
+}
+.modalContent .modalButton {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  color: var(--bg);
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  border-radius: 6px;
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding: 0.25rem 1.5rem;
+  transition: background-color 0.125s linear;
+}
+.modalContent .modalButton:hover {
+  color: var(--primary);
+  background: #fff;
+}
+
+/* Tablette */
+@media screen and (max-width: 991px) {
+  .main {
+    width: 100%;
+    grid-template: "title" "link" "form";
+  }
+  .section {
+    border-radius: unset;
+  }
+}
+@media screen and (max-width: 576px) {
+  .linksWrapper .article {
+    width: 85%;
+  }
+}

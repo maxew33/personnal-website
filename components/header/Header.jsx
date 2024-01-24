@@ -40,9 +40,9 @@ export default function Header() {
         setMenuOpen(false)
     }
 
-    const handleClick = () => {
-        context.setDarkMode(!context.darkMode)
-    }
+    // const handleClick = () => {
+    //     context.setDarkMode(!context.darkMode)
+    // }
 
     return (
         <div
@@ -77,7 +77,7 @@ export default function Header() {
                     <a href="tel:0781847657" className={styles.phone}>
                         07 81 84 76 57
                     </a>
-                    <button onClick={handleClick}>dark mode</button>
+                    {/* <button onClick={handleClick}>dark mode</button> */}
                 </div>
 
                 <section

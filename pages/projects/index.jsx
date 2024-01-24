@@ -70,9 +70,9 @@ export default function Projects() {
                     Explorez ce portfolio pour découvrir comment je transforme
                     des idées en expériences en ligne exceptionnelles.
                 </p>
-                <Link href="/contact" className={styles.contactBtn}>
+                {/* <Link href="/contact" className={styles.contactBtn}>
                     contact
-                </Link>
+                </Link> */}
             </header>
             <AnimatePresence>
                 {modalDisplayed && (
