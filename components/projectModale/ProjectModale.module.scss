@@ -1,23 +1,34 @@
 @import '../../styles/scss/utils/mixins';
 
-.article{
+.article {
     position: relative;
-    width: calc(100% - 2rem);
-    height: 100%;
+    width: calc(100% - 3rem);
+    height: auto;
     @include maxWidth;
-    color: var(--text);
+    color: white;
     margin: auto;
     padding: 2rem 1rem;
     border: 2px solid var(--grey);
     border-radius: 10px;
-    background: #fff5;
+    background: var(--secondary);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0fr;
+}
+
+.container {
     overflow: hidden;
 }
 
-.exit{
+.exit {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.5rem;
+    right: 0.5rem;
+    border: none;
+    background: unset;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
 
 .content {
@@ -26,15 +37,25 @@
     margin: auto;
     display: grid;
     grid-template-areas:
+        'title title'
         'description description'
         'objectives objectives'
         'implementation illus'
         'hightlights illus';
+    gap: 1.5rem;
+}
+
+.title {
+    grid-area: title;
+    justify-self: center;
+    font-size: 2rem;
+    margin: 0.75rem 0 1.5rem;
 }
 
 .description {
     font-size: 1.25rem;
     grid-area: description;
+    margin-bottom: 0.75rem;
 }
 
 .contentTitle {
@@ -50,7 +71,6 @@
         margin-top: 0.75rem;
     }
 }
-
 
 .contentIllus {
     width: 100%;
@@ -90,14 +110,6 @@
         font-size: 1.25rem;
     }
 
-    .content {
-        grid-template-areas:
-            'description description'
-            'objectives objectives'
-            'implementation implementation'
-            'hightlights illus';
-        gap: 0.5rem;
-    }
 }
 
 /* Tablette */
@@ -112,6 +124,7 @@
 
     .content {
         grid-template-areas:
+            'title'
             'description'
             'illus'
             'objectives '

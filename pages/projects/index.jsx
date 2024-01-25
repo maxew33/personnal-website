@@ -17,11 +17,9 @@ export default function Projects() {
 
     const [position, setPosition] = useState([])
 
-    const [projectPosition, setProjectPosition] = useState(0)
+    const [canChange, setCanChange] = useState(true)
 
     const [modalDisplayed, setModalDisplayed] = useState(false)
-
-    const [direction, setDirection] = useState(0)
 
     const [projectSelected, setProjectSelected] = useState()
     const [formerProjectSelected, setFormerProjectSelected] = useState()
@@ -40,21 +38,15 @@ export default function Projects() {
     }, [data])
 
     const handleDirection = (dir) => {
-        setDirection(dir)
+        const futurPosition = position.map((value) => value + dir)
 
-        const futurPosition = position.map((value) =>
-            value + dir 
-        )
+        canChange &&
+            (setPosition(futurPosition),
+            setTimeout(() => {
+                setCanChange(true)
+            }, 500))
 
-        setPosition(futurPosition)
-
-        setProjectPosition((formerPos) =>
-            formerPos + dir < 0
-                ? data.length - 1
-                : formerPos + dir > data.length - 1
-                ? 0
-                : formerPos + dir
-        )
+        setCanChange(false)
     }
 
     useEffect(() => {
@@ -119,24 +111,22 @@ export default function Projects() {
             </AnimatePresence>
             <div className={styles.carousel}>
                 <button
-                    className={`${styles.button} ${styles.left}`}
+                    className={`${styles.arrow} ${styles.left}`}
                     onClick={() => handleDirection(-1)}
                 >
-                    left
+                    <div></div>
                 </button>
                 <button
-                    className={`${styles.button} ${styles.right}`}
+                    className={`${styles.arrow} ${styles.right}`}
                     onClick={() => handleDirection(1)}
                 >
-                    right
+                    <div></div>
                 </button>
                 {data.map((project, index) => (
                     <div
                         className={styles.projectContainer}
                         onClick={() => handleClick(project)}
-                        data-position={
-                            position[index]
-                        }
+                        data-position={position[index]}
                         key={'project' + index}
                     >
                         <Image
@@ -152,9 +142,7 @@ export default function Projects() {
                     <span
                         className={styles.name}
                         key={'name' + index}
-                        data-position={
-                            position[index]
-                        }
+                        data-position={position[index]}
                     >
                         {project.name}
                     </span>

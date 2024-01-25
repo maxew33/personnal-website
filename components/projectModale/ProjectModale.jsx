@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styles from './ProjectModale.module.css'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 async function getProjectsData() {
     const { projects } = await require('../../data/projects.json')
@@ -28,14 +30,15 @@ export default function ProjectModale({ id, handleClose }) {
     return (
         <motion.article
             className={styles.article}
-            initial={{ opacity: 0.5, height: 0 }}
-            animate={{ opacity: 1, height: 500 }}
+            initial={{ opacity: 0.5, gridTemplateRows: "0fr"}}
+            animate={{ opacity: 1,  gridTemplateRows: "1fr" }}
             transition={{ ease: 'linear', duration: 0.5 }}
-            exit={{ opacity: 0.5, height: 0 }}
+            exit={{ opacity: 0.5,  gridTemplateRows: "0fr" }}
         >
             <div className={styles.container}>
                 {data ? (
                     <div className={styles.content}>
+                        <h2 className={styles.title}>{data.name}</h2>
                         <p className={styles.description}>{data.description}</p>
                         <div
                             className={`${styles.contentWrapper} ${styles.objectives}`}
@@ -88,8 +91,7 @@ export default function ProjectModale({ id, handleClose }) {
                         >
                             <Image
                                 src={
-                                    data.result.path ||
-                                    '/assets/home/chooseUs.webp'
+                                    data.result.illus
                                 }
                                 height={295}
                                 width={530}
@@ -102,7 +104,10 @@ export default function ProjectModale({ id, handleClose }) {
                     <div>Nous ne retrouvons pas l'article demandé.</div>
                 )}
                 <button onClick={handleClose} className={styles.exit}>
-                    X
+                    <FontAwesomeIcon
+                        icon={faXmark}
+                        className={styles.icon}
+                    />
                 </button>
             </div>
         </motion.article>

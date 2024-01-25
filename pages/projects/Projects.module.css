@@ -91,18 +91,69 @@
   opacity: 1;
 }
 
-.button {
+.arrow {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: unset;
+  background: unset;
+}
+.arrow::after {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+}
+.arrow div {
+  position: relative;
+  height: 3px;
+  width: 3rem;
+  background: var(--primary);
+  border-radius: 25px;
+  transform-origin: var(--arrow-transform-origin);
+  transition: 0.25s transform ease-in-out;
+}
+.arrow div::after, .arrow div::before {
+  content: "";
+  position: absolute;
+  background: var(--primary);
+  height: 3px;
+  width: 50%;
+  border-radius: 25px;
+  transition: 0.25s transform ease-in-out;
+  transform-origin: var(--arrow-transform-origin);
+}
+.arrow:hover > div::after {
+  transform: rotate(25deg);
+  background: var(--primary);
+}
+.arrow:hover > div::before {
+  transform: rotate(-25deg);
+  background: var(--primary);
 }
 
 .left {
-  left: 2rem;
+  --arrow-transform-origin: left;
+}
+.left > div::after {
+  left: 0;
+}
+.left > div::before {
+  left: 0;
 }
 
 .right {
-  right: 2rem;
+  --arrow-transform-origin: right;
+}
+.right > div::after {
+  transform: translateX(-100%) rotate(90deg);
+  right: 0;
+}
+.right > div::before {
+  transform: translateX(-100%) rotate(-90deg);
+  right: 0;
 }
 
 /* anim for moving discs from front to back */
@@ -165,14 +216,5 @@
     transform: translateX(0) rotate(5deg);
     opacity: 1;
     z-index: 9;
-  }
-}
-@media screen and (max-width: 991px) {
-  .header {
-    text-align: center;
-  }
-  .headerContent {
-    text-align: justify;
-    margin: 1rem 1.5rem 3rem;
   }
 }

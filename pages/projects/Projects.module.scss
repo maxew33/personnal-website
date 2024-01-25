@@ -6,7 +6,6 @@
     position: relative;
     min-height: 80vh;
     width: 100%;
-    // @include maxWidth;
     > * {
         line-height: 1.75;
     }
@@ -62,30 +61,95 @@
     }
 }
 
-.name{
+.name {
     position: absolute;
     left: 50%;
     bottom: -5rem;
     transform: translateX(-50%);
     opacity: 0;
-    transition: opacity .125s linear;
-    &[data-position="2"], &[data-position="-1"]{
+    transition: opacity 0.125s linear;
+    &[data-position='2'],
+    &[data-position='-1'] {
         opacity: 1;
     }
 }
 
-.button {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+//arrows
+
+.arrow {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: unset;
+    background: unset;
+
+    &::after {
+        position: absolute;
+        top: 0;
+    }
+
+    div {
+        position: relative;
+        height: 3px;
+        width: 3rem;
+        background: var(--primary);
+        border-radius: 25px;
+        transform-origin: var(--arrow-transform-origin);
+        transition: 0.25s transform ease-in-out;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            background: var(--primary);
+            height: 3px;
+            width: 50%;
+            border-radius: 25px;
+            transition: 0.25s transform ease-in-out;
+            transform-origin: var(--arrow-transform-origin);
+        }
+    }
+
+    &:hover > div {
+        &::after {
+            transform: rotate(25deg);
+            background: var(--primary);
+        }
+        &::before {
+            transform: rotate(-25deg);
+            background: var(--primary);
+        }
+    }
 }
 
 .left {
-    left: 2rem;
+    --arrow-transform-origin: left;
+    > div {
+        &::after {
+            left: 0;
+        }
+        &::before {
+            left: 0;
+        }
+    }
 }
 
 .right {
-    right: 2rem;
+    --arrow-transform-origin: right;
+    > div {
+        &::after {
+            transform: translateX(-100%) rotate(90deg);
+            right: 0;
+        }
+        &::before {
+            transform: translateX(-100%) rotate(-90deg);
+            right: 0;
+        }
+    }
 }
 
 /* anim for moving discs from front to back */
@@ -164,11 +228,4 @@
 }
 
 @media screen and (max-width: 991px) {
-    .header {
-        text-align: center;
-    }
-    .headerContent {
-        text-align: justify;
-        margin: 1rem 1.5rem 3rem;
-    }
 }
