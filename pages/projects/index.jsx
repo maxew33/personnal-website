@@ -110,18 +110,20 @@ export default function Projects() {
                 )}
             </AnimatePresence>
             <div className={styles.carousel}>
-                <button
-                    className={`${styles.arrow} ${styles.left}`}
-                    onClick={() => handleDirection(-1)}
-                >
-                    <div></div>
-                </button>
-                <button
-                    className={`${styles.arrow} ${styles.right}`}
-                    onClick={() => handleDirection(1)}
-                >
-                    <div></div>
-                </button>
+                <div className={styles.arrowsWrapper}>
+                    <button
+                        className={`${styles.arrow} ${styles.left}`}
+                        onClick={() => handleDirection(-1)}
+                    >
+                        <div></div>
+                    </button>
+                    <button
+                        className={`${styles.arrow} ${styles.right}`}
+                        onClick={() => handleDirection(1)}
+                    >
+                        <div></div>
+                    </button>
+                </div>
                 {data.map((project, index) => (
                     <div
                         className={styles.projectContainer}

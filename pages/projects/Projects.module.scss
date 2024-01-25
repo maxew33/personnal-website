@@ -46,9 +46,7 @@
 
 .projectContainer {
     position: absolute;
-    @include flexCol;
     padding: 1rem;
-    border-radius: 10px;
     transition: transform 0.25s linear;
     cursor: pointer;
     transform-origin: bottom right;
@@ -75,6 +73,14 @@
 }
 
 //arrows
+
+.arrowsWrapper {
+    width: min(75vw, 700px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+}
 
 .arrow {
     position: relative;
@@ -227,5 +233,13 @@
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 576px) {
+    .arrowsWrapper {
+        width: 90vw;
+    }
+
+    .illus{
+        height: 276px;
+        width: 182px;
+    }
 }
