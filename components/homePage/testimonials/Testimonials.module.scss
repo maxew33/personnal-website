@@ -96,3 +96,16 @@
     margin-left: 1rem;
     font-size: 0.75em;
 }
+
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        flex: 1 1 0;
+        width: min(95%, 600px);
+        margin-bottom: 1.5rem;
+    }
+}
