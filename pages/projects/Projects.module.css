@@ -26,7 +26,8 @@
 
 .headerContent {
   font-size: 1.25rem;
-  margin: 1rem 0 2.5rem;
+  margin: 5rem 0 5rem;
+  text-align: center;
 }
 
 .contactBtn {
@@ -52,10 +53,11 @@
 .carousel {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: min(100%, 1000px);
   height: 25rem;
+  margin: 5rem auto;
 }
 
 .projectContainer {
@@ -63,6 +65,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  border-radius: 10px;
   transition: transform 0.25s linear;
   cursor: pointer;
   transform-origin: bottom right;
@@ -74,6 +77,18 @@
 .projectContainer[data-position="2"] {
   z-index: 3;
   transform: rotate(5deg);
+}
+
+.name {
+  position: absolute;
+  left: 50%;
+  bottom: -5rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.125s linear;
+}
+.name[data-position="2"], .name[data-position="-1"] {
+  opacity: 1;
 }
 
 .button {

@@ -15,6 +15,8 @@ async function getProjectsData() {
 export default function Projects() {
     const [data, setData] = useState([])
 
+    const [position, setPosition] = useState([])
+
     const [projectPosition, setProjectPosition] = useState(0)
 
     const [modalDisplayed, setModalDisplayed] = useState(false)
@@ -32,6 +34,54 @@ export default function Projects() {
         fetchData()
     }, [])
 
+    //get the index for the data pos
+    useEffect(() => {
+        setPosition(Array.from(Array(data.length).keys()))
+    }, [data])
+
+    const handleDirection = (dir) => {
+        setDirection(dir)
+
+        const futurPosition = position.map((value) =>
+            value + dir 
+        )
+
+        setPosition(futurPosition)
+
+        setProjectPosition((formerPos) =>
+            formerPos + dir < 0
+                ? data.length - 1
+                : formerPos + dir > data.length - 1
+                ? 0
+                : formerPos + dir
+        )
+    }
+
+    useEffect(() => {
+        position.forEach((pos, index) => {
+            if (pos < 0) {
+                setTimeout(() => {
+                    setPosition((prevPosition) => {
+                        const newPosition = [...prevPosition]
+                        newPosition[index] = data.length - 1
+                        return newPosition
+                    })
+                }, 500)
+            }
+            if (pos > data.length - 1) {
+                setTimeout(() => {
+                    setPosition((prevPosition) => {
+                        const newPosition = [...prevPosition]
+                        newPosition[index] = 0
+                        return newPosition
+                    })
+                }, 500)
+            }
+        })
+    }, [position])
+
+    //select a project
+
     const handleClick = (project) => {
         setFormerProjectSelected(projectSelected)
         setProjectSelected(project)
@@ -48,18 +98,6 @@ export default function Projects() {
         }, 750)
     }, [projectSelected])
 
-    const handleDirection = (dir) => {
-        setDirection(dir)
-
-        setProjectPosition((formerPos) =>
-            formerPos + dir < 0
-                ? data.length - 1
-                : formerPos + dir > data.length - 1
-                ? 0
-                : formerPos + dir
-        )
-    }
-
     return (
         <main className={styles.main}>
             <header className={styles.header}>
@@ -67,12 +105,9 @@ export default function Projects() {
                 <p className={styles.headerContent}>
                     Chaque projet est une histoire unique de créativité, de
                     collaboration et de réussite. <br />
-                    Explorez ce portfolio pour découvrir comment je transforme
-                    des idées en expériences en ligne exceptionnelles.
+                    Explorez ces projets pour découvrir comment des idées se
+                    transforment en expériences en ligne.
                 </p>
-                {/* <Link href="/contact" className={styles.contactBtn}>
-                    contact
-                </Link> */}
             </header>
             <AnimatePresence>
                 {modalDisplayed && (
@@ -100,8 +135,7 @@ export default function Projects() {
                         className={styles.projectContainer}
                         onClick={() => handleClick(project)}
                         data-position={
-                            ((index + projectPosition) % data.length) +
-                            direction
+                            position[index]
                         }
                         key={'project' + index}
                     >
@@ -112,8 +146,18 @@ export default function Projects() {
                             className={styles.illus}
                             alt={project.result.name}
                         />
-                        <span className={styles.name}>{project.name}</span>
                     </div>
+                ))}
+                {data.map((project, index) => (
+                    <span
+                        className={styles.name}
+                        key={'name' + index}
+                        data-position={
+                            position[index]
+                        }
+                    >
+                        {project.name}
+                    </span>
                 ))}
             </div>
         </main>
