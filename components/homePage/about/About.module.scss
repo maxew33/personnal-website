@@ -36,11 +36,8 @@
     width: 90%;
     aspect-ratio: 20 / 11;
     border-radius: 10px;
-    // overflow: hidden;
-    // border: 0.5rem solid var(--grey);
-    // background: var(--grey);
-    &::after{
-        content:"";
+    &::after {
+        content: '';
         position: absolute;
         height: 105%;
         width: 105%;
@@ -54,6 +51,7 @@
 
 .videoTitle {
     @include comment($url: '/assets/home/bgarrow.png', $color: var(--grey));
+    left: 1.75rem;
 }
 
 .videoPlayer {
@@ -95,4 +93,63 @@
 .contentText {
     position: sticky;
     top: 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .article {
+        flex-direction: column;
+    }
+
+    .titleWrapper {
+        min-height: 30rem;
+        flex-direction: row-reverse;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .contentWrapper {
+        margin: 2.5rem 0;
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                top: 30rem + 5rem * $i;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .titleWrapper {
+        min-height: 25rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .contentWrapper {
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                top: 25rem + 7.5rem * $i;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .titleWrapper {
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+
+    .videoTitle {
+        left: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contentWrapper {
+        font-size: 1.25rem;
+    }
 }

@@ -57,6 +57,7 @@
   text-align: right;
   font-family: var(--fontfam3);
   color: var(--grey);
+  left: 1.75rem;
 }
 .videoTitle::after {
   content: "";
@@ -118,4 +119,72 @@
 .contentText {
   position: sticky;
   top: 5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .article {
+    flex-direction: column;
+  }
+  .titleWrapper {
+    min-height: 30rem;
+    flex-direction: row-reverse;
+    width: 100%;
+    z-index: 5;
+  }
+  .contentWrapper {
+    margin: 2.5rem 0;
+  }
+  .contentWrapper:nth-child(1) {
+    top: 35rem;
+  }
+  .contentWrapper:nth-child(2) {
+    top: 40rem;
+  }
+  .contentWrapper:nth-child(3) {
+    top: 45rem;
+  }
+  .contentWrapper:nth-child(4) {
+    top: 50rem;
+  }
+  .contentWrapper:nth-child(5) {
+    top: 55rem;
+  }
+}
+@media screen and (max-width: 910px) {
+  .titleWrapper {
+    min-height: 25rem;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .contentWrapper:nth-child(1) {
+    top: 32.5rem;
+  }
+  .contentWrapper:nth-child(2) {
+    top: 40rem;
+  }
+  .contentWrapper:nth-child(3) {
+    top: 47.5rem;
+  }
+  .contentWrapper:nth-child(4) {
+    top: 55rem;
+  }
+  .contentWrapper:nth-child(5) {
+    top: 62.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .titleWrapper {
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+  .videoTitle {
+    left: 0.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contentWrapper {
+    font-size: 1.25rem;
+  }
 }
