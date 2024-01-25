@@ -112,3 +112,75 @@
   background-position: top left;
   background-size: contain;
 }
+
+@media screen and (max-width: 1080px) {
+  .article {
+    grid-template-areas: "title title" "welcome carousel" "link carousel";
+  }
+  .title {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  .carouselContainer {
+    background-size: 30rem;
+  }
+  .carousel {
+    position: absolute;
+    bottom: 14.9rem;
+    width: 10.8rem;
+    right: 9.51rem;
+  }
+  .commentContainer {
+    position: absolute;
+    width: 7.5rem;
+    bottom: 35rem;
+    right: 9rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article {
+    grid-template-areas: "title title" "welcome carousel" "link carousel" "link carousel";
+  }
+  .carouselContainer {
+    background: unset;
+  }
+  .carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15rem;
+    right: 0;
+    border: 2px solid var(--secondary);
+    border-radius: 7px;
+  }
+  .commentContainer {
+    position: absolute;
+    width: 7.5rem;
+    top: 10%;
+    left: 50%;
+  }
+  .presentation {
+    margin: auto;
+    text-align: center;
+  }
+  .linkWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .carouselContainer {
+    background: unset;
+    height: 31rem;
+  }
+  .presentation {
+    margin: unset;
+  }
+}

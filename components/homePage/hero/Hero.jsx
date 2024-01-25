@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { useScroll, useTransform, motion, delay } from 'framer-motion'
+import { useScroll, useTransform, motion } from 'framer-motion'
 import styles from './Hero.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -47,7 +47,6 @@ export default function Hero(props) {
 
     const { scrollY } = useScroll({
         target: targetRef,
-        // offset: ['end end', 'end start'],
     })
 
     const opacity = useTransform(scrollY, [0, height / 4, height], [1, 1, 0])
@@ -81,7 +80,7 @@ export default function Hero(props) {
                     TechQuest, création de sites web originaux.
                 </h2>
 
-                <div className="linkWrapper">
+                <div className={styles.linkWrapper}>
                     <a
                         href="https://www.linkedin.com/in/maxime-malfilatre/"
                         className={styles.link}
@@ -128,7 +127,6 @@ export default function Hero(props) {
                             className={styles.carousel}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            // transition={{ duration: 1, delay: 3 }}
                         >
                             {illusData.length > 0 &&
                                 illusData.map((illus, index) => (
