@@ -91,7 +91,7 @@
 
 @mixin sectionBg($bgColor: var(--bg)) {
     background-color: $bgColor;
-    background-image: url('/assets/noise.png');
+    background-image: url('/assets/grainy.webp');
     background-attachment: fixed;
 }
 

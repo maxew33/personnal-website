@@ -35,7 +35,7 @@ $bgCol: #fff1d0;*/
 body {
     color: var(--text);
     font-family: var(--fontfam2);
-    background: var(--bg);
+    @include sectionBg;
 }
 
 #__next {

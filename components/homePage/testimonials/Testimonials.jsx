@@ -3,6 +3,8 @@ import { AnimatePresence, delay, motion } from 'framer-motion'
 import Link from 'next/link'
 import styles from './Testimonials.module.css'
 import ProjectModale from '@/components/projectModale/ProjectModale'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 async function getTestimonialsData() {
     const { testimonials } = await require('../../../data/testimonials.json')
@@ -60,7 +62,7 @@ export default function Testimonials() {
                 <h2 className={`home-section-title ${styles.title}`}>
                     Ils m'ont fait confiance.
                 </h2>
-                
+
                 <div className={styles.wrapper}>
                     {testimonialsData.map((testimonial, index) => (
                         <article
@@ -70,8 +72,7 @@ export default function Testimonials() {
                             <motion.blockquote
                                 variants={testimanialAnimationVariants}
                                 initial="initial"
-                                whileInView={() => ( 'animate'
-                                )}
+                                whileInView={() => 'animate'}
                                 custom={index}
                                 viewport={{ once: true }}
                                 transition={{
@@ -94,22 +95,36 @@ export default function Testimonials() {
                             <span className={styles.author}>
                                 {testimonial.author}
                             </span>
-                            <button
+                            {/* <button
                                 className={styles.link}
                                 onClick={() => handleClick(testimonial.id)}
                             >
                                 Voir le projet
-                            </button>
+                            </button> */}
+                            <Link
+                                className={styles.link}
+                                // onClick={() => handleClick(testimonial.id)}
+                                href={testimonial.link}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Voir le site{' '}
+                                <FontAwesomeIcon
+                                    icon={faUpRightFromSquare}
+                                    className={styles.icon}
+                                />
+                            </Link>
                         </article>
                     ))}
-                </div><AnimatePresence>
+                </div>
+                {/* <AnimatePresence>
                     {modalDisplayed && (
                         <ProjectModale
                             id={projectSelected}
                             handleClose={handleClose}
                         />
                     )}
-                </AnimatePresence>
+                </AnimatePresence> */}
             </article>
         </section>
     )

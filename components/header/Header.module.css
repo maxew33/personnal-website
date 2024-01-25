@@ -4,7 +4,9 @@
   position: sticky;
   top: 0;
   left: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url("/assets/grainy.webp");
+  background-attachment: fixed;
 }
 
 .header {

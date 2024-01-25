@@ -74,7 +74,7 @@ table {
   width: 100%;
   position: relative;
   background-color: var(--bgColor);
-  background-image: url("/assets/noise.png");
+  background-image: url("/assets/grainy.webp");
   background-attachment: fixed;
 }
 
@@ -251,7 +251,9 @@ $bgCol: #fff1d0;*/
 body {
   color: var(--text);
   font-family: var(--fontfam2);
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url("/assets/grainy.webp");
+  background-attachment: fixed;
 }
 
 #__next {

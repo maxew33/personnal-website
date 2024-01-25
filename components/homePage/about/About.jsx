@@ -24,9 +24,9 @@ export default function About(props) {
         fetchData()
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(textData)
-    },[textData])
+    }, [textData])
 
     const ReactPlayer = dynamic(() => import('react-player'), { ssr: false }) // prevent hydration error
 
@@ -60,7 +60,7 @@ export default function About(props) {
     return (
         <section className={`home-section ${styles.about}`} ref={targetRef}>
             <Wave positionPlace="top" />
-            <Wave color="var(--bg)" positionPlace="bottom" />
+            {/* <Wave color="var(--bg)" positionPlace="bottom" /> */}
             <article className={`home-article ${styles.article}`}>
                 <div className={styles.titleWrapper}>
                     <motion.h2
@@ -77,17 +77,17 @@ export default function About(props) {
                     >
                         votre contact
                     </motion.h2>
-                    
+
                     <div className={styles.videoPlayerContainer}>
-                    {startTitle && (
-                        <motion.div
-                            className={styles.videoTitle}
-                            animate={{ opacity: 1 }}
-                            onAnimationComplete={() => setStartVideo(true)}
-                        >
-                            mon bureau
-                        </motion.div>
-                    )}
+                        {startTitle && (
+                            <motion.div
+                                className={styles.videoTitle}
+                                animate={{ opacity: 1 }}
+                                onAnimationComplete={() => setStartVideo(true)}
+                            >
+                                mon bureau
+                            </motion.div>
+                        )}
                         {startVideo && (
                             <ReactPlayer
                                 url="/assets/video/ben-video.mp4"
@@ -102,9 +102,21 @@ export default function About(props) {
                     </div>
                 </div>
                 <div className={styles.content}>
-                    {textData && textData.map((data, id) => 
+                    {/* {textData && textData.map((data, id) => 
                     <AnimatedText text={data} className={styles.contentWrapper} once='true' key={'data'+id}/>)
-                    }
+                    } */}
+                    {textData &&
+                        textData.map(
+                            (data, id) => (
+                                <p
+                                    className={styles.contentWrapper}
+                                    key={'data' + id}
+                                >
+                                    {data}
+                                </p>
+                            )
+                            // <AnimatedText text={data} className={styles.contentWrapper} key={'data'+id}/>
+                        )}
                     <p className={styles.contentWrapper}></p>
                 </div>
             </article>

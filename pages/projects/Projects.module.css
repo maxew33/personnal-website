@@ -3,8 +3,9 @@
   position: relative;
   min-height: 80vh;
   width: 100%;
-  max-width: 1400px;
-  margin: auto;
+  background-color: var(--bg);
+  background-image: url("/assets/grainy.webp");
+  background-attachment: fixed;
 }
 .main > * {
   line-height: 1.75;
