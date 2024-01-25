@@ -108,11 +108,11 @@ export default function Testimonials() {
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
-                                Voir le site{' '}
-                                <FontAwesomeIcon
-                                    icon={faUpRightFromSquare}
-                                    className={styles.icon}
-                                />
+                                Voir le site
+                                    <FontAwesomeIcon
+                                        icon={faUpRightFromSquare}
+                                        className={styles.icon}
+                                    />
                             </Link>
                         </article>
                     ))}

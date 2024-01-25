@@ -57,6 +57,18 @@ export default function About(props) {
         },
     }
 
+    const videoPlayerVariants = {
+        initial: {
+            opacity: 0,
+        },
+        animate: {
+            opacity: 1,
+            transition: {
+                delay: .5,
+            },
+        },
+    }
+
     return (
         <section className={`home-section ${styles.about}`} ref={targetRef}>
             <Wave positionPlace="top" />
@@ -72,13 +84,18 @@ export default function About(props) {
                         viewport={{ once: true }}
                         transition={{
                             duration: 1,
-                            delay: 0.75,
+                            delay: 0.5,
                         }}
                     >
                         votre contact
                     </motion.h2>
 
-                    <div className={styles.videoPlayerContainer}>
+                    <motion.div
+                        className={styles.videoPlayerContainer}
+                        variants={videoPlayerVariants}
+                        initial="initial"
+                        whileInView="animate"
+                    >
                         {startTitle && (
                             <motion.div
                                 className={styles.videoTitle}
@@ -99,7 +116,7 @@ export default function About(props) {
                                 className={styles.videoPlayer}
                             />
                         )}
-                    </div>
+                    </motion.div>
                 </div>
                 <div className={styles.content}>
                     {/* {textData && textData.map((data, id) => 

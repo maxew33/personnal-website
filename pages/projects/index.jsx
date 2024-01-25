@@ -107,8 +107,8 @@ export default function Projects() {
                     >
                         <Image
                             src={project.result.path}
-                            height={295}
-                            width={530}
+                            height={414}
+                            width={272}
                             className={styles.illus}
                             alt={project.result.name}
                         />

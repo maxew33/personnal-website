@@ -70,12 +70,8 @@ table {
 }
 
 .home-section {
-  --bgColor: var(--bg);
   width: 100%;
   position: relative;
-  background-color: var(--bgColor);
-  background-image: url("/assets/grainy.webp");
-  background-attachment: fixed;
 }
 
 .home-article {

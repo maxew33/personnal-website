@@ -46,9 +46,7 @@
 .projectContainer {
     position: absolute;
     @include flexCol;
-    @include boxShadow;
     padding: 1rem;
-    border-radius: 10px;
     transition: transform 0.25s linear;
     cursor: pointer;
     transform-origin: bottom right;

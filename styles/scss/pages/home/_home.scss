@@ -8,10 +8,8 @@
 }
 
 .home-section {
-    --bgColor: var(--bg);
     width: 100%;
     position: relative;
-    @include sectionBg(var(--bgColor));
 }
 
 .home-article {
@@ -23,7 +21,6 @@
 .home-section-title {
     font-size: 3rem;
     font-family: var(--fontfam2);
-    // text-transform: capitalize;
 }
 
 
