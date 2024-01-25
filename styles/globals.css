@@ -95,7 +95,7 @@ p,
 blockquote {
   line-height: 1.5;
 }
-
+/*
 @media screen and (max-width: 1080px) {
   .home-heroContent {
     grid-template-areas: "title title" "welcome illus" "linkContainer illus" "invit illus";
@@ -223,6 +223,10 @@ blockquote {
     padding: 0.75rem 1.25rem;
   }
 }
+
+*/
+
+
 /* END OF RESET */
 /*
 font-family: 'Source Sans 3', sans-serif;

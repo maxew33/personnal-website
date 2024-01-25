@@ -5,16 +5,17 @@
     @include maxWidth;
 }
 
-.header{
+.header {
     display: grid;
-    grid-template-areas: 'title illus'
-    'presentation illus';
+    grid-template-areas:
+        'title illus'
+        'presentation illus';
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     color: var(--text);
 }
 
-.illus{
+.illus {
     grid-area: illus;
     position: relative;
     width: min(50vw, 700px);
@@ -28,19 +29,19 @@
     background-attachment: fixed;
 }
 
-.title{
+.title {
     @include title;
     grid-area: title;
 }
 
-.presentation{
+.presentation {
     grid-area: presentation;
     margin: auto;
     font-size: 1.25rem;
     max-width: 98%;
 }
 
-.introduction{
+.introduction {
     font-size: 2rem;
     font-family: var(--fontfam2);
     line-height: 1.5;
@@ -52,11 +53,8 @@
 .features {
     grid-area: features;
     margin-top: 1rem;
-    // justify-content: space-between;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    // flex-wrap: wrap;
-    // align-items: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -67,13 +65,12 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0 var(--grey);
-    // margin: 1rem 1rem 0 0;
 
-    &:nth-child(even){
+    &:nth-child(even) {
         justify-self: end;
     }
 
-    &:last-child{
+    &:last-child {
         width: 50%;
         justify-self: center;
         grid-column: span 2;
@@ -94,7 +91,7 @@
     margin-inline: auto;
     list-style: none;
     font-size: 1.15rem;
-    li:not(:last-child){
+    li:not(:last-child) {
         line-height: 2.5;
     }
     &::after {
@@ -109,61 +106,53 @@
     }
 }
 
-.logo{
-    margin-right: .5rem;
+.logo {
+    margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 1200px) {
-    .contentList {
-        height: 16rem;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .wrapper {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-
-    .contentList {
-        height: auto;
-    }
-
-    .article {
-        flex-direction: row;
-        width: 45rem;
-        max-width: 98%;
+    .header {
+        grid-template-areas:
+            'title title'
+            'presentation illus';
+        width: 98%;
         margin: auto;
     }
 
-    .content {
-        width: 70%;
+    .illus {
+        margin-top: unset;
+        border-radius: 10px;
+        width: 100%;
+        background-attachment: unset;
+        background-position: top right;
+        background-size: cover;
+    }
+
+    .features {
+        @include flexCol;
+        align-items: center;
+    }
+    .feature {
+        &:last-child {
+            width: 98%;
+        }
     }
 }
 
 @media screen and (max-width: 767px) {
-    .article {
-        &:hover {
-            transform: unset;
-        }
-    }
-
     .header {
-        width: 40%;
-        padding: 1.5rem;
-    }
-
-    .content {
-        width: 60%;
-    }
-
-    .contentList {
-        display: none;
+        grid-template-areas:
+            'title '
+            'illus'
+            'presentation';
+        grid-template-columns: unset;
+        grid-template-rows: repeat(3, 1fr);
+        width: 98%;
+        margin: auto;
     }
 }
 
 @media screen and (max-width: 576px) {
-
     .articleTitle {
         font-size: 6vw;
     }

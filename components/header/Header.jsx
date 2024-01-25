@@ -3,12 +3,11 @@
 import { usePathname} from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import AppContext from '../context/AppContext'
 import styles from './Header.module.css'
 
 export default function Header() {
-    const context = useContext(AppContext)
 
     const [menuOpen, setMenuOpen] = useState(false)
     const pathname = usePathname()
@@ -39,10 +38,6 @@ export default function Header() {
     const hideNav = () => {
         setMenuOpen(false)
     }
-
-    // const handleClick = () => {
-    //     context.setDarkMode(!context.darkMode)
-    // }
 
     return (
         <div
@@ -77,7 +72,6 @@ export default function Header() {
                     <a href="tel:0781847657" className={styles.phone}>
                         07 81 84 76 57
                     </a>
-                    {/* <button onClick={handleClick}>dark mode</button> */}
                 </div>
 
                 <section

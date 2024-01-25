@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -10,7 +9,7 @@ async function getServiceData() {
     return service
 }
 
-export default function Pricing() {
+export default function Services() {
     const [data, setData] = useState([])
 
     useEffect(() => {
