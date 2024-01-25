@@ -22,17 +22,17 @@ export default function Pricing() {
     }, [])
 
     const serviceWrapperAnimationVariants = {
-        initial: (index) => ({
+        initial: {
             opacity: 0,
-            scale: 0,
-            x: 50 * (index - 1),
-        }),
-        animate: (index) => ({
+            scale: 0.5,
+            y: 50,
+        },
+        animate: {
             opacity: 1,
             scale: 1,
-            x: 0,
-            transition: { duration: 0.75, delay: 0.15 * index },
-        }),
+            y: 0,
+            transition: { duration: 0.5 },
+        },
     }
 
     return (
