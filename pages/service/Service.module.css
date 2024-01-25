@@ -1,12 +1,19 @@
 .main {
-  display: flex;
-  color: var(--text);
   width: 100%;
   max-width: 1400px;
   margin: auto;
 }
 
+.header {
+  display: grid;
+  grid-template-areas: "title illus" "presentation illus";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  color: var(--text);
+}
+
 .illus {
+  grid-area: illus;
   position: relative;
   width: min(50vw, 700px);
   height: auto;
@@ -19,38 +26,55 @@
   background-attachment: fixed;
 }
 
-.service {
-  flex: 1;
-}
-
 .title {
   font-family: var(--fontfam1);
   text-align: center;
   font-size: 5.5rem;
   margin: 5rem auto;
   color: var(--primary);
+  grid-area: title;
 }
 
-.presentation, .introduction {
+.presentation {
+  grid-area: presentation;
+  margin: auto;
   font-size: 1.25rem;
   max-width: 98%;
 }
 
-.wrapper {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.introduction {
+  font-size: 2rem;
+  font-family: var(--fontfam2);
+  line-height: 1.5;
+  margin: 5rem auto 2.5rem;
+  text-align: center;
+  width: min(80vw, 800px);
 }
 
-.article {
+.features {
+  grid-area: features;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.feature {
   display: flex;
   flex-direction: column;
   height: auto;
+  width: 98%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0 var(--grey);
-  margin: 1rem 1rem 0 0;
+}
+.feature:nth-child(even) {
+  justify-self: end;
+}
+.feature:last-child {
+  width: 50%;
+  justify-self: center;
+  grid-column: span 2;
 }
 
 .articleTitle {

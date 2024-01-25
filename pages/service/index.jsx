@@ -37,25 +37,29 @@ export default function Pricing() {
 
     return (
         <main>
-            
-        <section className={styles.main}>
-            <section className={styles.service}>
-                <h1 className={styles.title}>Mes services</h1>
-                <p className={styles.presentation}>
-                    Pour la conception des sites, j'exploite les capacités de
-                    React et de son framework Next.js, tandis que les animations
-                    sont élaborées avec Framer Motion. <br /><br/>
-                    Une fois le site mis en place, je procède à un audit à
-                    l'aide de Lighthouse. <br />
-                    Cette démarche vise à garantir des performances optimales,
-                    une accessibilité maximale, et un référencement (SEO)
-                    irréprochable.
-                </p>
-                <section className={styles.wrapper}>
-                    <p className={styles.introduction}>
-                    Voici les cinq piliers fondamentaux sur lesquels je m'appuie pour développer votre site:
+            <section className={styles.main}>
+                <div className={styles.header}>
+                    <h1 className={styles.title}>Mes services</h1>
+                    <p className={styles.presentation}>
+                        Pour la conception des sites, j'exploite les capacités
+                        de React et de son framework Next.js, tandis que les
+                        animations sont élaborées avec Framer Motion. <br />
+                        <br />
+                        Une fois le site mis en place, je procède à un audit à
+                        l'aide de Lighthouse. <br />
+                        Cette démarche vise à garantir des performances
+                        optimales, une accessibilité maximale, et un
+                        référencement (SEO) irréprochable.
+                        <br />
+                        <br />
                     </p>
-
+                    <div className={styles.illus}></div>
+                </div>
+                <h2 className={styles.introduction}>
+                    Voici les cinq piliers fondamentaux sur lesquels je m'appuie
+                    pour développer chaque site:
+                </h2>
+                <section className={styles.features}>
                     {data.map((service, index) => (
                         <motion.article
                             key={'article' + index}
@@ -64,7 +68,7 @@ export default function Pricing() {
                             whileInView="animate"
                             viewport={{ once: true }}
                             custom={index}
-                            className={styles.article}
+                            className={styles.feature}
                         >
                             <h2 className={styles.articleTitle}>
                                 {service.title}
@@ -86,10 +90,7 @@ export default function Pricing() {
                     ))}
                 </section>
             </section>
-            <div className={styles.illus}>                
-            </div>
-        </section>
-        <Conclusion/>
+            <Conclusion />
         </main>
     )
 }
