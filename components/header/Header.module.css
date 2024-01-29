@@ -21,29 +21,18 @@
   margin: auto;
 }
 
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-transform: capitalize;
-  font-family: var(--fontfam1);
-  color: var(--bg);
-  font-size: 3.5rem;
-}
-.navigation a {
-  color: unset;
-}
-
 .logoLink,
-.logoLink:hover {
+.logoLink:hover,
+.navBarLogoLink,
+.navBarLogoLink:hover {
   height: 2.5rem;
-  color: var(--text);
+  color: var(--primary);
+  font-family: var(--fontfam2);
   text-decoration: none;
   display: flex;
-  align-items: center;
-  font-size: 0.75rem;
-  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 0.75rem;
 }
 
 .logo {
@@ -116,7 +105,7 @@
   background: var(--primary);
   border: none;
   border-radius: 15px;
-  transition: transform 0.15s linear;
+  transition: transform 0.15s linear, background-color 0.15s linear;
 }
 .burger span::before {
   top: 10px;
@@ -127,9 +116,11 @@
 }
 .menuOpen .burger span::after {
   transform: translateY(10px) rotate(-135deg);
+  background: var(--bg);
 }
 .menuOpen .burger span::before {
   transform: translateY(-10px) rotate(135deg);
+  background: var(--bg);
 }
 
 .navigationWrapper {
@@ -148,4 +139,63 @@
 .navigationWrapperOpen {
   display: grid;
   clip-path: circle(150% at 50% 1.75rem);
+}
+
+.navigation {
+  grid-area: navigation;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  font-family: var(--fontfam1);
+  color: var(--bg);
+  font-size: 3.5rem;
+}
+.navigation a {
+  color: unset;
+}
+
+.navBarLogoLink,
+.navBarLogoLink:hover {
+  font-size: 3rem;
+}
+
+.contact {
+  grid-area: contact;
+  font-size: 1.75rem;
+  position: relative;
+  line-height: 1.75;
+  padding: 10% 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact > *, .contact a {
+  color: var(--bg);
+}
+
+.navigationLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social {
+  grid-area: social;
+  display: flex;
+  gap: 1rem;
+  color: unset;
+}
+.social a {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .navigationWrapper {
+    height: 100vh;
+    padding: 5rem 0;
+    grid-template-areas: "navigation" "contact";
+  }
 }

@@ -1,14 +1,17 @@
 'use client'
 
-import { usePathname} from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import AppContext from '../context/AppContext'
 import styles from './Header.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faFacebookSquare,
+    faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Header() {
-
     const [menuOpen, setMenuOpen] = useState(false)
     const pathname = usePathname()
 
@@ -60,6 +63,7 @@ export default function Header() {
                         alt="logo de techquest"
                         className={styles.logo}
                     />
+                    TechQuest
                 </Link>
                 <button
                     onClick={displayNav}
@@ -96,6 +100,54 @@ export default function Header() {
                             </Link>
                         ))}
                     </nav>
+                    <div className={styles.contact}>
+                        <Link
+                            href="/"
+                            className={styles.navBarLogoLink}
+                            aria-label={paths.name}
+                        >
+                            <Image
+                                src="/assets/logoW.webp"
+                                width={54}
+                                height={60}
+                                alt="logo de techquest"
+                                className={styles.navBarlogo}
+                            />
+                            TechQuest
+                        </Link>
+                        <div className={styles.navigationLink}>
+                            <a
+                                href="tel:0781847657"
+                                className={styles.navBarPhone}
+                            >
+                                07 81 84 76 57
+                            </a>
+                            <div className={styles.social}>
+                                <Link
+                                    href="https://www.linkedin.com/in/maxime-malfilatre/"
+                                    aria-label="Linkedin"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faLinkedin}
+                                        className={styles.icon}
+                                    />
+                                </Link>
+                                <Link
+                                    href="https://www.linkedin.com/in/maxime-malfilatre/"
+                                    aria-label="Facebook"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <FontAwesomeIcon
+                                        icon={faFacebookSquare}
+                                        className={styles.icon}
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </header>
         </div>

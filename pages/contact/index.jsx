@@ -201,6 +201,9 @@ export default function Contact() {
                         <div className={styles.linkWrapper}>
                             <a
                                 href="https://www.linkedin.com/in/maxime-malfilatre/"
+                                aria-label="Linkedin"
+                                target="_blank"
+                                rel="noopener"
                                 className={styles.contact}
                             >
                                 <FontAwesomeIcon
@@ -210,6 +213,9 @@ export default function Contact() {
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/maxime-malfilatre/"
+                                aria-label="Facebook"
+                                target="_blank"
+                                rel="noopener"
                                 className={styles.contact}
                             >
                                 <FontAwesomeIcon

@@ -21,6 +21,7 @@ export default function Footer() {
                         alt="logo de techquest"
                         className={styles.logo}
                     />
+                    TechQuest
                 </Link>
                 <span className={styles.copyright}>
                     ©TechQuest Bordeaux 2024
@@ -36,15 +37,23 @@ export default function Footer() {
                     contact
                 </Link>
                 <div className={styles.social}>
-                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/"
-                    aria-label="lien linkedin">
+                    <Link
+                        href="https://www.linkedin.com/in/maxime-malfilatre/"
+                        aria-label="Linkedin"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         <FontAwesomeIcon
                             icon={faLinkedin}
                             className={styles.icon}
                         />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/maxime-malfilatre/"
-                    aria-label="lien facebook">
+                    <Link
+                        href="https://www.linkedin.com/in/maxime-malfilatre/"
+                        aria-label="Facebook"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         <FontAwesomeIcon
                             icon={faFacebookSquare}
                             className={styles.icon}

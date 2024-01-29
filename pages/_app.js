@@ -3,18 +3,10 @@ import AppContext from '@/components/context/AppContext'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function App({ Component, pageProps }) {
     const [darkMode, setDarkMode] = useState(false)
-
-    /*useEffect(() => {
-        const bgCol = darkMode ? '#3d3d3d' : '#fcedda'
-        const primary = darkMode ? '#fcedda' : '#3d3d3d'
-        document.documentElement.style.setProperty('--bg', bgCol)
-        document.documentElement.style.setProperty('--secondary', primary)
-    }, [darkMode])*/
 
     return (
         <AppContext.Provider value={{ darkMode, setDarkMode }}>
@@ -24,6 +16,13 @@ export default function App({ Component, pageProps }) {
                 <meta
                     name="description"
                     content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."
+                />
+
+                {/* indexation */}
+
+                <meta
+                    name="google-site-verification"
+                    content="mAxay-PYdygN1Yk2JZ17uIanTwziS4rmTmfd39Xu0fo"
                 />
 
                 {/* <!-- Facebook Meta Tags --> */}

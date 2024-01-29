@@ -25,6 +25,10 @@
   place-self: baseline;
   font-family: var(--fontfam2);
 }
+.presentation .highlighted {
+  font-weight: bold;
+  font-size: 3rem;
+}
 
 .highlighted {
   color: var(--primary);

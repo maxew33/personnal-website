@@ -77,12 +77,16 @@ export default function Hero(props) {
                 </motion.h1>
 
                 <h2 className={styles.presentation}>
-                    TechQuest, création de sites web originaux.
+                    <span className={styles.highlighted}>TechQuest</span> ,
+                    création de sites web originaux.
                 </h2>
 
                 <div className={styles.linkWrapper}>
                     <a
                         href="https://www.linkedin.com/in/maxime-malfilatre/"
+                        aria-label="Linkedin"
+                        target="_blank"
+                        rel="noopener"
                         className={styles.link}
                     >
                         <FontAwesomeIcon
@@ -92,6 +96,9 @@ export default function Hero(props) {
                     </a>
                     <a
                         href="https://www.linkedin.com/in/maxime-malfilatre/"
+                        aria-label="Facebook"
+                        target="_blank"
+                        rel="noopener"
                         className={styles.link}
                     >
                         <FontAwesomeIcon
@@ -103,8 +110,14 @@ export default function Hero(props) {
 
                 <motion.div
                     className={styles.carouselContainer}
-                    initial={{ x: -350, y: 250, rotate: 90, opacity: 0, scale: 0.75 }}
-                    animate={{ x:0, y: 0, rotate: 0, opacity: 1, scale: 1 }}
+                    initial={{
+                        x: -350,
+                        y: 250,
+                        rotate: 90,
+                        opacity: 0,
+                        scale: 0.75,
+                    }}
+                    animate={{ x: 0, y: 0, rotate: 0, opacity: 1, scale: 1 }}
                     style={{ originX: 0.5, originY: 1 }}
                     transition={{ duration: 0.75, delay: 1 }}
                     onAnimationComplete={() => setStartTitle(true)}
