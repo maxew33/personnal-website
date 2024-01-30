@@ -53,15 +53,6 @@ table {
   border-spacing: 0;
 }
 
-/*
---bg: #fff;
-    --text: #000;
-    --secondary: #14213d;
-    --secondary: #f2330d;
-    --lightCol: #f2f2f2;
-    --primary: #ff006e;
-    --grey: #d9d9d9;
-    */
 .home-main {
   position: relative;
   width: 100%;
@@ -229,10 +220,6 @@ font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
 */
-/*
-$accentCol: #ae371f;
-$primaryCol: #6a5e44;
-$bgCol: #fff1d0;*/
 :root {
   --bg: #f6f2ea;
   --secondary: #49403f;

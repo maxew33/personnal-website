@@ -11,11 +11,6 @@ font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
 */
 
-/*
-$accentCol: #ae371f;
-$primaryCol: #6a5e44;
-$bgCol: #fff1d0;*/
-
 :root {
     --bg: #{$bgCol};
     --secondary: #{$secondary};
@@ -24,8 +19,6 @@ $bgCol: #fff1d0;*/
     --text: #{$textCol};
     --redText: #{$textColRed};
 
-    // --secondary: #{$secondaryCol};
-    // --lightCol: #{$lightCol};
     --grey: #{$grey};
 
     --fontfam1: 'Archivo Black', serif;

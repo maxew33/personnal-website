@@ -67,12 +67,16 @@
   cursor: pointer;
   transform-origin: bottom right;
 }
-.projectContainer[data-position="1"] {
+.projectContainer[data-position="0"] {
   z-index: 2;
+  transform: rotate(0deg);
+}
+.projectContainer[data-position="1"] {
+  z-index: 3;
   transform: rotate(2.5deg);
 }
 .projectContainer[data-position="2"] {
-  z-index: 3;
+  z-index: 4;
   transform: rotate(5deg);
 }
 

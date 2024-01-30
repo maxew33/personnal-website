@@ -108,8 +108,8 @@ export default function Header() {
                         >
                             <Image
                                 src="/assets/logoW.webp"
-                                width={54}
-                                height={60}
+                                width={118}
+                                height={129}
                                 alt="logo de techquest"
                                 className={styles.navBarlogo}
                             />

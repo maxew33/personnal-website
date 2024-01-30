@@ -42,7 +42,8 @@
 }
 
 .phone,
-.link {
+.link,
+.navBarPhone {
     position: relative;
     color: var(--primary);
     &::after {
@@ -107,7 +108,7 @@
             background: var(--primary);
             border: none;
             border-radius: 15px;
-            transition: transform 0.15s linear, background-color .15s linear;
+            transition: transform 0.15s linear, background-color 0.15s linear;
         }
 
         &::before {
@@ -166,11 +167,6 @@
     }
 }
 
-.navBarLogoLink,
-.navBarLogoLink:hover{
-    font-size: 3rem;
-}
-
 .contact {
     grid-area: contact;
     font-size: 1.75rem;
@@ -180,32 +176,55 @@
     @include flexCol;
     justify-content: space-evenly;
     align-items: center;
-    > *, a {
+    > *,
+    a,
+    a:hover {
         color: var(--bg);
     }
 }
 
-.navigationLink{
+.navBarLogoLink,
+.navBarLogoLink:hover {
+    font-size: 3rem;
+    display: inline-block;
+    height: auto;
+}
+
+.navigationLink {
     @include flexCol;
+    gap: 2rem;
     align-items: center;
+}
+
+.navBarPhone{
+    &::after{
+        bottom: .5rem;
+        height: 3px;
+    }
 }
 
 .social {
     grid-area: social;
     display: flex;
-    gap: 1rem;
-    color: unset;
-    a{
-        font-size: 2rem;
+    gap: 2rem;
+}
+
+.icon {
+    height: 2.5rem;
+    color: var(--bg);
+    transition: color 0.125s linear;
+
+    &:hover {
+        color: var(--primary);
     }
 }
 
 @media screen and (max-width: 800px) {
-
     .navigationWrapper {
         height: 100vh;
         padding: 5rem 0;
-        grid-template-areas: 'navigation'
-        'contact';
+        grid-template-areas:
+            'navigation'
+            'contact';
     }
 }

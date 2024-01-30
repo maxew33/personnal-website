@@ -15,9 +15,9 @@ export default function Footer() {
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.link}>
                     <Image
-                        src="/assets/logoW.webp"
+                        src="/assets/logoB.webp"
                         width={118}
-                        height={87}
+                        height={129}
                         alt="logo de techquest"
                         className={styles.logo}
                     />

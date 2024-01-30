@@ -42,12 +42,14 @@
 }
 
 .phone,
-.link {
+.link,
+.navBarPhone {
   position: relative;
   color: var(--primary);
 }
 .phone::after,
-.link::after {
+.link::after,
+.navBarPhone::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -61,7 +63,9 @@
 }
 .phone.active::after, .phone:hover::after,
 .link.active::after,
-.link:hover::after {
+.link:hover::after,
+.navBarPhone.active::after,
+.navBarPhone:hover::after {
   transform: scaleX(1);
 }
 
@@ -156,11 +160,6 @@
   color: unset;
 }
 
-.navBarLogoLink,
-.navBarLogoLink:hover {
-  font-size: 3rem;
-}
-
 .contact {
   grid-area: contact;
   font-size: 1.75rem;
@@ -172,24 +171,44 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.contact > *, .contact a {
+.contact > *,
+.contact a,
+.contact a:hover {
   color: var(--bg);
+}
+
+.navBarLogoLink,
+.navBarLogoLink:hover {
+  font-size: 3rem;
+  display: inline-block;
+  height: auto;
 }
 
 .navigationLink {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
+}
+
+.navBarPhone::after {
+  bottom: 0.5rem;
+  height: 3px;
 }
 
 .social {
   grid-area: social;
   display: flex;
-  gap: 1rem;
-  color: unset;
+  gap: 2rem;
 }
-.social a {
-  font-size: 2rem;
+
+.icon {
+  height: 2.5rem;
+  color: var(--bg);
+  transition: color 0.125s linear;
+}
+.icon:hover {
+  color: var(--primary);
 }
 
 @media screen and (max-width: 800px) {

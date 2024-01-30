@@ -146,7 +146,7 @@ export default function Hero(props) {
                                     <Image
                                         key={'illus' + index}
                                         src={illus.result.minify}
-                                        height="351"
+                                        height="350"
                                         width="204"
                                         className={styles.carouselIllus}
                                         alt={illus.result.name}

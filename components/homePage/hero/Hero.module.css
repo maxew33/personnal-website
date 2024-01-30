@@ -51,13 +51,32 @@
 .carouselContainer {
   position: relative;
   grid-area: carousel;
-  z-index: -1;
   height: 100%;
   width: 100%;
+}
+.carouselContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: red;
   background: url("/assets/home/hand.png");
   background-repeat: no-repeat;
   background-size: 35rem;
   background-position: bottom right;
+  z-index: 10;
+}
+.carouselContainer::before {
+  content: "";
+  position: absolute;
+  bottom: 17.2rem;
+  width: 12.75rem;
+  right: 11.15rem;
+  aspect-ratio: 0.58;
+  background: black;
+  overflow: hidden;
 }
 
 .carousel {
@@ -66,7 +85,6 @@
   width: 12.75rem;
   right: 11.15rem;
   aspect-ratio: 0.58;
-  background: var(--bg);
   overflow: hidden;
 }
 
@@ -125,10 +143,10 @@
     text-align: center;
     font-size: 3.5rem;
   }
-  .carouselContainer {
+  .carouselContainer::after {
     background-size: 30rem;
   }
-  .carousel {
+  .carousel, .carouselContainer::before {
     position: absolute;
     bottom: 14.9rem;
     width: 10.8rem;
@@ -145,8 +163,8 @@
   .article {
     grid-template-areas: "title title" "welcome carousel" "link carousel" "link carousel";
   }
-  .carouselContainer {
-    background: unset;
+  .carouselContainer::after, .carouselContainer::before {
+    display: none;
   }
   .carousel {
     position: absolute;
