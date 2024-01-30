@@ -19,8 +19,8 @@ export default function Hero(props) {
     // fetching data
 
     async function getIllusData() {
-        const { projects } = await require('../../../data/projects.json')
-        return projects
+        const { carousel } = await require('../../../data/carousel.json')
+        return carousel
     }
 
     useEffect(() => {
@@ -145,11 +145,11 @@ export default function Hero(props) {
                                 illusData.map((illus, index) => (
                                     <Image
                                         key={'illus' + index}
-                                        src={illus.result.minify}
+                                        src={illus.path}
                                         height="350"
                                         width="204"
                                         className={styles.carouselIllus}
-                                        alt={illus.result.name}
+                                        alt={illus.name}
                                         data-position={
                                             index + counter >
                                             illusData.length - 1

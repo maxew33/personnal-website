@@ -62,7 +62,7 @@
   height: 100%;
   width: 100%;
   background: red;
-  background: url("/assets/home/hand.png");
+  background: url("/assets/home/hand.webp");
   background-repeat: no-repeat;
   background-size: 35rem;
   background-position: bottom right;
@@ -129,7 +129,7 @@
   width: 5rem;
   height: 5rem;
   top: 0.5rem;
-  background-image: url("/assets/home/arrow.png");
+  background-image: url("/assets/home/arrow.webp");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;

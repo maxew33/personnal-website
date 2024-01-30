@@ -1,0 +1,33 @@
+{
+    "carousel": [
+        {
+            "id": 0,
+            "name": "visuels du site du cabinet cap patrimoine",
+            "path": "/assets/home/chris.webp"
+        },
+        {
+            "id": 1,
+            "name": "WealthHealth, projet",
+
+            "path": "/assets/home/WealthHealth.webp"
+        },
+        {
+            "id": 2,
+            "name": "Benedict Priam, Photographe",
+
+            "path": "/assets/home/ben.webp"
+        },
+        {
+            "id": 3,
+            "name": "Jérémie Bonne, Graphiste Bordelais",
+
+            "path": "/assets/home/jerem.webp"
+        },
+        {
+            "id": 4,
+            "name": "Maxime Malfilâtre, développeur front end",
+
+            "path": "/assets/home/max.webp"
+        }
+    ]
+}

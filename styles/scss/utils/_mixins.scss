@@ -55,7 +55,7 @@
     }
 }
 
-@mixin comment($url: '/assets/home/arrow.png', $color: var(--text)) {
+@mixin comment($url: '/assets/home/arrow.webp', $color: var(--text)) {
     position: absolute;
     top: -2.5rem;
     left: 0.75rem;

@@ -44,7 +44,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("/assets/home/emptyTablet.png");
+  background-image: url("/assets/home/emptyTablet.webp");
   background-size: contain;
 }
 
@@ -65,7 +65,7 @@
   width: 5rem;
   height: 5rem;
   top: 0.5rem;
-  background-image: url("/assets/home/bgarrow.png");
+  background-image: url("/assets/home/bgarrow.webp");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;

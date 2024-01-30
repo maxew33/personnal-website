@@ -13,7 +13,7 @@ export default function Footer() {
         <footer className={styles.footer}>
             <Wave />
             <div className={styles.footerWrapper}>
-                <Link href="/" className={styles.link}>
+                <Link href="/" className={styles.logoWrapper}>
                     <Image
                         src="/assets/logoB.webp"
                         width={118}
@@ -26,14 +26,14 @@ export default function Footer() {
                 <span className={styles.copyright}>
                     ©TechQuest Bordeaux 2024
                 </span>
-                <Link href="/service" className={styles.solutions}>
+                <Link href="/service" className={`${styles.solutions} ${styles.link}`}>
                     Services
                 </Link>
-                <Link href="/legal" className={styles.legal}>
+                <Link href="/legal" className={`${styles.legal} ${styles.link}`}>
                     Mentions Légales
                 </Link>
                 {/* <Link href="/blog">articles</Link> */}
-                <Link href="/contact" className={styles.contact}>
+                <Link href="/contact" className={`${styles.contact} ${styles.link}`}>
                     contact
                 </Link>
                 <div className={styles.social}>

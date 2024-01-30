@@ -18,13 +18,13 @@
   max-width: 1400px;
   display: grid;
   grid-template-areas: "logo copyright solutions legal contact social";
-  align-items: center;
+  align-items: first baseline;
   justify-items: center;
   text-transform: capitalize;
 }
 
-.link,
-.link:hover {
+.logoWrapper,
+.logoWrapper:hover {
   height: 2.5rem;
   color: unset;
   font-family: var(--fontfam2);
@@ -45,6 +45,22 @@
 
 .copyright {
   grid-area: copyright;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+  transform-origin: left;
+}
+.link.active::after, .link:hover::after {
+  transform: scaleX(1);
 }
 
 .solutions {
@@ -68,9 +84,14 @@
 
 .icon {
   font-size: 2rem;
+  color: var(--text);
+  transition: color 0.125s linear;
+}
+.icon:hover {
+  color: var(--bg);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .footerWrapper {
     row-gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
@@ -79,16 +100,8 @@
 }
 @media screen and (max-width: 576px) {
   .footerWrapper {
-    row-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "logo . social" "solutions . contact" "copyright . legal";
-  }
-  .copyright,
-  .solutions {
-    justify-self: flex-start;
-  }
-  .legal,
-  .contact {
-    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
