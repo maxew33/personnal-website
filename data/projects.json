@@ -2,7 +2,7 @@
     "projects": [
         {
             "id": 0,
-            "name": "Cabinet CAP Patrimoine",
+            "name": ["Cabinet CAP Patrimoine"],
             "description": "Le Cabinet CAP Patrimoine, spécialisé en conseil de gestion de patrimoine, était à la recherche d'une présence en ligne qui reflète son engagement envers l'excellence dans le domaine financier, immobilier, de la défiscalisation, de la retraite, de l'épargne, et de la prévoyance.",
             "objectives": "L'objectif était de créer un site web qui transmette la sophistication de leurs services tout en fournissant une expérience utilisateur intuitive.",
             "implementation": "J'ai développé un site web sur mesure pour le Cabinet CAP Patrimoine, mettant en avant chaque aspect de leurs services de gestion privée. La conception a été pensée pour refléter la confiance, l'expertise et l'attention personnalisée qu'ils offrent à leurs clients.",
@@ -13,15 +13,15 @@
             ],
             "result": {
                 "name": "visuels du site du cabinet cap patrimoine",
-                "path": "/assets/projects/capPatrimoine-card.png",
-                "minify": "/assets/home/chris.png",
-                "illus": "/assets/projects/capPatrimoine-visuel.png"
+                "path": "/assets/projects/capPatrimoine-card.webp",
+                "minify": "/assets/home/chris.webp",
+                "illus": "/assets/projects/capPatrimoine-visuel.webp"
             },
             "link": "https://cabinet-cap-patrimoine.fr/"
         },
         {
             "id": 1,
-            "name": "Jérémie Bonne, Graphiste Bordelais",
+            "name": ["Jérémie Bonne", "Graphiste Bordelais"],
             "description": "Jérémie Bonne est un graphiste talentueux basé à Bordeaux. Spécialisé dans la communication, le lettrage, et l'identité visuelle, il fournit des services créatifs de haute qualité.",
             "objectives": "L'objectif était de créer un site web qui mette en valeur le travail exceptionnel de Jérémie Bonne. En collaborant étroitement avec lui, j'ai intégré sa maquette tout en garantissant une expérience utilisateur fluide et esthétique.",
             "implementation": "J'ai développé un site web sur mesure, reflétant le style distinctif de Jérémie Bonne. Chaque détail, du lettrage à l'identité visuelle, a été intégré avec précision pour présenter son travail de manière percutante.",
@@ -32,15 +32,15 @@
             ],
             "result": {
                 "name": "visuels du site de Jérémie Bonne",
-                "path": "/assets/projects/jerem-card.png",
-                "minify": "/assets/home/jerem.png",
-                "illus": "/assets/projects/jerem-visuel.png"
+                "path": "/assets/projects/jerem-card.webp",
+                "minify": "/assets/home/jerem.webp",
+                "illus": "/assets/projects/jerem-visuel.webp"
             },
             "link": "https://jeremie-bonne.fr/"
         },
         {
             "id": 2,
-            "name": "Maxime Malfilâtre, développeur front end",
+            "name": ["Maxime Malfilâtre", "développeur front-end"],
             "description": "Maxime Malfilâtre est un développeur front-end basé à Bordeaux. Son portfolio présente ses compétences en matière de développement web, mettant en avant des projets variés et innovants.",
             "objectives": "L'objectif était de concevoir un site web qui reflète la personnalité créative de Maxime Malfilâtre. Le portfolio devait être plus qu'une simple vitrine de compétences, mais une immersion dans son style, sa créativité et son approche unique du développement web.",
             "implementation": "J'ai développé un site web sur mesure, mettant en avant des projets personnels et originaux de Maxime. L'interaction était au cœur de la conception, offrant aux visiteurs une expérience immersive qui va au-delà des simples démonstrations techniques.",
@@ -51,9 +51,9 @@
             ],
             "result": {
                 "name": "visuels du site de Maxime Malfilâtre",
-                "path": "/assets/projects/max-card.png",
-                "minify": "/assets/home/max.png",
-                "illus": "/assets/projects/max-visuel.png"
+                "path": "/assets/projects/max-card.webp",
+                "minify": "/assets/home/max.webp",
+                "illus": "/assets/projects/max-visuel.webp"
             },
             "link": "https://www.maxime-malfilatre.com"
         }

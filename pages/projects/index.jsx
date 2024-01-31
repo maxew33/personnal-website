@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
 import styles from './Projects.module.css'
 import Image from 'next/image'
 import ProjectModale from '@/components/projectModale/ProjectModale'
+import { useSwipeable } from 'react-swipeable'
 import { AnimatePresence } from 'framer-motion'
 
 async function getProjectsData() {
@@ -72,6 +72,19 @@ export default function Projects() {
         })
     }, [position])
 
+    // changig the image by swipe
+    const handlers = useSwipeable({
+        onSwipedLeft: () => {
+            handleDirection(-1)
+        },
+        onSwipedRight: () => {
+            handleDirection(1)
+        },
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: false,
+        delta: 75,
+    })
+
     //select a project
 
     const handleClick = (project) => {
@@ -124,31 +137,37 @@ export default function Projects() {
                         <div></div>
                     </button>
                 </div>
-                {data.map((project, index) => (
-                    <div
-                        className={styles.projectContainer}
-                        onClick={() => handleClick(project)}
-                        data-position={position[index]}
-                        key={'project' + index}
-                    >
-                        <Image
-                            src={project.result.path}
-                            height={414}
-                            width={272}
-                            className={styles.illus}
-                            alt={project.result.name}
-                        />
-                    </div>
-                ))}
-                {data.map((project, index) => (
-                    <span
-                        className={styles.name}
-                        key={'name' + index}
-                        data-position={position[index]}
-                    >
-                        {project.name}
-                    </span>
-                ))}
+                <div className={styles.projectsContainer} {...handlers}>
+                    {data.map((project, index) => (
+                        <div
+                            className={styles.projectContainer}
+                            onClick={() => handleClick(project)}
+                            data-position={position[index]}
+                            key={'project' + index}
+                        >
+                            <Image
+                                src={project.result.path}
+                                height={414}
+                                width={272}
+                                className={styles.illus}
+                                alt={project.result.name}
+                            />
+                        </div>
+                    ))}
+                    {data.map((project, index) => (
+                        <span
+                            className={styles.name}
+                            key={'name' + index}
+                            data-position={position[index]}
+                        >
+                            {project.name.map((words, index) => (
+                                <span>
+                                    {words} <br />
+                                </span>
+                            ))}
+                        </span>
+                    ))}
+                </div>
             </div>
         </main>
     )

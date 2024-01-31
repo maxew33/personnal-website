@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
                 <title>TechQuest Bordeaux</title>
                 <meta
                     name="description"
-                    content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."
+                    content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-moi pour explorer les opportunités ensemble."
                 />
 
                 {/* indexation */}
@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
                 <meta property="og:title" content="TechQuest Bordeaux" />
                 <meta
                     property="og:description"
-                    content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."
+                    content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-moi pour explorer les opportunités ensemble."
                 />
                 <meta
                     property="og:image"
@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }) {
                 <meta name="twitter:title" content="TechQuest Bordeaux" />
                 <meta
                     name="twitter:description"
-                    content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-nous pour explorer les opportunités ensemble."
+                    content="TechQuest Bordeaux - Votre source pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-moi pour explorer les opportunités ensemble."
                 />
                 <meta
                     name="twitter:image"
@@ -53,6 +53,17 @@ export default function App({ Component, pageProps }) {
                 />
 
                 {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
+
+                <meta
+                    name="theme-color"
+                    media="(prefers-color-scheme: light)"
+                    content="#f6f2ea"
+                />
+                <meta
+                    name="theme-color"
+                    media="(prefers-color-scheme: dark)"
+                    content="#f6f2ea"
+                />
             </Head>
             <Header />
             <Component {...pageProps} />

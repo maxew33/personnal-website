@@ -33,7 +33,7 @@
 
 .videoPlayerContainer {
     position: relative;
-    width: 90%;
+    width: 100%;
     aspect-ratio: 20 / 11;
     border-radius: 10px;
     &::after {
@@ -89,7 +89,6 @@
     &:last-child {
         background: #00000000;
     }
-
 }
 
 .contentText {
@@ -152,7 +151,23 @@
 }
 
 @media screen and (max-width: 576px) {
+    .titleWrapper {
+        width: 90%;
+    }
+
+    .videoTitle {
+        display: none;
+    }
+
     .contentWrapper {
-        font-size: 1.25rem;
+        margin: 2.5rem 0;
+        min-height: 10vh;
+        font-size: 2.25vh;
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                top: 40vh + 11.5vh * $i;
+            }
+        }
     }
 }

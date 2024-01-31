@@ -140,6 +140,22 @@
   font-size: 1.75rem;
 }
 
+.contact::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+  transform-origin: left;
+}
+.contact.active::after, .contact:hover::after {
+  transform: scaleX(1);
+}
+
 .followUs {
   display: flex;
   flex-direction: column;
@@ -175,6 +191,11 @@
 
 .socialIcon {
   height: 2.5rem;
+  color: var(--primary);
+  transition: color 0.125s linear;
+}
+.socialIcon:hover {
+  color: var(--secondary);
 }
 
 .modal {

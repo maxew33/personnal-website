@@ -60,6 +60,15 @@
   margin: 5rem auto;
 }
 
+.projectsContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 480px;
+  width: 340px;
+}
+
 .projectContainer {
   position: absolute;
   padding: 1rem;
@@ -79,13 +88,18 @@
   z-index: 4;
   transform: rotate(5deg);
 }
+.projectContainer:not([data-position="2"]) {
+  pointer-events: none;
+}
 
 .name {
   position: absolute;
   left: 50%;
-  bottom: -5rem;
+  bottom: -1rem;
   transform: translateX(-50%);
   opacity: 0;
+  width: 80%;
+  text-align: center;
   transition: opacity 0.125s linear;
 }
 .name[data-position="2"], .name[data-position="-1"] {
@@ -230,6 +244,14 @@
 @media screen and (max-width: 576px) {
   .arrowsWrapper {
     width: 90vw;
+  }
+  .projectsContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 330px;
+    width: 240px;
   }
   .illus {
     height: 276px;

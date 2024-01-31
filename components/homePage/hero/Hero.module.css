@@ -193,10 +193,26 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .section {
+    height: 110vh;
+  }
   .article {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 5vh;
+  }
+  .title {
+    font-size: 5vh;
+  }
+  .presentation {
+    font-size: 2.5vh;
+  }
+  .presentation .highlighted {
+    font-size: 3.5vh;
+  }
+  .linkWrapper {
+    display: none;
   }
   .carouselContainer {
     background: unset;
