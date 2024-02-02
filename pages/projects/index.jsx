@@ -127,12 +127,14 @@ export default function Projects() {
                     <button
                         className={`${styles.arrow} ${styles.left}`}
                         onClick={() => handleDirection(-1)}
+                        aria-label="projet précédent"
                     >
                         <div></div>
                     </button>
                     <button
                         className={`${styles.arrow} ${styles.right}`}
                         onClick={() => handleDirection(1)}
+                         aria-label="projet suivant"
                     >
                         <div></div>
                     </button>
@@ -161,7 +163,7 @@ export default function Projects() {
                             data-position={position[index]}
                         >
                             {project.name.map((words, index) => (
-                                <span>
+                                <span key={'words' + index}>
                                     {words} <br />
                                 </span>
                             ))}

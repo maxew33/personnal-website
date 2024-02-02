@@ -75,12 +75,6 @@ export default function Services() {
                             <ul className={styles.contentList}>
                                 {service.features.map((feature, index) => (
                                     <li key={index}>
-                                        <Image
-                                            src="/assets/logo.webp"
-                                            width={9}
-                                            height={10}
-                                            className={styles.logo}
-                                        />
                                         {feature}
                                     </li>
                                 ))}

@@ -89,7 +89,7 @@
   width: 90%;
   padding: 1rem 0;
   margin-inline: auto;
-  list-style: none;
+  list-style: url("/assets/logoList.webp");
   font-size: 1.15rem;
 }
 .contentList li:not(:last-child) {

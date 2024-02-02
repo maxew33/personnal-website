@@ -16,6 +16,8 @@ import {
 
 export default function Contact() {
     const [modalDisplayed, setModalDisplayed] = useState(false)
+    const [authChecked, setAuthChecked] = useState(false)
+    const [error, setError] = useState(false)
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -29,29 +31,40 @@ export default function Contact() {
         }))
     }
 
+    const handleChangeCheckBox = () => {
+        setAuthChecked(!authChecked)
+    }
+
     const form = useRef(null)
 
     const sendEmail = (event) => {
-        const service = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-        const template = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-        const user = process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         event.preventDefault()
-        if (service && template && user && form.current) {
-            emailjs
-                .sendForm(service, template, form.current, user)
-                .then(
-                    (result) => {
-                        setModalDisplayed(true)
-                        setFormState({ name: '', email: '', message: '' })
-                    },
-                    (error) => {
-                        alert("le message n'a pas pu être envoyé.")
-                        console.error('FAILED...', error)
-                    }
-                )
-                .catch((err) => {
-                    console.error('FAILED...', err)
-                })
+
+        if (authChecked) {
+            setError(false)
+            setAuthChecked(false)
+            const service = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+            const template = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+            const user = process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+            if (service && template && user && form.current) {
+                emailjs
+                    .sendForm(service, template, form.current, user)
+                    .then(
+                        (result) => {
+                            setModalDisplayed(true)
+                            setFormState({ name: '', email: '', message: '' })
+                        },
+                        (error) => {
+                            alert("le message n'a pas pu être envoyé.")
+                            console.error('FAILED...', error)
+                        }
+                    )
+                    .catch((err) => {
+                        console.error('FAILED...', err)
+                    })
+            }
+        } else {
+            setError(true)
         }
     }
 
@@ -66,10 +79,10 @@ export default function Contact() {
                 <section className={`${styles.section} ${styles.formContact}`}>
                     <article className={styles.article}>
                         <h2 className={styles.articleTitle}>Une question ?</h2>
-                        <p className={styles.formTitle}>
+                        {/* <p className={styles.formTitle}>
                             Envoyez-moi un message. <br />
                             Je vous répondrai dès que possible.
-                        </p>
+                        </p> */}
                         <form
                             ref={form}
                             onSubmit={sendEmail}
@@ -126,6 +139,32 @@ export default function Contact() {
                                     required
                                 />
                             </div>
+                            <div
+                                className={`${styles.auth} ${
+                                    error && styles.error
+                                }`}
+                            >
+                                <input
+                                    type="checkbox"
+                                    checked={authChecked}
+                                    onChange={handleChangeCheckBox}
+                                    name="autorisation d'utilisation des données du formulaire"
+                                    id="dataAuth"
+                                />
+                                <label htmlFor="dataAuth">
+                                    En utilisant ce formulaire vous autorisez
+                                    TechQuest à utiliser vos informations pour
+                                    répondre à votre demande.
+                                    <br />
+                                    Aucune donnée n'est cédée à des tiers.
+                                </label>
+                            </div>
+                            {error && (
+                                <div className={styles.errorMsg}>
+                                    Vous avez oublié de cocher la case.
+                                </div>
+                            )}
+
                             <button type="submit" className={styles.formButton}>
                                 envoyer {` `}
                                 <FontAwesomeIcon icon={faPaperPlane} />
@@ -147,7 +186,10 @@ export default function Contact() {
                             Rencontrez-moi
                         </h2>
                         <div className={styles.linkWrapper}>
-                            <a href="https://calendar.app.google/x5FM2reA2PDo4JkA8">
+                            <a
+                                href="https://calendar.app.google/x5FM2reA2PDo4JkA8"
+                                className={styles.contact}
+                            >
                                 Prendre rendez-vous
                             </a>
                         </div>
@@ -204,7 +246,6 @@ export default function Contact() {
                                 aria-label="Linkedin"
                                 target="_blank"
                                 rel="noopener"
-                                className={styles.contact}
                             >
                                 <FontAwesomeIcon
                                     icon={faLinkedin}
@@ -216,7 +257,6 @@ export default function Contact() {
                                 aria-label="Facebook"
                                 target="_blank"
                                 rel="noopener"
-                                className={styles.contact}
                             >
                                 <FontAwesomeIcon
                                     icon={faSquareFacebook}

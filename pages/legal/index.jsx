@@ -5,13 +5,17 @@ export default function Legal() {
     return (
         <main className={styles.legalNoticeWrapper}>
             <h1>Mentions légales</h1>
+
             <h2>Site officiel de TechQuest</h2>
-            Tél. : 07 81 84 76 57 SIRET : ...
+            Tél. : 07 81 84 76 57 <br />
+            SIRET : ...
+
             <h2>Conception technique et réalisation</h2>
             TechQuest
             <a href="www.techquest.fr">www.techquest.fr</a>
+            
             <h2>Hébergement</h2>
-            OVH sarl 140 Quai du Sartel 59100 ROUBAIX
+            TechQuest est hébergé par HOSTINGER, dont le siège social est situé HOSTINGER INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : <a href="https://www.hostinger.fr/contact">https://www.hostinger.fr/contact</a>.
             <h2>Crédits photos, vidéos & illustrations</h2>
             Video, photos : Benedict Priam
             <br /> Illustrations : freepik.com
@@ -47,7 +51,7 @@ export default function Legal() {
             de modification, de rectification et de suppression des données qui
             vous concernent.
             <br /> Pour l'exercer, adressez-vous à TechQuest aux coordonnées
-            suivantes : contact@techquest.fr
+            suivantes : <a href="mailto:contact@techquest.fr">contact@techquest.fr</a>
         </main>
     )
 }

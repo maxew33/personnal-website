@@ -49,16 +49,13 @@
     }
 }
 
+.videoPlayer {
+    display: grid;
+}
+
 .videoTitle {
     @include comment($url: '/assets/home/bgarrow.webp', $color: var(--grey));
     left: 1.75rem;
-}
-
-.videoPlayer {
-    display: grid;
-    place-content: center;
-    border-radius: 7px;
-    overflow: hidden;
 }
 
 .content {

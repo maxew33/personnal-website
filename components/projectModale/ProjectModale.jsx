@@ -38,7 +38,9 @@ export default function ProjectModale({ id, handleClose }) {
             <div className={styles.container}>
                 {data ? (
                     <div className={styles.content}>
-                        <h2 className={styles.title}>{data.name}</h2>
+                        <h2 className={styles.title}>{data.name.map((word, index)=>(
+                            <>{word + ' '}<br/></>
+                        ))}</h2>
                         <p className={styles.description}>{data.description}</p>
                         <div
                             className={`${styles.contentWrapper} ${styles.objectives}`}
@@ -66,18 +68,12 @@ export default function ProjectModale({ id, handleClose }) {
                             <h3 className={styles.contentTitle}>
                                 Points forts :
                             </h3>{' '}
-                            <ul>
+                            <ul className={styles.hightlightsList}>
                                 {data.highlights.map((highlight, index) => (
                                     <li
                                         key={`hightlight${index}`}
                                         className={styles.contentText}
                                     >
-                                        <Image
-                                            src="/assets/logo.webp"
-                                            width={13.5}
-                                            height={15}
-                                            className={styles.logo}
-                                        />{' '}
                                         {highlight}
                                     </li>
                                 ))}

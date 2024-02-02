@@ -48,6 +48,10 @@
   background-size: contain;
 }
 
+.videoPlayer {
+  display: grid;
+}
+
 .videoTitle {
   position: absolute;
   top: -2.5rem;
@@ -69,13 +73,6 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
-}
-
-.videoPlayer {
-  display: grid;
-  place-content: center;
-  border-radius: 7px;
-  overflow: hidden;
 }
 
 .content {

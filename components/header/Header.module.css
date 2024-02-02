@@ -129,21 +129,21 @@
 }
 
 .navigationWrapper {
+  --clippy: 0%;
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   background: var(--secondary);
-  clip-path: circle(0% at 50% 1.75rem);
+  clip-path: circle(var(--clippy) at calc(50% - 0.5rem) 2rem);
   transition: clip-path 0.5s ease-in-out;
   display: grid;
   grid-template-areas: "navigation contact";
 }
 
 .navigationWrapperOpen {
-  display: grid;
-  clip-path: circle(150% at 50% 1.75rem);
+  --clippy: 150%;
 }
 
 .navigation {

@@ -94,8 +94,8 @@ export default function About(props) {
                         {startVideo && (
                             <ReactPlayer
                                 url="/assets/video/ben-video.mp4"
-                                width={'unset'}
-                                height={'unset'}
+                                width={'100%'}
+                                height={'100%'}
                                 muted
                                 loop
                                 playing
