@@ -10,6 +10,7 @@ import {
     faFacebookSquare,
     faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
+import Wave from '../wave/wave'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -148,6 +149,7 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
+                    <Wave positionPlace="bottom"/>
                 </section>
             </header>
         </div>

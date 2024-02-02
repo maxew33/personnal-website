@@ -74,12 +74,6 @@
   font-size: 1.5rem;
 }
 
-.link::after {
-  z-index: -1;
-  height: 4px;
-  border-radius: 10px;
-}
-
 .burger {
   position: absolute;
   z-index: 2;
@@ -135,7 +129,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--secondary);
+  background-color: var(--secondary);
   clip-path: circle(var(--clippy) at calc(50% - 0.5rem) 2rem);
   transition: clip-path 0.5s ease-in-out;
   display: grid;
@@ -155,16 +149,24 @@
   text-transform: capitalize;
   font-family: var(--fontfam1);
   color: var(--bg);
-  font-size: 3.5rem;
+  font-size: 8.5vh;
+  height: 80svh;
 }
 .navigation a {
   color: unset;
+}
+
+.link::after {
+  z-index: -1;
+  height: 4px;
+  border-radius: 10px;
 }
 
 .contact {
   grid-area: contact;
   font-size: 1.75rem;
   position: relative;
+  height: 80svh;
   line-height: 1.75;
   padding: 10% 0 5%;
   display: flex;
@@ -214,12 +216,21 @@
 
 @media screen and (max-width: 800px) {
   .navigationWrapper {
-    min-height: 100vh;
-    min-height: 100svh;
-    padding: 5rem 0;
+    height: calc(100vh - 12.5rem);
+    padding: 5rem 0 7.5rem;
     grid-template-areas: "navigation" "contact";
   }
+  .navigation {
+    font-size: 3rem;
+    max-height: 35svh;
+  }
   .contact {
+    max-height: 30svh;
     margin-bottom: 5vh;
+  }
+  .navBarlogo {
+    height: 10vh;
+    width: auto;
+    margin-right: 1rem;
   }
 }

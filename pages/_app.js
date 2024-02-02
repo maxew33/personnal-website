@@ -3,9 +3,23 @@ import AppContext from '@/components/context/AppContext'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+import { init } from '@socialgouv/matomo-next'
+
+const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL
+const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID
 
 export default function App({ Component, pageProps }) {
+    useEffect(() => {
+        init({
+            url: MATOMO_URL,
+            siteId: MATOMO_SITE_ID,
+            excludeUrlsPatterns: [/^\/login.php/, /\?token=.+/],
+            disableCookies: true,
+        })
+    }, [])
+
     const [darkMode, setDarkMode] = useState(false)
 
     return (
