@@ -41,7 +41,7 @@
     align-items: center;
     width: min(100%, 1000px);
     height: 25rem;
-    margin: 5rem auto;
+    margin: 7.5rem auto 10rem;
 }
 
 .projectsContainer{
@@ -266,4 +266,9 @@
         height: 276px;
         width: 182px;
     }
+
+    .carousel{
+        margin: 5rem auto;
+    }
 }
+

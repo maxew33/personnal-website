@@ -21,11 +21,11 @@
 
 .exit {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 1rem;
+  right: 1rem;
   border: none;
   background: unset;
-  font-size: 2rem;
+  font-size: 3rem;
   color: white;
   cursor: pointer;
 }
@@ -35,7 +35,7 @@
   width: min(98%, 90vw);
   margin: auto;
   display: grid;
-  grid-template-areas: "title title" "description description" "objectives objectives" "implementation illus" "hightlights illus";
+  grid-template-areas: "title title" "description description" "objectives illus" "implementation illus" "hightlights illus";
   gap: 1.5rem;
 }
 
@@ -52,6 +52,9 @@
   grid-area: description;
   margin-bottom: 0.75rem;
 }
+.description span {
+  display: block;
+}
 
 .contentTitle {
   font-size: 1.5rem;
@@ -63,11 +66,21 @@
 
 .contentText {
   line-height: 1.5;
-  padding: 0.5rem 1rem;
+  margin-left: 1.5rem;
   font-size: 1.15rem;
 }
-.contentText > *:not(:first-child) {
-  margin-top: 0.75rem;
+.contentText span {
+  display: block;
+}
+
+.highlight {
+  margin-left: 3rem;
+}
+
+.contentLink {
+  margin-left: 5rem;
+  grid-area: illus;
+  align-self: end;
 }
 
 .contentIllus {
@@ -75,11 +88,6 @@
   max-width: 30rem;
   height: auto;
   object-fit: contain;
-}
-
-.contentLink {
-  margin-left: 5rem;
-  grid-area: illus;
 }
 
 .objectives {

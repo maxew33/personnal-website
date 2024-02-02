@@ -30,18 +30,27 @@ export default function ProjectModale({ id, handleClose }) {
     return (
         <motion.article
             className={styles.article}
-            initial={{ opacity: 0.5, gridTemplateRows: "0fr"}}
-            animate={{ opacity: 1,  gridTemplateRows: "1fr" }}
+            initial={{ opacity: 0.5, gridTemplateRows: '0fr' }}
+            animate={{ opacity: 1, gridTemplateRows: '1fr' }}
             transition={{ ease: 'linear', duration: 0.5 }}
-            exit={{ opacity: 0.5,  gridTemplateRows: "0fr" }}
+            exit={{ opacity: 0.5, gridTemplateRows: '0fr' }}
         >
             <div className={styles.container}>
                 {data ? (
                     <div className={styles.content}>
-                        <h2 className={styles.title}>{data.name.map((word, index)=>(
-                            <>{word + ' '}<br/></>
-                        ))}</h2>
-                        <p className={styles.description}>{data.description}</p>
+                        <h2 className={styles.title}>
+                            {data.name.map((word, index) => (
+                                <span key={`word` + index}>
+                                    {word + ' '}
+                                    <br />
+                                </span>
+                            ))}
+                        </h2>
+                        <p className={styles.description}>
+                            {data.description.map((line, index) => (
+                                <span key={`description${index}`}>{line}</span>
+                            ))}
+                        </p>
                         <div
                             className={`${styles.contentWrapper} ${styles.objectives}`}
                         >
@@ -49,7 +58,11 @@ export default function ProjectModale({ id, handleClose }) {
                                 Objectifs :{' '}
                             </h3>
                             <div className={styles.contentText}>
-                                {data.objectives}
+                                {data.objectives.map((line, index) => (
+                                    <span key={`objectives${index}`}>
+                                        {line}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                         <div
@@ -59,7 +72,11 @@ export default function ProjectModale({ id, handleClose }) {
                                 Réalisation :{' '}
                             </h3>
                             <div className={styles.contentText}>
-                                {data.implementation}
+                                {data.implementation.map((line, index) => (
+                                    <span key={`implementation${index}`}>
+                                        {line}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                         <div
@@ -72,7 +89,7 @@ export default function ProjectModale({ id, handleClose }) {
                                 {data.highlights.map((highlight, index) => (
                                     <li
                                         key={`hightlight${index}`}
-                                        className={styles.contentText}
+                                        className={`${styles.contentText} ${styles.highlight}`}
                                     >
                                         {highlight}
                                     </li>
@@ -86,9 +103,7 @@ export default function ProjectModale({ id, handleClose }) {
                             className={styles.contentLink}
                         >
                             <Image
-                                src={
-                                    data.result.illus
-                                }
+                                src={data.result.illus}
                                 height={295}
                                 width={530}
                                 className={styles.contentIllus}
@@ -100,10 +115,7 @@ export default function ProjectModale({ id, handleClose }) {
                     <div>Nous ne retrouvons pas l'article demandé.</div>
                 )}
                 <button onClick={handleClose} className={styles.exit}>
-                    <FontAwesomeIcon
-                        icon={faXmark}
-                        className={styles.icon}
-                    />
+                    <FontAwesomeIcon icon={faXmark} className={styles.icon} />
                 </button>
             </div>
         </motion.article>
