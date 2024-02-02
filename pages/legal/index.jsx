@@ -5,53 +5,86 @@ export default function Legal() {
     return (
         <main className={styles.legalNoticeWrapper}>
             <h1>Mentions légales</h1>
-
-            <h2>Site officiel de TechQuest</h2>
-            Tél. : 07 81 84 76 57 <br />
-            SIRET : ...
-
-            <h2>Conception technique et réalisation</h2>
-            TechQuest
-            <a href="www.techquest.fr">www.techquest.fr</a>
-            
-            <h2>Hébergement</h2>
-            TechQuest est hébergé par HOSTINGER, dont le siège social est situé HOSTINGER INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : <a href="https://www.hostinger.fr/contact">https://www.hostinger.fr/contact</a>.
-            <h2>Crédits photos, vidéos & illustrations</h2>
-            Video, photos : Benedict Priam
-            <br /> Illustrations : freepik.com
-            <h2>Commentaires, remarques et suggestions</h2>
-            TechQuest ne garantit pas que ce site soit exempt de défaut,
-            d'erreur ou d'omission. L'information qui y est contenue est
-            destinée à vous apporter des indications générales et les mieux
-            actualisées possibles sur les sujets traités. <br />
-            TechQuest ne saurait en aucun cas être tenue responsable des
-            éventuels défauts, erreurs ou omissions existant dans ce site, ni de
-            l'utilisation et de l'interprétation de l'information qu'il
-            contient.
-            <br /> La présente clause de réserve juridique n'a pas pour objet de
-            limiter la responsabilité de l'agence de manière contraire à la
-            législation nationale applicable ni de l'exclure dans les cas où
-            elle peut être engagée en vertu de ladite législation. Droits
-            d'auteurs et propriété intellectuelle Le présent site constitue une
-            œuvre dont TechQuest est l'auteur au sens des articles L.111-1 et
-            suivants du Code de la propriété intellectuelle.
-            <br /> Sauf autorisation écrite de TechQuest, toutes utilisations
-            des œuvres autres que la reproduction et la consultation
-            individuelles et privées, conformes à l'article L.122-5 du Code de
-            la propriété intellectuelle, sont interdites. En aucun cas, ces
-            reproductions ne sauraient porter préjudice aux droits des tiers.
-            <h2>Protection des données personnelles, confidentialité</h2>
-            Aucune information personnelle n'est collectée à votre insu. Aucune
-            information personnelle n'est cédée à des tiers. Conformément à la
-            loi du 6 janvier 1978 relative à l'informatique, aux fichiers et aux
-            libertés, ce site a fait l'objet d'une déclaration auprès de la
-            Commission Nationale Informatique et Libertés (n° d'enregistrement
-            1165058). Pour toute collecte d'informations privées via les
-            formulaires présents sur ce site, vous disposez d'un droit d'accès,
-            de modification, de rectification et de suppression des données qui
-            vous concernent.
-            <br /> Pour l'exercer, adressez-vous à TechQuest aux coordonnées
-            suivantes : <a href="mailto:contact@techquest.fr">contact@techquest.fr</a>
+            <section>
+                <h2>Édition du site</h2>
+                En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004
+                pour la confiance dans l'économie numérique, il est précisé aux
+                utilisateurs du site internet{' '}
+                <a href="https://techquest.fr/">https://techquest.fr/</a>{' '}
+                l'identité des différents intervenants dans le cadre de sa
+                réalisation et de son suivi :<h3>Propriétaire du site</h3>
+                Maxime Malfilâtre <br />
+                Contact :{' '}
+                <a href="mailto:contact@techquest.fr">contact@techquest.fr</a> /
+                07 81 84 76 57
+                <h3>Identification de l'entreprise</h3>
+                EI - SIREN : 84281711600010
+                <h3>Hébergeur</h3>
+                AutreHOSTINGER HOSTINGER INTERNATIONAL LTD <br />
+                61 Lordou Vironos Street, 6023 Larnaca, Chypre
+                <h3>Autres contributeurs</h3>
+                Photos et video : Benedict Priam - unsplash <br />
+                Illustrations : freepik <br />
+                Mentions légales générées par{' '}
+                <a href="https://la-webeuse.com/generateur-mentions-legales">
+                    la-webeuse.com
+                </a>
+            </section>
+            <section>
+                <h2>Propriété intellectuelle et contrefaçons</h2>
+                Maxime Malfilâtre est propriétaire des droits de propriété
+                intellectuelle et détient les droits d'usage sur tous les
+                éléments accessibles sur le site internet, notamment les textes,
+                images, graphismes, logos, vidéos, architecture, icônes et sons.
+                <br /> Toute reproduction, représentation, modification,
+                publication, adaptation de tout ou partie des éléments du site,
+                quel que soit le moyen ou le procédé utilisé, est interdite,
+                sauf autorisation écrite préalable de Maxime Malfilâtre.
+                <br /> Toute exploitation non autorisée du site ou de l'un
+                quelconque des éléments qu'il contient sera considérée comme
+                constitutive d'une contrefaçon et poursuivie conformément aux
+                dispositions des articles L.335-2 et suivants du Code de
+                Propriété Intellectuelle.
+            </section>
+            <section>
+                <h2>Limitations de responsabilité</h2>
+                Maxime Malfilâtre ne pourra être tenu pour responsable des
+                dommages directs et indirects causés au matériel de
+                l'utilisateur, lors de l'accès au site{' '}
+                <a href="https://techquest.fr/">https://techquest.fr/</a>.{' '}
+                <br />
+                Maxime Malfilâtre décline toute responsabilité quant à
+                l'utilisation qui pourrait être faite des informations et
+                contenus présents sur
+                <a href="https://techquest.fr/">https://techquest.fr/</a>.
+                <br />
+                Maxime Malfilâtre s'engage à sécuriser au mieux le site
+                <a href="https://techquest.fr/">https://techquest.fr/</a>,
+                cependant sa responsabilité ne pourra être mise en cause si des
+                données indésirables sont importées et installées sur son site à
+                son insu.
+            </section>
+            <section>
+                <h2>CNIL et gestion des données personnelles.</h2>
+                Conformément aux dispositions de la loi 78-17 du 6 janvier 1978
+                modifiée, l'utilisateur du site{' '}
+                <a href="https://techquest.fr/">https://techquest.fr/</a>{' '}
+                dispose d'un droit d'accès, de modification et de suppression
+                des informations collectées.
+                <br /> Pour exercer ce droit, envoyez un message à{' '}
+                <a href="mailto:contact@techquest.fr">
+                    contact@techquest.fr
+                </a>.{' '}
+            </section>
+            <section>
+                <h2> Droit applicable et attribution de juridiction.</h2> Tout
+                litige en relation avec l'utilisation du site{' '}
+                <a href="https://techquest.fr/">https://techquest.fr/</a> est
+                soumis au droit français.
+                <br /> En dehors des cas où la loi ne le permet pas, il est fait
+                attribution exclusive de juridiction aux tribunaux compétents de
+                Bordeaux.
+            </section>
         </main>
     )
 }
