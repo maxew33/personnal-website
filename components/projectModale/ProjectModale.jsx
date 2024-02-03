@@ -54,9 +54,7 @@ export default function ProjectModale({ id, handleClose }) {
                         <div
                             className={`${styles.contentWrapper} ${styles.objectives}`}
                         >
-                            <h3 className={styles.contentTitle}>
-                                Objectifs :{' '}
-                            </h3>
+                            <h3 className={styles.contentTitle}>Objectif</h3>
                             <div className={styles.contentText}>
                                 {data.objectives.map((line, index) => (
                                     <span key={`objectives${index}`}>
@@ -68,9 +66,7 @@ export default function ProjectModale({ id, handleClose }) {
                         <div
                             className={`${styles.contentWrapper} ${styles.implementation}`}
                         >
-                            <h3 className={styles.contentTitle}>
-                                Réalisation :{' '}
-                            </h3>
+                            <h3 className={styles.contentTitle}>Réalisation</h3>
                             <div className={styles.contentText}>
                                 {data.implementation.map((line, index) => (
                                     <span key={`implementation${index}`}>
@@ -83,8 +79,8 @@ export default function ProjectModale({ id, handleClose }) {
                             className={`${styles.contentWrapper} ${styles.highlights}`}
                         >
                             <h3 className={styles.contentTitle}>
-                                Points forts :
-                            </h3>{' '}
+                                Points forts
+                            </h3>
                             <ul className={styles.hightlightsList}>
                                 {data.highlights.map((highlight, index) => (
                                     <li

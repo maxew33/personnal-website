@@ -30,6 +30,7 @@ body {
     color: var(--text);
     font-family: var(--fontfam2);
     @include sectionBg;
+    overflow-x: hidden;
 }
 
 #__next {

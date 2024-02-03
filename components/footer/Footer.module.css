@@ -91,14 +91,14 @@
   color: var(--primary);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .footerWrapper {
     row-gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "logo solutions contact social" "logo solutions contact social" "copyright copyright legal legal";
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .footerWrapper {
     display: flex;
     flex-direction: column;

@@ -1,55 +1,54 @@
 .about {
-  background: var(--primary);
-  min-height: 150vh;
+  min-height: 300vh;
 }
 
 .article {
-  height: 100%;
+  width: 100vw;
+  max-width: unset;
+  height: auto;
+  min-height: 95vh;
   display: flex;
+  flex-direction: column;
   gap: 5rem;
-}
-.article > * {
-  flex-basis: 100%;
+  padding-top: 10rem;
+  position: sticky;
+  top: 0rem;
+  background: var(--primary);
 }
 
 .titleWrapper {
-  height: 80vh;
-  position: sticky;
+  width: 98%;
+  height: 25vh;
+  max-width: 1400px;
+  margin-inline: auto;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  top: 5rem;
-  width: 50%;
 }
 
 .title {
   font-size: 5rem;
   color: #fff;
-  width: 100%;
   text-align: center;
+  font-family: var(--fontfam1);
 }
 
 .videoPlayerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 100%;
+  height: 100%;
   aspect-ratio: 20/11;
-  border-radius: 10px;
 }
 .videoPlayerContainer::after {
   content: "";
   position: absolute;
   height: 105%;
   width: 105%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-image: url("/assets/home/emptyTablet.webp");
   background-size: contain;
-}
-
-.videoPlayer {
-  display: grid;
+  background-repeat: no-repeat;
 }
 
 .videoTitle {
@@ -75,111 +74,70 @@
   background-size: contain;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.presentationWrapper {
+  height: 50vh;
+  width: 100vw;
+  overflow: hidden;
+  position: sticky;
+  top: calc(25vh + 15rem);
+}
+
+.presentationText {
   position: relative;
-  margin: 100vh 0;
+  width: 100vw;
+  height: 50vh;
+  background-image: url("/assets/home/monumentGirondins.webp");
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: contain;
 }
 
-.contentWrapper {
-  min-height: calc(15vh - 2rem);
-  margin: 15vh 0;
-  padding: 1rem;
-  font-size: 1.5rem;
-  line-height: 1.15;
-  display: grid;
-  align-content: center;
-  position: sticky;
-  background: linear-gradient(rgba(255, 255, 255, 0.3333333333), rgba(255, 255, 255, 0.3333333333)), var(--primary);
-  border-radius: 7px;
-}
-.contentWrapper:nth-child(1) {
-  top: 17.5vh;
-}
-.contentWrapper:nth-child(2) {
-  top: 35vh;
-}
-.contentWrapper:nth-child(3) {
-  top: 52.5vh;
-}
-.contentWrapper:nth-child(4) {
-  top: 70vh;
-}
-.contentWrapper:nth-child(5) {
-  top: 87.5vh;
-}
-.contentWrapper:last-child {
-  background: rgba(0, 0, 0, 0);
+.text {
+  position: relative;
+  display: block;
+  line-height: 1.5;
+  font-size: 3rem;
+  color: var(--bg);
 }
 
-.contentText {
-  position: sticky;
-  top: 5rem;
+.textA {
+  font-size: 4.5rem;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
-  .article {
-    flex-direction: column;
-  }
   .titleWrapper {
-    min-height: 30rem;
     flex-direction: row-reverse;
-    width: 100%;
-    z-index: 5;
-  }
-  .contentWrapper {
-    margin: 2.5rem 0;
-    min-height: 5rem;
-  }
-  .contentWrapper:nth-child(1) {
-    top: 36rem;
-  }
-  .contentWrapper:nth-child(2) {
-    top: 42rem;
-  }
-  .contentWrapper:nth-child(3) {
-    top: 48rem;
-  }
-  .contentWrapper:nth-child(4) {
-    top: 54rem;
-  }
-  .contentWrapper:nth-child(5) {
-    top: 60rem;
   }
 }
-@media screen and (max-width: 910px) {
-  .titleWrapper {
-    min-height: 25rem;
-  }
-  .title {
-    font-size: 3.5rem;
-  }
-  .contentWrapper:nth-child(1) {
-    top: 32.5rem;
-  }
-  .contentWrapper:nth-child(2) {
-    top: 40rem;
-  }
-  .contentWrapper:nth-child(3) {
-    top: 47.5rem;
-  }
-  .contentWrapper:nth-child(4) {
-    top: 55rem;
-  }
-  .contentWrapper:nth-child(5) {
-    top: 62.5rem;
+@media screen and (max-width: 1080px) {
+  .videoPlayerContainer {
+    width: 40vw;
+    height: unset;
+    margin-inline: 2rem;
   }
 }
 @media screen and (max-width: 767px) {
+  .article {
+    padding-top: 5rem;
+  }
   .titleWrapper {
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     margin: auto;
+    gap: 5rem;
+  }
+  .title {
+    font-size: 10vw;
   }
   .videoTitle {
     left: 0.5rem;
+  }
+  .text {
+    font-size: 5vw;
+  }
+  .textA {
+    font-size: 12.5vw;
   }
 }
 @media screen and (max-width: 576px) {
@@ -188,25 +146,5 @@
   }
   .videoTitle {
     display: none;
-  }
-  .contentWrapper {
-    margin: 2.5rem 0;
-    min-height: 10vh;
-    font-size: 2.25vh;
-  }
-  .contentWrapper:nth-child(1) {
-    top: 51.5vh;
-  }
-  .contentWrapper:nth-child(2) {
-    top: 63vh;
-  }
-  .contentWrapper:nth-child(3) {
-    top: 74.5vh;
-  }
-  .contentWrapper:nth-child(4) {
-    top: 86vh;
-  }
-  .contentWrapper:nth-child(5) {
-    top: 97.5vh;
   }
 }

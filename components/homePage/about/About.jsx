@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Wave from '../../wave/wave'
-import { motion } from 'framer-motion'
+import { motion, useTransform, useScroll } from 'framer-motion'
 import styles from './About.module.css'
 
 async function getTextData() {
@@ -26,20 +26,30 @@ export default function About(props) {
 
     const targetRef = useRef()
 
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+    })
+
+    const textAX = useTransform(scrollYProgress, [0, .75], ['100vw', '5vw'])
+    const textBX = useTransform(scrollYProgress, [.15, .5], ['100vw', '5vw'])
+    const textCX = useTransform(scrollYProgress, [.15, .7], ['100vw', '5vw'])
+    const textDX = useTransform(scrollYProgress, [.15, .6], ['100vw', '5vw'])
+    const textEX = useTransform(scrollYProgress, [.15, .75], ['100vw', '5vw'])
+
     const height = props.height
 
     const titleAnimationVariants = {
         initial: {
             opacity: 0,
-            scale: 0,
-            y: height / 2,
+            scale: 0.75,
+            y: 16,
         },
         animate: {
             opacity: 1,
             scale: 1,
             y: 0,
             transition: {
-                delay: 0.25,
+                delay: 0.125,
             },
         },
     }
@@ -51,7 +61,7 @@ export default function About(props) {
         animate: {
             opacity: 1,
             transition: {
-                delay: 0.5,
+                delay: 0.25,
             },
         },
     }
@@ -70,7 +80,7 @@ export default function About(props) {
                         viewport={{ once: true }}
                         transition={{
                             duration: 1,
-                            delay: 0.5,
+                            delay: 0.25,
                         }}
                     >
                         Votre contact
@@ -81,6 +91,7 @@ export default function About(props) {
                         variants={videoPlayerVariants}
                         initial="initial"
                         whileInView="animate"
+                        viewport={{ once: true }}
                     >
                         {startTitle && (
                             <motion.div
@@ -104,17 +115,15 @@ export default function About(props) {
                         )}
                     </motion.div>
                 </div>
-                <div className={styles.content}>
-                    {textData &&
-                        textData.map((data, id) => (
-                            <p
-                                className={styles.contentWrapper}
-                                key={'data' + id}
-                            >
-                                {data}
-                            </p>
-                        ))}
-                    <p className={styles.contentWrapper}></p>
+
+                <div className={styles.presentationWrapper}>
+                    <div className={styles.presentationText} >
+                        <motion.span className={`${styles.text} ${styles.textA}`} style={{ x: textAX }}>Maxime</motion.span>
+                        <motion.span className={`${styles.text} ${styles.textB}`} style={{ x: textBX }}>Développeur web</motion.span>
+                        <motion.span className={`${styles.text} ${styles.textC}`} style={{ x: textCX }}>Bordelais</motion.span>
+                        <motion.span className={`${styles.text} ${styles.textD}`} style={{ x: textDX }}>A hâte de vous rencontrer</motion.span>
+                        <motion.span className={`${styles.text} ${styles.textE}`} style={{ x: textEX }}>Aime bien une chocolatine</motion.span>
+                    </div>
                 </div>
             </article>
         </section>

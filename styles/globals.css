@@ -239,6 +239,7 @@ body {
   background-color: var(--bg);
   background-image: url("/assets/grainy.webp");
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 #__next {
