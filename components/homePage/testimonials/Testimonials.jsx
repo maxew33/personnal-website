@@ -71,7 +71,9 @@ export default function Testimonials() {
                                 {testimonial.content}
                             </motion.blockquote>
                             <span className={styles.author}>
-                                {testimonial.author}
+                                {testimonial.author.map((line, index) => (
+                                    <span key={'testimonial'+index}>{line}</span>
+                                ))}
                             </span>
                             <Link
                                 className={styles.link}
@@ -80,10 +82,6 @@ export default function Testimonials() {
                                 target="_blank"
                             >
                                 Voir le site
-                                <FontAwesomeIcon
-                                    icon={faUpRightFromSquare}
-                                    className={styles.icon}
-                                />
                             </Link>
                         </article>
                     ))}

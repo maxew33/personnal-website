@@ -1,13 +1,14 @@
 @import './scss/base/reset', './scss/utils/mixins', './scss/components/buttons',
     './scss/utils/variables', './scss/pages/home/home';
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Varela+Round&family=Kalam&display=swap');
 
 /* END OF RESET */
 /*
 font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
+font-family: 'Varela Round', sans-serif;
 */
 
 :root {
@@ -21,7 +22,7 @@ font-family: 'Kalam', cursive;
     --grey: #{$grey};
 
     --fontfam1: 'Archivo Black', serif;
-    --fontfam2: 'Source Sans 3', sans-serif;
+    --fontfam2: 'Varela Round', sans-serif;
     --fontfam3: 'Kalam', cursive;
 }
 

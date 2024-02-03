@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Varela+Round&family=Kalam&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -219,6 +219,7 @@ blockquote {
 font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
+font-family: 'Varela Round', sans-serif;
 */
 :root {
   --bg: #f6f2ea;
@@ -228,7 +229,7 @@ font-family: 'Kalam', cursive;
   --redText: #E02F1F;
   --grey: #d9d9d9;
   --fontfam1: "Archivo Black", serif;
-  --fontfam2: "Source Sans 3", sans-serif;
+  --fontfam2: "Varela Round", sans-serif;
   --fontfam3: "Kalam", cursive;
 }
 

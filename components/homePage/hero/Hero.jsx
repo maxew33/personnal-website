@@ -66,19 +66,19 @@ export default function Hero(props) {
                     className={styles.title}
                     initial={{ x: 0, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ ease: 'linear', duration: 1.5 }}
+                    transition={{ ease: 'linear', duration: 0.75 }}
                 >
-                    Soyez{' '}
-                    <motion.span className={styles.highlighted}>
-                        en ligne
-                    </motion.span>{' '}
-                    avec un site qui{' '}
-                    <span className={styles.highlighted}>vous</span> ressemble.
+                    <span className={styles.highlighted}>TechQuest</span>
+                    <br />
                 </motion.h1>
 
                 <h2 className={styles.presentation}>
-                    <span className={styles.highlighted}>TechQuest</span> ,
-                    création de sites web originaux.
+                    Avec <span className={styles.highlighted}>Maxime</span>, soyez{' '}
+                    <motion.span className={styles.highlighted}>
+                        en ligne
+                    </motion.span><br/>
+                    avec un site qui{' '}
+                    <span className={styles.highlighted}>vous</span> ressemble.
                 </h2>
 
                 <div className={styles.linkWrapper}>
@@ -119,7 +119,7 @@ export default function Hero(props) {
                     }}
                     animate={{ x: 0, y: 0, rotate: 0, opacity: 1, scale: 1 }}
                     style={{ originX: 0.5, originY: 1 }}
-                    transition={{ duration: 0.75, delay: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                     onAnimationComplete={() => setStartTitle(true)}
                 >
                     <div className={styles.commentContainer}>

@@ -67,8 +67,17 @@
     margin-top: 1rem;
 }
 
+.author span{
+    display: block;
+    &:not(:first-child){
+        font-size: .75em;
+        margin-top: .5rem;
+    }
+}
+
 .link {
     position: absolute;
+    font-style: italic;
     right: 0;
     width: auto;
     color: unset;

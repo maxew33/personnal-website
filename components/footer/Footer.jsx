@@ -11,11 +11,11 @@ import Wave from '../wave/wave'
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <Wave />
+            <Wave color={'var(--secondary)'}/>
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.logoWrapper}>
                     <Image
-                        src="/assets/logoB.webp"
+                        src="/assets/logoW.webp"
                         width={118}
                         height={129}
                         alt="logo de techquest"

@@ -19,20 +19,20 @@
 
 .title {
     grid-area: title;
-    font-size: 4rem;
-    line-height: 1.15;
+    font-size: 7rem;
     align-self: center;
 }
 
 .presentation {
     grid-area: welcome;
-    font-size: 2rem;
+    font-size: 2.5rem;
     place-self: baseline;
     font-family: var(--fontfam2);
+    line-height: 1.5;
 
     & .highlighted{
         font-weight: bold;
-        font-size: 3rem;
+        // font-size: 3rem;
     }
 }
 
@@ -60,7 +60,7 @@
     grid-area: carousel;
     height: 100%;
     width: 100%;
-    &::after{
+    &::before{
         content:"";
         position: absolute;
         top: 0;
@@ -72,10 +72,10 @@
         background-repeat: no-repeat;
         background-size: 35rem;
         background-position: bottom right;
-        z-index: 10;
+        // z-index: 10;
     }
     
-    &::before{
+    &::after{
         content:"";
         position: absolute;
         bottom: 17.2rem;
@@ -94,6 +94,7 @@
     right: 11.15rem;
     aspect-ratio: 0.58;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .carouselIllus {

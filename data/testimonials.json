@@ -3,21 +3,21 @@
         {
             "id": 0,
             "content": "Nous sommes extrêmement satisfaits du site web que Maxime a créé. Son approche professionnelle et son attention aux détails ont permis de mettre en valeur notre expertise de manière élégante.",
-            "author": "Christophe V.",
+            "author": ["Christophe V.", "cabinet capPatrimoine"],
             "link": "https://cabinet-cap-patrimoine.fr/",
             "me": false
         },
         {
             "id": 1,
             "content": "Maxime est un professionnel à la fois très réactif et très à l'écoute. Quelqu'un sur qui l'on peut se fier. Il semble avoir une solution pour chaque problème et c'est toujours un atout pour moi de travailler avec lui.",
-            "author": "Jérémie H.",
+            "author": ["Jérémie H.", "graphiste Bordelais"],
             "link": "https://jeremie-bonne.fr/",
             "me": false
         },
         {
             "id": 2,
             "content": "Avec ce portfolio, j'ai voulu aller au-delà de la simple présentation de mes compétences : j'ai essayé de proposer une véritable expérience immersive pour mes visiteurs.",
-            "author": "Maxime M.",
+            "author": ["Maxime M.", "développeur web"],
             "link": "https://www.maxime-malfilatre.com",
             "me": true
         }

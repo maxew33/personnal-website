@@ -1,10 +1,10 @@
 .footer {
   position: relative;
   top: 5rem;
-  background: var(--primary);
-  padding: 2.5rem 0 5rem;
+  background: var(--secondary);
+  padding: 2.5rem 0 7.5rem;
   font-size: 1.5rem;
-  color: black;
+  color: var(--bg);
   font-weight: 500;
 }
 .footer a {
@@ -54,7 +54,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: var(--text);
+  background: var(--bg);
   transform: scaleX(0);
   transition: transform 0.15s linear;
   transform-origin: left;
@@ -84,11 +84,11 @@
 
 .icon {
   font-size: 2rem;
-  color: var(--text);
+  color: var(--bg);
   transition: color 0.125s linear;
 }
 .icon:hover {
-  color: var(--bg);
+  color: var(--primary);
 }
 
 @media screen and (max-width: 1000px) {
