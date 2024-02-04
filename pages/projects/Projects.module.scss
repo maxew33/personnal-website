@@ -13,17 +13,17 @@
 }
 
 .header {
-    margin: 4rem auto 4rem;
+    margin: 2rem auto 4rem;
     width: min(1000px, 98%);
 }
 
 .headerTitle {
     @include title;
+    margin: unset;
 }
 
 .headerContent {
     font-size: 1.25rem;
-    margin: 5rem 0 5rem;
     text-align: center;
 }
 
@@ -41,7 +41,7 @@
     align-items: center;
     width: min(100%, 1000px);
     height: 25rem;
-    margin: 7.5rem auto 10rem;
+    margin: 5rem auto 10rem;
 }
 
 .projectsContainer{
@@ -60,14 +60,14 @@
     cursor: pointer;
     transform-origin: bottom right;
 
-    @for $i from 0 through 2 {
+    @for $i from 0 through 4 {
         &[data-position='#{$i}'] {
             z-index: $i + 2;
-            transform: rotate($i * 2.5deg);
+            transform: rotate($i * 1deg);
         }
     }
 
-    &:not([data-position='2']) {
+    &:not([data-position='4']) {
         pointer-events: none;
     }
 }
@@ -81,7 +81,7 @@
     width: 80%;
     text-align: center;
     transition: opacity 0.125s linear;
-    &[data-position='2'],
+    &[data-position='4'],
     &[data-position='-1'] {
         opacity: 1;
     }
@@ -175,7 +175,7 @@
 
 /* anim for moving discs from front to back */
 .projectContainer {
-    &[data-position='3'] {
+    &[data-position='5'] {
         z-index: 9;
         animation: linear 0.5s forwards running to-the-back;
     }
@@ -247,6 +247,11 @@
         z-index: 9;
     }
 }
+
+@media screen and (max-width: 1400px) {
+    .carousel {
+        margin: 10rem auto;
+    }}
 
 @media screen and (max-width: 576px) {
     .arrowsWrapper {

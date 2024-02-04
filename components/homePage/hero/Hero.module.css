@@ -71,7 +71,7 @@
   position: absolute;
   bottom: 17.2rem;
   width: 12.75rem;
-  right: 11.15rem;
+  right: 11.1rem;
   aspect-ratio: 0.58;
   background: black;
   overflow: hidden;
@@ -81,10 +81,16 @@
   position: absolute;
   bottom: 17.2rem;
   width: 12.75rem;
-  right: 11.15rem;
+  right: 11.1rem;
   aspect-ratio: 0.58;
   overflow: hidden;
   cursor: pointer;
+}
+
+.projectLink {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .carouselIllus {
@@ -140,22 +146,25 @@
   }
   .title {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 10vw;
   }
-  .carouselContainer::after {
-    background-size: 30rem;
+  .carouselContainer::after, .carouselContainer::before {
+    display: none;
   }
-  .carousel, .carouselContainer::before {
+  .carousel {
+    border: 5px solid var(--secondary);
+    border-radius: 7px;
     position: absolute;
-    bottom: 14.9rem;
-    width: 10.8rem;
-    right: 9.51rem;
+    width: 15rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .commentContainer {
     position: absolute;
     width: 7.5rem;
-    bottom: 35rem;
-    right: 9rem;
+    top: calc(50% - 13.5rem);
+    left: 50%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -166,20 +175,7 @@
     display: none;
   }
   .carousel {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 15rem;
-    right: 0;
-    border: 2px solid var(--secondary);
-    border-radius: 7px;
-  }
-  .commentContainer {
-    position: absolute;
-    width: 7.5rem;
-    top: 10%;
-    left: 50%;
   }
   .presentation {
     margin: auto;
@@ -196,28 +192,17 @@
     height: 110vh;
   }
   .article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: unset;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    grid-template-areas: "title" "carousel" "welcome" "link";
     margin-top: 5vh;
   }
   .title {
-    font-size: 5vh;
-  }
-  .presentation {
-    font-size: 2.5vh;
-  }
-  .presentation .highlighted {
-    font-size: 3.5vh;
-  }
-  .linkWrapper {
-    display: none;
+    font-size: 15vw;
   }
   .carouselContainer {
     background: unset;
     height: 31rem;
-  }
-  .presentation {
-    margin: unset;
   }
 }

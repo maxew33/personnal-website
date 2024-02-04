@@ -7,6 +7,7 @@ import {
     faLinkedin,
     faSquareFacebook,
 } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 
 export default function Hero(props) {
     const [illusData, setIllusData] = useState([])
@@ -73,10 +74,10 @@ export default function Hero(props) {
                 </motion.h1>
 
                 <h2 className={styles.presentation}>
-                    Avec <span className={styles.highlighted}>Maxime</span>, soyez{' '}
+                    Soyez{' '}
                     <motion.span className={styles.highlighted}>
                         en ligne
-                    </motion.span><br/>
+                    </motion.span>{' '}
                     avec un site qui{' '}
                     <span className={styles.highlighted}>vous</span> ressemble.
                 </h2>
@@ -143,23 +144,26 @@ export default function Hero(props) {
                         >
                             {illusData.length > 0 &&
                                 illusData.map((illus, index) => (
-                                    <Image
-                                        key={'illus' + index}
-                                        src={illus.path}
-                                        height="350"
-                                        width="204"
-                                        className={styles.carouselIllus}
-                                        alt={illus.name}
-                                        data-position={
-                                            index + counter >
-                                            illusData.length - 1
-                                                ? index +
-                                                  counter -
-                                                  illusData.length
-                                                : index + counter
-                                        }
-                                        priority
-                                    />
+                                    <Link href={`/projects?id=${illus.id}`} 
+                                    key={'illus' + index}
+                                    className={styles.projectLink}>
+                                        <Image
+                                            src={illus.path}
+                                            height="350"
+                                            width="204"
+                                            className={styles.carouselIllus}
+                                            alt={illus.name}
+                                            data-position={
+                                                index + counter >
+                                                illusData.length - 1
+                                                    ? index +
+                                                      counter -
+                                                      illusData.length
+                                                    : index + counter
+                                            }
+                                            priority
+                                        />
+                                    </Link>
                                 ))}
                         </motion.div>
                     )}

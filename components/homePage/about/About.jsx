@@ -30,11 +30,11 @@ export default function About(props) {
         target: targetRef,
     })
 
-    const textAX = useTransform(scrollYProgress, [0, .75], ['100vw', '5vw'])
-    const textBX = useTransform(scrollYProgress, [.15, .5], ['100vw', '5vw'])
-    const textCX = useTransform(scrollYProgress, [.15, .7], ['100vw', '5vw'])
-    const textDX = useTransform(scrollYProgress, [.15, .6], ['100vw', '5vw'])
-    const textEX = useTransform(scrollYProgress, [.15, .75], ['100vw', '5vw'])
+    const textAX = useTransform(scrollYProgress, [0, 0.75], ['100vw', '5vw'])
+    const textBX = useTransform(scrollYProgress, [0.15, 0.5], ['100vw', '5vw'])
+    const textCX = useTransform(scrollYProgress, [0.15, 0.7], ['100vw', '5vw'])
+    const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
+    const textEX = useTransform(scrollYProgress, [0.15, 0.75], ['100vw', '5vw'])
 
     const height = props.height
 
@@ -117,12 +117,36 @@ export default function About(props) {
                 </div>
 
                 <div className={styles.presentationWrapper}>
-                    <div className={styles.presentationText} >
-                        <motion.span className={`${styles.text} ${styles.textA}`} style={{ x: textAX }}>Maxime</motion.span>
-                        <motion.span className={`${styles.text} ${styles.textB}`} style={{ x: textBX }}>Développeur web</motion.span>
-                        <motion.span className={`${styles.text} ${styles.textC}`} style={{ x: textCX }}>Bordelais</motion.span>
-                        <motion.span className={`${styles.text} ${styles.textD}`} style={{ x: textDX }}>A hâte de vous rencontrer</motion.span>
-                        <motion.span className={`${styles.text} ${styles.textE}`} style={{ x: textEX }}>Aime bien une chocolatine</motion.span>
+                    <div className={styles.presentationText}>
+                        <motion.span
+                            className={`${styles.text} ${styles.textA}`}
+                            style={{ x: textAX }}
+                        >
+                            Maxime
+                        </motion.span>
+                        <motion.span
+                            className={`${styles.text} ${styles.textB}`}
+                            style={{ x: textBX }}
+                        >
+                            Développeur web
+                        </motion.span>
+                        <motion.span
+                            className={`${styles.text} ${styles.textC}`}
+                            style={{ x: textCX }}
+                        >
+                            Bordelais
+                        </motion.span>
+                        <motion.span
+                            className={`${styles.text} ${styles.textD}`}
+                            style={{ x: textDX }}
+                        >Mangeur de chocolatine
+                        </motion.span>
+                        <motion.span
+                            className={`${styles.text} ${styles.textE}`}
+                            style={{ x: textEX }}
+                        >
+                        A hâte de vous rencontrer
+                        </motion.span>
                     </div>
                 </div>
             </article>

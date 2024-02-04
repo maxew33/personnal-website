@@ -6,9 +6,10 @@ import Image from 'next/image'
 import ProjectModale from '@/components/projectModale/ProjectModale'
 import { useSwipeable } from 'react-swipeable'
 import { AnimatePresence } from 'framer-motion'
+import { useSearchParams } from 'next/navigation'
 
 async function getProjectsData() {
-    const { projects } = await require('../../data/projects.json')
+    const { projects } = await import('../../data/projects.json')
     return projects
 }
 
@@ -22,7 +23,12 @@ export default function Projects() {
     const [modalDisplayed, setModalDisplayed] = useState(false)
 
     const [projectSelected, setProjectSelected] = useState()
+
     const [formerProjectSelected, setFormerProjectSelected] = useState()
+
+    const searchParams = useSearchParams()
+
+    const projectId = searchParams.get('id')
 
     useEffect(() => {
         async function fetchData() {
@@ -35,6 +41,10 @@ export default function Projects() {
     //get the index for the data pos
     useEffect(() => {
         setPosition(Array.from(Array(data.length).keys()))
+        projectId &&
+            data.find(
+                (project) => project.id === projectId && handleClick(project)
+            )
     }, [data])
 
     const handleDirection = (dir) => {
@@ -108,10 +118,7 @@ export default function Projects() {
             <header className={styles.header}>
                 <h1 className={styles.headerTitle}>Projets</h1>
                 <p className={styles.headerContent}>
-                    Chaque projet est une histoire unique de créativité, de
-                    collaboration et de réussite. <br />
-                    Explorez ces projets pour découvrir comment des idées se
-                    transforment en expériences en ligne.
+                    Explorez ces projets pour découvrir comment des idées se transforment en expériences en ligne.
                 </p>
             </header>
             <AnimatePresence>
@@ -134,7 +141,7 @@ export default function Projects() {
                     <button
                         className={`${styles.arrow} ${styles.right}`}
                         onClick={() => handleDirection(1)}
-                         aria-label="projet suivant"
+                        aria-label="projet suivant"
                     >
                         <div></div>
                     </button>

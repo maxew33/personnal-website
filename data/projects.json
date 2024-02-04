@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "id": 0,
+            "id": "0",
             "name": ["Cabinet CAP Patrimoine"],
             "description": [
                 "Le Cabinet CAP Patrimoine, spécialisé en conseil de gestion de patrimoine, était à la recherche d'une présence en ligne qui reflète son engagement envers l'excellence dans le domaine financier, immobilier, de la défiscalisation, de la retraite, de l'épargne, et de la prévoyance."
@@ -25,9 +25,58 @@
                 "illus": "/assets/projects/capPatrimoine-visuel.webp"
             },
             "link": "https://cabinet-cap-patrimoine.fr/"
+        },{
+            "id": "1",
+            "name": ["WealthHealth","Application RH"],
+            "description": [
+                "Dernier projet de la formation Openclassrooms, il s'agit de créer une application de ressources humaines."
+            ],
+            "objectives": [
+                "L'objectif est de refondre une application pour réduire la dette technique (en passant de JQuery à react)"
+            ],
+            "implementation": [
+                "J'ai recodé entièrement l'application en créant une interface sobre, élégante et cohérente avec le secteur de la société.",
+                "La conception a été pensée pour être simple, efficace, intuitive et interactive."
+            ],
+            "highlights": [
+                "Optimisation des performances.",
+                "Modularité de l'interface.",
+                "Adaptabilité de l'interface aux différents supports."
+            ],
+            "result": {
+                "name": "visuels du site de l'application health wealth",
+                "path": "/assets/projects/WealthHealth-card.webp",
+                "minify": "/assets/home/WealthHealth.webp",
+                "illus": "/assets/projects/WealthHealth-visuel.webp"
+            },
+            "link": "https://oc-p14-hrnet-full-app-front.vercel.app/"
+        },{
+            "id": "2",
+            "name": ["portfolio","photographe"],
+            "description": [
+                "Partant de l'idée que tout photographe professionnel se doit d'avoir un portfolio pour y présenter ses travaux, j'ai crée ce portfolio factice en m'appuyant sur les travaux de B. Priam photographe à Libourne."
+            ],
+            "objectives": [
+                "L'objectif était de créer un portfolio interactif et mettant en avant les photos."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur mesure avec, au départ, le choix de la galerie",
+                "Dans la galerie, il y a un défilement parallaxe des photos clicables."
+            ],
+            "highlights": [
+                "Mise en valeur des galeries de manière distinctive.",
+                "Exploration des galeries de manière intuitive et captivante."            
+            ],
+            "result": {
+                "name": "visuels d'un portfolio de photographe'",
+                "path": "/assets/projects/ben-card.webp",
+                "minify": "/assets/home/ben.webp",
+                "illus": "/assets/projects/ben-visuel.webp"
+            },
+            "link": "https://maxime-malfilatre.com/sandbox/BenPriam/"
         },
         {
-            "id": 1,
+            "id": "3",
             "name": ["Jérémie Bonne", "Graphiste Bordelais"],
             "description": [
                 "Jérémie Bonne est un graphiste talentueux basé à Bordeaux.",
@@ -55,7 +104,7 @@
             "link": "https://jeremie-bonne.fr/"
         },
         {
-            "id": 2,
+            "id": "4",
             "name": ["Maxime Malfilâtre", "Développeur front-end"],
             "description": [
                 "Je suis un développeur front-end basé à Bordeaux.",
