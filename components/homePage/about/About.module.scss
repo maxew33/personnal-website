@@ -124,11 +124,14 @@
 
     .videoPlayerContainer {
         width: 65vw;
-        height: unset;
-        margin-inline: 2rem;
+        height: 35.75vw;
+        aspect-ratio: unset;
+
+        &::after{
+            height: 37.5vw;
+            width: 68.25vw;
+        }
     }
-
-
 
     .videoTitle {
         left: 0.5rem;
@@ -147,5 +150,4 @@
     .titleWrapper {
         width: 90%;
     }
-
 }

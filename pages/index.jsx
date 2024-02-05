@@ -4,11 +4,11 @@ import About from '@/components/homePage/about/About'
 import Testimonials from '@/components/homePage/testimonials/Testimonials'
 import Conclusion from '@/components/conclusion/Conclusion'
 
-import { useWindowHeight } from '@react-hook/window-size'
+import { useWindowSize} from '@react-hook/window-size'
 
 export default function Home() {
 
-    const height = useWindowHeight()
+    const [width, height] = useWindowSize()
 
     useEffect(() => {
         console.log(`
@@ -23,7 +23,7 @@ _
 
     return (
         <main className="home-main">
-            <Hero height={height}/>
+            <Hero height={height} width={width}/>
             <About height={height}/>
             <Testimonials />
             <Conclusion />

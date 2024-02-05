@@ -113,12 +113,17 @@ export default function Projects() {
         }, 750)
     }, [projectSelected])
 
+    useEffect(() => {
+        modalDisplayed && window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [modalDisplayed])
+
     return (
         <main className={styles.main}>
             <header className={styles.header}>
                 <h1 className={styles.headerTitle}>Projets</h1>
                 <p className={styles.headerContent}>
-                    Explorez ces projets pour découvrir comment des idées se transforment en expériences en ligne.
+                    Explorez ces projets pour découvrir comment des idées se
+                    transforment en expériences en ligne.
                 </p>
             </header>
             <AnimatePresence>

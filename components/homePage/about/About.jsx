@@ -9,7 +9,7 @@ async function getTextData() {
     return text
 }
 
-export default function About(props) {
+export default function About() {
     const [startTitle, setStartTitle] = useState(false)
     const [startVideo, setStartVideo] = useState(false)
     const [textData, setTextData] = useState()
@@ -35,8 +35,6 @@ export default function About(props) {
     const textCX = useTransform(scrollYProgress, [0.15, 0.7], ['100vw', '5vw'])
     const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
     const textEX = useTransform(scrollYProgress, [0.15, 0.75], ['100vw', '5vw'])
-
-    const height = props.height
 
     const titleAnimationVariants = {
         initial: {

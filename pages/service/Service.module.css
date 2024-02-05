@@ -91,9 +91,10 @@
   margin-inline: auto;
   list-style: url("/assets/logoList.webp");
   font-size: 1.15rem;
+  line-height: 1.15;
 }
 .contentList li:not(:last-child) {
-  line-height: 2.5;
+  margin-bottom: 1rem;
 }
 .contentList::after {
   content: "";

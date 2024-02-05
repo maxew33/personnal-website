@@ -73,7 +73,7 @@ export default function Header() {
                 >
                     <span></span>
                 </button>
-                <div>
+                <div className={styles.phoneContainer}>
                     <a href="tel:0781847657" className={styles.phone}>
                         07 81 84 76 57
                     </a>

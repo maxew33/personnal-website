@@ -9,13 +9,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
 
-export default function Hero(props) {
+export default function Hero({ height, width }) {
     const [illusData, setIllusData] = useState([])
     const [startCarousel, setStartCarousel] = useState(false)
 
     const [startTitle, setStartTitle] = useState(false)
-
-    const height = props.height
 
     // fetching data
 
@@ -120,7 +118,10 @@ export default function Hero(props) {
                     }}
                     animate={{ x: 0, y: 0, rotate: 0, opacity: 1, scale: 1 }}
                     style={{ originX: 0.5, originY: 1 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    transition={{
+                        duration: width > 1080 ? 0.5 : 0,
+                        delay: width > 1080 ? 0.5 : 0,
+                    }}
                     onAnimationComplete={() => setStartTitle(true)}
                 >
                     <div className={styles.commentContainer}>
@@ -144,9 +145,11 @@ export default function Hero(props) {
                         >
                             {illusData.length > 0 &&
                                 illusData.map((illus, index) => (
-                                    <Link href={`/projects?id=${illus.id}`} 
-                                    key={'illus' + index}
-                                    className={styles.projectLink}>
+                                    <Link
+                                        href={`/projects?id=${illus.id}`}
+                                        key={'illus' + index}
+                                        className={styles.projectLink}
+                                    >
                                         <Image
                                             src={illus.path}
                                             height="350"
