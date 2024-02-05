@@ -5,7 +5,7 @@ import styles from './Hero.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faLinkedin,
-    faSquareFacebook,
+    faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
 
@@ -94,14 +94,13 @@ export default function Hero({ height, width }) {
                         />
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/maxime-malfilatre/"
-                        aria-label="Facebook"
+                        href="https://www.instagram.com/maxew.dev/"
+                        aria-label="instagram"
                         target="_blank"
                         rel="noopener"
-                        className={styles.link}
                     >
                         <FontAwesomeIcon
-                            icon={faSquareFacebook}
+                            icon={faSquareInstagram}
                             className={styles.icon}
                         />
                     </a>

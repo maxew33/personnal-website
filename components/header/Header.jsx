@@ -7,8 +7,8 @@ import React, { useState } from 'react'
 import styles from './Header.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faFacebookSquare,
     faLinkedin,
+    faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Wave from '../wave/wave'
 
@@ -135,21 +135,21 @@ export default function Header() {
                                         className={styles.icon}
                                     />
                                 </Link>
-                                <Link
-                                    href="https://www.linkedin.com/in/maxime-malfilatre/"
-                                    aria-label="Facebook"
+                                <a
+                                    href="https://www.instagram.com/maxew.dev/"
+                                    aria-label="instagram"
                                     target="_blank"
                                     rel="noopener"
                                 >
                                     <FontAwesomeIcon
-                                        icon={faFacebookSquare}
+                                        icon={faSquareInstagram}
                                         className={styles.icon}
                                     />
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <Wave positionPlace="bottom"/>
+                    <Wave positionPlace="bottom" />
                 </section>
             </header>
         </div>

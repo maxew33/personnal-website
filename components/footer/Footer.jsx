@@ -3,15 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faFacebookSquare,
     faLinkedin,
+    faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Wave from '../wave/wave'
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <Wave color={'var(--secondary)'}/>
+            <Wave color={'var(--secondary)'} />
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.logoWrapper}>
                     <Image
@@ -26,14 +26,23 @@ export default function Footer() {
                 <span className={styles.copyright}>
                     ©TechQuest Bordeaux 2024
                 </span>
-                <Link href="/service" className={`${styles.solutions} ${styles.link}`}>
+                <Link
+                    href="/service"
+                    className={`${styles.solutions} ${styles.link}`}
+                >
                     Services
                 </Link>
-                <Link href="/legal" className={`${styles.legal} ${styles.link}`}>
+                <Link
+                    href="/legal"
+                    className={`${styles.legal} ${styles.link}`}
+                >
                     Mentions Légales
                 </Link>
                 {/* <Link href="/blog">articles</Link> */}
-                <Link href="/contact" className={`${styles.contact} ${styles.link}`}>
+                <Link
+                    href="/contact"
+                    className={`${styles.contact} ${styles.link}`}
+                >
                     contact
                 </Link>
                 <div className={styles.social}>
@@ -48,17 +57,17 @@ export default function Footer() {
                             className={styles.icon}
                         />
                     </Link>
-                    <Link
-                        href="https://www.linkedin.com/in/maxime-malfilatre/"
-                        aria-label="Facebook"
+                    <a
+                        href="https://www.instagram.com/maxew.dev/"
+                        aria-label="instagram"
                         target="_blank"
                         rel="noopener"
                     >
                         <FontAwesomeIcon
-                            icon={faFacebookSquare}
+                            icon={faSquareInstagram}
                             className={styles.icon}
                         />
-                    </Link>
+                    </a>
                 </div>
             </div>
         </footer>

@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faLinkedin,
-    faSquareFacebook,
+    faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import {
     faCalendarDays,
@@ -253,13 +253,13 @@ export default function Contact() {
                                 />
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/maxime-malfilatre/"
-                                aria-label="Facebook"
+                                href="https://www.instagram.com/maxew.dev/"
+                                aria-label="instagram"
                                 target="_blank"
                                 rel="noopener"
                             >
                                 <FontAwesomeIcon
-                                    icon={faSquareFacebook}
+                                    icon={faSquareInstagram}
                                     className={styles.socialIcon}
                                 />
                             </a>
