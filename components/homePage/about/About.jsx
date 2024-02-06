@@ -137,13 +137,14 @@ export default function About() {
                         <motion.span
                             className={`${styles.text} ${styles.textD}`}
                             style={{ x: textDX }}
-                        >Mangeur de chocolatine
+                        >
+                            Mangeur de chocolatine
                         </motion.span>
                         <motion.span
                             className={`${styles.text} ${styles.textE}`}
                             style={{ x: textEX }}
                         >
-                        A hâte de vous rencontrer
+                            A hâte de vous rencontrer
                         </motion.span>
                     </div>
                 </div>

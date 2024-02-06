@@ -118,7 +118,7 @@
     left: 0;
     background-color: var(--secondary);
     clip-path: circle(var(--clippy) at calc(50% - .5rem) 2rem);
-    transition: clip-path 0.5s ease-in-out;
+    transition: clip-path 0.6s ease-in-out;
     display: grid;
     grid-template-areas: 'navigation contact';
 }
@@ -245,7 +245,13 @@
         transform: unset;
 
     }
+
     .phoneContainer{
         display: none;
+    }
+
+    .navigationWrapper {
+        clip-path: circle(var(--clippy) at calc(100% - 4rem) 2rem);
+        transition: clip-path 0.5s ease-in-out;
     }
 }
