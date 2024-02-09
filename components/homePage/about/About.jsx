@@ -35,6 +35,8 @@ export default function About() {
     const textCX = useTransform(scrollYProgress, [0.15, 0.7], ['100vw', '5vw'])
     const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
     const textEX = useTransform(scrollYProgress, [0.15, 0.75], ['100vw', '5vw'])
+    
+    const bp = useTransform(scrollYProgress, [0.25, 0.75], ['0%', '90%'])
 
     const titleAnimationVariants = {
         initial: {
@@ -115,7 +117,9 @@ export default function About() {
                 </div>
 
                 <div className={styles.presentationWrapper}>
-                    <div className={styles.presentationText}>
+                    <motion.div className={styles.presentationText}
+                    style={{'--bp': bp}}
+                    >
                         <motion.span
                             className={`${styles.text} ${styles.textA}`}
                             style={{ x: textAX }}
@@ -146,7 +150,7 @@ export default function About() {
                         >
                             A hâte de vous rencontrer
                         </motion.span>
-                    </div>
+                    </motion.div>
                 </div>
             </article>
         </section>

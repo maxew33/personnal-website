@@ -67,19 +67,20 @@
 }
 
 .presentationText {
+    --bp: '10%';
     position: relative;
     width: 100vw;
     height: 50vh;
-    // background: #000;
-    &::after{
+
+    &::after {
         position: absolute;
         top: 0;
-        content: "";
+        content: '';
         height: 100%;
         width: 100%;
         background-image: url('/assets/home/monumentGirondins.webp');
         background-repeat: no-repeat;
-        background-position: 90%;
+        background-position: var(--bp);
         background-size: contain;
     }
 }
@@ -112,7 +113,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .about{
+    .about {
         min-height: 200vh;
     }
     .article {
@@ -135,7 +136,7 @@
         height: 35.75vw;
         aspect-ratio: unset;
 
-        &::after{
+        &::after {
             height: 37.5vw;
             width: 68.25vw;
         }

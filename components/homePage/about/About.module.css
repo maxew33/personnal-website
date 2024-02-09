@@ -83,6 +83,7 @@
 }
 
 .presentationText {
+  --bp: "10%";
   position: relative;
   width: 100vw;
   height: 50vh;
@@ -95,7 +96,7 @@
   width: 100%;
   background-image: url("/assets/home/monumentGirondins.webp");
   background-repeat: no-repeat;
-  background-position: 90%;
+  background-position: var(--bp);
   background-size: contain;
 }
 
