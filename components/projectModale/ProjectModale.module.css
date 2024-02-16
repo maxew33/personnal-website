@@ -6,7 +6,6 @@
   margin: auto;
   color: white;
   margin: auto;
-  padding: 2rem 1rem;
   border: 2px solid var(--grey);
   border-radius: 10px;
   background: var(--secondary);
@@ -17,6 +16,8 @@
 
 .container {
   overflow: hidden;
+  width: 98%;
+  margin-inline: auto;
 }
 
 .exit {
