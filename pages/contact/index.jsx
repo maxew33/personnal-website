@@ -81,10 +81,6 @@ export default function Contact() {
                 <section className={`${styles.section} ${styles.formContact}`}>
                     <article className={styles.article}>
                         <h2 className={styles.articleTitle}>Une question ?</h2>
-                        {/* <p className={styles.formTitle}>
-                            Envoyez-moi un message. <br />
-                            Je vous répondrai dès que possible.
-                        </p> */}
                         <form
                             ref={form}
                             onSubmit={sendEmail}
