@@ -190,10 +190,12 @@
 .socialIcon {
     height: 2.5rem;
     color: var(--primary);
-    transition: color 0.125s linear;
+    fill: var(--primary);
+    transition: color 0.125s linear, fill 0.125s linear;
 
     &:hover {
         color: var(--secondary);
+        fill: var(--secondary);
     }
 }
 

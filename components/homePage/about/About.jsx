@@ -33,8 +33,8 @@ export default function About() {
     const textAX = useTransform(scrollYProgress, [0, 0.75], ['100vw', '5vw'])
     const textBX = useTransform(scrollYProgress, [0.15, 0.5], ['100vw', '5vw'])
     const textCX = useTransform(scrollYProgress, [0.15, 0.7], ['100vw', '5vw'])
-    const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
-    const textEX = useTransform(scrollYProgress, [0.15, 0.75], ['100vw', '5vw'])
+    // const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
+    // const textEX = useTransform(scrollYProgress, [0.15, 0.75], ['100vw', '5vw'])
 
 
     const titleAnimationVariants = {
@@ -136,7 +136,7 @@ export default function About() {
                         >
                             Bordelais
                         </motion.span>
-                        <motion.span
+                        {/* <motion.span
                             className={`${styles.text} ${styles.textD}`}
                             style={{ x: textDX }}
                         >
@@ -147,7 +147,7 @@ export default function About() {
                             style={{ x: textEX }}
                         >
                             A hâte de vous rencontrer
-                        </motion.span>
+                        </motion.span> */}
                     </motion.div>
                 </div>
             </article>

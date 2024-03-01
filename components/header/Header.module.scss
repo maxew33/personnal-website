@@ -47,10 +47,31 @@
 .navBarPhone {
     position: relative;
     color: var(--primary);
-    @include underline;}
+    @include underline;
+}
 
 .phone {
     font-size: 1.5rem;
+}
+
+.malt{
+    fill: var(--primary);
+    svg{
+        border: 1px solid transparent;
+        border-radius: 50%;
+        padding:.1rem;
+        transition: border-color .075s linear;
+        &:hover{
+            border-color: var(--primary);
+        }
+    }
+}
+
+.phoneContainer{
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 .burger {
@@ -110,14 +131,14 @@
 }
 
 .navigationWrapper {
-    --clippy : 0%;
+    --clippy: 0%;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     background-color: var(--secondary);
-    clip-path: circle(var(--clippy) at calc(50% - .5rem) 2rem);
+    clip-path: circle(var(--clippy) at calc(50% - 0.5rem) 2rem);
     transition: clip-path 0.6s ease-in-out;
     display: grid;
     grid-template-areas: 'navigation contact';
@@ -142,7 +163,6 @@
         color: unset;
     }
 }
-
 
 .link {
     &::after {
@@ -182,9 +202,9 @@
     align-items: center;
 }
 
-.navBarPhone{
-    &::after{
-        bottom: .5rem;
+.navBarPhone {
+    &::after {
+        bottom: 0.5rem;
         height: 3px;
     }
 }
@@ -198,10 +218,12 @@
 .icon {
     height: 2.5rem;
     color: var(--bg);
-    transition: color 0.125s linear;
+    fill: var(--bg);
+    transition: color 0.125s linear, fill 0.125s linear;
 
     &:hover {
         color: var(--primary);
+        fill: var(--primary);
     }
 }
 
@@ -214,7 +236,7 @@
             'contact';
     }
 
-    .navigation{        
+    .navigation {
         font-size: 3rem;
         max-height: 35svh;
     }
@@ -229,24 +251,21 @@
         width: auto;
         margin-right: 1rem;
     }
-    
 }
 
 @media screen and (max-width: 576px) {
-
-    .header{
+    .header {
         align-items: flex-start;
     }
 
-    .burger{
-        position:relative;
+    .burger {
+        position: relative;
         top: unset;
         left: unset;
         transform: unset;
-
     }
 
-    .phoneContainer{
+    .phoneContainer {
         display: none;
     }
 

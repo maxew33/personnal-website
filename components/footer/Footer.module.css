@@ -85,10 +85,12 @@
 .icon {
   font-size: 2rem;
   color: var(--bg);
-  transition: color 0.125s linear;
+  fill: var(--bg);
+  transition: color 0.125s linear, fill 0.125s linear;
 }
 .icon:hover {
   color: var(--primary);
+  fill: var(--primary);
 }
 
 @media screen and (max-width: 1080px) {

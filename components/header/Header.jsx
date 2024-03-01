@@ -11,6 +11,7 @@ import {
     faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Wave from '../wave/wave'
+import Malt from '../malt/malt'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -77,6 +78,17 @@ export default function Header() {
                     <a href="tel:0781847657" className={styles.phone}>
                         07 81 84 76 57
                     </a>
+                    -
+                    <a
+                        href="https://www.malt.fr/profile/maximemalfilatre"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="malt"
+                    >
+                        <span className={styles.malt}>
+                            <Malt size="1.75rem" />
+                        </span>
+                    </a>
                 </div>
 
                 <section
@@ -124,7 +136,7 @@ export default function Header() {
                                 07 81 84 76 57
                             </a>
                             <div className={styles.social}>
-                                <Link
+                                <a
                                     href="https://www.linkedin.com/in/maxime-malfilatre/"
                                     aria-label="Linkedin"
                                     target="_blank"
@@ -134,7 +146,7 @@ export default function Header() {
                                         icon={faLinkedin}
                                         className={styles.icon}
                                     />
-                                </Link>
+                                </a>
                                 <a
                                     href="https://www.instagram.com/maxew.dev/"
                                     aria-label="instagram"
@@ -145,6 +157,16 @@ export default function Header() {
                                         icon={faSquareInstagram}
                                         className={styles.icon}
                                     />
+                                </a>
+                                <a
+                                    href="https://www.malt.fr/profile/maximemalfilatre"
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label="malt"
+                                >
+                                    <span className={styles.icon}>
+                                        <Malt size="2.5rem" />
+                                    </span>
                                 </a>
                             </div>
                         </div>

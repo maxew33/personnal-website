@@ -30,7 +30,7 @@
     font-family: var(--fontfam2);
     line-height: 1.5;
 
-    & .highlighted{
+    & .highlighted {
         font-weight: bold;
         // font-size: 3rem;
     }
@@ -48,10 +48,12 @@
     height: 2.5rem;
     padding-right: 1.5rem;
     color: var(--text);
-    transition: color 0.125s linear;
+    fill: var(--text);
+    transition: color 0.125s linear, fill 0.125s linear;
 
     &:hover {
         color: var(--primary);
+        fill: var(--primary);
     }
 }
 
@@ -60,8 +62,8 @@
     grid-area: carousel;
     height: 100%;
     width: 100%;
-    &::before{
-        content:"";
+    &::before {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -74,9 +76,9 @@
         background-position: bottom right;
         // z-index: 10;
     }
-    
-    &::after{
-        content:"";
+
+    &::after {
+        content: '';
         position: absolute;
         bottom: 17.2rem;
         width: 12.75rem;
@@ -97,7 +99,7 @@
     cursor: pointer;
 }
 
-.projectLink{
+.projectLink {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -140,16 +142,18 @@
             'link carousel';
     }
 
-    .title{
+    .title {
         text-align: center;
         font-size: 10vw;
     }
 
-
     .carouselContainer {
-        &::after, &::before{display: none}
+        &::after,
+        &::before {
+            display: none;
+        }
     }
-    
+
     .carousel {
         border: 5px solid var(--secondary);
         border-radius: 7px;
@@ -158,16 +162,14 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }    
-    
+    }
+
     .commentContainer {
         position: absolute;
         width: 7.5rem;
         top: calc(50% - 13.5rem);
         left: 50%;
-    }  
-
-
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -180,14 +182,17 @@
     }
 
     .carouselContainer {
-        &::after, &::before{display: none;}
+        &::after,
+        &::before {
+            display: none;
+        }
     }
-    
+
     .carousel {
         width: 15rem;
     }
 
-    .presentation{
+    .presentation {
         margin: auto;
         text-align: center;
     }
@@ -200,25 +205,23 @@
 }
 
 @media screen and (max-width: 576px) {
-
-    .section{
+    .section {
         height: 110vh;
     }
-    
+
     .article {
         height: unset;
         grid-template-columns: 1fr;
         row-gap: 2rem;
         grid-template-areas:
-        'title'
-        'carousel'
-        'welcome'
-        'link';
+            'title'
+            'carousel'
+            'welcome'
+            'link';
         margin-top: 5vh;
     }
 
-
-    .title{
+    .title {
         font-size: 15vw;
     }
 
@@ -226,5 +229,4 @@
         background: unset;
         height: 31rem;
     }
-
 }

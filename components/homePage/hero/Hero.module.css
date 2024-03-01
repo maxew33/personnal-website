@@ -41,10 +41,12 @@
   height: 2.5rem;
   padding-right: 1.5rem;
   color: var(--text);
-  transition: color 0.125s linear;
+  fill: var(--text);
+  transition: color 0.125s linear, fill 0.125s linear;
 }
 .icon:hover {
   color: var(--primary);
+  fill: var(--primary);
 }
 
 .carouselContainer {

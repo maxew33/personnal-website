@@ -74,6 +74,26 @@
   font-size: 1.5rem;
 }
 
+.malt {
+  fill: var(--primary);
+}
+.malt svg {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 0.1rem;
+  transition: border-color 0.075s linear;
+}
+.malt svg:hover {
+  border-color: var(--primary);
+}
+
+.phoneContainer {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .burger {
   position: absolute;
   z-index: 2;
@@ -208,10 +228,12 @@
 .icon {
   height: 2.5rem;
   color: var(--bg);
-  transition: color 0.125s linear;
+  fill: var(--bg);
+  transition: color 0.125s linear, fill 0.125s linear;
 }
 .icon:hover {
   color: var(--primary);
+  fill: var(--primary);
 }
 
 @media screen and (max-width: 767px) {

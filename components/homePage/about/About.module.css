@@ -1,5 +1,5 @@
 .about {
-  min-height: 300vh;
+  min-height: 250vh;
 }
 
 .article {
@@ -87,6 +87,9 @@
   position: relative;
   width: 100vw;
   height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .presentationText::after {
   position: absolute;

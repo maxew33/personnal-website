@@ -7,6 +7,7 @@ import {
     faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Wave from '../wave/wave'
+import Malt from '../malt/malt'
 
 export default function Footer() {
     return (
@@ -67,6 +68,16 @@ export default function Footer() {
                             icon={faSquareInstagram}
                             className={styles.icon}
                         />
+                    </a>{' '}
+                    <a
+                        href="https://www.malt.fr/profile/maximemalfilatre"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="malt"
+                    >
+                        <span className={styles.icon}>
+                            <Malt size="2rem" />
+                        </span>
                     </a>
                 </div>
             </div>

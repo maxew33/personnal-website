@@ -9,10 +9,12 @@ import {
 import {
     faCalendarDays,
     faEnvelope,
+    faHandshakeSimple,
     faMobileScreen,
     faPaperPlane,
     faThumbsUp,
 } from '@fortawesome/free-solid-svg-icons'
+import Malt from '@/components/malt/malt'
 
 export default function Contact() {
     const [modalDisplayed, setModalDisplayed] = useState(false)
@@ -215,18 +217,22 @@ export default function Contact() {
                         <h2 className={styles.articleTitle}>
                             <span className={styles.iconContainer}>
                                 <FontAwesomeIcon
-                                    icon={faEnvelope}
+                                    icon={faHandshakeSimple}
                                     className={styles.icon}
                                 />
                             </span>{' '}
-                            écrivez-moi
+                            Engagez-moi
                         </h2>
                         <div className={styles.linkWrapper}>
                             <a
-                                href="mailto:contact@techquest.fr"
-                                className={styles.contact}
+                                href="https://www.malt.fr/profile/maximemalfilatre"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="malt"
                             >
-                                contact@techquest.fr
+                                <span className={styles.socialIcon}>
+                                    <Malt size="2.5rem" />
+                                </span>
                             </a>
                         </div>
                     </article>

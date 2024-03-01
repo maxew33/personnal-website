@@ -8,6 +8,7 @@ import {
     faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
+import Malt from '@/components/malt/malt'
 
 export default function Hero({ height, width }) {
     const [illusData, setIllusData] = useState([])
@@ -103,6 +104,16 @@ export default function Hero({ height, width }) {
                             icon={faSquareInstagram}
                             className={styles.icon}
                         />
+                    </a>
+                    <a
+                        href="https://www.malt.fr/profile/maximemalfilatre"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="malt"
+                    >
+                        <span className={styles.icon}>
+                            <Malt size="2.5rem" />
+                        </span>
                     </a>
                 </div>
 

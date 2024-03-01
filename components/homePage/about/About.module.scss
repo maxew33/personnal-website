@@ -1,7 +1,7 @@
 @import '../../../styles/scss/utils/mixins';
 
 .about {
-    min-height: 300vh;
+    min-height: 250vh;
 }
 
 .article {
@@ -71,6 +71,8 @@
     position: relative;
     width: 100vw;
     height: 50vh;
+    @include flexCol;
+    justify-content: center;
 
     &::after {
         position: absolute;
@@ -92,6 +94,7 @@
     font-size: 3rem;
     color: var(--bg);
     font-family: var(--fontfam1);
+
 }
 .textA {
     font-size: 9rem;
