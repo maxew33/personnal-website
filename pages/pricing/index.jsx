@@ -45,6 +45,7 @@ export default function Pricing() {
                 rendez-vous, d'une durée d'environ 30 minutes, est gratuit et
                 sans aucun engagement de votre part.
                 <br />
+                <br/>
                 Voici la gamme de tarifs de base qui constituent le point de
                 départ pour la création de votre site.
                 <br /> Ils ne comprennent ni l'achat du nom de domaine ni
@@ -53,7 +54,6 @@ export default function Pricing() {
                 Il est important de noter que ces tarifs sont sujets à évolution
                 en fonction des options et fonctionnalités spécifiques choisies
                 pour votre site.
-                <br /> Voici un aperçu de ces tarifs de base :
             </p>
             <section className={styles.pricingWrapper}>
                 {data.map((price, index) => (
@@ -63,7 +63,7 @@ export default function Pricing() {
                         initial="initial"
                         animate="animate"
                         custom={index}
-                        className={`pricing-article pricing-${price.type}`}
+                        className={styles.article}
                     >
                         <div className={styles.header}>
                             à partir de{' '}

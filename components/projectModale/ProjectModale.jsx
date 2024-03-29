@@ -3,7 +3,7 @@ import styles from './ProjectModale.module.css'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faPlus } from '@fortawesome/free-solid-svg-icons'
 
 async function getProjectsData() {
     const { projects } = await require('../../data/projects.json')
@@ -85,8 +85,9 @@ export default function ProjectModale({ id, handleClose }) {
                                 {data.highlights.map((highlight, index) => (
                                     <li
                                         key={`hightlight${index}`}
-                                        className={`${styles.contentText} ${styles.highlight}`}
+                                        className={styles.contentText}
                                     >
+                                        <FontAwesomeIcon icon={faPlus} />{' '}
                                         {highlight}
                                     </li>
                                 ))}

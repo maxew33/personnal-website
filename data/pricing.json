@@ -4,31 +4,31 @@
             "title": "One page",
             "subtitle": "carte de visite",
             "price": "400€",
-            "feature": "une seule page web, où toute l'information est présentée de manière continue et fluide."
+            "feature": "Une seule page web, où toute l'information est présentée de manière continue et fluide. Cette option convient parfaitement pour une présence en ligne simple et efficace."
         },
         {
             "price": "800€",
             "title": "Site vitrine",
             "subtitle": "présence en ligne",
-            "feature": "Une plateforme statique de plusieurs pages présentant votre entreprise ou votre activité, ses offres, ses coordonnées et un formulaire de contact."
+            "feature": "Une plateforme statique de plusieurs pages présentant votre entreprise ou votre activité, ses offres, ses coordonnées et un formulaire de contact. Idéal pour présenter votre entreprise de manière professionnelle et complète."
         },
         {
             "price": "2000€",
             "title": "Webzine",
             "subtitle": "visibilité avancée",
-            "feature": "Une plateforme interactive pour la publication d'articles, le partage d'idées et l'engagement de votre communauté."
+            "feature": "Une plateforme interactive pour la publication d'articles, le partage d'idées et l'engagement de votre communauté. Cette option est parfaite pour ceux qui cherchent à créer un contenu dynamique et à développer une communauté en ligne."
         },
         {
             "price": "3500€",
             "title": "site e-commerce",
             "subtitle": "boutique en ligne",
-            "feature": "Une solution complète de vente en ligne incluant la gestion des produits, des paiements et des commandes."
+            "feature": "Une solution complète de vente en ligne incluant la gestion des produits, des paiements et des commandes. Parfait pour ceux qui souhaitent vendre des produits ou des services en ligne de manière professionnelle et sécurisée."
         },
         {
-            "price": "3500€",
-            "title": "site e-commerce",
-            "subtitle": "boutique en ligne",
-            "feature": "Une solution complète de vente en ligne incluant la gestion des produits, des paiements et des commandes."
+            "price": "350€ / jour",
+            "title": "site sur mesure",
+            "subtitle": "Unique, comme vous.",
+            "feature": "Une site unique fait sur mesure, conçu spécifiquement selon vos besoins et vos préférences. Cette option offre une flexibilité totale pour créer un site web qui reflète parfaitement votre identité et vos objectifs."
         }
     ]
 }

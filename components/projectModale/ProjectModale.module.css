@@ -26,7 +26,6 @@
   border: none;
   background: unset;
   font-size: 3rem;
-  color: white;
   cursor: pointer;
 }
 
@@ -65,10 +64,6 @@
   font-family: var(--fontfam1);
 }
 
-.hightlightsList {
-  list-style: url("/assets/logoList.webp");
-}
-
 .contentText {
   line-height: 1.5;
   margin-left: 1.5rem;
@@ -76,10 +71,6 @@
 }
 .contentText span {
   display: block;
-}
-
-.highlight {
-  margin-left: 3rem;
 }
 
 .contentLink {
