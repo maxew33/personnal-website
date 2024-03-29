@@ -223,10 +223,10 @@ font-family: 'Varela Round', sans-serif;
 */
 :root {
   --bg: #f6f2ea;
-  --secondary: #49403f;
-  --primary: #e75d50;
+  --secondary: #990059;
+  --primary: #990059;
   --text: #010028;
-  --redText: #E02F1F;
+  --redText: #ff0065;
   --grey: #d9d9d9;
   --fontfam1: "Archivo Black", serif;
   --fontfam2: "Varela Round", sans-serif;
@@ -236,9 +236,6 @@ font-family: 'Varela Round', sans-serif;
 body {
   color: var(--text);
   font-family: var(--fontfam2);
-  background-color: var(--bg);
-  background-image: url("/assets/grainy.webp");
-  background-attachment: fixed;
   overflow-x: hidden;
 }
 

@@ -9,7 +9,8 @@
     > * {
         line-height: 1.75;
     }
-    @include sectionBg;
+    // @include sectionBg;
+    background: #fff;
 }
 
 .header {

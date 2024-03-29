@@ -29,7 +29,7 @@ font-family: 'Varela Round', sans-serif;
 body {
     color: var(--text);
     font-family: var(--fontfam2);
-    @include sectionBg;
+    // @include sectionBg;
     overflow-x: hidden;
 }
 

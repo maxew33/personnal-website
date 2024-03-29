@@ -65,7 +65,7 @@ export default function Header() {
                         alt="logo de techquest"
                         className={styles.logo}
                     />
-                    TechQuest
+                    Maxime Malfilâtre
                 </Link>
                 <button
                     onClick={displayNav}
@@ -126,7 +126,7 @@ export default function Header() {
                                 alt="logo de techquest"
                                 className={styles.navBarlogo}
                             />
-                            TechQuest
+                            Maxime Malfilâtre
                         </Link>
                         <div className={styles.navigationLink}>
                             <a

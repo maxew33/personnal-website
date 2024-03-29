@@ -68,17 +68,17 @@ export default function Hero({ height, width }) {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ ease: 'linear', duration: 0.75 }}
                 >
-                    <span className={styles.highlighted}>TechQuest</span>
+                    <span className={styles.highlighted}>Maxime Malfilâtre</span>
                     <br />
                 </motion.h1>
 
                 <h2 className={styles.presentation}>
-                    Soyez{' '}
+                    Créateur de site web sur{' '}
                     <motion.span className={styles.highlighted}>
-                        en ligne
+                        Bordeaux
                     </motion.span>{' '}
-                    avec un site qui{' '}
-                    <span className={styles.highlighted}>vous</span> ressemble.
+                    et {' '}
+                    <span className={styles.highlighted}>Libourne</span>.
                 </h2>
 
                 <div className={styles.linkWrapper}>

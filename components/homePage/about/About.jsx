@@ -33,7 +33,7 @@ export default function About() {
     const textAX = useTransform(scrollYProgress, [0, 0.75], ['100vw', '5vw'])
     const textBX = useTransform(scrollYProgress, [0.15, 0.5], ['100vw', '5vw'])
     const textCX = useTransform(scrollYProgress, [0.15, 0.7], ['100vw', '5vw'])
-    // const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
+    const textDX = useTransform(scrollYProgress, [0.15, 0.6], ['100vw', '5vw'])
     // const textEX = useTransform(scrollYProgress, [0.15, 0.75], ['100vw', '5vw'])
 
 
@@ -134,15 +134,15 @@ export default function About() {
                             className={`${styles.text} ${styles.textC}`}
                             style={{ x: textCX }}
                         >
-                            Bordelais
+                            Sur Bordeaux
                         </motion.span>
-                        {/* <motion.span
+                        <motion.span
                             className={`${styles.text} ${styles.textD}`}
                             style={{ x: textDX }}
                         >
-                            Mangeur de chocolatine
+                            Et Libourne
                         </motion.span>
-                        <motion.span
+                        {/* <motion.span
                             className={`${styles.text} ${styles.textE}`}
                             style={{ x: textEX }}
                         >
