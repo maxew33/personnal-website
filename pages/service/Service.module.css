@@ -31,7 +31,7 @@
   text-align: center;
   font-size: 5.5rem;
   margin: 5rem auto;
-  color: var(--primary);
+  color: var(--accent);
   grid-area: title;
 }
 
@@ -79,7 +79,7 @@
 
 .articleTitle {
   margin: 1rem auto;
-  color: var(--primary);
+  color: var(--accent);
   font-size: 1.5rem;
   text-transform: capitalize;
 }

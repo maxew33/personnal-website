@@ -30,7 +30,7 @@
 }
 
 .highlighted {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .linkWrapper {
@@ -45,8 +45,8 @@
   transition: color 0.125s linear, fill 0.125s linear;
 }
 .icon:hover {
-  color: var(--primary);
-  fill: var(--primary);
+  color: var(--accent);
+  fill: var(--accent);
 }
 
 .carouselContainer {

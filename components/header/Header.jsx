@@ -31,6 +31,10 @@ export default function Header() {
             name: 'services',
         },
         {
+            path: '/pricing/',
+            name: 'tarifs',
+        },
+        {
             path: '/contact/',
             name: 'contact',
         },
@@ -65,7 +69,6 @@ export default function Header() {
                         alt="logo de techquest"
                         className={styles.logo}
                     />
-                    Maxime Malfilâtre
                 </Link>
                 <button
                     onClick={displayNav}
@@ -120,9 +123,9 @@ export default function Header() {
                             aria-label={paths.name}
                         >
                             <Image
-                                src="/assets/logoW.webp"
-                                width={118}
-                                height={129}
+                                src="/assets/logo.webp"
+                                width={150}
+                                height={150}
                                 alt="logo de techquest"
                                 className={styles.navBarlogo}
                             />

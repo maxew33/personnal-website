@@ -32,14 +32,14 @@
 
 .content {
     position: relative;
-    background: #eee;
+    background: var(--primary);
     padding: 1rem;
     border-radius: 5px;
     @include boxShadow;
     &::after,
     &::before {
         position: absolute;
-        color: var(--primary);
+        color: var(--accent);
         font-size: 5rem;
         font-family: 'Acme';
     }

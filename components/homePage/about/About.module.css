@@ -28,9 +28,7 @@
 
 .title {
   font-size: 5rem;
-  color: #fff;
   text-align: center;
-  font-family: var(--fontfam1);
 }
 
 .videoPlayerContainer {
@@ -108,7 +106,6 @@
   display: block;
   line-height: 1.5;
   font-size: 3rem;
-  color: var(--bg);
   font-family: var(--fontfam1);
   top: -2.5rem;
 }

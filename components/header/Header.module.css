@@ -13,7 +13,6 @@
   z-index: 10;
   width: calc(100% - 4rem);
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
   max-width: 1400px;
   padding: 0.75rem 2rem;
@@ -25,14 +24,21 @@
 .navBarLogoLink,
 .navBarLogoLink:hover {
   height: 2.5rem;
-  color: var(--primary);
+  color: var(--accent);
   font-family: var(--fontfam2);
   text-decoration: none;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   gap: 0.75rem;
+}
+
+.navBarLogoLink,
+.navBarLogoLink:hover {
+  font-size: 3rem;
+  height: auto;
+  flex-direction: column;
 }
 
 .logo {
@@ -45,7 +51,7 @@
 .link,
 .navBarPhone {
   position: relative;
-  color: var(--primary);
+  color: var(--accent);
 }
 .phone::after,
 .link::after,
@@ -56,7 +62,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: var(--primary);
+  background: var(--accent);
   transform: scaleX(0);
   transition: transform 0.15s linear;
   transform-origin: left;
@@ -74,7 +80,7 @@
 }
 
 .malt {
-  fill: var(--primary);
+  fill: var(--accent);
 }
 .malt svg {
   border: 1px solid transparent;
@@ -87,7 +93,7 @@
 }
 
 .phoneContainer {
-  color: var(--primary);
+  color: var(--accent);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -111,7 +117,7 @@
   height: 5px;
   width: 2rem;
   border-radius: 15px;
-  background: var(--primary);
+  background: var(--accent);
 }
 .burger span::after, .burger span::before {
   content: "";
@@ -120,7 +126,7 @@
   width: inherit;
   height: inherit;
   top: -10px;
-  background: var(--primary);
+  background: var(--accent);
   border: none;
   border-radius: 15px;
   transition: transform 0.15s linear, background-color 0.15s linear;
@@ -199,13 +205,6 @@
   color: var(--bg);
 }
 
-.navBarLogoLink,
-.navBarLogoLink:hover {
-  font-size: 3rem;
-  display: inline-block;
-  height: auto;
-}
-
 .navigationLink {
   display: flex;
   flex-direction: column;
@@ -231,8 +230,8 @@
   transition: color 0.125s linear, fill 0.125s linear;
 }
 .icon:hover {
-  color: var(--primary);
-  fill: var(--primary);
+  color: var(--accent);
+  fill: var(--accent);
 }
 
 @media screen and (max-width: 767px) {

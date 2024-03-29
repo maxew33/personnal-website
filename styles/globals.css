@@ -222,11 +222,11 @@ font-family: 'Kalam', cursive;
 font-family: 'Varela Round', sans-serif;
 */
 :root {
-  --bg: #f6f2ea;
-  --secondary: #990059;
-  --primary: #990059;
+  --bg: #fff;
+  --secondary: #03002e;
+  --primary: #eee;
   --text: #010028;
-  --redText: #ff0065;
+  --accent: #ff0065;
   --grey: #d9d9d9;
   --fontfam1: "Archivo Black", serif;
   --fontfam2: "Varela Round", sans-serif;

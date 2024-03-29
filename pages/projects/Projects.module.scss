@@ -118,7 +118,7 @@
         position: relative;
         height: 3px;
         width: 3rem;
-        background: var(--primary);
+        background: var(--accent);
         border-radius: 25px;
         transform-origin: var(--arrow-transform-origin);
         transition: 0.25s transform ease-in-out;
@@ -127,7 +127,7 @@
         &::before {
             content: '';
             position: absolute;
-            background: var(--primary);
+            background: var(--accent);
             height: 3px;
             width: 50%;
             border-radius: 25px;
@@ -139,11 +139,9 @@
     &:hover > div {
         &::after {
             transform: rotate(25deg);
-            background: var(--primary);
         }
         &::before {
             transform: rotate(-25deg);
-            background: var(--primary);
         }
     }
 }

@@ -5,12 +5,12 @@
     width: calc(100% - 3rem);
     height: auto;
     @include maxWidth;
-    color: white;
+    // color: white;
     margin: auto;
     // padding: 2rem 1rem;
     border: 2px solid var(--grey);
     border-radius: 10px;
-    background: var(--secondary);
+    background: var(--primary);
     overflow: hidden;
     display: grid;
     grid-template-rows: 0fr;
@@ -116,6 +116,8 @@
 
 .highlights {
     grid-area: hightlights;
+        padding-bottom: 2rem;
+    
 }
 
 @media screen and (max-width: 1200px) {

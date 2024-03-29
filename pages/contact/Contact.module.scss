@@ -22,8 +22,9 @@
 }
 
 .section {
-    background: var(--secondary);
+    background: var(--primary);
     border-radius: 10px;
+    border: 2px solid var(--grey);
     @include boxShadow;
 }
 
@@ -44,7 +45,6 @@
     grid-area: form;
 
     .article {
-        color: var(--bg);
         height: calc(100% - 4rem);
         justify-content: space-between;
         gap: 1rem;
@@ -107,9 +107,9 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    color: var(--bg);
-    background: var(--primary);
-    border: none;
+    // color: var(--bg);
+    background: var(--bg);
+    border: 2px solid var(--grey);
     padding: 0.75rem 0;
     width: 100%;
     cursor: pointer;
@@ -118,8 +118,8 @@
     border-radius: 6px;
     transition: background-color .125s linear, color .125s linear;
     &:hover {
-        background: var(--bg);
-        color: var(--secondary);
+        background: var(--grey);
+        color: var(--accent);
     }
     svg {
         height: 1.25rem;
@@ -152,7 +152,7 @@
 }
 
 .contact{
-    @include underline;
+    @include underline(var(--accent));
 }
 
 .followUs {
@@ -174,7 +174,7 @@
 }
 
 .icon {
-    color: var(--primary);
+    color: var(--accent);
     font-size: 2rem;
 }
 
@@ -183,19 +183,19 @@
     gap: 1.5rem;
     font-size: 1.25rem;
     a {
-        color: var(--primary);
+        color: var(--secondary);
     }
 }
 
 .socialIcon {
     height: 2.5rem;
-    color: var(--primary);
-    fill: var(--primary);
+    color: var(--secondary);
+    fill: var(--secondary);
     transition: color 0.125s linear, fill 0.125s linear;
 
     &:hover {
-        color: var(--secondary);
-        fill: var(--secondary);
+        color: var(--accent);
+        fill: var(--accent);
     }
 }
 

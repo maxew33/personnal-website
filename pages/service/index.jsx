@@ -40,11 +40,11 @@ export default function Services() {
                 <div className={styles.header}>
                     <h1 className={styles.title}>Mes services</h1>
                     <p className={styles.presentation}>
-                        Pour la conception des sites, j'exploite les capacités
+                        Pour la conception des sites, soit j'utilise le cms wordpress, soit j'exploite les capacités
                         de React et de son framework Next.js, tandis que les
                         animations sont élaborées avec Framer Motion. <br />
                         <br />
-                        Une fois le site mis en place, je procède à un audit à
+                        Quelque soit la solution choisie, une fois le site mis en place, je procède à un audit à
                         l'aide de Lighthouse. <br />
                         Cette démarche vise à garantir des performances
                         optimales, une accessibilité maximale, et un

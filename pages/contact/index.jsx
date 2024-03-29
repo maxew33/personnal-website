@@ -151,7 +151,7 @@ export default function Contact() {
                                 />
                                 <label htmlFor="dataAuth">
                                     En utilisant ce formulaire vous autorisez
-                                    TechQuest à utiliser vos informations pour
+                                    Maxime Malfilâtre à utiliser vos informations pour
                                     répondre à votre demande.
                                     <br />
                                     Aucune donnée n'est cédée à des tiers.

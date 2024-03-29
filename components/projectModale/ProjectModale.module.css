@@ -4,11 +4,10 @@
   height: auto;
   max-width: 1400px;
   margin: auto;
-  color: white;
   margin: auto;
   border: 2px solid var(--grey);
   border-radius: 10px;
-  background: var(--secondary);
+  background: var(--primary);
   overflow: hidden;
   display: grid;
   grid-template-rows: 0fr;
@@ -106,6 +105,7 @@
 
 .highlights {
   grid-area: hightlights;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 1200px) {

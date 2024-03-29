@@ -16,7 +16,6 @@
     z-index: 10;
     width: calc(100% - 4rem);
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     max-width: 1400px;
     padding: 0.75rem 2rem;
@@ -28,14 +27,21 @@
 .navBarLogoLink,
 .navBarLogoLink:hover {
     height: 2.5rem;
-    color: var(--primary);
+    color: var(--accent);
     font-family: var(--fontfam2);
     text-decoration: none;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
     gap: 0.75rem;
+}
+
+.navBarLogoLink,
+.navBarLogoLink:hover {
+    font-size: 3rem;
+    height: auto;
+    flex-direction: column;
 }
 
 .logo {
@@ -48,32 +54,32 @@
 .link,
 .navBarPhone {
     position: relative;
-    color: var(--primary);
-    @include underline;
+    color: var(--accent);
+    @include underline(var(--accent));
 }
 
 .phone {
     font-size: 1.5rem;
 }
 
-.malt{
-    fill: var(--primary);
-    svg{
+.malt {
+    fill: var(--accent);
+    svg {
         border: 1px solid transparent;
         border-radius: 50%;
-        padding:.1rem;
-        transition: border-color .075s linear;
-        &:hover{
+        padding: 0.1rem;
+        transition: border-color 0.075s linear;
+        &:hover {
             border-color: var(--primary);
         }
     }
 }
 
-.phoneContainer{
-    color: var(--primary);
+.phoneContainer {
+    color: var(--accent);
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .burger {
@@ -94,7 +100,7 @@
         height: 5px;
         width: 2rem;
         border-radius: 15px;
-        background: var(--primary);
+        background: var(--accent);
         &::after,
         &::before {
             content: '';
@@ -103,7 +109,7 @@
             width: inherit;
             height: inherit;
             top: -10px;
-            background: var(--primary);
+            background: var(--accent);
             border: none;
             border-radius: 15px;
             transition: transform 0.15s linear, background-color 0.15s linear;
@@ -191,13 +197,6 @@
     }
 }
 
-.navBarLogoLink,
-.navBarLogoLink:hover {
-    font-size: 3rem;
-    display: inline-block;
-    height: auto;
-}
-
 .navigationLink {
     @include flexCol;
     gap: 2rem;
@@ -224,8 +223,8 @@
     transition: color 0.125s linear, fill 0.125s linear;
 
     &:hover {
-        color: var(--primary);
-        fill: var(--primary);
+        color: var(--accent);
+        fill: var(--accent);
     }
 }
 

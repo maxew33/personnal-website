@@ -4,7 +4,7 @@
             "title": "fiabilité",
             "description": "Fournir des solutions robustes et fiables.",
             "features": [
-                "Utilisation de Next.js pour un rendu côté serveur (SSR) amélioré.",
+                "Mise en œuvre de solutions robustes pour garantir la fiabilité.",
                 "Génération de pages statiques pour une performance optimale."
             ]
         },
@@ -20,8 +20,8 @@
             "title": "visibilité",
             "description": "Améliorer la visibilité en ligne et l'indexation par les moteurs de recherche.",
             "features": [
-                "SEO amélioré grâce au rendu côté serveur et à la génération statique.",
-                "Pages pré-rendues pour une indexation rapide par les moteurs de recherche."
+                "Optimisation pour les moteurs de recherche (SEO).",
+                "Indexation rapide par les moteurs de recherche."
             ]
         },
         {
@@ -36,7 +36,7 @@
             "title": "originalité",
             "description": "Créer un site qui vous ressemble.",
             "features": [
-                "Animations dynamiques avec Framer Motion.",
+                "Animations fluides et dynamiques.",
                 "Site créé sur mesure, à votre image."
             ]
         }

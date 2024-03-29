@@ -19,7 +19,7 @@
   text-align: center;
   font-size: 5.5rem;
   margin: 5rem auto;
-  color: var(--primary);
+  color: var(--accent);
   margin: unset;
 }
 
@@ -32,9 +32,8 @@
   display: inline-block;
   text-decoration: none;
   padding: 0.625rem 1.25rem;
-  border: 1px solid var(--primary);
   border-radius: 5px;
-  color: var(--bg);
+  color: var(--text);
   background: var(--primary);
   transition: background-color 0.25s linear, color 0.25s linear, border-color 0.25s linear;
   font-weight: 400;
@@ -43,9 +42,8 @@
   padding: 0.75rem 1.5rem;
 }
 .contactBtn:hover {
-  background: var(--secondary);
-  border: 1px solid var(--secondary);
-  text-shadow: unset;
+  background: var(--grey);
+  color: var(--accent);
 }
 
 .carousel {
@@ -139,7 +137,7 @@
   position: relative;
   height: 3px;
   width: 3rem;
-  background: var(--primary);
+  background: var(--accent);
   border-radius: 25px;
   transform-origin: var(--arrow-transform-origin);
   transition: 0.25s transform ease-in-out;
@@ -147,7 +145,7 @@
 .arrow div::after, .arrow div::before {
   content: "";
   position: absolute;
-  background: var(--primary);
+  background: var(--accent);
   height: 3px;
   width: 50%;
   border-radius: 25px;
@@ -156,11 +154,9 @@
 }
 .arrow:hover > div::after {
   transform: rotate(25deg);
-  background: var(--primary);
 }
 .arrow:hover > div::before {
   transform: rotate(-25deg);
-  background: var(--primary);
 }
 
 .left {

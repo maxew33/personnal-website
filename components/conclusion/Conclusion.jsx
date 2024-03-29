@@ -13,7 +13,7 @@ export default function Conclusion() {
                 ressemble.
             </p>
             <Link href="/contact" className={styles.btn}>
-                Contact
+                Contactez-moi
             </Link>
         </section>
     )

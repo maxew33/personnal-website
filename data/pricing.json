@@ -1,0 +1,34 @@
+{
+    "pricing": [
+        {
+            "title": "One page",
+            "subtitle": "carte de visite",
+            "price": "400€",
+            "feature": "une seule page web, où toute l'information est présentée de manière continue et fluide."
+        },
+        {
+            "price": "800€",
+            "title": "Site vitrine",
+            "subtitle": "présence en ligne",
+            "feature": "Une plateforme statique de plusieurs pages présentant votre entreprise ou votre activité, ses offres, ses coordonnées et un formulaire de contact."
+        },
+        {
+            "price": "2000€",
+            "title": "Webzine",
+            "subtitle": "visibilité avancée",
+            "feature": "Une plateforme interactive pour la publication d'articles, le partage d'idées et l'engagement de votre communauté."
+        },
+        {
+            "price": "3500€",
+            "title": "site e-commerce",
+            "subtitle": "boutique en ligne",
+            "feature": "Une solution complète de vente en ligne incluant la gestion des produits, des paiements et des commandes."
+        },
+        {
+            "price": "3500€",
+            "title": "site e-commerce",
+            "subtitle": "boutique en ligne",
+            "feature": "Une solution complète de vente en ligne incluant la gestion des produits, des paiements et des commandes."
+        }
+    ]
+}
