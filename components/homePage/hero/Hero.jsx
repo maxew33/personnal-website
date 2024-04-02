@@ -62,23 +62,18 @@ export default function Hero({ height, width }) {
                 className={`${styles.article} home-article`}
                 style={{ opacity }}
             >
-                <motion.h1
+                <motion.div
                     className={styles.title}
                     initial={{ x: 0, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ ease: 'linear', duration: 0.75 }}
                 >
-                    <span className={styles.highlighted}>Maxime Malfilâtre</span>
-                    <br />
-                </motion.h1>
+                    <h1 className={styles.highlighted}>Maxime Malfilâtre</h1>
+                    <p className={styles.hook}>Construisons ensemble un site qui vous ressemble.</p>
+                </motion.div>
 
                 <h2 className={styles.presentation}>
-                    Créateur de site web sur{' '}
-                    <motion.span className={styles.highlighted}>
-                        Bordeaux
-                    </motion.span>{' '}
-                    et {' '}
-                    <span className={styles.highlighted}>Libourne</span>.
+                    Création de sites et d'applications
                 </h2>
 
                 <div className={styles.linkWrapper}>

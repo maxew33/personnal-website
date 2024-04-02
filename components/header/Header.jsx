@@ -31,10 +31,6 @@ export default function Header() {
             name: 'services',
         },
         {
-            path: '/pricing/',
-            name: 'tarifs',
-        },
-        {
             path: '/contact/',
             name: 'contact',
         },
@@ -81,7 +77,7 @@ export default function Header() {
                     <a href="tel:0781847657" className={styles.phone}>
                         07 81 84 76 57
                     </a>
-                    -
+                    {/* -
                     <a
                         href="https://www.malt.fr/profile/maximemalfilatre"
                         target="_blank"
@@ -91,7 +87,7 @@ export default function Header() {
                         <span className={styles.malt}>
                             <Malt size="1.75rem" />
                         </span>
-                    </a>
+                    </a> */}
                 </div>
 
                 <section
@@ -126,7 +122,7 @@ export default function Header() {
                                 src="/assets/logo.webp"
                                 width={150}
                                 height={150}
-                                alt="logo de techquest"
+                                alt="logo de Maxime Malfilâtre"
                                 className={styles.navBarlogo}
                             />
                             Maxime Malfilâtre

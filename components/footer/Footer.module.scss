@@ -56,7 +56,7 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background: var(--bg);
+        background: var(--accent);
         transform: scaleX(0);
         transition: transform 0.15s linear;
         transform-origin: left;
@@ -95,8 +95,8 @@
     transition: color 0.125s linear, fill 0.125s linear;
 
     &:hover {
-        color: var(--primary);
-        fill: var(--primary);
+        color: var(--accent);
+        fill: var(--accent);
     }
 }
 

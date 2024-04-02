@@ -1,7 +1,7 @@
-@import './scss/base/reset', './scss/utils/mixins', './scss/components/buttons',
-    './scss/utils/variables', './scss/pages/home/home';
+@import './scss/base/reset', './scss/utils/mixins', './scss/utils/variables',
+    './scss/pages/home/home';
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Varela+Round&family=Kalam&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Varela+Round&family=Kalam&display=swap');
 
 /* END OF RESET */
 /*
@@ -9,7 +9,12 @@ font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
 font-family: 'Varela Round', sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Cinzel", serif;
+font-family: "Martel", serif;
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Martel:wght@200;300;400;600;700;800;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --bg: #{$bgCol};
@@ -21,8 +26,8 @@ font-family: 'Varela Round', sans-serif;
 
     --grey: #{$grey};
 
-    --fontfam1: 'Archivo Black', serif;
-    --fontfam2: 'Varela Round', sans-serif;
+    --fontfam1: 'Martel', serif;
+    --fontfam2: 'Raleway', sans-serif;
     --fontfam3: 'Kalam', cursive;
 }
 

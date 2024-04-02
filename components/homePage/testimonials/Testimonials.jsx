@@ -60,14 +60,14 @@ export default function Testimonials() {
                                 }}
                                 className={styles.content}
                             >
-                                {testimonial.me && (
+                                {/* {testimonial.me && (
                                     <motion.div
                                         className={styles.comment}
                                         animate={{ opacity: 1 }}
                                     >
                                         c'est moi
                                     </motion.div>
-                                )}
+                                )} */}
                                 {testimonial.content}
                             </motion.blockquote>
                             <span className={styles.author}>

@@ -27,13 +27,10 @@
 .navBarLogoLink,
 .navBarLogoLink:hover {
     height: 2.5rem;
-    color: var(--accent);
-    font-family: var(--fontfam2);
     text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    font-weight: bold;
     gap: 0.75rem;
 }
 
@@ -97,9 +94,9 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        height: 5px;
+        height: 3px;
         width: 2rem;
-        border-radius: 15px;
+        // border-radius: 15px;
         background: var(--accent);
         &::after,
         &::before {
@@ -149,6 +146,8 @@
     clip-path: circle(var(--clippy) at calc(50% - 0.5rem) 2rem);
     transition: clip-path 0.6s ease-in-out;
     display: grid;
+    text-transform: capitalize;
+    font-family: var(--fontfam1);
     grid-template-areas: 'navigation contact';
 }
 
@@ -162,8 +161,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    text-transform: capitalize;
-    font-family: var(--fontfam1);
     color: var(--bg);
     font-size: 8.5vh;
     height: 80svh;

@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Varela+Round&family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Martel:wght@200;300;400;600;700;800;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -220,16 +220,19 @@ font-family: 'Source Sans 3', sans-serif;
 font-family: 'Archivo Black', sans-serif;
 font-family: 'Kalam', cursive;
 font-family: 'Varela Round', sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Cinzel", serif;
+font-family: "Martel", serif;
 */
 :root {
   --bg: #fff;
   --secondary: #03002e;
   --primary: #eee;
-  --text: #010028;
+  --text: #03002e;
   --accent: #ff0065;
   --grey: #d9d9d9;
-  --fontfam1: "Archivo Black", serif;
-  --fontfam2: "Varela Round", sans-serif;
+  --fontfam1: "Martel", serif;
+  --fontfam2: "Raleway", sans-serif;
   --fontfam3: "Kalam", cursive;
 }
 

@@ -151,8 +151,8 @@ export default function Contact() {
                                 />
                                 <label htmlFor="dataAuth">
                                     En utilisant ce formulaire vous autorisez
-                                    Maxime Malfilâtre à utiliser vos informations pour
-                                    répondre à votre demande.
+                                    Maxime Malfilâtre à utiliser vos
+                                    informations pour répondre à votre demande.
                                     <br />
                                     Aucune donnée n'est cédée à des tiers.
                                 </label>
@@ -213,22 +213,18 @@ export default function Contact() {
                         <h2 className={styles.articleTitle}>
                             <span className={styles.iconContainer}>
                                 <FontAwesomeIcon
-                                    icon={faHandshakeSimple}
+                                    icon={faEnvelope}
                                     className={styles.icon}
                                 />
                             </span>{' '}
-                            Engagez-moi
+                            Ecrivez-moi
                         </h2>
                         <div className={styles.linkWrapper}>
                             <a
-                                href="https://www.malt.fr/profile/maximemalfilatre"
-                                target="_blank"
-                                rel="noopener"
-                                aria-label="malt"
+                                href="mailto:maxime.malfilatre@gmail.com"
+                                className={styles.contact}
                             >
-                                <span className={styles.socialIcon}>
-                                    <Malt size="2.5rem" />
-                                </span>
+                                maxime.malfilatre@gmail.com
                             </a>
                         </div>
                     </article>

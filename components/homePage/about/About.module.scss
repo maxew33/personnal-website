@@ -52,7 +52,7 @@
 }
 
 .videoTitle {
-    @include comment($url: '/assets/home/bgarrow.webp', $color: var(--grey));
+    @include comment;
     left: 1.75rem;
 }
 
@@ -94,9 +94,9 @@
     top: -2.5rem;
 }
 .textA {
-    font-size: 9rem;
+    font-size: 6rem;
     z-index: 2;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {

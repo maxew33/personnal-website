@@ -10,30 +10,31 @@
     justify-content: center;
     height: 90vh;
     display: grid;
+    text-align: center;
     grid-template-areas:
-        'title carousel'
         'welcome carousel'
+        'title carousel'
         'link carousel';
     grid-template-columns: 1fr 1fr;
 }
 
 .title {
     grid-area: title;
-    font-size: 7rem;
+    font-size: 3.25rem;
     align-self: center;
+}
+
+.hook{
+    font-size: 1.25rem;
 }
 
 .presentation {
     grid-area: welcome;
-    font-size: 2.5rem;
-    place-self: baseline;
+    font-size: 5rem;
+    align-self: end;
     font-family: var(--fontfam2);
-    line-height: 1.5;
+    line-height: 1.15;
 
-    & .highlighted {
-        font-weight: bold;
-        // font-size: 3rem;
-    }
 }
 
 .highlighted {
@@ -69,7 +70,6 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background: red;
         background: url('/assets/home/hand.webp');
         background-repeat: no-repeat;
         background-size: 35rem;
@@ -112,20 +112,20 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
-    transform: translate(-100%);
+    transform: translate(-200%);
     &[data-position='1'] {
-        transform: translate(0%);
+        transform: translate(-100%);
         z-index: 10;
     }
     &[data-position='2'] {
-        transform: translate(100%);
+        transform: translate(0%);
         z-index: 10;
     }
 }
 
 .commentContainer {
     position: absolute;
-    width: 7.5rem;
+    width: 10rem;
     bottom: 40rem;
     right: 11rem;
 }
@@ -137,7 +137,7 @@
 @media screen and (max-width: 1080px) {
     .article {
         grid-template-areas:
-            'title title'
+            'title carousel'
             'welcome carousel'
             'link carousel';
     }

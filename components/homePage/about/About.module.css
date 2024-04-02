@@ -56,8 +56,7 @@
   text-transform: capitalize;
   width: 100%;
   text-align: right;
-  font-family: var(--fontfam3);
-  color: var(--grey);
+  color: var(--text);
   left: 1.75rem;
 }
 .videoTitle::after {
@@ -66,7 +65,7 @@
   width: 5rem;
   height: 5rem;
   top: 0.5rem;
-  background-image: url("/assets/home/bgarrow.webp");
+  background-image: url("/assets/home/arrow.webp");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
@@ -111,9 +110,8 @@
 }
 
 .textA {
-  font-size: 9rem;
+  font-size: 6rem;
   z-index: 2;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
