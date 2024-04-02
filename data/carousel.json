@@ -8,26 +8,27 @@
         {
             "id": 1,
             "name": "WealthHealth, projet",
-
             "path": "/assets/home/WealthHealth.webp"
         },
         {
             "id": 2,
-            "name": "Benedict Priam, Photographe",
-
-            "path": "/assets/home/ben.webp"
+            "name": "Maxime Malfilâtre, développeur front end",
+            "path": "/assets/home/max.webp"
         },
         {
             "id": 3,
-            "name": "Jérémie Bonne, Graphiste Bordelais",
-
-            "path": "/assets/home/jerem.webp"
+            "name": "Benedict Priam, Photographe",
+            "path": "/assets/home/ben.webp"
         },
         {
             "id": 4,
-            "name": "Maxime Malfilâtre, développeur front end",
-
-            "path": "/assets/home/max.webp"
+            "name": "Jérémie Bonne, Graphiste Bordelais",
+            "path": "/assets/home/jerem.webp"
+        },
+        {
+            "id": 5,
+            "name": "Mina Marrault, décoratrice d'intérieurs",
+            "path": "/assets/home/mina.webp"
         }
     ]
 }

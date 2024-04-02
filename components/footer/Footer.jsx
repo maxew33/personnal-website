@@ -16,16 +16,16 @@ export default function Footer() {
             <div className={styles.footerWrapper}>
                 <Link href="/" className={styles.logoWrapper}>
                     <Image
-                        src="/assets/logoW.webp"
-                        width={118}
-                        height={129}
+                        src="/assets/logo.webp"
+                        width={120}
+                        height={120}
                         alt="logo de techquest"
                         className={styles.logo}
                     />
-                    TechQuest
+                    M.Malfilâtre
                 </Link>
                 <span className={styles.copyright}>
-                    ©TechQuest Bordeaux 2024
+                    ©Maxime Malfilâtre 2024
                 </span>
                 <Link
                     href="/service"

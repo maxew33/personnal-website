@@ -92,7 +92,11 @@
   z-index: 6;
   transform: rotate(4deg);
 }
-.projectContainer:not([data-position="4"]) {
+.projectContainer[data-position="5"] {
+  z-index: 7;
+  transform: rotate(5deg);
+}
+.projectContainer:not([data-position="5"]) {
   pointer-events: none;
 }
 
@@ -182,7 +186,7 @@
 }
 
 /* anim for moving discs from front to back */
-.projectContainer[data-position="5"] {
+.projectContainer[data-position="6"] {
   z-index: 9;
   animation: linear 0.5s forwards running to-the-back;
 }

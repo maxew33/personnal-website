@@ -144,11 +144,16 @@
 
 @media screen and (max-width: 1080px) {
   .article {
-    grid-template-areas: "title carousel" "welcome carousel" "link carousel";
+    grid-template-areas: "welcome carousel" "title carousel" "link carousel";
+  }
+  .presentation {
+    font-size: max(5vw, 3rem);
   }
   .title {
-    text-align: center;
-    font-size: 10vw;
+    font-size: max(4vw, 2.25rem);
+  }
+  .hook {
+    font-size: max(1.75vw, 1rem);
   }
   .carouselContainer::after, .carouselContainer::before {
     display: none;
@@ -197,14 +202,14 @@
     height: unset;
     grid-template-columns: 1fr;
     row-gap: 2rem;
-    grid-template-areas: "title" "carousel" "welcome" "link";
+    grid-template-areas: "welcome" "carousel" "title" "link";
     margin-top: 5vh;
-  }
-  .title {
-    font-size: 15vw;
   }
   .carouselContainer {
     background: unset;
     height: 31rem;
+  }
+  .commentContainer {
+    display: none;
   }
 }

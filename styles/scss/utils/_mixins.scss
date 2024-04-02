@@ -1,5 +1,5 @@
 @mixin contactUs($size: inherit) {
-    padding: $size/2 $size;
+    padding: calc($size/2) $size;
     // border: 1px solid var(--secondary);
     border-radius: 5px;
     color: var(--text);

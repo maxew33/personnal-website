@@ -61,14 +61,14 @@
     cursor: pointer;
     transform-origin: bottom right;
 
-    @for $i from 0 through 4 {
+    @for $i from 0 through 5 {
         &[data-position='#{$i}'] {
             z-index: $i + 2;
             transform: rotate($i * 1deg);
         }
     }
 
-    &:not([data-position='4']) {
+    &:not([data-position='5']) {
         pointer-events: none;
     }
 }
@@ -174,7 +174,7 @@
 
 /* anim for moving discs from front to back */
 .projectContainer {
-    &[data-position='5'] {
+    &[data-position='6'] {
         z-index: 9;
         animation: linear 0.5s forwards running to-the-back;
     }

@@ -130,6 +130,31 @@
                 "illus": "/assets/projects/max-visuel.webp"
             },
             "link": "https://pf2022.maxime-malfilatre.com/"
+        },{
+            "id": "5",
+            "name": ["Mina Marrault - Architecte d'Intérieurs"],
+            "description": [
+              "Mina Marrault est une architecte d'intérieurs passionnée par la création d'espaces uniques et fonctionnels qui reflètent la personnalité et le style de ses clients. Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
+            ],
+            "objectives": [
+              "L'objectif était de concevoir un site vitrine professionnel pour présenter le travail de Mina Marrault, mettre en valeur son portfolio et faciliter la prise de contact avec de potentiels clients."
+            ],
+            "implementation": [
+              "J'ai développé un site web sur WordPress pour Mina Marrault, en mettant l'accent sur la présentation visuelle de ses réalisations et en assurant une navigation fluide pour les visiteurs.",
+              "Le design a été soigneusement élaboré pour refléter le style et l'esthétique de Mina, tout en offrant une expérience utilisateur intuitive."
+            ],
+            "highlights": [
+              "Présentation visuelle dynamique de son portfolio, mettant en avant ses projets les plus remarquables.",
+              "Intégration de fonctionnalités de contact facile pour permettre aux visiteurs d'entrer en communication avec Mina Marrault.",
+              "Optimisation pour les moteurs de recherche (SEO) afin d'assurer une visibilité maximale en ligne."
+            ],
+            "result": {
+                "name": "visuels du site de Mina Marrault",
+                "path": "/assets/projects/mina-card.webp",
+                "minify": "/assets/home/mina.webp",
+                "illus": "/assets/projects/mina-visuel.webp"
+            },
+            "link": "https://minamarrault.maxime-malfilatre.com/"
         }
     ]
 }
