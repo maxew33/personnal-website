@@ -96,13 +96,15 @@
     aspect-ratio: 0.58;
     overflow: hidden;
     cursor: pointer;
+    
+    .projectLink {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    
 }
 
-.projectLink {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
 
 .carouselIllus {
     position: absolute;

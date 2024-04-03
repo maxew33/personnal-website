@@ -12,23 +12,23 @@
         },
         {
             "id": 2,
-            "name": "Maxime Malfilâtre, développeur front end",
-            "path": "/assets/home/max.webp"
-        },
-        {
-            "id": 3,
             "name": "Benedict Priam, Photographe",
             "path": "/assets/home/ben.webp"
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Jérémie Bonne, Graphiste Bordelais",
             "path": "/assets/home/jerem.webp"
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Mina Marrault, décoratrice d'intérieurs",
             "path": "/assets/home/mina.webp"
+        },
+        {
+            "id": 5,
+            "name": "Maxime Malfilâtre, développeur front end",
+            "path": "/assets/home/max.webp"
         }
     ]
 }

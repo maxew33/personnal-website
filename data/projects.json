@@ -25,9 +25,10 @@
                 "illus": "/assets/projects/capPatrimoine-visuel.webp"
             },
             "link": "https://cabinet-cap-patrimoine.fr/"
-        },{
+        },
+        {
             "id": "1",
-            "name": ["WealthHealth","Application RH"],
+            "name": ["WealthHealth", "Application RH"],
             "description": [
                 "Dernier projet de la formation Openclassrooms, il s'agit de créer une application de ressources humaines."
             ],
@@ -50,9 +51,10 @@
                 "illus": "/assets/projects/WealthHealth-visuel.webp"
             },
             "link": "https://oc-p14-hrnet-full-app-front.vercel.app/"
-        },{
+        },
+        {
             "id": "2",
-            "name": ["portfolio","photographe"],
+            "name": ["Portfolio", "photographe"],
             "description": [
                 "Partant de l'idée que tout photographe professionnel se doit d'avoir un portfolio pour y présenter ses travaux, j'ai crée ce portfolio factice en m'appuyant sur les travaux de B. Priam photographe à Libourne."
             ],
@@ -65,7 +67,7 @@
             ],
             "highlights": [
                 "Mise en valeur des galeries de manière distinctive.",
-                "Exploration des galeries de manière intuitive et captivante."            
+                "Exploration des galeries de manière intuitive et captivante."
             ],
             "result": {
                 "name": "visuels d'un portfolio de photographe'",
@@ -105,6 +107,32 @@
         },
         {
             "id": "4",
+            "name": ["Mina Marrault", "Architecte d'Intérieurs"],
+            "description": [
+                "Mina Marrault est une architecte d'intérieurs passionnée par la création d'espaces uniques et fonctionnels qui reflètent la personnalité et le style de ses clients. Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
+            ],
+            "objectives": [
+                "L'objectif était de concevoir un site vitrine professionnel pour présenter le travail de Mina Marrault, mettre en valeur son portfolio et faciliter la prise de contact avec de potentiels clients."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur WordPress pour Mina Marrault, en mettant l'accent sur la présentation visuelle de ses réalisations et en assurant une navigation fluide pour les visiteurs.",
+                "Le design a été soigneusement élaboré pour refléter le style et l'esthétique de Mina, tout en offrant une expérience utilisateur intuitive."
+            ],
+            "highlights": [
+                "Présentation visuelle dynamique de son portfolio, mettant en avant ses projets les plus remarquables.",
+                "Intégration de fonctionnalités de contact facile pour permettre aux visiteurs d'entrer en communication avec Mina Marrault.",
+                "Optimisation pour les moteurs de recherche (SEO) afin d'assurer une visibilité maximale en ligne."
+            ],
+            "result": {
+                "name": "visuels du site de Mina Marrault",
+                "path": "/assets/projects/mina-card.webp",
+                "minify": "/assets/home/mina.webp",
+                "illus": "/assets/projects/mina-visuel.webp"
+            },
+            "link": "https://minamarrault.maxime-malfilatre.com/"
+        },
+        {
+            "id": "5",
             "name": ["Maxime Malfilâtre", "Développeur front-end"],
             "description": [
                 "Je suis un développeur front-end basé à Bordeaux.",
@@ -130,31 +158,6 @@
                 "illus": "/assets/projects/max-visuel.webp"
             },
             "link": "https://pf2022.maxime-malfilatre.com/"
-        },{
-            "id": "5",
-            "name": ["Mina Marrault - Architecte d'Intérieurs"],
-            "description": [
-              "Mina Marrault est une architecte d'intérieurs passionnée par la création d'espaces uniques et fonctionnels qui reflètent la personnalité et le style de ses clients. Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
-            ],
-            "objectives": [
-              "L'objectif était de concevoir un site vitrine professionnel pour présenter le travail de Mina Marrault, mettre en valeur son portfolio et faciliter la prise de contact avec de potentiels clients."
-            ],
-            "implementation": [
-              "J'ai développé un site web sur WordPress pour Mina Marrault, en mettant l'accent sur la présentation visuelle de ses réalisations et en assurant une navigation fluide pour les visiteurs.",
-              "Le design a été soigneusement élaboré pour refléter le style et l'esthétique de Mina, tout en offrant une expérience utilisateur intuitive."
-            ],
-            "highlights": [
-              "Présentation visuelle dynamique de son portfolio, mettant en avant ses projets les plus remarquables.",
-              "Intégration de fonctionnalités de contact facile pour permettre aux visiteurs d'entrer en communication avec Mina Marrault.",
-              "Optimisation pour les moteurs de recherche (SEO) afin d'assurer une visibilité maximale en ligne."
-            ],
-            "result": {
-                "name": "visuels du site de Mina Marrault",
-                "path": "/assets/projects/mina-card.webp",
-                "minify": "/assets/home/mina.webp",
-                "illus": "/assets/projects/mina-visuel.webp"
-            },
-            "link": "https://minamarrault.maxime-malfilatre.com/"
         }
     ]
 }
