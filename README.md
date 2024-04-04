@@ -1,8 +1,8 @@
 # TechQuest
 
-![portfolio banner](https://zupimages.net/up/24/06/5hnj.jpg)
+![portfolio banner](https://zupimages.net/up/24/14/vlcb.png)
 
-Ce repository contient le code du site TechQuest dont l'objet est de proposer mes services de développeur front-end.
+Ce repository contient le code de mon site dont l'objet est de proposer mes services de développeur front-end.
 Vous y trouverez bien sûr, queqlues projets, une présentation de mes compétences et une section de contact.
 
 ## technologies
@@ -13,9 +13,9 @@ Vous y trouverez bien sûr, queqlues projets, une présentation de mes compéten
 
 ## Aperçu
 
-![snapshot](https://zupimages.net/up/24/06/7js4.jpg)
+![snapshot](https://zupimages.net/up/24/14/fm0l.png)
 
 ## Author
 
 -   [Maxime Malfilâtre](https://www.github.com/maxew33)
--   [Portfolio](https://maxime-malfilatre.com)
+-   [Portfolio](https://pf2022.maxime-malfilatre.com)
