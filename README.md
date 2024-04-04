@@ -1,6 +1,4 @@
-# TechQuest
-
-![portfolio banner](https://zupimages.net/up/24/14/clhb.png)
+![portfolio banner](https://zupimages.net/up/24/14/swjv.png)
 
 Ce repository contient le code de mon site dont l'objet est de proposer mes services de développeur front-end.
 Vous y trouverez bien sûr, queqlues projets, une présentation de mes compétences et une section de contact.
