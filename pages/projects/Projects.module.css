@@ -110,7 +110,7 @@
   text-align: center;
   transition: opacity 0.125s linear;
 }
-.name[data-position="4"], .name[data-position="-1"] {
+.name[data-position="5"], .name[data-position="-1"] {
   opacity: 1;
 }
 
