@@ -41,6 +41,11 @@
     max-width: 98%;
 }
 
+.highlight{
+    font-weight: bold;
+    color: var(--accent);   
+}
+
 .introduction {
     font-size: 2rem;
     font-family: var(--fontfam2);
@@ -89,7 +94,7 @@
     width: 90%;
     padding: 1rem 0;
     margin-inline: auto;
-    list-style: url('/assets/logoList.webp');
+    list-style: "· ";
     font-size: 1.15rem;
     line-height: 1.15;
     li:not(:last-child) {

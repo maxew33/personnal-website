@@ -69,11 +69,13 @@ export default function Hero({ height, width }) {
                     transition={{ ease: 'linear', duration: 0.75 }}
                 >
                     <h1 className={styles.highlighted}>Maxime Malfilâtre</h1>
-                    <p className={styles.hook}>Construisons ensemble un site qui vous ressemble.</p>
+                    <p className={styles.hook}>
+                        Construisons ensemble un site qui vous ressemble.
+                    </p>
                 </motion.div>
 
                 <h2 className={styles.presentation}>
-                    Création de sites et d'applications
+                    Création de sites et d'applications web
                 </h2>
 
                 <div className={styles.linkWrapper}>
@@ -82,7 +84,7 @@ export default function Hero({ height, width }) {
                         aria-label="Linkedin"
                         target="_blank"
                         rel="noopener"
-                        className={styles.link}
+                        // className={styles.link}
                     >
                         <FontAwesomeIcon
                             icon={faLinkedin}
@@ -110,6 +112,12 @@ export default function Hero({ height, width }) {
                             <Malt size="2.5rem" />
                         </span>
                     </a>
+                    <Link
+                        href="/service/"
+                        className={styles.link}
+                    >
+                        Mes services
+                    </Link>
                 </div>
 
                 <motion.div

@@ -40,7 +40,31 @@ export default function Services() {
                 <div className={styles.header}>
                     <h1 className={styles.title}>Mes services</h1>
                     <p className={styles.presentation}>
-                        Pour la conception des sites, soit j'utilise le cms wordpress, soit j'exploite les capacités
+                        Je crois en l'importance d'une approche sur mesure pour
+                        chaque projet. <br />
+                        <br />
+                        Un{' '}
+                        <span className={styles.highlight}>
+                            site vitrine
+                        </span>{' '}
+                        élégant, une solution{' '}
+                        <span className={styles.highlight}>e-commerce</span>{' '}
+                        intuitive , ou un
+                        <span className={styles.highlight}>
+                            {' '}
+                            portfolio
+                        </span>{' '}
+                        dynamique, je
+                        conçois des solutions personnalisées qui reflètent votre
+                        identité et vos objectifs. <br />
+                        <br />
+                        Enfin, une fois le site mis en place, je procède à un
+                        audit qui vise à garantir des performances optimales,
+                        une accessibilité maximale, et un référencement (SEO)
+                        irréprochable.
+                        <br />
+                        <br />
+                        {/* Pour la conception des sites, soit j'utilise le cms wordpress, soit j'exploite les capacités
                         de React et de son framework Next.js, tandis que les
                         animations sont élaborées avec Framer Motion. <br />
                         <br />
@@ -50,13 +74,13 @@ export default function Services() {
                         optimales, une accessibilité maximale, et un
                         référencement (SEO) irréprochable.
                         <br />
-                        <br />
+                        <br /> */}
                     </p>
                     <div className={styles.illus}></div>
                 </div>
                 <h2 className={styles.introduction}>
                     Voici les cinq piliers fondamentaux sur lesquels je m'appuie
-                    pour développer chaque site:
+                    pour développer chaque site :
                 </h2>
                 <section className={styles.features}>
                     {data.map((service, index) => (
@@ -74,9 +98,7 @@ export default function Services() {
                             </h2>
                             <ul className={styles.contentList}>
                                 {service.features.map((feature, index) => (
-                                    <li key={index}>
-                                        {feature}
-                                    </li>
+                                    <li key={index}>{feature}</li>
                                 ))}
                             </ul>
                         </motion.article>

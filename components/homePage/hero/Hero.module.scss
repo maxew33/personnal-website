@@ -44,6 +44,11 @@
     grid-area: link;
 }
 
+.link{
+    color: unset;
+    @include underline(var(--accent));
+}
+
 .icon {
     height: 2.5rem;
     padding-right: 1.5rem;
