@@ -29,7 +29,8 @@ export default function App({ Component, pageProps }) {
                 <title>Maxime Malfilâtre, créateur de site web sur Bordeaux et Libourne</title>
                 <meta
                     name="description"
-                    content="Maxime Malfilâtre - Votre interlocuteur pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-moi pour explorer les opportunités ensemble."
+                    content="Maxime Malfilâtre - Votre interlocuteur pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure.
+                    Je me déplace sur Izon, Yvrac, Vayres, Bassens, Arveyres, Libourne, Montussan, Carbon-Blanc, Saint-Loubès, Sainte-Eulalie, Beychac-et-Caillau, Ambarès-et-Lagrave, Saint-Vincent-de-Paul, Saint-André-de-Cubzac, Saint-Sulpice-et-Cameyrac."
                 />
 
                 {/* indexation */}
@@ -45,7 +46,8 @@ export default function App({ Component, pageProps }) {
                 <meta property="og:title" content="Maxime Malfilâtre, créateur de site web sur Bordeaux et Libourne" />
                 <meta
                     property="og:description"
-                    content="Maxime Malfilâtre - Votre interlocuteur pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-moi pour explorer les opportunités ensemble."
+                    content="Maxime Malfilâtre - Votre interlocuteur pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure.
+                    Je me déplace sur Izon, Yvrac, Vayres, Bassens, Arveyres, Libourne, Montussan, Carbon-Blanc, Saint-Loubès, Sainte-Eulalie, Beychac-et-Caillau, Ambarès-et-Lagrave, Saint-Vincent-de-Paul, Saint-André-de-Cubzac, Saint-Sulpice-et-Cameyrac."
                 />
                 <meta
                     property="og:image"
@@ -59,7 +61,8 @@ export default function App({ Component, pageProps }) {
                 <meta name="twitter:title" content="Maxime Malfilâtre, créateur de site web sur Bordeaux et Libourne" />
                 <meta
                     name="twitter:description"
-                    content="Maxime Malfilâtre - Votre interlocuteur pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure pour répondre à vos besoins professionnels. Contactez-moi pour explorer les opportunités ensemble."
+                    content="Maxime Malfilâtre - Votre interlocuteur pour des solutions web élégantes, modernes et efficaces. Création de sites web sur mesure.
+                    Je me déplace sur Izon, Yvrac, Vayres, Bassens, Arveyres, Libourne, Montussan, Carbon-Blanc, Saint-Loubès, Sainte-Eulalie, Beychac-et-Caillau, Ambarès-et-Lagrave, Saint-Vincent-de-Paul, Saint-André-de-Cubzac, Saint-Sulpice-et-Cameyrac."
                 />
                 <meta
                     name="twitter:image"
