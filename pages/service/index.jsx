@@ -64,17 +64,16 @@ export default function Services() {
                         irréprochable.
                         <br />
                         <br />
-                        {/* Pour la conception des sites, soit j'utilise le cms wordpress, soit j'exploite les capacités
-                        de React et de son framework Next.js, tandis que les
-                        animations sont élaborées avec Framer Motion. <br />
-                        <br />
+                        Pour la conception de votre site, je peux utiliser <span className={styles.highlight}>wordpress</span> ou exploiter les capacités
+                        de <span className={styles.highlight}>Next.js</span> et de Framer Motion. <br />
+                        {/* <br />
                         Quelque soit la solution choisie, une fois le site mis en place, je procède à un audit à
                         l'aide de Lighthouse. <br />
                         Cette démarche vise à garantir des performances
                         optimales, une accessibilité maximale, et un
                         référencement (SEO) irréprochable.
-                        <br />
                         <br /> */}
+                        <br />
                     </p>
                     <div className={styles.illus}></div>
                 </div>
