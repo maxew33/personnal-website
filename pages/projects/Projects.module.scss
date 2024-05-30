@@ -1,6 +1,8 @@
 @use 'sass:math';
 @import '../../styles/scss/utils/mixins';
 
+$nbItems:6;
+
 .main {
     color: var(--text);
     position: relative;
@@ -61,14 +63,14 @@
     cursor: pointer;
     transform-origin: bottom right;
 
-    @for $i from 0 through 5 {
+    @for $i from 0 through $nbItems {
         &[data-position='#{$i}'] {
             z-index: $i + 2;
             transform: rotate($i * 1deg);
         }
     }
 
-    &:not([data-position='5']) {
+    &:not([data-position='#{$nbItems}']) {
         pointer-events: none;
     }
 }
@@ -82,7 +84,7 @@
     width: 80%;
     text-align: center;
     transition: opacity 0.125s linear;
-    &[data-position='5'],
+    &[data-position='#{$nbItems}'],
     &[data-position='-1'] {
         opacity: 1;
     }
@@ -174,7 +176,7 @@
 
 /* anim for moving discs from front to back */
 .projectContainer {
-    &[data-position='6'] {
+    &[data-position='#{$nbItems + 1}'] {
         z-index: 9;
         animation: linear 0.5s forwards running to-the-back;
     }
@@ -184,6 +186,7 @@
         animation: linear 0.5s forwards running to-the-front;
     }
 }
+
 @keyframes to-the-back {
     0% {
         transform: translateX(0rem) rotate(5deg);
@@ -231,7 +234,7 @@
     }
 
     60% {
-        transform: translateX(5rem) rotate(15deg);
+        transform: translateX(2rem) rotate(15deg);
         opacity: 0;
     }
 
@@ -241,7 +244,7 @@
     }
 
     100% {
-        transform: translateX(0) rotate(5deg);
+        transform: translateX(0rem) rotate(6deg);
         opacity: 1;
         z-index: 9;
     }

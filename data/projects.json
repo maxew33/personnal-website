@@ -109,7 +109,7 @@
             "id": "4",
             "name": ["Mina Marrault", "Architecte d'Intérieurs"],
             "description": [
-                "Mina Marrault est une architecte d'intérieurs passionnée par la création d'espaces uniques et fonctionnels qui reflètent la personnalité et le style de ses clients. Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
+                "Mina Marrault est une architecte d'intérieurs passionnée par la création d'espaces uniques et fonctionnels qui reflètent la personnalité et le style de ses clients.","Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
             ],
             "objectives": [
                 "L'objectif était de concevoir un site vitrine professionnel pour présenter le travail de Mina Marrault, mettre en valeur son portfolio et faciliter la prise de contact avec de potentiels clients."
@@ -133,6 +133,33 @@
         },
         {
             "id": "5",
+            "name": ["Chez Max", "Restaurant"],
+            "description": [
+                "Chez Max est un restaurant gastronomique français proposant une cuisine raffinée dans une ambiance chaleureuse.","Ce site web a été conçu pour refléter l'élégance et l'excellence culinaire du restaurant.","Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
+            ],
+            "objectives": [
+                "L'objectif était de concevoir un site web attractif et fonctionnel, mettant en avant le menu, les réservations, et les avis des clients.",
+                "Le site devait offrir une expérience utilisateur fluide et intuitive, tout en reflétant l'identité du restaurant."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur mesure pour Chez Max, en mettant l'accent sur une navigation facile et une présentation visuelle élégante des plats.",
+                "La page d'accueil présente le restaurant, tandis que la page des réservations permet aux clients de réserver facilement une table."
+            ],
+            "highlights": [
+                "Implémentation d'un système de réservations.",
+                "Interface utilisateur intuitive pour faciliter les réservations.",
+                "Section d'avis des clients pour bâtir la crédibilité et la réputation du restaurant."
+            ],
+            "result": {
+                "name": "visuels du site du restaurant chez Max",
+                "path": "/assets/projects/chezmax-card.webp",
+                "minify": "/assets/home/chezmax.webp",
+                "illus": "/assets/projects/chezmax-visuel.webp"
+            },
+            "link": "https://chezmax.maxime-malfilatre.com/"
+        },
+        {
+            "id": "6",
             "name": ["Maxime Malfilâtre", "Développeur front-end"],
             "description": [
                 "Je suis un développeur front-end basé à Bordeaux.",

@@ -96,7 +96,11 @@
   z-index: 7;
   transform: rotate(5deg);
 }
-.projectContainer:not([data-position="5"]) {
+.projectContainer[data-position="6"] {
+  z-index: 8;
+  transform: rotate(6deg);
+}
+.projectContainer:not([data-position="6"]) {
   pointer-events: none;
 }
 
@@ -110,7 +114,7 @@
   text-align: center;
   transition: opacity 0.125s linear;
 }
-.name[data-position="5"], .name[data-position="-1"] {
+.name[data-position="6"], .name[data-position="-1"] {
   opacity: 1;
 }
 
@@ -186,7 +190,7 @@
 }
 
 /* anim for moving discs from front to back */
-.projectContainer[data-position="6"] {
+.projectContainer[data-position="7"] {
   z-index: 9;
   animation: linear 0.5s forwards running to-the-back;
 }
@@ -234,7 +238,7 @@
     z-index: 1;
   }
   60% {
-    transform: translateX(5rem) rotate(15deg);
+    transform: translateX(2rem) rotate(15deg);
     opacity: 0;
   }
   75% {
@@ -242,7 +246,7 @@
     z-index: 9;
   }
   100% {
-    transform: translateX(0) rotate(5deg);
+    transform: translateX(0rem) rotate(6deg);
     opacity: 1;
     z-index: 9;
   }
