@@ -56,6 +56,18 @@ $nbItems:6;
     width: 340px;
 }
 
+.firstAnim{    
+    position: absolute;
+    @for $i from 0 through $nbItems {
+        &[data-position='#{$i}'] {
+            z-index: $i + 2;
+            transform: rotate($i * 1deg) translate( $i * 10vmin, $i * -5vmin);
+        }
+    }
+
+}
+
+
 .projectContainer {
     position: absolute;
     padding: 1rem;

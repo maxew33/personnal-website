@@ -18,6 +18,8 @@ export default function Projects() {
 
     const [position, setPosition] = useState([])
 
+    const [firstAnimDone, setFirstAnimDone] = useState(false)
+
     const [canChange, setCanChange] = useState(true)
 
     const [modalDisplayed, setModalDisplayed] = useState(false)
@@ -58,6 +60,12 @@ export default function Projects() {
 
         setCanChange(false)
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            setFirstAnimDone(true)
+        }, 750)
+    }, [])
 
     useEffect(() => {
         position.forEach((pos, index) => {
@@ -154,7 +162,7 @@ export default function Projects() {
                 <div className={styles.projectsContainer} {...handlers}>
                     {data.map((project, index) => (
                         <div
-                            className={styles.projectContainer}
+                            className={firstAnimDone ? styles.projectContainer : styles.firstAnim}
                             onClick={() => handleClick(project)}
                             data-position={position[index]}
                             key={'project' + index}
@@ -168,7 +176,7 @@ export default function Projects() {
                             />
                         </div>
                     ))}
-                    {data.map((project, index) => (
+                    {firstAnimDone && data.map((project, index) => (
                         <span
                             className={styles.name}
                             key={'name' + index}
