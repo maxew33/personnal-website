@@ -64,7 +64,7 @@ export default function Projects() {
     useEffect(() => {
         setTimeout(() => {
             setFirstAnimDone(true)
-        }, 750)
+        }, 1000)
     }, [])
 
     useEffect(() => {

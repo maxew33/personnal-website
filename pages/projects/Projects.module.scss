@@ -58,13 +58,25 @@ $nbItems:6;
 
 .firstAnim{    
     position: absolute;
+    animation: displayingcards .5s steps(1) forwards;
+    animation-delay: var(--delay);
+    opacity: 0;
+
     @for $i from 0 through $nbItems {
         &[data-position='#{$i}'] {
+            --delay: #{$i * .05s};
             z-index: $i + 2;
             transform: rotate($i * 1deg) translate( $i * 10vmin, $i * -5vmin);
         }
     }
 
+}
+
+@keyframes displayingcards{
+   
+    to {
+        opacity: 1;
+    }
 }
 
 
