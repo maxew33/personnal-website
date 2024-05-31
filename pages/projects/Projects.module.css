@@ -2,6 +2,7 @@
   color: var(--text);
   position: relative;
   min-height: 80vh;
+  overflow-x: hidden;
   width: 100%;
   background: #fff;
 }
@@ -65,8 +66,12 @@
   width: 340px;
 }
 
-.firstAnim {
+.firstAnim, .projectContainer {
   position: absolute;
+  padding: 1rem;
+}
+
+.firstAnim {
   animation: displayingcards 0.5s steps(1) forwards;
   animation-delay: var(--delay);
   opacity: 0;
@@ -106,6 +111,9 @@
   z-index: 8;
   transform: rotate(6deg) translate(60vmin, -30vmin);
 }
+.firstAnim ~ span {
+  color: white;
+}
 
 @keyframes displayingcards {
   to {
@@ -113,8 +121,6 @@
   }
 }
 .projectContainer {
-  position: absolute;
-  padding: 1rem;
   transition: transform 0.25s linear;
   cursor: pointer;
   transform-origin: bottom right;

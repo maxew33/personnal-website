@@ -176,7 +176,7 @@ export default function Projects() {
                             />
                         </div>
                     ))}
-                    {firstAnimDone && data.map((project, index) => (
+                    {data.map((project, index) => (
                         <span
                             className={styles.name}
                             key={'name' + index}

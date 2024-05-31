@@ -7,6 +7,7 @@ $nbItems:6;
     color: var(--text);
     position: relative;
     min-height: 80vh;
+    overflow-x: hidden;
     width: 100%;
     > * {
         line-height: 1.75;
@@ -56,8 +57,13 @@ $nbItems:6;
     width: 340px;
 }
 
-.firstAnim{    
+.firstAnim, .projectContainer{
     position: absolute;
+    padding: 1rem;
+
+}
+
+.firstAnim{    
     animation: displayingcards .5s steps(1) forwards;
     animation-delay: var(--delay);
     opacity: 0;
@@ -69,8 +75,12 @@ $nbItems:6;
             transform: rotate($i * 1deg) translate( $i * 10vmin, $i * -5vmin);
         }
     }
-
+    ~span{
+        color: white;
+    }
 }
+
+
 
 @keyframes displayingcards{
    
@@ -81,8 +91,6 @@ $nbItems:6;
 
 
 .projectContainer {
-    position: absolute;
-    padding: 1rem;
     transition: transform 0.25s linear;
     cursor: pointer;
     transform-origin: bottom right;
