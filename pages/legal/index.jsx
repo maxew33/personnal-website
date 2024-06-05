@@ -10,12 +10,12 @@ export default function Legal() {
                 En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004
                 pour la confiance dans l'économie numérique, il est précisé aux
                 utilisateurs du site internet{' '}
-                <a href="https://techquest.fr/">https://techquest.fr/</a>{' '}
+                <a href="https://maxime-malfilatre.com/">https://maxime-malfilatre.com/</a>{' '}
                 l'identité des différents intervenants dans le cadre de sa
                 réalisation et de son suivi :<h3>Propriétaire du site</h3>
                 Maxime Malfilâtre <br />
                 Contact :{' '}
-                <a href="mailto:contact@techquest.fr">contact@techquest.fr</a> /
+                <a href="mailto:malfilatre.dev@gmail.com">malfilatre.dev@gmail.com</a> /
                 07 81 84 76 57
                 <h3>Identification de l'entreprise</h3>
                 EI - SIREN : 84281711600010
@@ -51,15 +51,15 @@ export default function Legal() {
                 Maxime Malfilâtre ne pourra être tenu pour responsable des
                 dommages directs et indirects causés au matériel de
                 l'utilisateur, lors de l'accès au site{' '}
-                <a href="https://techquest.fr/">https://techquest.fr/</a>.{' '}
+                <a href="mailto:malfilatre.dev@gmail.com">malfilatre.dev@gmail.com</a>.{' '}
                 <br />
                 Maxime Malfilâtre décline toute responsabilité quant à
                 l'utilisation qui pourrait être faite des informations et
                 contenus présents sur
-                <a href="https://techquest.fr/">https://techquest.fr/</a>.
+                <a href="mailto:malfilatre.dev@gmail.com">malfilatre.dev@gmail.com</a>.
                 <br />
                 Maxime Malfilâtre s'engage à sécuriser au mieux le site
-                <a href="https://techquest.fr/">https://techquest.fr/</a>,
+                <a href="mailto:malfilatre.dev@gmail.com">malfilatre.dev@gmail.com</a>,
                 cependant sa responsabilité ne pourra être mise en cause si des
                 données indésirables sont importées et installées sur son site à
                 son insu.
@@ -68,18 +68,18 @@ export default function Legal() {
                 <h2>CNIL et gestion des données personnelles.</h2>
                 Conformément aux dispositions de la loi 78-17 du 6 janvier 1978
                 modifiée, l'utilisateur du site{' '}
-                <a href="https://techquest.fr/">https://techquest.fr/</a>{' '}
+                <a href="mailto:malfilatre.dev@gmail.com">malfilatre.dev@gmail.com</a>{' '}
                 dispose d'un droit d'accès, de modification et de suppression
                 des informations collectées.
                 <br /> Pour exercer ce droit, envoyez un message à{' '}
-                <a href="mailto:contact@techquest.fr">
-                    contact@techquest.fr
+                <a href="mailto:malfilatre.dev@gmail.com">
+                    malfilatre.dev@gmail.com
                 </a>.{' '}
             </section>
             <section>
                 <h2> Droit applicable et attribution de juridiction.</h2> Tout
                 litige en relation avec l'utilisation du site{' '}
-                <a href="https://techquest.fr/">https://techquest.fr/</a> est
+                <a href="mailto:malfilatre.dev@gmail.com">malfilatre.dev@gmail.com</a>  est
                 soumis au droit français.
                 <br /> En dehors des cas où la loi ne le permet pas, il est fait
                 attribution exclusive de juridiction aux tribunaux compétents de

@@ -34,7 +34,7 @@ export default function Hero({ height, width }) {
     // ====== Animations ====== /
 
     /* carousel */
-    const [counter, setCounter] = useState(1)
+    const [counter, setCounter] = useState(3)
 
     useEffect(() => {
         illusData.length > 0 &&
